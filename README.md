@@ -1,6 +1,5 @@
 # website
-
-altos lets go
+https://nikkeichoralensemble.github.io/website/
 
 # Usage
 

@@ -4,5 +4,5 @@ altos lets go
 
 # Usage
 
-To edit style, edit assets/sass/main.scss (**not** assets/css/main.css) with:
-`sass --watch assets/sass/main.scss assets/css/main.css --no-source-map`
+To edit style, edit static/sass/main.scss (**not** static/css/main.css) with:
+`sass --watch static/sass/main.scss static/css/main.css --no-source-map`

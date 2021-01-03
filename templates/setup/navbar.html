@@ -3,10 +3,11 @@
     <li class="current"><a href="{{url_for('index')}}">Home</a></li>
 
     <!-- <li>
-      <a href="#">Dropdown</a>
+      <a href="#">Templates</a>
       <ul>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Magna phasellus</a></li>
+        <li><a href="{{url_for('test0')}}">No Sidebar</a></li>
+        <li><a href="{{url_for('test1')}}">Left-sidebar</a></li>
+        <li><a href="{{url_for('test2')}}">Right-sidebar</a></li>
         <li>
           <a href="#">Phasellus consequat</a>
           <ul>
@@ -20,8 +21,8 @@
       </ul>
     </li> -->
 
-    <li><a href="{{url_for('index')}}">About</a></li>
-    <li><a href="{{url_for('index')}}">Auditions</a></li>
-    <li><a href="{{url_for('index')}}">More?</a></li>
+    <li><a href="{{url_for('about')}}">About</a></li>
+    <li><a href="{{url_for('auditions')}}">Auditions</a></li>
+    <li><a href="{{url_for('more')}}">More?</a></li>
   </ul>
 </nav>

@@ -26,19 +26,24 @@ def more():
     return render_template("pages/more.html")
 
 
-@app.route("/test/no-sidebar")
+@app.route("/txt/home")
 def test0():
-    return render_template("pages/no-sidebar.html")
+    return render_template("txt/txt_home.html")
 
 
-@app.route("/test/left-sidebar")
+@app.route("/txt/no-sidebar")
 def test1():
-    return render_template("pages/left-sidebar.html")
+    return render_template("txt/txt_no-sidebar.html")
 
 
-@app.route("/test/right-sidebar")
+@app.route("/txt/left-sidebar")
 def test2():
-    return render_template("pages/right-sidebar.html")
+    return render_template("txt/txt_left-sidebar.html")
+
+
+@app.route("/txt/right-sidebar")
+def test3():
+    return render_template("txt/txt_right-sidebar.html")
 
 
 if __name__ == "__main__":

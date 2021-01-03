@@ -6,5 +6,15 @@
 
 # Making Edits
 
+Please use Git!!
+
+## Edit website style
+
 1. run `sass --watch static/sass/main.scss static/css/main.css --no-source-map`
 2. edit `static/sass/main.scss` (**not** `static/css/main.css`).
+
+## Deploying the website to OCF
+
+1. SSH into OCF's server with `ssh nice@ssh.ocf.berkeley.edu` in a terminal
+2. run `cd public_html`
+3. run `git pull`

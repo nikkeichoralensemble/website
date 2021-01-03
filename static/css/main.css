@@ -1664,8 +1664,17 @@ ul.contact li a:before {
 ul.contact li:hover {
   top: -5px;
 }
+ul.contact li:hover a.fa-youtube {
+  background-color: #c4302b;
+}
 ul.contact li:hover a.fa-facebook {
   background-color: #3c5a98;
+}
+ul.contact li:hover a.fa-instagram {
+  background-color: #c13584;
+}
+ul.contact li:hover a.fa-envelope {
+  background-color: #666666;
 }
 ul.contact li:hover a.fa-twitter {
   background-color: #2daae4;
@@ -1675,9 +1684,6 @@ ul.contact li:hover a.fa-dribbble {
 }
 ul.contact li:hover a.fa-linkedin {
   background-color: #006599;
-}
-ul.contact li:hover a.fa-instagram {
-  background-color: #2e5e86;
 }
 ul.contact li:hover a.fa-google-plus {
   background-color: #da2713;

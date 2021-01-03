@@ -617,8 +617,20 @@ ul.contact {
       top: -5px;
 
       a {
+        &.fa-youtube {
+          background-color: #c4302b;
+        }
+
         &.fa-facebook {
           background-color: #3c5a98;
+        }
+
+        &.fa-instagram {
+          background-color: #c13584;
+        }
+
+        &.fa-envelope {
+          background-color: #666666;
         }
 
         &.fa-twitter {
@@ -631,10 +643,6 @@ ul.contact {
 
         &.fa-linkedin {
           background-color: #006599;
-        }
-
-        &.fa-instagram {
-          background-color: #2e5e86;
         }
 
         &.fa-google-plus {
@@ -952,6 +960,7 @@ table {
 
   &.brands {
     &:before {
+      // CSS Pseudo-element
       font-family: "Font Awesome 5 Brands";
     }
   }

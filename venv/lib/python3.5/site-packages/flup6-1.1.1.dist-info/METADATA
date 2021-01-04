@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: flup6
+Version: 1.1.1
+Summary: Random assortment of WSGI servers
+Home-page: https://bitbucket.org/denisenkom/flup
+Author: Mikhail Denisenko
+Author-email: denisenkom@gmail.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Server
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+UNKNOWN
+
+

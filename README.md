@@ -1,12 +1,16 @@
 # How to Run
 
-1. run `source env/bin/activate`
+1. run `source venv/bin/activate`
 2. run `python3 app.py`
 3. open http://127.0.0.1:5000/ in your browser
 
 # Making Edits
 
 Please use Git!!
+
+## Edit website content
+
+Edit HTML files under `templates/pages`
 
 ## Edit website style
 

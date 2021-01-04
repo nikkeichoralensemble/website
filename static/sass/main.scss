@@ -8,8 +8,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700");
 
-@import "libs/colors";
-
 /*
   TXT by HTML5 UP
   html5up.net | @ajlkn
@@ -437,7 +435,7 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url("../images/txt/overlay.png");
+    background: $overlay-img;
     border-radius: 8px;
   }
 
@@ -1200,8 +1198,7 @@ body {
 
 #banner {
   position: relative;
-  background-image: url("../images/txt/overlay.png"),
-    url("../images/txt/overlay.png"), url("../images/txt/banner.jpg");
+  background-image: $overlay-img, $overlay-img, $banner-img;
   background-position: top left, top left, center center;
   background-repeat: repeat, repeat, no-repeat;
   background-size: auto, auto, cover;
@@ -1211,8 +1208,7 @@ body {
   .content {
     position: relative;
     background-color: rgba(21, 28, 23, 0.85);
-    background-image: url("../images/txt/overlay.png"),
-      url("../images/txt/highlight.png");
+    background-image: $overlay-img, $highlight-img;
     background-position: top left, center center;
     background-size: auto, 100% 250%;
     background-repeat: repeat, no-repeat;
@@ -1517,7 +1513,7 @@ body {
     width: 100%;
     z-index: _misc(z-index-base) + 1;
     background-color: rgba(21, 38, 23, 0.8);
-    background-image: url("../images/txt/overlay.png");
+    background-image: $overlay-img;
 
     .title {
       display: block;
@@ -1581,7 +1577,7 @@ body {
     @include vendor(
       "background-image",
       (
-        'url("../images/txt/overlay.png")',
+        '$overlay-img',
         "linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5))"
       )
     );

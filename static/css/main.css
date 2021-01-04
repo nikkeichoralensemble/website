@@ -1,8 +1,8 @@
 @charset "UTF-8";
-@import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700");
 /* Nav */
 /* Button */
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700");
 /*
   TXT by HTML5 UP
   html5up.net | @ajlkn
@@ -1479,7 +1479,7 @@ header > p {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url("../images/txt/overlay.png");
+  background: url("/static/txt/overlay.png");
   border-radius: 8px;
 }
 .image.fit {
@@ -2116,7 +2116,7 @@ body {
 /* Banner */
 #banner {
   position: relative;
-  background-image: url("../images/txt/overlay.png"), url("../images/txt/overlay.png"), url("../images/txt/banner.jpg");
+  background-image: url("/static/txt/overlay.png"), url("/static/txt/overlay.png"), url("/static/group.jpg");
   background-position: top left, top left, center center;
   background-repeat: repeat, repeat, no-repeat;
   background-size: auto, auto, cover;
@@ -2126,7 +2126,7 @@ body {
 #banner .content {
   position: relative;
   background-color: rgba(21, 28, 23, 0.85);
-  background-image: url("../images/txt/overlay.png"), url("../images/txt/highlight.png");
+  background-image: url("/static/txt/overlay.png"), url("/static/txt/highlight.png");
   background-position: top left, center center;
   background-size: auto, 100% 250%;
   background-repeat: repeat, no-repeat;
@@ -2374,7 +2374,7 @@ body {
     width: 100%;
     z-index: 10001;
     background-color: rgba(21, 38, 23, 0.8);
-    background-image: url("../images/txt/overlay.png");
+    background-image: url("/static/txt/overlay.png");
   }
   #titleBar .title {
     display: block;
@@ -2450,10 +2450,10 @@ body {
     width: 275px;
     z-index: 10002;
     background-color: #353c37;
-    background-image: url("../images/txt/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    background-image: url("../images/txt/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    background-image: url("../images/txt/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    background-image: url("../images/txt/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background-image: $overlay-img, -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background-image: $overlay-img, -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background-image: $overlay-img, -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background-image: $overlay-img, linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
     background-repeat: repeat, no-repeat;
     background-size: auto, 100% 100%;
     font-family: "Open Sans Condensed", sans-serif;

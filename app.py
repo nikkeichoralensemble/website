@@ -3,7 +3,9 @@ from flask.templating import render_template
 from pathlib import Path
 
 app = Flask(__name__)
-
+app.wsgi_app = SassMiddleware(app.wsgi_app, {
+    'website': ('static/sass', 'static/css', '/static/css')
+})
 
 @app.route("/")
 # @app.route("/index")

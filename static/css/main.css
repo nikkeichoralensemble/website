@@ -1479,7 +1479,7 @@ header > p {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url("/static/txt/overlay.png");
+  background: url("../../static/images/txt/overlay.png");
   border-radius: 8px;
 }
 .image.fit {
@@ -2116,7 +2116,7 @@ body {
 /* Banner */
 #banner {
   position: relative;
-  background-image: url("/static/txt/overlay.png"), url("/static/txt/overlay.png"), url("/static/group.jpg");
+  background-image: url("../../static/images/txt/overlay.png"), url("../../static/images/txt/overlay.png"), url("../../static/images/group.jpg");
   background-position: top left, top left, center center;
   background-repeat: repeat, repeat, no-repeat;
   background-size: auto, auto, cover;
@@ -2126,7 +2126,7 @@ body {
 #banner .content {
   position: relative;
   background-color: rgba(21, 28, 23, 0.85);
-  background-image: url("/static/txt/overlay.png"), url("/static/txt/highlight.png");
+  background-image: url("../../static/images/txt/overlay.png"), url("../../static/images/txt/highlight.png");
   background-position: top left, center center;
   background-size: auto, 100% 250%;
   background-repeat: repeat, no-repeat;
@@ -2374,7 +2374,7 @@ body {
     width: 100%;
     z-index: 10001;
     background-color: rgba(21, 38, 23, 0.8);
-    background-image: url("/static/txt/overlay.png");
+    background-image: url("../../static/images/txt/overlay.png");
   }
   #titleBar .title {
     display: block;

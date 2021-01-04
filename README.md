@@ -1,8 +1,9 @@
 # How to Run
-
-1. run `source venv/bin/activate`
-2. run `python3 app.py`
-3. open http://127.0.0.1:5000/ in your browser
+1. create an environment: run `virtualenv venv`
+1. start the environment: run `source venv/bin/activate`
+2. install dependencies: run `pip install -r requirements.txt'
+3. run `python3 app.py`
+4. open http://127.0.0.1:5000/ in your browser
 
 # Making Edits
 

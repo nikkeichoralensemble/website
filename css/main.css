@@ -1,6 +1,6 @@
-@import "fontawesome-all.min.css";
 @import "brands.css";
 
+@import "vars.css";
 @import "setup.css";
 @import "content.css";
 

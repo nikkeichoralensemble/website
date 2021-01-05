@@ -1,7 +1,17 @@
 /*body */
 body {
   display: block;
+  font-family: #{font(body-font)};
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: #{font(body-font)};
+}
+
 /* Header */
 header {
   background: #e9e8e6;
@@ -86,6 +96,9 @@ footer {
   font-size: 14px;
   text-align: center;
 
+  > li {
+    list-style: none;
+  }
   // .credits {
   //   padding-top: 5px;
   //   font-size: 13px;
@@ -95,3 +108,5 @@ footer {
   //   color: #34b7a7;
   // }
 }
+
+@import "sections";

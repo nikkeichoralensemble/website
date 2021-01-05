@@ -14,15 +14,21 @@ $size: (
 );
 
 // Font.
-$font: {
-  $main-font: "Open Sans Condensed", sans-serif;
-}
+$font: (
+  $main-font: (
+    "Raleway",
+    sans-serif,
+  ),
+  $body-font: (
+    "Open Sans",
+    sans-serif,
+  ),
+) !default;
 
 // Palette.
-$palette: {
-  $theme-color: blue;
-}
+$palette: (
+  $theme-color: blue,
+);
 
 // Images
-$images: {
-}
+$images: ();

@@ -2,12 +2,8 @@ from pathlib import Path
 
 from flask import Flask
 from flask.templating import render_template
-from sassutils.wsgi import SassMiddleware
 
 app = Flask(__name__)
-app.wsgi_app = SassMiddleware(
-    app.wsgi_app, {"website": ("static/sass", "static/css", "/static/css")}
-)
 
 
 @app.route("/")

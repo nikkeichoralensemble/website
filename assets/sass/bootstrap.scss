@@ -1,0 +1,8 @@
+$--small: 180px;
+$--regular: 500px;
+
+@media (max-width: $--small) {
+  .logo {
+    font-size: 28px;
+  }
+}

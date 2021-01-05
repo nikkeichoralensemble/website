@@ -335,17 +335,17 @@ header > p {
     width: calc(100% - 100px);
   }
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 500px) {
   .container {
     width: calc(100% - 100px);
   }
 }
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 360px) {
   .container {
     width: calc(100% - 40px);
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 180px) {
   .container {
     width: calc(100% - 30px);
   }
@@ -905,7 +905,7 @@ header > p {
     padding-top: 80px;
   }
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 500px) {
   .row {
     display: flex;
     flex-wrap: wrap;
@@ -1090,7 +1090,7 @@ header > p {
     padding-top: 100px;
   }
 }
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 360px) {
   .row {
     display: flex;
     flex-wrap: wrap;
@@ -1275,7 +1275,7 @@ header > p {
     padding-top: 40px;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 180px) {
   .row {
     display: flex;
     flex-wrap: wrap;
@@ -2299,7 +2299,7 @@ select {
   display: none;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 500px) {
   /* Basic */
   html,
 body {
@@ -2525,7 +2525,7 @@ body {
   }
 }
 /* Small */
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 360px) {
   /* Basic */
   body,
 input,
@@ -2648,7 +2648,7 @@ button.large,
   }
 }
 /* Small */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 180px) {
   /* Basic */
   body,
 input,

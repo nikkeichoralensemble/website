@@ -22,20 +22,20 @@
       1680px,
     ),
     large: (
-      981px,
+      501px,
       1280px,
     ),
     medium: (
-      737px,
-      980px,
+      360px,
+      500px,
     ),
     small: (
-      361px,
-      736px,
+      181px,
+      360px,
     ),
     xsmall: (
       null,
-      360px,
+      180px,
     ),
   )
 );
@@ -1577,7 +1577,7 @@ body {
     @include vendor(
       "background-image",
       (
-        '$overlay-img',
+        "$overlay-img",
         "linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5))"
       )
     );

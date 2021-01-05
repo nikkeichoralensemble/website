@@ -3,8 +3,7 @@
 
   <head>
     <title>Nikkei Choral Ensemble</title>
-    <link href="css/main.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7664d863fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
@@ -12,7 +11,7 @@
   <body>
 
     <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
+    <header class="fixed-top">
       <div class="container-fluid d-flex justify-content-between align-items-center">
 
         <h1 class="logo"><a href="index.html">NiCE</a></h1>
@@ -34,13 +33,16 @@
     </header><!-- End Header -->
 
     <!-- ======= Main Section ======= -->
+    {% block main %}
     <section class="d-flex align-items-center">
       Content
     </section><!-- End Main -->
+    {% endblock %}
+
 
     <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <ul class="contact">
+    <footer>
+      <!-- <ul class="contact">
         <li><a class="fas icon brands fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"><i
               class="label">Youtube</i></a></li>
         <li><a class="fas icon brands fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/">
@@ -48,7 +50,7 @@
         <li><a class="fas icon brands fa-facebook" href="https://www.facebook.com/wearenice"><i
               class="label">Facebook</i></a></li>
         <li><a class="fas icon fa-envelope" href="nikkeichoralensemble@gmail.com"><i class="label">Envelope</i></a></li>
-      </ul>
+      </ul> -->
 
       <li></li>&copy; Copyright <strong><span>Nikkei Choral Ensemble</span></strong>. All Rights Reserved</li>
       <li>Website by Emma Jiang, April Sin, and Jessica Qian.</li>
@@ -67,22 +69,10 @@
       </div>
     </footer><!-- End  Footer -->
 
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    <a href="#"><i class="fas fa-arrow-up"></i></a>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
-    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
-    <script src="assets/kelly.js"></script>
+    <script src="https://kit.fontawesome.com/7664d863fa.js" crossorigin="anonymous"></script>
 
   </body>
 

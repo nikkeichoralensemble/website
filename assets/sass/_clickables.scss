@@ -1,4 +1,6 @@
-/* Icons */
+/*--------------------------------------------------------------
+# Icons
+--------------------------------------------------------------*/
 
 /// Makes an element's :before pseudoelement a FontAwesome icon.
 /// @param {string} $content Optional content value to use.
@@ -62,10 +64,7 @@
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Header Social Links
---------------------------------------------------------------*/
-/* header .contact {
+header .contact {
   padding-left: 20px;
 }
 
@@ -80,12 +79,6 @@ header .contact a {
 
 header .contact a:hover {
   color: #34b7a7;
-} */
-
-@media (max-width: 992px) {
-  header .contact {
-    padding: 0 48px 0 0;
-  }
 }
 
 ul.contact {

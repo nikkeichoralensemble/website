@@ -6,3 +6,9 @@ $--regular: 500px;
     font-size: 28px;
   }
 }
+
+@media (max-width: 992px) {
+  header .contact {
+    padding: 0 48px 0 0;
+  }
+}

@@ -1,34 +1,22 @@
-// Misc.
-$misc: (
-  z-index-base: 10000,
-);
+$main-font: "Raleway", sans-serif;
+$body-font: "Open Sans", sans-serif;
 
-// Duration.
-$duration: (
-  navPanel: 0.5s,
-);
-
-// Size.
-$size: (
-  navPanel: 275px,
-);
-
-// Font.
-$font: (
-  $main-font: (
-    "Raleway",
-    sans-serif,
-  ),
-  $body-font: (
-    "Open Sans",
-    sans-serif,
-  ),
-) !default;
+@function _font($key) {
+  @return #{map-get($font, $key)};
+}
 
 // Palette.
 $palette: (
-  $theme-color: blue,
+  "theme": #4787c3,
+  "theme-dark": #235d9c,
+  "accent": #f65e89,
+  "accent-lighter": #ffcacf,
+  "_black": #222222,
+  "_white": #ffffff,
+  "_grey": #888888,
+  //e9e8e6
 );
 
-// Images
-$images: ();
+@function _palette($key) {
+  @return map-get($palette, $key);
+}

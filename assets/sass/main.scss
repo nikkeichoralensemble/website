@@ -1,9 +1,13 @@
+/*body */
+body {
+  display: block;
+}
 /* Header */
 header {
   background: #e9e8e6;
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
   padding: 15px;
-  height: 7%;
+  // height: 7%;
 }
 /* Logo */
 .logo {
@@ -51,28 +55,28 @@ nav {
     font-size: 15px;
     font-family: #{font(main-font)};
     font-weight: 600;
-    &:before {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -5px;
-      left: 0;
-      background-color: #34b7a7;
-      visibility: hidden;
-      width: 0px;
-      transition: all 0.3s ease-in-out 0s;
-    }
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 0;
+    //   height: 2px;
+    //   bottom: -5px;
+    //   left: 0;
+    //   background-color: #34b7a7;
+    //   visibility: hidden;
+    //   width: 0px;
+    //   transition: all 0.3s ease-in-out 0s;
+    // }
     &:hover {
       text-decoration: none;
     }
   }
 }
 
-/* Main content */
-main {
-  margin-top: 30px; /* Add a top margin to avoid content overlay */
-}
+// /* Main content */
+// main {
+//   margin-top: 7%; /* Add a top margin to avoid content overlay */
+// }
 
 /* Footer */
 footer {

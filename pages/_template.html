@@ -14,9 +14,8 @@
   </head>
 
   <body>
-
     <!-- ======= Header ======= -->
-    <header class="fixed-top container-fluid d-flex align-items-center">
+    <header id="header" class="fixed-top container-fluid d-flex align-items-center">
       <!-- <div style="position:fixed"> -->
       <h1 class="logo"><a href="index.html">NiCE</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
@@ -35,15 +34,15 @@
     </header><!-- End Header -->
 
     <!-- ======= Main Section ======= -->
-    {% block main %}
-    <section class="d-flex align-items-center">
-      Content
-    </section><!-- End Main -->
-    {% endblock %}
+    <main id="main">
+      {% block main %}
+      Main Content
+      {% endblock %}
+    </main>
 
 
     <!-- ======= Footer ======= -->
-    <footer>
+    <footer id="footer">
       <!-- <ul class="contact">
         <li><a class="fas icon brands fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"><i
               class="label">Youtube</i></a></li>
@@ -85,6 +84,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
+    <!-- Custom Scripts -->
+    <script src="../assets/js/main.js"></script>
   </body>
 
 </html>

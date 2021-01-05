@@ -1,3 +1,7 @@
-@import "general.css";
-@import "navbar.css";
+@import "fontawesome-all.min.css";
+@import "brands.css";
+
+@import "setup.css";
+@import "content.css";
+
 @import "clickables.css";

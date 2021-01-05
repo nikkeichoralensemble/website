@@ -4,42 +4,61 @@
   <head>
     <title>Nikkei Choral Ensemble</title>
     <link href="css/main.css" rel="stylesheet">
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="https://kit.fontawesome.com/7664d863fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 
   <body>
 
     <!-- ======= Header ======= -->
-    <header>
-      <!-- Navbar -->
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="auditions.html">Audidions</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav><!-- End Navbar -->
+    <header id="header" class="fixed-top">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
 
+        <h1 class="logo"><a href="index.html">NiCE</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <!-- Navbar -->
+        <nav class="navbar d-none d-lg-block">
+          <div class="container-fluid d-flex justify-content-between align-items-center"></div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="auditions.html">Auditions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav><!-- End Navbar -->
+
+        <ul class="contact">
+          <li><a class="fas icon brands fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"><i
+                class="label">Youtube</i></a></li>
+          <li><a class="fas icon brands fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/">
+              <i class="label">Instagram</i></a></li>
+          <li><a class="fas icon brands fa-facebook" href="https://www.facebook.com/wearenice"><i
+                class="label">Facebook</i></a></li>
+          <li><a class="fas icon fa-envelope" href="nikkeichoralensemble@gmail.com"><i class="label">Envelope</i></a>
+          </li>
+        </ul>
+
+      </div>
     </header><!-- End Header -->
 
     <!-- ======= Main Section ======= -->
-    <section>
+    <section class="d-flex align-items-center">
       Content
     </section><!-- End Main -->
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
       <ul class="contact">
-        <li><a class="fas icon brands fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"><span
-              class="label">Youtube</span></a></li>
+        <li><a class="fas icon brands fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"><i
+              class="label">Youtube</i></a></li>
         <li><a class="fas icon brands fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/">
-            <span class="label">Instagram</span></a></li>
-        <li><a class="fas icon brands fa-facebook" href="https://www.facebook.com/wearenice"><span
-              class="label">Facebook</span></a></li>
-        <li><a class="fas icon fa-envelope" href="nikkeichoralensemble@gmail.com"><span
-              class="label">Envelope</span></a></li>
+            <i class="label">Instagram</i></a></li>
+        <li><a class="fas icon brands fa-facebook" href="https://www.facebook.com/wearenice"><i
+              class="label">Facebook</i></a></li>
+        <li><a class="fas icon fa-envelope" href="nikkeichoralensemble@gmail.com"><i class="label">Envelope</i></a></li>
       </ul>
 
       <li></li>&copy; Copyright <strong><span>Nikkei Choral Ensemble</span></strong>. All Rights Reserved</li>
@@ -59,8 +78,20 @@
       </div>
     </footer><!-- End  Footer -->
 
-    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt">Back to Top</i></a>
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+    <script src="assets/kelly.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
   </body>
 
 </html>

@@ -38,6 +38,31 @@
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Header Social Links
+--------------------------------------------------------------*/
+/* header .contact {
+  padding-left: 20px;
+}
+
+header .contact a {
+  color: #222222;
+  padding-left: 6px;
+  display: inline-block;
+  line-height: 1px;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+header .contact a:hover {
+  color: #34b7a7;
+} */
+
+@media (max-width: 992px) {
+  header .contact {
+    padding: 0 48px 0 0;
+  }
+}
 
 ul.contact {
   list-style: none;
@@ -82,26 +107,28 @@ ul.contact li:hover {
   top: -5px;
 }
 
+ul.contact li:hover a.fa-youtube {
+  background-color: #c4302b;
+}
 ul.contact li:hover a.fa-facebook {
-  background-color: #3c5a98;
+  background-color: #4267b2;
 }
-
-ul.contact li:hover a.fa-dribbble {
-  background-color: #c4376b;
-}
-
-ul.contact li:hover a.fa-linkedin {
-  background-color: #006599;
-}
-
 ul.contact li:hover a.fa-instagram {
-  background-color: #2e5e86;
+  background-color: #bc2a8d;
+  background: linear-gradient(
+    45deg,
+    #fccc63,
+    #fbad50,
+    #e95950,
+    #cd486b,
+    #bc2a8d,
+    #8a3ab9,
+    #4c68d7
+  );
 }
-
-ul.contact li:hover a.fa-google-plus {
-  background-color: #da2713;
+ul.contact li:hover a.fa-envelope {
+  background-color: #666666;
 }
-
 ul.contact li:active {
   top: 0;
 }

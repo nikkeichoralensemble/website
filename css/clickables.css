@@ -1,3 +1,111 @@
+/* Icons */
+
+.icon {
+  text-decoration: none;
+  position: relative;
+  text-decoration: none;
+}
+
+.icon:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  text-transform: none !important;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+
+.icon:before {
+  line-height: inherit;
+}
+
+.icon > .label {
+  display: none;
+}
+
+.icon.solid:before {
+  font-weight: 900;
+}
+
+.icon.brands:before {
+  font-family: "Font Awesome 5 Brands";
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+
+ul.contact {
+  list-style: none;
+  padding-left: 0;
+  cursor: default;
+}
+
+ul.contact li {
+  -moz-transition: top 0.15s ease-in-out;
+  -webkit-transition: top 0.15s ease-in-out;
+  -ms-transition: top 0.15s ease-in-out;
+  transition: top 0.15s ease-in-out;
+  position: relative;
+  display: inline-block;
+  margin: 0 0.25em 0 0.25em;
+  top: 0;
+  padding-left: 0;
+}
+
+ul.contact li a {
+  -moz-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  display: block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  outline: 0;
+  background: #c1cac5;
+  text-align: center;
+}
+
+ul.contact li a:before {
+  color: #f2f5f3;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+ul.contact li:hover {
+  top: -5px;
+}
+
+ul.contact li:hover a.fa-facebook {
+  background-color: #3c5a98;
+}
+
+ul.contact li:hover a.fa-dribbble {
+  background-color: #c4376b;
+}
+
+ul.contact li:hover a.fa-linkedin {
+  background-color: #006599;
+}
+
+ul.contact li:hover a.fa-instagram {
+  background-color: #2e5e86;
+}
+
+ul.contact li:hover a.fa-google-plus {
+  background-color: #da2713;
+}
+
+ul.contact li:active {
+  top: 0;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/

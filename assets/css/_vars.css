@@ -30,6 +30,9 @@
   --font--main-light: "RalewayExtraLight", sans-serif;
   --font--main-light-italic: "RalewayExtraLightItalic", sans-serif;
   --font--body: "GothicA1", sans-serif;
+  --font--small: 15px;
+  --font--medium: 32px;
+  --font--large: 48px;
 
   /* Palette. */
   --palette--theme: #4787c3;

@@ -1,0 +1,31 @@
+@media (max-width: 992px) {
+  #header .logo {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1024px) {
+  #banner {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 992px) {
+  #banner:before {
+    content: "";
+    background: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #banner h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #banner h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,148 @@
+/*--------------------------------------------------------------
+# Page Setup
+--------------------------------------------------------------*/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  z-index: 100;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  z-index: 0;
+  flex: 1 0 auto;
+  width: 100%;
+  min-height: 100%;
+}
+
+div {
+  z-index: inherit;
+  position: relative;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+section,
+article {
+  z-index: 0;
+  margin-bottom: 6em;
+}
+
+footer {
+  z-index: 100;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/*--------------------------------------------------------------
+# Top
+--------------------------------------------------------------*/
+header a,
+footer a {
+  margin: 5px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  max-height: 40px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav li {
+  list-style: none;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+.back-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  position: fixed;
+  display: none;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact > a {
+  margin: 5px;
+}
+
+/*--------------------------------------------------------------
+# Banners
+--------------------------------------------------------------*/
+#banner {
+  background: linear-gradient(transparent 50%, #ffcacf), url("../img/group.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#banner * {
+  position: relative;
+  top: 30vh;
+}
+#banner h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: #e9e8e6;
+}
+#banner h1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#4787c3, #e9e8e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#banner h2 {
+  color: #222222;
+  font-size: 22px;
+}
+#banner button {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: #fff;
+  background: #34b7a7;
+}
+#banner button:hover {
+  background: #3dc8b7;
+}

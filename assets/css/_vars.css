@@ -1,0 +1,14 @@
+:root {
+  /* Fonts */
+  --font--main: "Raleway", sans-serif;
+  --font--body: "Open Sans", sans-serif;
+
+  /* Palette. */
+  --palette--theme: #4787c3;
+  --palette--theme-dark: #235d9c;
+  --palette--accent: #f65e89;
+  --palette--accent-lighter: #ffcacf;
+  --palette--palette-black: #222222;
+  --palette--white: #e9e8e6;
+  --palette--grey: #b3b3b3;
+}

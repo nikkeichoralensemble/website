@@ -51,12 +51,19 @@ header {
 
 main {
   flex: 1 0 auto;
+  width: 100%;
+  min-height: 100%;
 }
 
 div {
+  position: relative;
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
+}
+
+img {
+  z-index: -1;
 }
 
 footer {
@@ -117,6 +124,45 @@ nav {
 /*--------------------------------------------------------------
 # Banners
 --------------------------------------------------------------*/
+#banner {
+  background-image: url("../img/group.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#banner h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #222222;
+}
+#banner h2 {
+  color: #6f6f6f;
+  margin: 10px 0 0 0;
+  font-size: 22px;
+}
+#banner button {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: #fff;
+  background: #34b7a7;
+}
+#banner button:hover {
+  background: #3dc8b7;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/

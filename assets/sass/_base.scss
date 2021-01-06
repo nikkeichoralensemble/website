@@ -20,14 +20,20 @@ header {
 
 main {
   flex: 1 0 auto;
+  width: 100%;
+  min-height: 100%;
 }
 
 div {
+  position: relative;
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
 }
 
+img {
+  z-index: -1;
+}
 footer {
   width: 100%;
   flex-shrink: 0;
@@ -83,58 +89,44 @@ nav {
 /*--------------------------------------------------------------
 # Banners
 --------------------------------------------------------------*/
+
 #banner {
+  background-image: url("../img/group.jpg");
+  background-position: center center;
+  background-size: cover;
+
+  @include setupFlex(center);
+  flex-direction: column;
+
+  h1 {
+    // title
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #222222;
+  }
+  h2 {
+    //subtitle
+    color: #6f6f6f;
+    margin: 10px 0 0 0;
+    font-size: 22px;
+  }
+  button {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #fff;
+    background: #34b7a7;
+    &:hover {
+      background: #3dc8b7;
+    }
+  }
 }
-// #banner {
-//   width: 100vw;
-//   position: relative;
-//   top: 70%;
-//   // background: url("../img/group.jpg") center center;
-//   background-size: cover;
-//   @include setupFlex(center);
-//   flex-direction: column;
-//   h1 {
-//     // title
-//     margin: 0;
-//     font-size: 48px;
-//     font-weight: 700;
-//     line-height: 56px;
-//     color: #222222;
-//   }
-//   h2 {
-//     //subtitle
-//     color: #6f6f6f;
-//     margin: 10px 0 0 0;
-//     font-size: 22px;
-//   }
-// }
-
-// #banner .container {
-//   padding-top: 70px;
-//   position: relative;
-// }
-
-// @media (max-width: 992px) {
-//   #banner .container {
-//     padding-top: 58px;
-//   }
-// }
-
-// #banner .btn-about {
-//   font-family: "Raleway", sans-serif;
-//   text-transform: uppercase;
-//   font-weight: 600;
-//   font-size: 12px;
-//   letter-spacing: 1px;
-//   display: inline-block;
-//   padding: 12px 40px;
-//   border-radius: 50px;
-//   transition: 0.5s;
-//   margin-top: 30px;
-//   color: #fff;
-//   background: #34b7a7;
-// }
-
-// #banner .btn-about:hover {
-//   background: #3dc8b7;
-// }

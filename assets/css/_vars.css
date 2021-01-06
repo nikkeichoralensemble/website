@@ -8,7 +8,12 @@
   --palette--theme-dark: #235d9c;
   --palette--accent: #f65e89;
   --palette--accent-lighter: #ffcacf;
-  --palette--palette-black: #222222;
+  --palette--black: #222222;
   --palette--white: #e9e8e6;
   --palette--grey: #b3b3b3;
+
+  /* Responsive Screen Thersholds */
+  --screen--small: 200px;
+  --screen--medium: 500px;
+  --screen--large: 1000px; 
 }

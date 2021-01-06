@@ -101,7 +101,8 @@ nav li {
 # Banners
 --------------------------------------------------------------*/
 #banner {
-  background: linear-gradient(transparent 50%, #ffcacf), url("../img/group.jpg");
+  background: linear-gradient(transparent 50%, var(--palette--accent-lighter)),
+    url("../img/group.jpg");
   background-position: center center;
   background-size: cover;
   display: flex;
@@ -121,7 +122,10 @@ nav li {
 }
 #banner h1 {
   font-size: 72px;
-  background: -webkit-linear-gradient(#4787c3, #e9e8e6);
+  background: -webkit-linear-gradient(
+    var(--palette--theme),
+    var(--palette--accent)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -130,7 +134,7 @@ nav li {
   font-size: 22px;
 }
 #banner button {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font--main);
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
@@ -140,9 +144,9 @@ nav li {
   border-radius: 50px;
   transition: 0.5s;
   margin-top: 30px;
-  color: #fff;
-  background: #34b7a7;
+  color: var(--palette--white);
+  background: var(--palette--theme);
 }
 #banner button:hover {
-  background: #3dc8b7;
+  background: var(--palette--theme-darker);
 }

@@ -105,9 +105,15 @@ nav {
     // line-height: 56px;
     color: _palette(_white);
   }
+  h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(_palette(theme), _palette(_white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   h2 {
     //subtitle
-    color: _palette(_grey);
+    color: _palette(_black);
     font-size: 22px;
   }
   button {

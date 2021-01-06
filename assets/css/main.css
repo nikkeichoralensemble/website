@@ -121,7 +121,7 @@ nav {
 # Banners
 --------------------------------------------------------------*/
 #banner {
-  background: linear-gradient(transparent, #222222), url("../img/group.jpg");
+  background: linear-gradient(transparent 50%, #ffcacf), url("../img/group.jpg");
   background-position: center center;
   background-size: cover;
   display: flex;
@@ -139,8 +139,14 @@ nav {
   font-weight: 700;
   color: #e9e8e6;
 }
+#banner h1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#4787c3, #e9e8e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 #banner h2 {
-  color: #b3b3b3;
+  color: #222222;
   font-size: 22px;
 }
 #banner button {

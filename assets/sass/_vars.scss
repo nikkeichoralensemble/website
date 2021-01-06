@@ -24,4 +24,4 @@ $palette: (
   justify-content: $justify;
 }
 
-$fade-to-dark: linear-gradient(transparent, _palette(_black));
+$fade-to-dark: linear-gradient(transparent 50%, _palette(accent-lighter));

@@ -41,3 +41,13 @@ $fade-to-dark: linear-gradient(transparent 50%, _palette(accent-lighter));
 @mixin top-level() {
   z-index: 100;
 }
+
+// Duration.
+$duration: (
+  navPanel: 0.5s,
+);
+
+// Size.
+$size: (
+  navPanel: 275px,
+);

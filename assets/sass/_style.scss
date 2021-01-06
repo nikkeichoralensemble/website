@@ -12,9 +12,6 @@ header {
     line-height: 1;
     letter-spacing: 2px;
     color: _palette(_black);
-    img {
-      max-height: 40px;
-    }
   }
   // responsive elements
   .logo,
@@ -22,14 +19,17 @@ header {
     // hover animation
     &:before {
       content: "";
-      position: absolute;
+      visibility: hidden;
+
+      background-color: _palette(accent);
+      transition: all 0.3s ease-in-out 0s;
+
       width: 0;
       height: 2px;
+
+      position: absolute;
       bottom: -5px;
       left: 0;
-      background-color: _palette(accent);
-      visibility: hidden;
-      transition: all 0.3s ease-in-out 0s;
     }
     &:hover:before {
       visibility: visible;
@@ -63,32 +63,15 @@ footer {
 }
 
 #copyright {
-  @include setupFlex(space-between);
   background: #e7eae8;
   color: #8b9790;
-  // padding: 0.75em 2em 0.75em 2em;
-  border-radius: 8px;
 }
 
 #ocf {
-  @include setupFlex(space-between);
-  border-radius: 5px;
-  border: 1px solid _palette(_black);
   border-left: 10px solid #ccc;
   background-color: _palette(_grey);
-  margin: 1.5em 10px;
-  p {
-    display: inline;
-  }
-  &:before {
-    color: #ccc;
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
-  }
 }
+
 /*--------------------------------------------------------------
 # Icons and Buttons
 --------------------------------------------------------------*/
@@ -146,18 +129,7 @@ footer {
   }
 }
 
-.back-to-top {
-  position: fixed;
-  display: none;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
-}
-
 .back-to-top i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 24px;
   width: 40px;
   height: 40px;

@@ -1,10 +1,12 @@
-/// style header
-
-/// shitf main section down
+/*--------------------------------------------------------------
+# Shift Main Down
+--------------------------------------------------------------*/
 topHeight = $("header").outerHeight(true);
 $("main").css({ "margin-top": topHeight + "px" });
 
-// Add active tab
+/*--------------------------------------------------------------
+# Add Active Tab
+--------------------------------------------------------------*/
 $(document).ready(function () {
   // get current URL path and assign 'active' class
   var pathname = window.location.pathname;
@@ -15,9 +17,11 @@ $("nav a").click(function () {
   $(this).addClass("active");
 });
 
-// Back to top button
+/*--------------------------------------------------------------
+# Back to Top Button
+--------------------------------------------------------------*/
 $(window).scroll(function () {
-  if ($(this).scrollTop() > 100) {
+  if ($(this).scrollTop() > document.body.scrollHeight / 2) {
     $(".back-to-top").fadeIn("slow");
   } else {
     $(".back-to-top").fadeOut("slow");

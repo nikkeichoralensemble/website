@@ -1,21 +1,33 @@
 /*--------------------------------------------------------------
-# This sets up the layout of any visible components.
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
 # Page Setup
 --------------------------------------------------------------*/
 html,
 body {
   height: 100%;
 }
+
 body {
   display: flex;
   flex-direction: column;
 }
+
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  @include setupFlex(space-between);
+}
+
 main {
   flex: 1 0 auto;
 }
+
+div {
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
 footer {
   width: 100%;
   flex-shrink: 0;
@@ -24,34 +36,39 @@ footer {
 /*--------------------------------------------------------------
 # Top
 --------------------------------------------------------------*/
-header {
-  position: fixed;
-  top: 0px;
-  width: 100%;
+header,
+footer {
+  a {
+    margin: 5px;
+  }
+}
+
+.logo {
+  @include setupFlex(center);
+  img {
+    max-height: 40px;
+  }
+}
+nav {
   @include setupFlex(space-between);
-  .logo {
-    @include setupFlex;
-  }
-  nav {
-    // place nav at dead center of page
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    @include setupFlex(space-between);
-    list-style: none;
-    a {
-      margin: 5px;
-    }
-  }
+
+  // place nav at dead center of page
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  list-style: none;
 }
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 .back-to-top {
-  position: relative;
-  right: 0px;
-  bottom: 0px;
+  @include setupFlex;
+  position: fixed;
+  display: none;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
 }
 
 .contact {

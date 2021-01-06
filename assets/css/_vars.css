@@ -6,9 +6,11 @@
   /* Palette. */
   --palette--theme: #4787c3;
   --palette--theme-dark: #235d9c;
+  --patette--theme-light: #D0E0F0;
   --palette--accent: #f65e89;
   --palette--accent-lighter: #ffcacf;
+  --palette--off-black: #2A324B;
   --palette--palette-black: #222222;
-  --palette--white: #e9e8e6;
-  --palette--grey: #b3b3b3;
+  --palette--white: #ffffff;
+  --palette--grey: #f5f5f5;
 }

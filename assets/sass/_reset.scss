@@ -1,22 +1,28 @@
 /*--------------------------------------------------------------
 # Reset Elements
 --------------------------------------------------------------*/
-body,
-header,
-footer,
-main,
-nav {
-  padding: 0px;
-  margin: 0px;
-}
+// body,
+// header,
+// footer,
+// main,
+// nav {
+//   padding: 0px;
+//   margin: 0px;
+// }
 
-a {
-  all: unset;
-}
+// a,
+// a:hover {
+//   // color: unset;
+//   // all: unset;
+//   text-decoration: none;
+// }
+
+// * {
+//   vertical-align: center;
+//   text-align: center;
+//   font-family: $body-font;
+// }
 
 * {
   border: 1px solid red; // DEBUG USE
-  vertical-align: center;
-  text-align: center;
-  font-family: $body-font;
 }

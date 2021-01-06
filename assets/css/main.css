@@ -1,24 +1,8 @@
 /*--------------------------------------------------------------
 # Reset Elements
 --------------------------------------------------------------*/
-body,
-header,
-footer,
-main,
-nav {
-  padding: 0px;
-  margin: 0px;
-}
-
-a {
-  all: unset;
-}
-
 * {
   border: 1px solid red;
-  vertical-align: center;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
 }
 
 header {
@@ -64,44 +48,60 @@ header {
   background: #b3b3b3;
   padding: 10px 15px;
 }
+header a.logo {
+  color: #222222;
+}
+header img.logo {
+  max-height: 40px;
+}
 
 footer {
   background: #ffcacf;
   padding: 10px 15px;
 }
 
-.logo a {
-  color: #222222;
-}
-
-.contact > a {
-  -moz-transition: background-color 0.2s ease-in-out;
-  -webkit-transition: background-color 0.2s ease-in-out;
-  -ms-transition: background-color 0.2s ease-in-out;
+div.contact > a {
+  background: #c1cac5;
   transition: background-color 0.2s ease-in-out;
-  display: block;
-  position: relative;
   width: 48px;
   height: 48px;
   border-radius: 6px;
   outline: 0;
-  background: #c1cac5;
   text-align: center;
+  vertical-align: center;
 }
-.contact > a:before {
+div.contact > a:before {
   color: #f2f5f3;
   font-size: 32px;
   line-height: 48px;
 }
-.contact > a:hover {
+div.contact > a:hover {
+  position: relative;
   top: -5px;
+  text-decoration: none;
 }
-.contact > a:hover a.fa-youtube {
-  background-color: #2e5e86;
+div.contact > a.fa-youtube:hover {
+  background-color: #c4302b;
 }
-.contact > a:hover a.fa-facebook {
-  background-color: #3c5a98;
+div.contact > a.fa-facebook:hover {
+  background-color: #4267b2;
 }
-.contact > a:hover a.fa-instagram {
-  background-color: #2e5e86;
+div.contact > a.fa-instagram:hover {
+  background-color: #bc2a8d;
+  background: linear-gradient(45deg, #fccc63, #fbad50, #e95950, #cd486b, #bc2a8d, #8a3ab9, #4c68d7);
+}
+div.contact > a.fa-envelope:hover {
+  background-color: #666666;
+}
+
+nav {
+  background-color: #b3b3b3;
+}
+
+/*--------------------------------------------------------------
+# Font Awesome Icons
+--------------------------------------------------------------*/
+fas,
+fab {
+  color: white;
 }

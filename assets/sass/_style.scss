@@ -1,6 +1,12 @@
 header {
   background: _palette(_grey);
   padding: 10px 15px;
+  a.logo {
+    color: _palette(_black);
+  }
+  img.logo {
+    max-height: 40px;
+  }
 }
 
 footer {
@@ -8,46 +14,64 @@ footer {
   padding: 10px 15px;
 }
 
-.logo {
-  & a {
-    color: _palette(_black);
-  }
-}
-
-.contact > a {
-  -moz-transition: background-color 0.2s ease-in-out;
-  -webkit-transition: background-color 0.2s ease-in-out;
-  -ms-transition: background-color 0.2s ease-in-out;
+div.contact > a {
+  background: #c1cac5;
+  // -moz-transition: background-color 0.2s ease-in-out;
+  // -webkit-transition: background-color 0.2s ease-in-out;
+  // -ms-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
-  display: block;
-  position: relative;
+
   width: 48px;
   height: 48px;
   border-radius: 6px;
   outline: 0;
-  background: #c1cac5;
   text-align: center;
+  vertical-align: center;
 
   &:before {
+    /// style icons
     color: #f2f5f3;
     font-size: 32px;
     line-height: 48px;
   }
 
   &:hover {
+    position: relative;
     top: -5px;
-
-    a {
-      &.fa-youtube {
-        background-color: #2e5e86;
-      }
-      &.fa-facebook {
-        background-color: #3c5a98;
-      }
-
-      &.fa-instagram {
-        background-color: #2e5e86;
-      }
-    }
+    text-decoration: none;
   }
+
+  &.fa-youtube:hover {
+    background-color: #c4302b;
+  }
+  &.fa-facebook:hover {
+    background-color: #4267b2;
+  }
+  &.fa-instagram:hover {
+    background-color: #bc2a8d;
+    background: linear-gradient(
+      45deg,
+      #fccc63,
+      #fbad50,
+      #e95950,
+      #cd486b,
+      #bc2a8d,
+      #8a3ab9,
+      #4c68d7
+    );
+  }
+  &.fa-envelope:hover {
+    background-color: #666666;
+  }
+}
+
+nav {
+  background-color: _palette(_grey);
+}
+/*--------------------------------------------------------------
+# Font Awesome Icons
+--------------------------------------------------------------*/
+fas,
+fab {
+  color: white;
 }

@@ -1,7 +1,7 @@
-@import "vars";
+@import "_vars.css";
 
-@import "reset";
+@import "_reset.css";
 
-@import "layout";
-@import "style";
-@import "navbar";
+@import "_layout.css";
+@import "_style.css";
+@import "_navbar.css";

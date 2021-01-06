@@ -2,6 +2,9 @@
   /* Fonts */
   --font--main: "Raleway", sans-serif;
   --font--body: "Open Sans", sans-serif;
+  --font--small: 15px;
+  --font--medium: 32px;
+  --font--large: 48px;
 
   /* Palette. */
   --palette--theme: #4787c3;

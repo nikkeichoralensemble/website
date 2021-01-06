@@ -65,10 +65,12 @@ footer {
 nav {
   @include setupFlex(space-between);
   // place nav at dead center of page
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  list-style: none;
+  // position: fixed;
+  // left: 50%;
+  // transform: translate(-50%, 0%);
+  li {
+    list-style: none; 
+  }
 }
 
 /*--------------------------------------------------------------

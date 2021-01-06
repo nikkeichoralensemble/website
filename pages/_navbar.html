@@ -1,0 +1,32 @@
+<!-- Use any element to open the sidenav -->
+<header>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <a class="logo" href="{{ url_for('index') }}">
+    NiCE
+    <img src="assets/img/logo.png"></a>
+
+  <!-- Navigation tabs -->
+  <nav>
+    <a href=" {{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('auditions') }}">Auditions</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+  </nav><!-- End Navbar -->
+
+  <div class=contact>
+    <a class="fab fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
+    <a class="fab fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/"></a>
+    <a class="fab fa-facebook" href="https://www.facebook.com/wearenice"></a>
+    <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
+  </div>
+
+</header>

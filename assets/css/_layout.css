@@ -42,29 +42,44 @@ footer {
 /*--------------------------------------------------------------
 # Flexbox display
 --------------------------------------------------------------*/
-body {
-  display: flex;
-  flex-direction: column;
-}
-
+/* make flex */
+body,
 header,
 nav,
 .logo,
 .contact,
-.back-to-top {
+.back-to-top,
+#banner {
   display: flex;
-  align-items: center;
+  align-items: center; /* vertical alignment */
+}
+
+/* horizontal alignment */
+body,
+header,
+nav,
+.logo,
+.contact,
+.back-to-top,
+#banner {
+  justify-content: center;
+}
+body,
+header,
+footer {
   justify-content: space-between;
+}
+
+/* display child elements in column style */
+body,
+.sidenav,
+#banner {
+  flex-direction: column;
 }
 
 /*--------------------------------------------------------------
 # Top
 --------------------------------------------------------------*/
-header a,
-footer a {
-  margin: 5px;
-}
-
 .logo img {
   max-height: 40px;
 }
@@ -72,16 +87,18 @@ footer a {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-.back-to-top {
-  position: fixed;
-  display: none;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
+header a,
+footer a,
+.contact a {
+  margin: 5px;
 }
 
-.contact > a {
-  margin: 5px;
+.back-to-top {
+  position: fixed;
+  display: none; /* hidden until scoll */
+  right: 15px;
+  bottom: 15px;
+  z-index: var(--level--top);
 }
 
 /*--------------------------------------------------------------
@@ -92,10 +109,6 @@ footer a {
     url("../img/group.jpg");
   background-position: center center;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 #banner * {
   position: relative;

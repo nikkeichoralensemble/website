@@ -1,12 +1,6 @@
 /*--------------------------------------------------------------
 # Reset Elements
 --------------------------------------------------------------*/
-* {
-  border: 1px solid red;
-  vertical-align: center;
-  font-family: "Open Sans", sans-serif;
-}
-
 body,
 header,
 footer,
@@ -16,11 +10,33 @@ nav {
   margin: 0px;
 }
 
+a {
+  all: unset;
+}
+
+* {
+  border: 1px solid red;
+  vertical-align: center;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
 header {
   position: fixed;
   top: 0px;
   width: 100%;
   display: flex;
+  align-items: center;
+}
+header > nav {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+header > nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -29,18 +45,19 @@ footer {
   bottom: 0px;
   width: 100%;
 }
-
-nav {
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, 0%);
+footer > .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer > .contact > a {
+  margin: 5px;
 }
 
-nav > ul,
-footer > .contact {
-  all: unset;
-  list-style: none;
-  display: flex;
+.back-to-top {
+  position: relative;
+  right: 0px;
+  bottom: 0px;
 }
 
 header {
@@ -55,4 +72,36 @@ footer {
 
 .logo a {
   color: #222222;
+}
+
+.contact > a {
+  -moz-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  display: block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  outline: 0;
+  background: #c1cac5;
+  text-align: center;
+}
+.contact > a:before {
+  color: #f2f5f3;
+  font-size: 32px;
+  line-height: 48px;
+}
+.contact > a:hover {
+  top: -5px;
+}
+.contact > a:hover a.fa-youtube {
+  background-color: #2e5e86;
+}
+.contact > a:hover a.fa-facebook {
+  background-color: #3c5a98;
+}
+.contact > a:hover a.fa-instagram {
+  background-color: #2e5e86;
 }

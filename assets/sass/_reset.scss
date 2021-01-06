@@ -1,13 +1,6 @@
 /*--------------------------------------------------------------
 # Reset Elements
 --------------------------------------------------------------*/
-* {
-  // all: unset;
-  border: 1px solid red;
-  vertical-align: center;
-  // text-align: center;
-  font-family: $body-font;
-}
 body,
 header,
 footer,
@@ -15,4 +8,15 @@ main,
 nav {
   padding: 0px;
   margin: 0px;
+}
+
+a {
+  all: unset;
+}
+
+* {
+  border: 1px solid red; // DEBUG USE
+  vertical-align: center;
+  text-align: center;
+  font-family: $body-font;
 }

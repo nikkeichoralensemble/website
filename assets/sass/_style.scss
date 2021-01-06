@@ -14,83 +14,40 @@ footer {
   }
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.95);
-  background-image: $overlay-img;
-  width: 100%;
-  height: 3.25em;
-  line-height: 3.25em;
+.contact > a {
+  -moz-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  display: block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  outline: 0;
+  background: #c1cac5;
   text-align: center;
-  font-family: $navbar-font;
-  font-weight: 700;
-  text-transform: uppercase;
-  cursor: default;
 
-  ul {
-    position: relative;
-    z-index: 1001;
+  &:before {
+    color: #f2f5f3;
+    font-size: 32px;
+    line-height: 48px;
   }
 
-  li {
-    display: inline-block;
-    margin: 0 0.5em 0 0.5em;
-    top: 0;
-    position: relative;
-    -moz-transition: top 0.15s ease-in-out;
-    -webkit-transition: top 0.15s ease-in-out;
-    -o-transition: top 0.15s ease-in-out;
-    -ms-transition: top 0.15s ease-in-out;
-    transition: top 0.15s ease-in-out;
+  &:hover {
+    top: -5px;
 
-    > ul {
-      display: none;
-    }
-
-    a,
-    span {
-      @include vendor(
-        "transition",
-        ("background-color .075s ease-in-out", "color .075s ease-in-out")
-      );
-      position: relative;
-      display: block;
-      text-decoration: none;
-      color: #6b7770;
-      top: -6px;
-      padding: 6px 1.5em 0.25em 1.5em;
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px;
-      outline: 0;
-    }
-
-    &:hover,
-    &.active {
-      top: 3px;
-    }
-
-    &:hover {
-      a,
-      span {
-        background: #c1cac5;
-        color: #fff;
+    a {
+      &.fa-youtube {
+        background-color: #2e5e86;
       }
-    }
-
-    &.active {
-      a,
-      span {
-        background: #c1cac5;
-        color: #fff;
+      &.fa-facebook {
+        background-color: #3c5a98;
       }
-    }
 
-    &.current a {
-      background: $nav-tab-color;
-      color: $nav-tab-text-color;
+      &.fa-instagram {
+        background-color: #2e5e86;
+      }
     }
   }
 }

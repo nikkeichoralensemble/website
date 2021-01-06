@@ -21,7 +21,7 @@ $("nav a").click(function () {
 # Back to Top Button
 --------------------------------------------------------------*/
 $(window).scroll(function () {
-  if ($(this).scrollTop() > document.body.scrollHeight / 2) {
+  if ($(this).scrollTop() > 100) {
     $(".back-to-top").fadeIn("slow");
   } else {
     $(".back-to-top").fadeOut("slow");

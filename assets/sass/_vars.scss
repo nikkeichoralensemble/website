@@ -1,9 +1,6 @@
+// Fonts
 $main-font: "Raleway", sans-serif;
 $body-font: "Open Sans", sans-serif;
-
-@function _font($key) {
-  @return #{map-get($font, $key)};
-}
 
 // Palette.
 $palette: (

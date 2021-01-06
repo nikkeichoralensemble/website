@@ -17,4 +17,10 @@
   --screen--small: 200px;
   --screen--medium: 500px;
   --screen--large: 1000px;
+
+  /* Z-index */
+  --level--top: 100;
+  --level--mid: 50;
+  --level--ground: 0;
+  --level--underground: -100;
 }

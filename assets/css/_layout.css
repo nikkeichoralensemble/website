@@ -6,24 +6,15 @@ body {
   height: 100%;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
 header {
-  z-index: 100;
+  z-index: var(--level--top);
   position: fixed;
   top: 0px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 main {
-  z-index: 0;
-  flex: 1 0 auto;
+  z-index: var(--level--ground);
   width: 100%;
   min-height: 100%;
 }
@@ -38,14 +29,32 @@ div {
 
 section,
 article {
-  z-index: 0;
+  z-index: var(--level--ground);
   margin-bottom: 6em;
 }
 
 footer {
-  z-index: 100;
+  z-index: var(--level--top);
   width: 100%;
   flex-shrink: 0;
+}
+
+/*--------------------------------------------------------------
+# Flexbox display
+--------------------------------------------------------------*/
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+nav,
+.logo,
+.contact,
+.back-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*--------------------------------------------------------------
@@ -56,31 +65,14 @@ footer a {
   margin: 5px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .logo img {
   max-height: 40px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-nav li {
-  list-style: none;
 }
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 .back-to-top {
-  display: flex;
-  align-items: center;
-  justify-content: initial;
   position: fixed;
   display: none;
   right: 15px;
@@ -88,11 +80,6 @@ nav li {
   z-index: 99999;
 }
 
-.contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .contact > a {
   margin: 5px;
 }
@@ -118,7 +105,7 @@ nav li {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
-  color: #e9e8e6;
+  color: var(--palette--white);
 }
 #banner h1 {
   font-size: 72px;
@@ -130,7 +117,7 @@ nav li {
   -webkit-text-fill-color: transparent;
 }
 #banner h2 {
-  color: #222222;
+  color: var(--palette--black);
   font-size: 22px;
 }
 #banner button {

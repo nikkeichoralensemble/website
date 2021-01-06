@@ -1,11 +1,16 @@
+// @import "vars";
+// @import "vendor";
+
+// @import "base";
+
+// // Pages
+// @import "sections";
+
+// // Components
+// @import "clickables";
+// @import "bootstrap";
 @import "vars";
-@import "vendor";
-
-@import "base";
-
-// Pages
-@import "sections";
-
-// Components
-@import "clickables";
-@import "bootstrap";
+@import "reset";
+// @import "base";
+@import "placement";
+@import "style";

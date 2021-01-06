@@ -1,6 +1,5 @@
-function shiftMain() {
-  topHeight = $("header").outerHeight(true);
-  $("main").css({ "margin-top": topHeight + "px" });
-}
+/// style header
 
-shiftMain();
+/// shitf main section down
+var headerHeight = $("header").outerHeight();
+$("main").css({ "margin-top": topHeight + "px" });

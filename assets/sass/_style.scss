@@ -1,0 +1,15 @@
+header {
+  background: _palette(_grey);
+  padding: 10px 15px;
+}
+
+footer {
+  background: _palette(accent-lighter);
+  padding: 10px 15px;
+}
+
+.logo {
+  & a {
+    color: _palette(_black);
+  }
+}

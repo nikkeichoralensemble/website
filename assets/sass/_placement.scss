@@ -1,0 +1,60 @@
+@mixin align-all {
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+@mixin v-align {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+}
+
+@mixin h-align {
+  justify-self: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+@mixin dead-center() {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+@mixin setupFlex($elem) {
+  #{elem} {
+    display: flex;
+  }
+  // #{$child} {
+  //   flex-shrink: 0;
+  // }
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+nav {
+  @include dead-center();
+}
+
+nav > ul,
+footer > .contact {
+  all: unset;
+  list-style: none;
+  display: flex;
+}

@@ -4,6 +4,17 @@
 topHeight = $("header").outerHeight(true);
 $("main").css({ "margin-top": topHeight + "px" });
 
+// Add active tab
+$(document).ready(function () {
+  // get current URL path and assign 'active' class
+  var pathname = window.location.pathname;
+  $('nav a[href="' + pathname + '"]').addClass("active");
+});
+$("nav a").click(function () {
+  $("nav a").removeClass("active");
+  $(this).addClass("active");
+});
+
 // Back to top button
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {

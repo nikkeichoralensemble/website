@@ -370,7 +370,7 @@ h2.major span {
   margin-left: 50px;
 }
 
-#main {
+main {
   transition: margin-left 0.5s;
   padding: 16px;
 }

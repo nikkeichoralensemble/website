@@ -2,17 +2,17 @@
 <header>
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
-  <div id="mySidenav" class="sidenav">
+  <nav id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href=" {{ url_for('index') }}">Home</a>
     <a href="{{ url_for('about') }}">About</a>
     <a href="{{ url_for('auditions') }}">Auditions</a>
     <a href="{{ url_for('contact') }}">Contact</a>
-  </div>
+  </nav>
 
   <a class="logo" href="{{ url_for('index') }}">
     NiCE
-    <img src="assets/img/logo.png"></a> 
+    <img src="assets/img/logo.png"></a>
 
   <!-- Navigation tabs -->
   <nav>

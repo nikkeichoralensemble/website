@@ -1,11 +1,20 @@
+/*--------------------------------------------------------------
+# Header and Footer
+--------------------------------------------------------------*/
 header {
-  background: _palette(_grey);
+  background: _palette(_white);
+  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.1);
   padding: 10px 15px;
+
   a.logo {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 2px;
     color: _palette(_black);
-  }
-  img.logo {
-    max-height: 40px;
+    img {
+      max-height: 40px;
+    }
   }
 }
 
@@ -14,19 +23,72 @@ footer {
   padding: 10px 15px;
 }
 
-div.contact > a {
-  background: #c1cac5;
-  // -moz-transition: background-color 0.2s ease-in-out;
-  // -webkit-transition: background-color 0.2s ease-in-out;
-  // -ms-transition: background-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out;
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+nav ul {
+  > li {
+    position: relative;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  a {
+    transition: 0.3s;
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
 
-  width: 48px;
-  height: 48px;
-  border-radius: 6px;
-  outline: 0;
+    // hover animation and style
+    &:hover {
+      color: _palette(accent);
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: _palette(accent);
+      visibility: hidden;
+      transition: all 0.3s ease-in-out 0s;
+    }
+    &:hover:before {
+      visibility: visible;
+      width: 25px;
+    }
+
+    // style active tab
+    .active > a:before {
+      visibility: visible;
+      width: 25px;
+    }
+    .active > a {
+      color: #222222;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Icons
+--------------------------------------------------------------*/
+.fas,
+.fab {
+  background-color: _palette(_grey);
+  color: _palette(white);
+  font-size: 24px;
   text-align: center;
   vertical-align: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  transition: all 0.4s;
+  &:hover {
+    position: relative;
+    top: -5px;
+    background: _palette(theme);
+  }
 
   &:before {
     /// style icons
@@ -62,15 +124,4 @@ div.contact > a {
   &.fa-envelope:hover {
     background-color: #666666;
   }
-}
-
-nav {
-  background-color: _palette(_grey);
-}
-/*--------------------------------------------------------------
-# Font Awesome Icons
---------------------------------------------------------------*/
-fas,
-fab {
-  color: white;
 }

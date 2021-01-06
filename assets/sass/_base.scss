@@ -1,0 +1,43 @@
+/*--------------------------------------------------------------
+# This sets up the layout of any visible components.
+--------------------------------------------------------------*/
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  @include setupFlex(space-between);
+  > .logo {
+    @include setupFlex;
+  }
+  > nav {
+    // place nav at dead center of page
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    > ul {
+      @include setupFlex(space-between);
+      list-style: none;
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.back-to-top {
+  position: relative;
+  right: 0px;
+  bottom: 0px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > a {
+    margin: 5px;
+  }
+}

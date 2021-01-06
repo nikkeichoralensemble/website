@@ -1,22 +1,47 @@
 /*--------------------------------------------------------------
 # Reset Elements
 --------------------------------------------------------------*/
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+ul {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
 a,
 a:hover {
   color: unset;
   text-decoration: none;
+  position: relative;
+  text-align: center;
+  vertical-align: center;
 }
 
 * {
   border: 1px solid red;
 }
 
+/*--------------------------------------------------------------
+# This sets up the layout of any visible components.
+--------------------------------------------------------------*/
 header {
   position: fixed;
   top: 0px;
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+header > .logo {
+  display: flex;
+  align-items: center;
+  justify-content: initial;
 }
 header > nav {
   position: fixed;
@@ -24,24 +49,16 @@ header > nav {
   transform: translate(-50%, 0%);
 }
 header > nav > ul {
-  list-style: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  list-style: none;
 }
 
 footer {
   position: fixed;
   bottom: 0px;
   width: 100%;
-}
-footer > .contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-footer > .contact > a {
-  margin: 5px;
 }
 
 .back-to-top {
@@ -50,14 +67,31 @@ footer > .contact > a {
   bottom: 0px;
 }
 
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact > a {
+  margin: 5px;
+}
+
+/*--------------------------------------------------------------
+# Header and Footer
+--------------------------------------------------------------*/
 header {
-  background: #b3b3b3;
+  background: #e9e8e6;
+  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.1);
   padding: 10px 15px;
 }
 header a.logo {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 2px;
   color: #222222;
 }
-header img.logo {
+header a.logo img {
   max-height: 40px;
 }
 
@@ -66,47 +100,92 @@ footer {
   padding: 10px 15px;
 }
 
-div.contact > a {
-  background: #c1cac5;
-  transition: background-color 0.2s ease-in-out;
-  width: 48px;
-  height: 48px;
-  border-radius: 6px;
-  outline: 0;
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+nav ul > li {
+  position: relative;
+  white-space: nowrap;
+  padding: 10px;
+}
+nav ul a {
+  transition: 0.3s;
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+nav ul a:hover {
+  color: #f65e89;
+}
+nav ul a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #f65e89;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+nav ul a:hover:before {
+  visibility: visible;
+  width: 25px;
+}
+nav ul a .active > a:before {
+  visibility: visible;
+  width: 25px;
+}
+nav ul a .active > a {
+  color: #222222;
+}
+
+/*--------------------------------------------------------------
+# Icons
+--------------------------------------------------------------*/
+.fas,
+.fab {
+  background-color: #b3b3b3;
+  font-size: 24px;
   text-align: center;
   vertical-align: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  transition: all 0.4s;
 }
-div.contact > a:before {
+.fas:hover,
+.fab:hover {
+  position: relative;
+  top: -5px;
+  background: #4787c3;
+}
+.fas:before,
+.fab:before {
   color: #f2f5f3;
   font-size: 32px;
   line-height: 48px;
 }
-div.contact > a:hover {
+.fas:hover,
+.fab:hover {
   position: relative;
   top: -5px;
 }
-div.contact > a.fa-youtube:hover {
+.fas.fa-youtube:hover,
+.fab.fa-youtube:hover {
   background-color: #c4302b;
 }
-div.contact > a.fa-facebook:hover {
+.fas.fa-facebook:hover,
+.fab.fa-facebook:hover {
   background-color: #4267b2;
 }
-div.contact > a.fa-instagram:hover {
+.fas.fa-instagram:hover,
+.fab.fa-instagram:hover {
   background-color: #bc2a8d;
   background: linear-gradient(45deg, #fccc63, #fbad50, #e95950, #cd486b, #bc2a8d, #8a3ab9, #4c68d7);
 }
-div.contact > a.fa-envelope:hover {
+.fas.fa-envelope:hover,
+.fab.fa-envelope:hover {
   background-color: #666666;
-}
-
-nav {
-  background-color: #b3b3b3;
-}
-
-/*--------------------------------------------------------------
-# Font Awesome Icons
---------------------------------------------------------------*/
-fas,
-fab {
-  color: white;
 }

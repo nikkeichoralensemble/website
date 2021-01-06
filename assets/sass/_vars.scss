@@ -12,11 +12,17 @@ $palette: (
   "accent": #f65e89,
   "accent-lighter": #ffcacf,
   "_black": #222222,
-  "_white": #ffffff,
+  "_white": #e9e8e6,
   "_grey": #b3b3b3,
   //e9e8e6
 );
 
 @function _palette($key) {
   @return map-get($palette, $key);
+}
+
+@mixin setupFlex($justify: initial) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
 }

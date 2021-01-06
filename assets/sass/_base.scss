@@ -6,10 +6,10 @@ body {
   height: 100%;
 }
 
-// body {
-// display: flex;
-// flex-direction: column;
-// }
+body {
+  display: flex;
+  flex-direction: column;
+}
 
 header {
   position: fixed;
@@ -19,8 +19,8 @@ header {
 }
 
 main {
-  // flex: 1 0 auto;
-  // width: 100%;
+  flex: 1 0 auto;
+  width: 100%;
   min-height: 100%;
 }
 
@@ -33,7 +33,7 @@ div {
 
 footer {
   width: 100%;
-  // flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 /*--------------------------------------------------------------
@@ -54,7 +54,6 @@ footer {
 }
 nav {
   @include setupFlex(space-between);
-
   // place nav at dead center of page
   position: fixed;
   left: 50%;

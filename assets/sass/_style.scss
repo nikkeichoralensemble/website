@@ -13,6 +13,12 @@ header {
     letter-spacing: 2px;
     color: _palette(_black);
   }
+  nav a {
+    // style nav tabs
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+  }
   // responsive elements
   .logo,
   nav a {

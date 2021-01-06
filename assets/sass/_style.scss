@@ -18,6 +18,7 @@ header {
     font-size: 15px;
     font-family: "Raleway", sans-serif;
     font-weight: 600;
+    margin: 0px 20px;
   }
   // responsive elements
   .logo,
@@ -155,4 +156,21 @@ footer {
 .back-to-top i:hover {
   background: #3dc8b7;
   color: #fff;
+}
+
+/* Others */
+h2.major {
+  position: relative;
+  border-top: solid 5px #e7eae8;
+  font-size: 1.65em;
+  text-align: center;
+  margin: 0 0 3em 0;
+  top: 0.775em;
+  span {
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    top: -0.775em;
+    padding: 0 1.25em 0 1.25em;
+  }
 }

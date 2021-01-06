@@ -25,3 +25,15 @@ $palette: (
 }
 
 $fade-to-dark: linear-gradient(transparent 50%, _palette(accent-lighter));
+
+@mixin underground() {
+  z-index: -100;
+}
+
+@mixin ground-level() {
+  z-index: 0;
+}
+
+@mixin top-level() {
+  z-index: 100;
+}

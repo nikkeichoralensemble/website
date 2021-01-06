@@ -1,6 +1,12 @@
 /*--------------------------------------------------------------
 # Reset Elements
 --------------------------------------------------------------*/
+a,
+a:hover {
+  color: unset;
+  text-decoration: none;
+}
+
 * {
   border: 1px solid red;
 }
@@ -78,7 +84,6 @@ div.contact > a:before {
 div.contact > a:hover {
   position: relative;
   top: -5px;
-  text-decoration: none;
 }
 div.contact > a.fa-youtube:hover {
   background-color: #c4302b;

@@ -1,5 +1,5 @@
 /// style header
 
 /// shitf main section down
-var headerHeight = $("header").outerHeight();
+topHeight = $("header").outerHeight(true);
 $("main").css({ "margin-top": topHeight + "px" });

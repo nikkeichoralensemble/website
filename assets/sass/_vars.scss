@@ -34,6 +34,10 @@ $fade-to-dark: linear-gradient(transparent 50%, _palette(accent-lighter));
   z-index: 0;
 }
 
+@mixin mid-level() {
+  z-index: 50;
+}
+
 @mixin top-level() {
   z-index: 100;
 }

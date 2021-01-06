@@ -58,18 +58,25 @@ header {
 --------------------------------------------------------------*/
 
 footer {
+  @include setupFlex(space-between);
   background: _palette(accent-lighter);
-  padding: 10px 15px;
-}
+  font-size: small;
+  padding: 5px 30px;
 
-#copyright {
-  background: #e7eae8;
-  color: #8b9790;
-}
-
-#ocf {
-  border-left: 10px solid #ccc;
-  background-color: _palette(_grey);
+  div {
+    width: 30%;
+  }
+  #copyright {
+    text-align: right;
+    li {
+      list-style-type: none;
+    }
+  }
+  #ocf {
+    @include setupFlex;
+    //   border-left: 10px solid #ccc;
+    //   background-color: #e7eae8;
+  }
 }
 
 /*--------------------------------------------------------------

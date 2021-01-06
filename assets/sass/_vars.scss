@@ -23,3 +23,5 @@ $palette: (
   align-items: center;
   justify-content: $justify;
 }
+
+$fade-to-dark: linear-gradient(transparent, _palette(_black));

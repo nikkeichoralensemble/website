@@ -54,7 +54,7 @@ header nav a.active {
 # Banners
 --------------------------------------------------------------*/
 #banner {
-  background: linear-gradient(transparent 50%, var(--palette--accent-lighter)),
+  background: linear-gradient(transparent 50%, var(--palette--theme)),
     url("../img/group.jpg");
   background-position: center center;
   background-size: cover;
@@ -69,11 +69,12 @@ header nav a.active {
 }
 #banner h1 {
   margin: 0;
-  font-size: 48px;
+  font-family: var(--font--main);
+  font-size: 72px;
   font-weight: 700;
   color: var(--palette--white);
 }
-#banner h1 {
+/* #banner h1 {
   font-size: 72px;
   background: -webkit-linear-gradient(
     var(--palette--theme),
@@ -81,9 +82,10 @@ header nav a.active {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 #banner h2 {
-  color: var(--palette--black);
+  color: var(--palette--white);
+  font-family: var(--font--body);
   font-size: 22px;
 }
 #banner button {
@@ -98,10 +100,10 @@ header nav a.active {
   transition: 0.5s;
   margin-top: 30px;
   color: var(--palette--white);
-  background: var(--palette--theme);
+  background: var(--palette--accent);
 }
 #banner button:hover {
-  background: var(--palette--theme-darker);
+  background: var(--palette--accent-lighter);
 }
 
 /*--------------------------------------------------------------
@@ -111,7 +113,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--palette--accent-lighter);
+  background: var(--palette--theme);
   font-size: small;
   padding: 5px 30px;
 }

@@ -26,83 +26,84 @@
 
   <!-- ======= Body ======= -->
 
-  <body id="body" class="flex-col-center">
-    <!-- ======= Header ======= -->
-    <header id="header" class="flex-row-space">
-      <button onclick="openNav()">&#9776;</button>
+  <body id="body">
+    <div id="page-wrapper">
 
-      <nav id="sidenav">
-        <button class="closebtn" onclick="closeNav()">&times;</button>
-        <a href=" {{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('about') }}">About</a>
-        <a href="{{ url_for('auditions') }}">Auditions</a>
-        <a href="{{ url_for('contact') }}">Contact</a>
+      <!-- ======= Navigation ======= -->
+      <nav id="nav">
+        <div class=container>
+          <a id="logo" href="{{ url_for('index') }}">NiCE</a>
+          <!-- <img class="logo" src="{{ url_for('static', filename='img/logo.png')}}"> -->
+        </div>
+
+        <ul>
+          <li><a href=" {{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('auditions') }}">Auditions</a></li>
+        </ul>
+
+        <div class="contact container">
+          <a class="fab fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
+          <a class="fab fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/"></a>
+          <a class="fab fa-facebook" href="https://www.facebook.com/wearenice"></a>
+          <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
+        </div>
       </nav>
 
-      <div class=flex-row-even>
-        <a class="logo" href="{{ url_for('index') }}">
-          NiCE</a>
-        <img class="logo" src="{{ url_for('static', filename='img/logo.png')}}">
-      </div>
+      <!-- ======= Header ======= -->
+      <header id="header" class="flex-row-space">
+      </header>
+      <!-- End Header -->
 
-      <nav id="topnav flex-row-even">
-        <a href=" {{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('about') }}">About</a>
-        <a href="{{ url_for('auditions') }}">Auditions</a>
-      </nav>
+      <!-- ======= Main Section ======= -->
+      <main id="main">
+        {% block main %}
+        Main Content
+        {% endblock %}
+      </main>
 
-      <div class="contact flex-row-even">
-        <a class="fab fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
-        <a class="fab fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/"></a>
-        <a class="fab fa-facebook" href="https://www.facebook.com/wearenice"></a>
-        <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
-      </div>
-    </header>
-    <!-- End Header -->
-
-    <!-- ======= Main Section ======= -->
-    <main id="main" class=flex-col-even>
-      {% block main %}
-      Main Content
-      {% endblock %}
-    </main>
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class=flex-row-space>
-      <div class="flex-row-center">
-        <p>
-          <b>Disclaimer</b>: We are a student group acting independently of the University of California. We take full
-          responsibility for our organization and this web site.
-        </p>
-        <!-- <img src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin.svg" alt="Hosted by the OCF" /> -->
-        <img src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin-dark.svg" alt="Hosted by the OCF" />
-      </div>
-      <div class="contact">
-        <a class="fab fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
-        <a class="fab fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/"></a>
-        <a class="fab fa-facebook" href="https://www.facebook.com/wearenice"></a>
-        <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
-      </div>
-      <div id="copyright">
-        <li>&copy; <b>Nikkei Choral Ensemble</b>. All rights reserved</li>
-        <li>Website by April Sin, Emma Jiang, and Jessica Qian.</li>
-      </div>
-    </footer><!-- End  Footer -->
+      <!-- ======= Footer ======= -->
+      <footer id="footer">
+        <div class="flex-row-center">
+          <p>
+            <b>Disclaimer</b>: We are a student group acting independently of the University of California. We take full
+            responsibility for our organization and this web site.
+          </p>
+          <!-- <img src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin.svg" alt="Hosted by the OCF" /> -->
+          <img src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin-dark.svg" alt="Hosted by the OCF" />
+        </div>
+        <div class="contact">
+          <a class="fab fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
+          <a class="fab fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/"></a>
+          <a class="fab fa-facebook" href="https://www.facebook.com/wearenice"></a>
+          <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
+        </div>
+        <div id="copyright">
+          <li>&copy; <b>Nikkei Choral Ensemble</b>. All rights reserved</li>
+          <li>Website by April Sin, Emma Jiang, and Jessica Qian.</li>
+        </div>
+      </footer><!-- End  Footer -->
+    </div><!-- End  Page -->
 
     <a href="#" id="back-to-top "><i class="fas fa-arrow-up"></i></a>
-
 
     <!-- Vendor Scripts -->
     <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{ url_for('static', filename='vendor/jquery.easing/jquery.easing.min.js')}}"></script>
-    <!-- <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js')}}"></script> -->
     <!-- <script src="{{ url_for('static', filename='vendor/waypoints/jquery.waypoints.min.js')}}"></script> -->
     <!-- <script src="{{ url_for('static', filename='vendor/counterup/counterup.min.js')}}"></script> -->
     <!-- <script src="{{ url_for('static', filename='vendor/owl.carousel/owl.carousel.min.js')}}"></script> -->
     <!-- <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js')}}"></script> -->
     <!-- <script src="{{ url_for('static', filename='vendor/venobox/venobox.min.js')}}"></script> -->
     <script src="{{ url_for('static', filename='vendor/aos/aos.js')}}"></script>
+    <script src="../assets/js/jquery.dropotron.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+
+    <script src="../assets/js/txt-util.js"></script>
+    <script src="../assets/js/txt.js"></script>
 
     <!-- Custom Scripts -->
     <script src="{{ url_for('static', filename='js/main.js')}}"></script>

@@ -31,10 +31,10 @@
   --font--main-light-italic: "RalewayExtraLightItalic", sans-serif;
   --font--body: "GothicA1", sans-serif;
 
-  --font--xs: 15px;
-  --font--m: 32px;
-  --font--l: 48px;
-  --font--xl: 72px;
+  --font--xs: 15vw;
+  --font--m: 32vw;
+  --font--l: 48vw;
+  --font--xl: 72vw;
 
   /* Palette. */
   --palette--theme: #4787c3;
@@ -52,6 +52,7 @@
   --screen--large: 1000px;
 
   /* Z-index */
+  --level--roof: 500;
   --level--top: 100;
   --level--mid: 50;
   --level--ground: 0;

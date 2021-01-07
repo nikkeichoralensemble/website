@@ -1,26 +1,22 @@
 {% extends "_template.html" %}
-{% set active_page = "index" %}
-{% set active_page = active_page|default('index') -%}
 
 {% block main %}
-<section id="banner" data-aos="zoom-in" data-aos-delay="100">
+<banner data-aos="zoom-in" data-aos-delay="100">
+  <img src="{{url_for('static', filename='img/group.jpg')}}">
   <h1>We are NiCE!</h1>
   <h2>UC Berkeley's premier Japanese and English a cappella group</h2>
   <button href="about.html">About Us</button>
-    <!-- <a href="about.html" class="btn-about">About Us</a>
+  <!-- <a href="about.html" class="btn-about">About Us</a>
       <a href="about.html" class="btn-about">About Us</a> -->
-</section>
+</banner> 
 <section>
   <h2>Interested in joining?</h2>
   <button href="auditions.html">Spring 2021 Auditions Open</button>
 </section>
 <section>
   <h2>Recent Performances</h2>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/PUslCt-1KkA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/PUslCt-1KkA" frameborder="0"
+    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
   </iframe>
 </section>
 {% endblock %}
-
-<!-- <script>
-  $("#banner").style.backgroundImage = Flask.url_for('static', filename = "img/groug.jpg");
-</script> -->

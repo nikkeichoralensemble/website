@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# Header
+# Header and Footer
 --------------------------------------------------------------*/
 header {
   background: var(--palette--white);
@@ -50,9 +50,6 @@ nav .active:before {
   width: 25px;
 }
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
 footer {
   background: var(--palette--theme);
   font-size: small;
@@ -166,12 +163,21 @@ h2.major span {
 /*--------------------------------------------------------------
 # Banners
 --------------------------------------------------------------*/
-#banner {
+/* .banner {
   background: linear-gradient(transparent 50%, var(--palette--theme)),
     url("../img/group.jpg");
   background-position: center center;
   background-size: cover;
+} */
+.banner {
+  width: 100vw !important;
 }
+.banner img {
+  position: fixed;
+  height: auto;
+  width: 100%;
+}
+
 #banner * {
   position: relative;
   top: 30vh;

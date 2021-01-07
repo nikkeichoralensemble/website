@@ -12,7 +12,9 @@ header {
   top: 0px;
   width: 100%;
 }
-
+.sidenav {
+  z-index: var(--level--roof);
+}
 main {
   z-index: var(--level--ground);
   width: 100%;
@@ -31,7 +33,6 @@ section,
 article {
   z-index: var(--level--ground);
   margin-bottom: 6em;
-  
 }
 
 footer {
@@ -50,7 +51,7 @@ nav,
 .logo,
 .contact,
 .back-to-top,
-#banner {
+banner {
   display: flex;
   align-items: center; /* vertical alignment */
 }
@@ -62,7 +63,7 @@ nav,
 .logo,
 .contact,
 .back-to-top,
-#banner {
+banner {
   justify-content: center;
 }
 body,
@@ -74,15 +75,8 @@ footer {
 /* display child elements in column style */
 body,
 .sidenav,
-#banner {
+banner {
   flex-direction: column;
-}
-
-/*--------------------------------------------------------------
-# Top
---------------------------------------------------------------*/
-.logo img {
-  max-height: 40px;
 }
 
 /*--------------------------------------------------------------
@@ -92,6 +86,15 @@ header a,
 footer a,
 .contact a {
   margin: 5px;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.logo img {
+  max-height: 40px;
 }
 
 .back-to-top {

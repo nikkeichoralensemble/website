@@ -5,6 +5,8 @@
 @import "libs/breakpoints";
 @import "libs/html-grid";
 
+@import "_vars.css";
+
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700");
 
@@ -1198,20 +1200,29 @@ body {
 
 #banner {
   position: relative;
-  background-image: $overlay-img, $overlay-img, $banner-img;
-  background-position: top left, top left, center center;
-  background-repeat: repeat, repeat, no-repeat;
-  background-size: auto, auto, cover;
+  // background-image: none, none, $banner-img;
+  // background-position: top left, top left, center center;
+  // background-repeat: repeat, repeat, no-repeat;
+  // background-size: auto, auto, cover;
+
+  background-image: linear-gradient($banner-img;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   z-index: 1;
   padding: 11em 0;
 
   .content {
     position: relative;
-    background-color: rgba(21, 28, 23, 0.85);
-    background-image: $overlay-img, $highlight-img;
-    background-position: top left, center center;
-    background-size: auto, 100% 250%;
-    background-repeat: repeat, no-repeat;
+    // background-color: rgba(21, 28, 23, 0.85);
+    // background-image: $overlay-img, $highlight-img;
+    // background-position: top left, center center;
+    // background-size: auto, 100% 250%;
+    // background-repeat: repeat, no-repeat;
+
+    background-color: transparent;
+
     text-align: center;
     margin: 0;
     padding: 4em 0 3.5em 0;
@@ -1512,7 +1523,7 @@ body {
     top: 0;
     width: 100%;
     z-index: _misc(z-index-base) + 1;
-    background-color: rgba(21, 38, 23, 0.8);
+    // background-color: rgba(21, 38, 23, 0.8);
     background-image: $overlay-img;
 
     .title {
@@ -1573,7 +1584,7 @@ body {
     top: 0;
     width: _size(navPanel);
     z-index: _misc(z-index-base) + 2;
-    background-color: #353c37;
+    // background-color: #353c37;
     @include vendor(
       "background-image",
       (

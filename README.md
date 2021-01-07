@@ -1,3 +1,9 @@
+# Setup
+
+1. `npm install postcss-media-variables --save-dev`
+2. `pip install virtualenv`
+3. install SASS (https://sass-lang.com/install)
+
 # How to Run
 
 1. create an environment: run `virtualenv venv`

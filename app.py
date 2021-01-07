@@ -35,5 +35,9 @@ def contact():
 def tmp():
     return render_template("_template.html")
 
+@app.route("/test")
+def test():
+    return render_template("_test.html")
+
 if __name__ == "__main__":
     app.run(debug=True)  # TODO set false when deploy

@@ -6,16 +6,42 @@
 -->
 <html>
   <!-- Head -->
-  {% include "setup/head.html" %}
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" href="../../assets/css/main.css" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <title>Nikkei Choral Ensemble</title>
+  </head>
 
   <body class="homepage is-preload">
     <div id="page-wrapper">
 
-      <!-- Header -->
-      {% include "setup/header.html" %}
+      <!-- ======= Header ======= -->
+      <header id="header" style="display: none;">
+        <div class="logo container">
+          <a id="logo" href="{{ url_for('index') }}">NiCE</a>
+          <!-- <img class="logo" src="{{ url_for('static', filename='img/logo.png')}}"> -->
+        </div>
 
-      <!-- Nav -->
-      {% include "setup/navbar.html" %}
+        <div class="contact container">
+          <a class="fab fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
+          <a class="fab fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/"></a>
+          <a class="fab fa-facebook" href="https://www.facebook.com/wearenice"></a>
+          <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
+        </div>
+
+      </header>
+
+      <!-- ======= Navbar ======= -->
+      <nav id="nav">
+        <ul>
+          <li><a href=" {{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('auditions') }}">Auditions</a></li>
+        </ul>
+      </nav>
 
       <!-- Main -->
       <section id="main">
@@ -23,9 +49,73 @@
       </section>
 
       <!-- Footer -->
-      {% include "setup/footer.html" %}
+      <footer id="footer">
+        <div class="container">
+          <div class="row gtr-200">
+            <div class="col-12">
 
-      <a href="#" class="back-to-top fas fa-alt-arrow-up"></a>
+              <!-- About -->
+              <section>
+                <h2 class="major"><span>What's this about?</span></h2>
+                <p>
+                  This is <strong>TXT</strong>, yet another free responsive site template designed by
+                  <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net">HTML5 UP</a>. It's released
+                  under the
+                  <a href="http://html5up.net/license/">Creative Commons Attribution</a> license so feel free to use it
+                  for
+                  whatever you're working on (personal or commercial), just be sure to give us credit for the design.
+                  That's basically it :)
+                </p>
+              </section>
+
+            </div>
+            <div class="col-12">
+
+              <!-- Contact -->
+              <section>
+                <h2 class="major"><span>Get in touch</span></h2>
+                <ul class="contact">
+                  <li><a class="fas icon brands fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"><span
+                        class="label">Youtube</span></a></li>
+                  <li><a class="fas icon brands fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/">
+                      <span class="label">Instagram</span></a></li>
+                  <li><a class="fas icon brands fa-facebook" href="https://www.facebook.com/wearenice"><span
+                        class="label">Facebook</span></a></li>
+                  <li><a class="fas icon fa-envelope" href="nikkeichoralensemble@gmail.com"><span
+                        class="label">Envelope</span></a></li>
+                </ul>
+              </section>
+
+            </div>
+          </div>
+
+
+          <!-- Copyright -->
+          <div id="copyright">
+            <!-- OCF -->
+            <div>
+              Disclaimer: We are a student group acting independently of the University of California. We take full
+              responsibility for our
+              organization and this web site.
+              <img src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin.svg" alt="Hosted by the OCF"
+                style="border: 0;" />
+              </a>
+              <img src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin-dark.svg" alt="Hosted by the OCF"
+                style="border: 0;" />
+              </a>
+            </div>
+            <ul class="menu">
+              <li>&copy; 2021 Nikkei Choral Ensemble. All rights reserved</li>
+              <li>Website by Emma Jiang, April Sin, and Jessica Qian.</li>
+              <li>Template from <a href="http://html5up.net">HTML5 UP</a>.</li>
+            </ul>
+          </div>
+
+        </div>
+      </footer>
+
+      <!-- Back to Top -->
+      <a href="#" class="back-to-top"><i class="fas fa-alt-arrow-up"></i></a>
     </div>
 
     <!-- Scripts -->

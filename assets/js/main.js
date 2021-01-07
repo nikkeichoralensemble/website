@@ -1,14 +1,8 @@
 /*--------------------------------------------------------------
-# Custom Tags
---------------------------------------------------------------*/
-
-// document.registerElement("banner");
-
-/*--------------------------------------------------------------
 # Shift Main Down
 --------------------------------------------------------------*/
 $(document).ready(function () {
-  topHeight = document.getElementById("header").outerHeight(true);
+  topHeight = document.getElementById("nav").outerHeight(true);
   alert(topHeight);
   document.getElementById("main").css({ "margin-top": topHeight + "px" });
 });

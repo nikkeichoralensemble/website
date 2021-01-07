@@ -29,18 +29,21 @@
   <body id="body">
     <div id="page-wrapper">
 
-      <!-- ======= Navigation ======= -->
-      <nav id="nav">
+      <!-- ======= Header ======= -->
+      <header id="header" class="flex-row-space">
         <div class=container>
           <a id="logo" href="{{ url_for('index') }}">NiCE</a>
           <!-- <img class="logo" src="{{ url_for('static', filename='img/logo.png')}}"> -->
         </div>
 
-        <ul>
-          <li><a href=" {{ url_for('index') }}">Home</a></li>
-          <li><a href="{{ url_for('about') }}">About</a></li>
-          <li><a href="{{ url_for('auditions') }}">Auditions</a></li>
-        </ul>
+        <!-- ======= Navigation ======= -->
+        <nav id="nav">
+          <ul>
+            <li><a href=" {{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('auditions') }}">Auditions</a></li>
+          </ul>
+        </nav>
 
         <div class="contact container">
           <a class="fab fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
@@ -48,10 +51,6 @@
           <a class="fab fa-facebook" href="https://www.facebook.com/wearenice"></a>
           <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
         </div>
-      </nav>
-
-      <!-- ======= Header ======= -->
-      <header id="header" class="flex-row-space">
       </header>
       <!-- End Header -->
 
@@ -85,22 +84,18 @@
       </footer><!-- End  Footer -->
     </div><!-- End  Page -->
 
-    <a href="#" id="back-to-top "><i class="fas fa-arrow-up"></i></a>
+    <a href="#" id="back-to-top fas fa-arrow-up"></a>
 
     <!-- Vendor Scripts -->
-    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='vendor/jquery.easing/jquery.easing.min.js')}}"></script>
-    <!-- <script src="{{ url_for('static', filename='vendor/waypoints/jquery.waypoints.min.js')}}"></script> -->
-    <!-- <script src="{{ url_for('static', filename='vendor/counterup/counterup.min.js')}}"></script> -->
-    <!-- <script src="{{ url_for('static', filename='vendor/owl.carousel/owl.carousel.min.js')}}"></script> -->
-    <!-- <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js')}}"></script> -->
-    <!-- <script src="{{ url_for('static', filename='vendor/venobox/venobox.min.js')}}"></script> -->
-    <script src="{{ url_for('static', filename='vendor/aos/aos.js')}}"></script>
+
+    <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/jquery.dropotron.min.js"></script>
     <script src="../assets/js/jquery.scrolly.min.js"></script>
     <script src="../assets/js/browser.min.js"></script>
     <script src="../assets/js/breakpoints.min.js"></script>
+
+    <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
 
     <script src="../assets/js/txt-util.js"></script>
     <script src="../assets/js/txt.js"></script>

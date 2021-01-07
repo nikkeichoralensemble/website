@@ -190,22 +190,23 @@ h2.major span {
   background-color: #666666;
 }
 
-/*--------------------------------------------------------------
-# Buttons
---------------------------------------------------------------*/
-#back-to-top {
+.fas.fa-arrow-up {
   font-size: 24px;
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  background: var(--palette--theme);
-  color: #fff;
+  /* background: var(--palette--theme); */
+  /* color: #fff;
   transition: all 0.4s;
 }
-#back-to-top:hover {
+.fas.fa-arrow-up:hover {
   background: var(--palette--theme);
-  color: #fff;
+  /* color: #fff; */
 }
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Banners

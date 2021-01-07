@@ -1564,7 +1564,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background: url("images/overlay.png");
+      background: url("../img/overlay.png");
       border-radius: 8px;
     }
 
@@ -2164,7 +2164,7 @@
     /* left: 0; */
     z-index: 1000;
     /* background-color: rgba(255, 255, 255, 0.95); */
-    /* background-image: url("images/overlay.png"); */
+    /* background-image: url("../img/overlay.png"); */
     /* width: 100%; */
     height: 3.25em;
     line-height: 3.25em;
@@ -2293,10 +2293,12 @@
 
   #banner {
     position: relative;
-    background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/banner.jpg");
+    /* background-image: url("../img/overlay.png"), url("../img/overlay.png"), url("../../../img/banner.jpg");
     background-position: top left, top left, center center;
     background-repeat: repeat, repeat, no-repeat;
-    background-size: auto, auto, cover;
+    background-size: auto, auto, cover; */
+    background: linear-gradient(transparent 60%, var(--palette-theme)), url("../img/group.jpg");
+    background-size: cover;
     z-index: 1;
     padding: 11em 0;
   }
@@ -2304,7 +2306,7 @@
     #banner .content {
       position: relative;
       background-color: rgba(21, 28, 23, 0.85);
-      background-image: url("images/overlay.png"), url("images/highlight.png");
+      background-image: url("../img/overlay.png"), url("../img/highlight.png");
       background-position: top left, center center;
       background-size: auto, 100% 250%;
       background-repeat: repeat, no-repeat;
@@ -2593,7 +2595,7 @@
         width: 100%;
         z-index: 10001;
         background-color: rgba(21, 38, 23, 0.8);
-        background-image: url("images/overlay.png");
+        background-image: url("../img/overlay.png");
       }
 
         #titleBar .title {
@@ -2674,10 +2676,10 @@
         width: 275px;
         z-index: 10002;
         background-color: #353c37;
-        background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-        background-image: url("images/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-        background-image: url("images/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-        background-image: url("images/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+        background-image: url("../img/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+        background-image: url("../img/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+        background-image: url("../img/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+        background-image: url("../img/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
         background-repeat: repeat, no-repeat;
         background-size: auto, 100% 100%;
         font-family: 'Open Sans Condensed', sans-serif;

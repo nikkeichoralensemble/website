@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------
 # General
---------------------------------------------------------------*/
+--------------------------------------------------------------
 * {
   overflow: hidden;
 }
@@ -8,7 +8,6 @@
 section,
 article {
   z-index: var(--level--ground);
-  /* margin-bottom: 6em; */
   margin-left: var(--gutter);
   margin-right: var(--gutter);
 }
@@ -72,7 +71,7 @@ img {
 
 /*--------------------------------------------------------------
 # Header and Footer
---------------------------------------------------------------*/
+--------------------------------------------------------------
 header {
   position: fixed;
   top: 0px;
@@ -109,7 +108,7 @@ footer {
 /*--------------------------------------------------------------
 # Specific Components
 --------------------------------------------------------------*/
-header a,
+/* header a,
 footer a,
 .contact a {
   margin: 5px;
@@ -120,15 +119,13 @@ footer a,
 }
 .logo img {
   max-height: 40px;
-}
+} */
 
 #back-to-top {
   position: fixed;
   right: 15px;
   bottom: 15px;
-  z-index: var(--level--top);
-
-  display: none; /* hidden until scoll */
+  z-index: var(--level--roof);
 }
 
 /*--------------------------------------------------------------

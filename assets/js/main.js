@@ -8,8 +8,9 @@
 # Shift Main Down
 --------------------------------------------------------------*/
 $(document).ready(function () {
-  topHeight = $("header").outerHeight(true);
-  $("main").css({ "margin-top": topHeight + "px" });
+  topHeight = document.getElementById("header").outerHeight(true);
+  alert(topHeight);
+  document.getElementById("main").css({ "margin-top": topHeight + "px" });
 });
 
 /*--------------------------------------------------------------
@@ -30,13 +31,13 @@ $("nav a").click(function () {
 --------------------------------------------------------------*/
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
-    $("#back-to-top").fadeIn("slow");
+    document.getElementById("back-to-top").fadeIn("slow");
   } else {
-    $("#back-to-top").fadeOut("slow");
+    document.getElementById("back-to-top").fadeOut("slow");
   }
 });
 
-$("#back-to-top").click(function () {
+document.getElementById("back-to-top").click(function () {
   $("html, body").animate(
     {
       scrollTop: 0,
@@ -53,35 +54,35 @@ $("#back-to-top").click(function () {
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
-  $("#sidenav").style.width = "100px";
+  document.getElementById("sidenav").style.width = "100px";
 }
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
-  $("#sidenav").style.width = "0";
+  document.getElementById("sidenav").style.width = "0";
 }
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 function openNav() {
-  $("#sidenav").style.width = "250px";
+  document.getElementById("sidenav").style.width = "250px";
 
-  $("#header").style.marginLeft = "250px";
-  $("#main").style.marginLeft = "250px";
-  $("#footer").style.marginLeft = "250px";
+  document.getElementById("header").style.marginLeft = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("footer").style.marginLeft = "250px";
 
-  $("#header").style.backgroundColor = "rgba(0,0,0,0.4)";
-  $("#main").style.backgroundColor = "rgba(0,0,0,0.4)";
-  $("#footer").style.backgroundColor = "rgba(0,0,0,0.4)";
+  document.getElementById("header").style.backgroundColor = "rgba(0,0,0,0.4)";
+  document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.4)";
+  document.getElementById("footer").style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 function closeNav() {
-  $("#sidenav").style.width = "0px";
+  document.getElementById("sidenav").style.width = "0px";
 
-  $("#header").style.marginLeft = "0px";
-  $("#main").style.marginLeft = "0px";
-  $("#footer").style.marginLeft = "0px";
+  document.getElementById("header").style.marginLeft = "0px";
+  document.getElementById("main").style.marginLeft = "0px";
+  document.getElementById("footer").style.marginLeft = "0px";
 
-  $("#header").style.backgroundColor = "white";
-  $("#main").style.backgroundColor = "white)";
-  $("#footer").style.backgroundColor = "white";
+  document.getElementById("header").style.backgroundColor = "white";
+  document.getElementById("main").style.backgroundColor = "white)";
+  document.getElementById("footer").style.backgroundColor = "white";
 }

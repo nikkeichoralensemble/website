@@ -3,48 +3,38 @@ from pathlib import Path
 from flask import Flask
 from flask.templating import render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="assets", template_folder="pages")
 
 
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("pages/index.html")
+    return render_template("index.html")
 
 
 @app.route("/about")
 def about():
-    return render_template("pages/about.html")
+    return render_template("about.html")
 
 
 @app.route("/auditions")
 def auditions():
-    return render_template("pages/auditions.html")
+    return render_template("auditions.html")
 
 
-@app.route("/more")
-def more():
-    return render_template("pages/more.html")
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 
-@app.route("/txt/home")
-def test0():
-    return render_template("txt/txt_home.html")
+@app.route("/tmp")
+def tmp():
+    return render_template("_template.html")
 
 
-@app.route("/txt/no-sidebar")
-def test1():
-    return render_template("txt/txt_no-sidebar.html")
-
-
-@app.route("/txt/left-sidebar")
-def test2():
-    return render_template("txt/txt_left-sidebar.html")
-
-
-@app.route("/txt/right-sidebar")
-def test3():
-    return render_template("txt/txt_right-sidebar.html")
+@app.route("/test")
+def test():
+    return render_template("_test.html")
 
 
 if __name__ == "__main__":

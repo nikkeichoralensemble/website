@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- ======= Head ======= -->
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Nikkei Choral Ensemble</title>
+
+    <!-- Icons -->
+    <link href="{{ url_for('static', filename='img/logo.png')}}" rel="icon">
+    <script src="https://kit.fontawesome.com/7664d863fa.js" crossorigin="anonymous"></script>
+    {# TODO make a kit with NiCE's email #}
+
+    <!-- Vendor CSS -->
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='scss/main.css')}}"> -->
+
+  </head>
+
+  <!-- ======= Body ======= -->
+
+  <body id="body">
+    <div id="page-wrapper">
+
+      <!-- ======= Header ======= -->
+      <header id="header">
+        <div class="container">
+          <a id="logo" href="{{ url_for('index') }}">NiCE</a>
+          <!-- <img class="logo" src="{{ url_for('static', filename='img/logo.png')}}"> -->
+        </div>
+
+        <!-- ======= Navigation ======= -->
+        <nav id="nav">
+          <ul>
+            <li><a href=" {{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('auditions') }}">Auditions</a></li>
+          </ul>
+        </nav>
+
+        <div class="contact container">
+          <a class="fab fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
+          <a class="fab fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/"></a>
+          <a class="fab fa-facebook" href="https://www.facebook.com/wearenice"></a>
+          <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- ======= Main Section ======= -->
+      <main id="main">
+        {% block main %}
+        Main Content
+        {% endblock %}
+      </main>
+
+      <!-- ======= Footer ======= -->
+      <footer id="footer">
+        <div class="flex-row-center">
+          <p>
+            <b>Disclaimer</b>: We are a student group acting independently of the University of California. We take full
+            responsibility for our organization and this web site.
+          </p>
+          <!-- <img src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin.svg" alt="Hosted by the OCF" /> -->
+          <img src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin-dark.svg" alt="Hosted by the OCF" />
+        </div>
+        <div class="contact">
+          <a class="fab fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
+          <a class="fab fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/"></a>
+          <a class="fab fa-facebook" href="https://www.facebook.com/wearenice"></a>
+          <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
+        </div>
+        <div id="copyright">
+          <li>&copy; <b>Nikkei Choral Ensemble</b>. All rights reserved</li>
+          <li>Website by April Sin, Emma Jiang, and Jessica Qian.</li>
+        </div>
+      </footer><!-- End  Footer -->
+    </div><!-- End  Page -->
+
+    <a href="#" id="back-to-top fas fa-arrow-up"></a>
+
+    <!-- Vendor Scripts -->
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.dropotron.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+
+    <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+
+    <!-- <script src="../assets/js/txt-util.js"></script> -->
+    <!-- <script src="../assets/js/txt.js"></script> -->
+
+    <!-- Custom Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+
+  </body>
+
+</html>

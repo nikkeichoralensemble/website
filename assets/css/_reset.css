@@ -12,6 +12,11 @@
   letter-spacing: 0;
 }
 
+header a,
+header a:hover {
+  all: unset;
+}
+
 /* ul {
   margin-block-start: 0em;
   margin-block-end: 0em;

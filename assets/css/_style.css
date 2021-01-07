@@ -13,17 +13,10 @@ header {
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.1);
 }
 
-header a:hover:before {
-  visibility: visible;
-  width: 25px;
-}
-
-header a:hover {
-  color: var(--palette--accent);
-}
-
 /* Navigations */
-
+#sidenav {
+  background-color: var(--patette--theme);
+}
 #topnav a,
 #sidenav a {
   color: var(--palette--grey);
@@ -187,14 +180,14 @@ h2.major span {
 /*--------------------------------------------------------------
 # Banners
 --------------------------------------------------------------*/
-banner h1 {
+.banner h1 {
   font-family: var(--font--main);
   font-size: var(--font--l);
   font-weight: heavy;
   color: var(--palette--white);
 }
 
-banner h1 {
+.banner h1 {
   font-size: 72px;
   /* TODO add fallback */
   background: -webkit-linear-gradient(
@@ -204,12 +197,12 @@ banner h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-banner h2 {
+.banner h2 {
   color: var(--palette--white);
   font-family: var(--font--body);
   font-size: 22px;
 }
-banner button {
+.banner button {
   font-family: var(--font--main);
   text-transform: uppercase;
   font-weight: 600;
@@ -223,6 +216,6 @@ banner button {
   color: var(--palette--white);
   background: var(--palette--accent);
 }
-banner button:hover {
+.banner button:hover {
   background: var(--palette--accent-lighter);
 }

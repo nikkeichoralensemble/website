@@ -1,0 +1,141 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------
+* {
+  overflow: hidden;
+}
+
+section,
+article {
+  z-index: var(--level--ground);
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+}
+
+header,
+footer {
+  max-height: 20vh;
+}
+
+main {
+  z-index: var(--level--ground);
+
+  min-height: 100%;
+  width: 100%;
+}
+
+img {
+
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Flexboxes
+--------------------------------------------------------------*/
+[class^="flex-"] {
+  /* base flex properties */
+  display: flex;
+  align-items: center;
+}
+
+.flex-row-center {
+  justify-content: center;
+  flex-direction: row;
+}
+
+.flex-row-spaced {
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.flex-row-even {
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.flex-col-center {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-col-space {
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.flex-col-even {
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+/*--------------------------------------------------------------
+# Header and Footer
+--------------------------------------------------------------
+header {
+  position: fixed;
+  top: 0px;
+
+  z-index: var(--level--top);
+
+  width: 100%;
+}
+
+#sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--level--roof);
+
+  height: 100vh;
+
+  display: none;
+}
+
+#topnav a,
+#sidenav a {
+  padding: 8px 8px 8px 32px;
+}
+
+footer {
+  z-index: var(--level--top);
+
+  width: 100%;
+
+  flex-shrink: 0;
+}
+
+/*--------------------------------------------------------------
+# Specific Components
+--------------------------------------------------------------*/
+/* header a,
+footer a,
+.contact a {
+  margin: 5px;
+}
+
+.logo {
+  max-height: 100%;
+}
+.logo img {
+  max-height: 40px;
+} */
+
+#back-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: var(--level--roof);
+}
+
+/*--------------------------------------------------------------
+# Banners
+--------------------------------------------------------------*/
+.banner {
+  /* height: 100vh; */
+  width: 100%;
+}
+.banner img {
+  height: auto;
+  width: 100%;
+}

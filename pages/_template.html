@@ -21,21 +21,23 @@
 
   </head>
 
-  <body>
+  <body class=flex-col-center>
     <!-- ======= Header ======= -->
-    {% include "_navbar.html" %}
+    <header class=flex-row-space>
+      {% include "_navbar.html" %}
+    </header>
     <!-- End Header -->
 
     <!-- ======= Main Section ======= -->
-    <main>
+    <main class=flex-col-even>
       {% block main %}
       Main Content
       {% endblock %}
     </main>
 
     <!-- ======= Footer ======= -->
-    <footer>
-      <div id="ocf">
+    <footer class=flex-row-space>
+      <div class=flex-row-center>
         <p>
           <b>Disclaimer</b>: We are a student group acting independently of the University of California. We take full
           responsibility for our organization and this web site.
@@ -56,7 +58,7 @@
     </footer><!-- End  Footer -->
 
 
-    <a href="#" class="back-to-top "><i class="fas fa-arrow-up"></i></a>
+    <a href="#" id="back-to-top "><i class="fas fa-arrow-up"></i></a>
 
     <!-- Vendor Scripts -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>

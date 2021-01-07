@@ -78,7 +78,7 @@ nav {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-.back-to-top {
+#back-to-top {
   @include setupFlex;
   position: fixed;
   display: none;

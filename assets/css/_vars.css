@@ -24,6 +24,9 @@
 }
 
 :root {
+  /* Layout */
+  --gutter: 10vw;
+
   /* Fonts */
   --font--main: "RalewayMedium", sans-serif;
   --font--main-italic: "RalewayMediumItalic", sans-serif;

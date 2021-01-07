@@ -7,8 +7,11 @@ document.registerElement("banner");
 /*--------------------------------------------------------------
 # Shift Main Down
 --------------------------------------------------------------*/
-topHeight = $("header").outerHeight(true);
-$("main").css({ "margin-top": topHeight + "px" });
+$(document).ready(function () {
+  topHeight = $("header").outerHeight(true);
+  alert(topHeight);
+  $("main").css({ "margin-top": topHeight + "px" });
+});
 
 /*--------------------------------------------------------------
 # Add Active Tab
@@ -28,13 +31,13 @@ $("nav a").click(function () {
 --------------------------------------------------------------*/
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
-    $(".back-to-top").fadeIn("slow");
+    $("#back-to-top").fadeIn("slow");
   } else {
-    $(".back-to-top").fadeOut("slow");
+    $("#back-to-top").fadeOut("slow");
   }
 });
 
-$(".back-to-top").click(function () {
+$("#back-to-top").click(function () {
   $("html, body").animate(
     {
       scrollTop: 0,

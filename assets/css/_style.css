@@ -1,35 +1,16 @@
 /*--------------------------------------------------------------
-# Header and Footer
+# General
+--------------------------------------------------------------*/
+body {
+  background: var(--palette--accent-lighter);
+}
+
+/*--------------------------------------------------------------
+# Header
 --------------------------------------------------------------*/
 header {
   background: var(--palette--white);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.1);
-}
-header .logo {
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 2px;
-  color: var(--palette--black);
-}
-header a {
-  font-size: 15px;
-  font-family: var(--font--main);
-  font-weight: 600;
-  margin: 0px 20px;
-}
-
-header a:before {
-  /* hover animation */
-  content: "";
-  visibility: hidden;
-  background-color: var(--palette--accent);
-  transition: all 0.3s ease-in-out 0s;
-  width: 0;
-  height: 2px;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
 }
 
 header a:hover:before {
@@ -41,14 +22,58 @@ header a:hover {
   color: var(--palette--accent);
 }
 
+/* Navigations */
+
+#topnav a,
+#sidenav a {
+  color: var(--palette--grey);
+
+  font-family: var(--font--main);
+  font-size: 25px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+#sidenav a:hover {
+  color: var(--palette--white);
+  text-decoration: none;
+}
+
+#sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* hover animation */
+#topnav a:before {
+  content: "";
+  visibility: hidden;
+  background-color: var(--palette--accent);
+  transition: all 0.3s ease-in-out 0s;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
 /* Active Tab */
-nav .active {
+#topnav .active {
   color: var(--palette--accent);
 }
-nav .active:before {
+#topnav .active:before {
   visibility: visible;
   width: 25px;
 }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
 
 footer {
   background: var(--palette--theme);
@@ -83,7 +108,6 @@ h2.major span {
   top: -0.775em;
   padding: 0 1.25em 0 1.25em;
 }
-
 
 /*--------------------------------------------------------------
 # Icons
@@ -146,7 +170,7 @@ h2.major span {
 /*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
-.back-to-top {
+#back-to-top {
   font-size: 24px;
   width: 40px;
   height: 40px;
@@ -155,7 +179,7 @@ h2.major span {
   color: #fff;
   transition: all 0.4s;
 }
-.back-to-top:hover {
+#back-to-top:hover {
   background: var(--palette--theme);
   color: #fff;
 }
@@ -163,33 +187,14 @@ h2.major span {
 /*--------------------------------------------------------------
 # Banners
 --------------------------------------------------------------*/
-/* .banner {
-  background: linear-gradient(transparent 50%, var(--palette--theme)),
-    url("../img/group.jpg");
-  background-position: center center;
-  background-size: cover;
-} */
-.banner {
-  width: 100vw !important;
-}
-.banner img {
-  position: fixed;
-  height: auto;
-  width: 100%;
-}
-
-#banner * {
-  position: relative;
-  top: 30vh;
-}
-#banner h1 {
-  margin: 0;
+banner h1 {
   font-family: var(--font--main);
-  font-size: 72px;
-  font-weight: 700;
+  font-size: var(--font--l);
+  font-weight: heavy;
   color: var(--palette--white);
 }
-/* #banner h1 {
+
+banner h1 {
   font-size: 72px;
   /* TODO add fallback */
   background: -webkit-linear-gradient(
@@ -198,13 +203,13 @@ h2.major span {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-} */
-#banner h2 {
+}
+banner h2 {
   color: var(--palette--white);
   font-family: var(--font--body);
   font-size: 22px;
 }
-#banner button {
+banner button {
   font-family: var(--font--main);
   text-transform: uppercase;
   font-weight: 600;
@@ -218,6 +223,6 @@ h2.major span {
   color: var(--palette--white);
   background: var(--palette--accent);
 }
-#banner button:hover {
+banner button:hover {
   background: var(--palette--accent-lighter);
 }

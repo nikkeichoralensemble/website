@@ -2,12 +2,15 @@
 # Reset Elements
 --------------------------------------------------------------*/
 * {
+  position: static;
+
   padding: 0px;
   margin: 0px;
-  position: relative;
+  box-sizing: border-box;
+
   line-height: 1;
   letter-spacing: 0;
-} 
+}
 
 /* ul {
   margin-block-start: 0em;
@@ -17,14 +20,14 @@
   padding-inline-start: 0px;
 } */
 
-a,
+/* a,
 a:hover {
   color: unset;
   text-decoration: none;
   position: relative;
   text-align: center;
   vertical-align: center;
-}
+} */
 
 * {
   border: 1px solid red;

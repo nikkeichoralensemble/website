@@ -22,11 +22,6 @@ def auditions():
     return render_template("auditions.html")
 
 
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
-
-
 @app.route("/tmp")
 def tmp():
     return render_template("_template.html")

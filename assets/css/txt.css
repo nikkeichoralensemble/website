@@ -958,68 +958,6 @@ input, select, textarea {
 				border-right: solid 1em transparent;
 			}
 
-/* Banner */
-
-	#banner {
-		position: relative;
-		background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/banner.jpg");
-		background-position: top left, top left, center center;
-		background-repeat: repeat, repeat, no-repeat;
-		background-size: auto, auto, cover;
-		z-index: 1;
-		padding: 11em 0;
-	}
-
-		#banner .content {
-			position: relative;
-			background-color: rgba(21, 28, 23, 0.85);
-			background-image: url("images/overlay.png"), url("images/highlight.png");
-			background-position: top left, center center;
-			background-size: auto, 100% 250%;
-			background-repeat: repeat, no-repeat;
-			text-align: center;
-			margin: 0;
-			padding: 4em 0 3.5em 0;
-		}
-
-			#banner .content h2 {
-				color: #fff;
-				font-size: 2.75em;
-				margin: 0 0 0.5em 0;
-			}
-
-			#banner .content p {
-				display: block;
-				font-family: 'Open Sans Condensed', sans-serif;
-				font-weight: 700;
-				text-transform: uppercase;
-				color: #575d59;
-				font-size: 1.35em;
-				margin: 0 0 1.25em 0;
-			}
-
-			#banner .content .button {
-				-moz-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				-webkit-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				-ms-transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				color: #b4b7b5;
-				background: transparent !important;
-				border: solid 4px #575d59;
-				border-color: rgba(87, 93, 89, 0.35);
-				font-size: 1.5em;
-			}
-
-				#banner .content .button:hover {
-					color: #e4e7e5;
-					border-color: rgba(87, 93, 89, 0.75);
-				}
-
-				#banner .content .button:active {
-					color: #fff;
-					border-color: #616763;
-				}
-
 /* Main */
 
 	#main {
@@ -1057,9 +995,6 @@ input, select, textarea {
 			margin: 0 0 1.5em 0;
 		}
 
-			#footer h2.major span {
-				background: #f2f5f3;
-			}
 
 /* Copyright */
 

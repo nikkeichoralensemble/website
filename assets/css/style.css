@@ -13,6 +13,24 @@ body {
   transition: transform 0.5s ease;
 }
 
+body,
+header,
+footer,
+main,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+i {
+  color: var(--palette--black);
+}
+
 button {
   cursor: pointer;
 }
@@ -103,9 +121,6 @@ footer {
   background: var(--palette--theme);
   font-size: small;
   padding: 5px 30px;
-}
-footer div {
-  width: 30%;
 }
 footer #copyright {
   text-align: right;
@@ -212,19 +227,30 @@ h2.major span {
 /*--------------------------------------------------------------
 # Banners
 --------------------------------------------------------------*/
-/* .banner {
-  background-image: "../img/group.jpg";
+#banner {
+  position: relative;
+  background-image: linear-gradient(transparent 50%, var(--palette--theme)),
+    url("../img/group.jpg");
   background-position: center center;
   background-size: cover;
-} */
-.banner h1 {
+}
+
+#banner .content {
+  position: relative;
+  background-position: top left, center center;
+  background-size: auto, 100% 250%;
+  background-repeat: repeat, no-repeat;
+  text-align: center;
+  margin: 0;
+  padding: 4em 0 3.5em 0;
+}
+
+#banner > .content > h1 {
   font-family: var(--font--main);
   font-size: var(--font--l);
   font-weight: heavy;
   color: var(--palette--white);
-}
 
-.banner h1 {
   font-size: 72px;
   /* TODO add fallback */
   background: -webkit-linear-gradient(
@@ -234,12 +260,46 @@ h2.major span {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.banner h2 {
+#banner > .content > h2 {
   color: var(--palette--white);
   font-family: var(--font--body);
   font-size: 22px;
+
+  display: block;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #575d59;
+  font-size: 1.35em;
+  margin: 0 0 1.25em 0;
+
+  color: #fff;
+  font-size: 2.75em;
+  margin: 0 0 0.5em 0;
 }
-.banner button {
+
+#banner .content .button {
+  -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  color: #b4b7b5;
+  background: transparent !important;
+  border: solid 4px #575d59;
+  border-color: rgba(87, 93, 89, 0.35);
+  font-size: 1.5em;
+}
+
+#banner .content .button:hover {
+  color: #e4e7e5;
+  border-color: rgba(87, 93, 89, 0.75);
+}
+
+#banner .content .button:active {
+  color: #fff;
+  border-color: #616763;
+}
+#banner > .content > button {
   font-family: var(--font--main);
   text-transform: uppercase;
   font-weight: 600;
@@ -253,6 +313,6 @@ h2.major span {
   color: var(--palette--white);
   background: var(--palette--accent);
 }
-.banner button:hover {
+#banner .content button:hover {
   background: var(--palette--accent-lighter);
 }

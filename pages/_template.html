@@ -19,29 +19,36 @@
     <div id="page-wrapper">
 
       <!-- ======= Header ======= -->
-      <header id="header row">
-        <div class="logo container">
-          <a id="logo" href="{{ url_for('index') }}">NiCE</a>
-          <!-- <img class="logo" src="{{ url_for('static', filename='img/logo.png')}}"> -->
-        </div>
+      <header id="header" class="d-flex justify-content-between">
+        <nav id="nav">
+          <div class="logo container">
+            <a id="logo" href="{{ url_for('index') }}">NiCE</a>
+            <!-- <img class="logo" src="{{ url_for('static', filename='img/logo.png')}}"> -->
+          </div>
 
-        <div class="contact container">
-          <a class="fab fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
-          <a class="fab fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/"></a>
-          <a class="fab fa-facebook" href="https://www.facebook.com/wearenice"></a>
-          <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
-        </div>
 
-      </header>
+          <!-- ======= Navbar ======= -->
 
-      <!-- ======= Navbar ======= -->
-      <nav id="nav">
-        <ul>
-          <li><a href=" {{ url_for('index') }}">Home</a></li>
-          <li><a href="{{ url_for('about') }}">About</a></li>
-          <li><a href="{{ url_for('auditions') }}">Auditions</a></li>
+          <ul>
+            <li><a href=" {{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('auditions') }}">Auditions</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact -->
+        <ul class="contact">
+          <li><a class="fas icon brands fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"><span
+                class="label">Youtube</span></a></li>
+          <li><a class="fas icon brands fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/">
+              <span class="label">Instagram</span></a></li>
+          <li><a class="fas icon brands fa-facebook" href="https://www.facebook.com/wearenice"><span
+                class="label">Facebook</span></a></li>
+          <li><a class="fas icon fa-envelope" href="nikkeichoralensemble@gmail.com"><span
+                class="label">Envelope</span></a></li>
         </ul>
-      </nav>
+        <nav id="nav">
+      </header>
 
       <!-- Main -->
       <section id="main">

@@ -55,9 +55,9 @@
   --screen--large: 1000px;
 
   /* Z-index */
-  --level--roof: 500;
-  --level--top: 100;
-  --level--mid: 50;
+  --level--roof: 1000;
+  --level--top: 800;
+  --level--mid: 30;
   --level--ground: 0;
   --level--underground: -100;
 }

@@ -3,13 +3,24 @@
 --------------------------------------------------------------*/
 body {
   background: var(--palette--accent-lighter);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-transition: -moz-transform 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  -ms-transition: -ms-transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
+
 button {
   cursor: pointer;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
+header,
+footer,
+main {
   transition: margin-left 0.5s;
 }
 
@@ -32,7 +43,8 @@ header {
 
 /* Navigations */
 #sidenav {
-  background-color: var(--patette--theme);
+  background-color: var(--palette--theme);
+  padding: 0px;
 }
 #topnav a,
 #sidenav a {
@@ -198,11 +210,11 @@ h2.major span {
 /*--------------------------------------------------------------
 # Banners
 --------------------------------------------------------------*/
-.banner {
+/* .banner {
   background-image: "../img/group.jpg";
   background-position: center center;
   background-size: cover;
-}
+} */
 .banner h1 {
   font-family: var(--font--main);
   font-size: var(--font--l);

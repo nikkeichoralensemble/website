@@ -63,11 +63,16 @@ function closeNav() {
 }
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 function openNav() {
-  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("sidenav").style.display = "block";
+  w = document.getElementById("sidenav").outerWidth(true);
 
-  document.getElementById("header").style.marginLeft = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  document.getElementById("footer").style.marginLeft = "250px";
+  document.getElementById("header").css({ "margin-right": w + "px" });
+  document.getElementById("main").css({ "margin-left": w + "px" });
+  document.getElementById("footer").css({ "margin-left": w + "px" });
+
+  //   document.getElementById("header").style.marginLeft = w;
+  //   document.getElementById("main").style.marginLeft = w;
+  //   document.getElementById("footer").style.marginLeft = w;
 
   document.getElementById("header").style.backgroundColor = "rgba(0,0,0,0.4)";
   document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.4)";
@@ -76,7 +81,7 @@ function openNav() {
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 function closeNav() {
-  document.getElementById("sidenav").style.width = "0px";
+  document.getElementById("sidenav").style.display = "none";
 
   document.getElementById("header").style.marginLeft = "0px";
   document.getElementById("main").style.marginLeft = "0px";

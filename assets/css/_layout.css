@@ -1,12 +1,21 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+* {
+  overflow: hidden;
+}
+
 section,
 article {
   z-index: var(--level--ground);
   /* margin-bottom: 6em; */
   margin-left: var(--gutter);
   margin-right: var(--gutter);
+}
+
+header,
+footer {
+  max-height: 20vh;
 }
 
 main {
@@ -17,8 +26,8 @@ main {
 }
 
 img {
-  height: auto;
-  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -66,6 +75,7 @@ img {
 header {
   position: fixed;
   top: 0px;
+
   z-index: var(--level--top);
 
   width: 100%;
@@ -77,10 +87,9 @@ header {
   left: 0;
   z-index: var(--level--roof);
 
-  height: 100%;
-  width: 0;
-  /* padding-top: 60px; */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  height: 100vh;
+
+  display: none;
 }
 
 #topnav a,
@@ -106,9 +115,9 @@ footer a,
 }
 
 .logo {
-  height: 40px;
+  max-height: 100%;
 }
-.logo * {
+.logo img {
   max-height: 40px;
 }
 

@@ -1,10 +1,12 @@
 /*--------------------------------------------------------------
 # Reset Elements
 --------------------------------------------------------------*/
-*,
-*:before,
-*:after,
-*:active {
+body *,
+body *:before,
+body *:after,
+body *:active {
+  z-index: var(--level--ground);
+
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
@@ -18,11 +20,6 @@ header a:hover {
   all: unset;
 }
 
-body *,
-main *,
-div * {
-  position: static;
-}
 /* ul {
   margin-block-start: 0em;
   margin-block-end: 0em;

@@ -11,6 +11,18 @@
 /*--------------------------------------------------------------
 # Reset TXT
 --------------------------------------------------------------*/
+*,
+*:hover,
+*:active {
+  display: flex;
+  position: absolute;
+  border: none !important;
+  min-height: 10px;
+  min-width: 10px;
+  height: min-content;
+  width: min-content;
+}
+
 p,
 ul,
 ol,
@@ -24,10 +36,24 @@ table {
 }
 
 #nav {
+  position: initial;
   width: auto;
   padding: 0px;
 }
+
+#nav li {
+  padding: 0px;
+}
+
+#nav li:hover {
+  top: 0px;
+  color: #34b7a7;
+  background-color: transparent;
+  border: 1px solid var(--palette--theme);
+}
+
 .logo {
+  border: none;
   margin: 0px;
   padding: 0px;
 }
@@ -43,13 +69,6 @@ table {
   display: flex;
   justify-content: space-between;
   position: fixed;
-}
-#nav {
-  position: absolute;
-  top: 0px;
-  /* make center of header */
-  /* left: 50%; */
-  /* transform: translate(-50%, 0); */
 }
 
 /*--------------------------------------------------------------
@@ -67,7 +86,9 @@ body {
   flex: 1 0 auto;
 }
 #footer {
+  width: 100%;
   flex-shrink: 0;
+  z-index: var(--level-top);
 }
 
 /*--------------------------------------------------------------
@@ -100,9 +121,18 @@ body {
 }
 
 /*--------------------------------------------------------------
+# Contacts
+--------------------------------------------------------------*/
+.contact {
+  display: flex;
+}
+
+/*--------------------------------------------------------------
 # Debug Use
 --------------------------------------------------------------*/
 
-* {
+*,
+*:hover,
+*:active {
   border: 1px solid red !important;
 }

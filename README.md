@@ -16,8 +16,7 @@ Edit HTML files under `templates/pages`
 
 ## Edit website style
 
-1. run `sass --watch static/sass/main.scss static/css/main.css --no-source-map`
-2. edit `static/sass/main.scss` (**not** `static/css/main.css`).
+Edit CSS files under `assets/css`
 
 ## Deploying the website to OCF
 

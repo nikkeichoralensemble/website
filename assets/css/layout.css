@@ -30,44 +30,7 @@ img {
   max-width: 100%;
 }
 
-/*--------------------------------------------------------------
-# Flexboxes
---------------------------------------------------------------*/
-[class^="flex-"] {
-  /* base flex properties */
-  display: flex;
-  align-items: center;
-}
 
-.flex-row-center {
-  justify-content: center;
-  flex-direction: row;
-}
-
-.flex-row-spaced {
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-.flex-row-even {
-  justify-content: space-evenly;
-  flex-direction: row;
-}
-
-.flex-col-center {
-  justify-content: center;
-  flex-direction: column;
-}
-
-.flex-col-space {
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-.flex-col-even {
-  justify-content: space-evenly;
-  flex-direction: column;
-}
 
 /*--------------------------------------------------------------
 # Header and Footer
@@ -131,11 +94,3 @@ footer a,
 /*--------------------------------------------------------------
 # Banners
 --------------------------------------------------------------*/
-.banner {
-  /* height: 100vh; */
-  width: 100%;
-}
-.banner img {
-  height: auto;
-  width: 100%;
-}

@@ -1,3 +1,7 @@
+/*--------------------------------------------------------------
+# Webfonts Setup
+--------------------------------------------------------------*/
+
 @font-face {
   font-family: "RalewayMedium";
   src: url(../font/Raleway-Medium.ttf) format("truetype");
@@ -22,6 +26,10 @@
   font-family: "GothicA1";
   src: url(../font/GothicA1-Regular.ttf) format("truetype");
 }
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
 
 :root {
   /* Layout */

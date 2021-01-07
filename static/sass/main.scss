@@ -228,7 +228,7 @@ body,
 input,
 textarea,
 select {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font--body);
   font-weight: 400;
   color: #6b7770;
   font-size: 13pt;
@@ -1205,7 +1205,8 @@ body {
   // background-repeat: repeat, repeat, no-repeat;
   // background-size: auto, auto, cover;
 
-  background-image: linear-gradient($banner-img;
+  background: linear-gradient(transparent 60%, var(--palette--theme)),
+    $overlay-img;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1221,7 +1222,7 @@ body {
     // background-size: auto, 100% 250%;
     // background-repeat: repeat, no-repeat;
 
-    background-color: transparent;
+    // background-color: transparent;
 
     text-align: center;
     margin: 0;

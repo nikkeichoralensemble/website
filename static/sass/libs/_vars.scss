@@ -25,7 +25,7 @@ $main-font: "Open Sans Condensed", sans-serif;
 
 /* Nav */
 $nav-bg-color: rgba(255, 255, 255, 0.95);
-$nav-bg-img: url("images/overlay.png");
+$nav-bg-img: url("../../images/txt/overlay.png");
 $nav-font: $main-font;
 $nav-tab-color: #b1ddab;
 $nav-tab-text-color: white;
@@ -41,7 +41,6 @@ $button-click-color: #a1cd9b;
 
 // Images
 // $banner-img: url('../../static/images/txt/banner.jpg');
-$banner-img: url('../../static/images/group.jpg');
-$overlay-img: url('../../static/images/txt/overlay.png');
-$highlight-img: url('../../static/images/txt/highlight.png');
-
+$banner-img: url("../../images/group.jpg");
+$overlay-img: url("../../images/txt/overlay.png");
+$highlight-img: url("../../images/txt/highlight.png");

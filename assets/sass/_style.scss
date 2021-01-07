@@ -1,5 +1,3 @@
-@import "vars";
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -89,6 +87,25 @@ footer {
 }
 
 /*--------------------------------------------------------------
+# Text
+--------------------------------------------------------------*/
+h2.major {
+  position: relative;
+  border-top: solid 5px #e7eae8;
+  font-size: 1.65em;
+  text-align: center;
+  margin: 0 0 3em 0;
+  top: 0.775em;
+  span {
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    top: -0.775em;
+    padding: 0 1.25em 0 1.25em;
+  }
+}
+
+/*--------------------------------------------------------------
 # Icons and Buttons
 --------------------------------------------------------------*/
 .fas,
@@ -156,22 +173,5 @@ footer {
   &:hover {
     background: _palette(theme);
     color: #fff;
-  }
-}
-
-/* Others */
-h2.major {
-  position: relative;
-  border-top: solid 5px #e7eae8;
-  font-size: 1.65em;
-  text-align: center;
-  margin: 0 0 3em 0;
-  top: 0.775em;
-  span {
-    background: #fff;
-    position: relative;
-    display: inline-block;
-    top: -0.775em;
-    padding: 0 1.25em 0 1.25em;
   }
 }

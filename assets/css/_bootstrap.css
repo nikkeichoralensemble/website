@@ -1,3 +1,30 @@
+:root {
+  --small: 500px;
+  --medium: 767.98px;
+  --large: 992px;
+}
+/*--------------------------------------------------------------
+# Desktop
+--------------------------------------------------------------*/
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+/*--------------------------------------------------------------
+# Tablet
+--------------------------------------------------------------*/
+
+/* Small devices (landscape phones, tablet, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/*--------------------------------------------------------------
+# Mobile
+--------------------------------------------------------------*/
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+
 @media (max-width: 992px) {
   #header .logo {
     font-size: 28px;

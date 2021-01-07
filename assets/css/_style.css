@@ -51,68 +51,9 @@ nav .active:before {
 }
 
 /*--------------------------------------------------------------
-# Banners
---------------------------------------------------------------*/
-#banner {
-  background: linear-gradient(transparent 50%, var(--palette--theme)),
-    url("../img/group.jpg");
-  background-position: center center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-#banner * {
-  position: relative;
-  top: 30vh;
-}
-#banner h1 {
-  margin: 0;
-  font-family: var(--font--main);
-  font-size: 72px;
-  font-weight: 700;
-  color: var(--palette--white);
-}
-/* #banner h1 {
-  font-size: 72px;
-  background: -webkit-linear-gradient(
-    var(--palette--theme),
-    var(--palette--accent)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-#banner h2 {
-  color: var(--palette--white);
-  font-family: var(--font--body);
-  font-size: 22px;
-}
-#banner button {
-  font-family: var(--font--main);
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin-top: 30px;
-  color: var(--palette--white);
-  background: var(--palette--accent);
-}
-#banner button:hover {
-  background: var(--palette--accent-lighter);
-}
-
-/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background: var(--palette--theme);
   font-size: small;
   padding: 5px 30px;
@@ -126,14 +67,29 @@ footer #copyright {
 footer #copyright li {
   list-style-type: none;
 }
-footer #ocf {
-  display: flex;
-  align-items: center;
-  justify-content: initial;
-}
 
 /*--------------------------------------------------------------
-# Icons and Buttons
+# Text
+--------------------------------------------------------------*/
+h2.major {
+  position: relative;
+  border-top: solid 5px #e7eae8;
+  font-size: 1.65em;
+  text-align: center;
+  margin: 0 0 3em 0;
+  top: 0.775em;
+}
+h2.major span {
+  background: #fff;
+  position: relative;
+  display: inline-block;
+  top: -0.775em;
+  padding: 0 1.25em 0 1.25em;
+}
+
+
+/*--------------------------------------------------------------
+# Icons
 --------------------------------------------------------------*/
 .fas,
 .fab {
@@ -190,6 +146,9 @@ footer #ocf {
   background-color: #666666;
 }
 
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
 .back-to-top {
   font-size: 24px;
   width: 40px;
@@ -204,19 +163,55 @@ footer #ocf {
   color: #fff;
 }
 
-/* Others */
-h2.major {
-  position: relative;
-  border-top: solid 5px #e7eae8;
-  font-size: 1.65em;
-  text-align: center;
-  margin: 0 0 3em 0;
-  top: 0.775em;
+/*--------------------------------------------------------------
+# Banners
+--------------------------------------------------------------*/
+#banner {
+  background: linear-gradient(transparent 50%, var(--palette--theme)),
+    url("../img/group.jpg");
+  background-position: center center;
+  background-size: cover;
 }
-h2.major span {
-  background: #fff;
+#banner * {
   position: relative;
+  top: 30vh;
+}
+#banner h1 {
+  margin: 0;
+  font-family: var(--font--main);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--palette--white);
+}
+/* #banner h1 {
+  font-size: 72px;
+  /* TODO add fallback */
+  background: -webkit-linear-gradient(
+    var(--palette--theme),
+    var(--palette--accent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+#banner h2 {
+  color: var(--palette--white);
+  font-family: var(--font--body);
+  font-size: 22px;
+}
+#banner button {
+  font-family: var(--font--main);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
   display: inline-block;
-  top: -0.775em;
-  padding: 0 1.25em 0 1.25em;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: var(--palette--white);
+  background: var(--palette--accent);
+}
+#banner button:hover {
+  background: var(--palette--accent-lighter);
 }

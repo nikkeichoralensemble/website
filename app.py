@@ -33,4 +33,4 @@ def tmp():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)  # TODO set false when deploy
+    app.run()

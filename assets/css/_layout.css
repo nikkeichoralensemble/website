@@ -25,7 +25,7 @@ img {
 # Flexboxes
 --------------------------------------------------------------*/
 [class^="flex-"] {
-  /* base button properties */
+  /* base flex properties */
   display: flex;
   align-items: center;
 }

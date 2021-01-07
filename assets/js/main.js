@@ -2,14 +2,13 @@
 # Custom Tags
 --------------------------------------------------------------*/
 
-document.registerElement("banner");
+// document.registerElement("banner");
 
 /*--------------------------------------------------------------
 # Shift Main Down
 --------------------------------------------------------------*/
 $(document).ready(function () {
   topHeight = $("header").outerHeight(true);
-  alert(topHeight);
   $("main").css({ "margin-top": topHeight + "px" });
 });
 

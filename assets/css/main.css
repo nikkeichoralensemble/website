@@ -2,8 +2,5 @@
 
 @import "_reset.css";
 
-@import "setup/layout.css";
-@import "setup/style.css";
-
-@import "sections/navbar.css";
-@import "sections/banner.css";
+@import "_layout.css";
+@import "_style.css";

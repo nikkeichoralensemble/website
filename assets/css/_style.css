@@ -4,7 +4,9 @@
 body {
   background: var(--palette--accent-lighter);
 }
-
+button {
+  cursor: pointer;
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -26,6 +28,7 @@ header {
   font-weight: 600;
   text-decoration: none;
 
+  display: block;
   transition: 0.3s;
 }
 

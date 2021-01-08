@@ -30,20 +30,6 @@ a:hover {
 # Page Setup
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
-html {
-  height: 100%;
-}
-
-body {
-  min-height: 100%; // fill screen
-
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  // grid-template-columns: 1fr;
-
-  // header, main, footer
-}
-
 header {
   max-height: 20vh;
   @include fill-width;

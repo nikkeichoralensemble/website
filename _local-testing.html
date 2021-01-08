@@ -5,26 +5,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/utils.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" /> -->
+    <link rel="stylesheet" href="assets/stylesheets/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/stylesheets/main.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo-square.png" />
+
     <title>Nikkei Choral Ensemble</title>
   </head>
 
   <body>
     <!-- Header -->
     <header>
-      <div class="logo">
-        <a href="#">NiCE</a>
-        <img class="logo" src="{{ url_for('static', filename='img/logo.png')}}">
-      </div>
+      <button id="open-nav-btn" onclick="openNav()">&#9776;</button>
 
-      <div class="nav">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Auditions</a>
-      </div>
+      <nav id="topnav">
+        <a href="javascript:void(0)" id="close-nav-btn" onclick="closeNav()">&times;</a>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/auditions">Auditions</a>
+      </nav>
 
       <div class="contact">
         <a class="fas fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
@@ -41,7 +41,7 @@
 
     <!-- Footer -->
     <footer>
-      <div class="ocf">
+      <div id="ocf">
         <p>
           Disclaimer: We are a student group acting independently of the University of California.
           We take full responsibility for our organization and this web site.
@@ -57,16 +57,20 @@
         <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
       </div>
 
-      <copyright>
-        &copy; <b>Nikkei Choral Ensemble</b>. All rights reserved
-        Website by April Sin, Emma Jiang, and Jessica Qian.
-        Bootstrap emplate from <a href="http://html5up.net">HTML5 UP</a>.
-      </copyright>
+      <div id="copyright">
+        <p>
+          &copy; <b>Nikkei Choral Ensemble</b>. All rights reserved
+          Website by April Sin, Emma Jiang, and Jessica Qian.
+        </p>
+        <p>
+          Bootstrap template from <a href="http://html5up.net">HTML5 UP</a>.
+        </p>
+      </div>
 
     </footer>
 
     <!-- Back to Top -->
-    <a href="#" class="back-to-top"><i class="fas fa-alt-arrow-up"></i></a>
+    <a href="#" id="back-to-top" class="fas fa-alt-arrow-up"></a>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>

@@ -94,6 +94,7 @@ header #topnav {
 }
 header #topnav a {
   font-family: var(--font--main);
+  text-transform: lowercase;
 }
 header .contact {
   position: absolute;
@@ -142,8 +143,8 @@ header {
 }
 header #topnav > a {
   font-size: 15px;
-  padding: 100% 5%;
-  margin: 1em 2em;
+  margin: 1em 1em;
+  padding: 1em 2em; 
 }
 header #topnav > a:hover {
   color: var(--palette--white);

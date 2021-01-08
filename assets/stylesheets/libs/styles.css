@@ -80,6 +80,10 @@ header #topnav > a {
   padding: 3em;
   margin: 3em;
 }
+header #open-nav-btn {
+  font-size: 30px;
+  cursor: pointer;
+}
 
 footer {
   color: var(--palette--white);
@@ -103,14 +107,6 @@ footer {
 .fab {
   color: var(--palette--black);
   background-color: var(--palette--white);
-  height: 45px;
-  width: 45px;
-  border-radius: 22.5px;
-  font-size: 22.5px;
-  line-height: 45px;
-  vertical-align: baseline;
-  margin: 4.5px;
-  padding: 0.9px;
 }
 .fas:hover,
 .fab:hover {

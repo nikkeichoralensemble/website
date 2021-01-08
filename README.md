@@ -14,6 +14,16 @@ Please use Git!!
 
 Edit HTML files under `templates/pages`
 
+They are generally organized following this order:
+
+```
+/* Basic */
+/* Header */
+/* Main */
+/* Footer */
+/* Components */
+```
+
 ## Edit website style
 
 Edit CSS files under `assets/css`

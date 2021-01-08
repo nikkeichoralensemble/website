@@ -6,8 +6,8 @@
   box-sizing: content-box;
   // min-height: min-content;
   // min-width: min-content;
-  // height: auto;
-  // width: auto;
+  height: minmax(10px, auto);
+  width: minmax(10px, auto);
   max-height: 100%;
   max-width: 100%;
 
@@ -71,39 +71,45 @@ footer {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-// Global Components
-#logo {
-  // @include Grid(space-evenly);
-  img {
-    height: 1cm;
-    width: auto;
-  }
-}
-#topnav {
-  display: inline-block;
-  // @include FlexRow(space-evenly);
-}
-#sidenav {
-  @include FlexCol(start);
-  display: none;
-}
+/* Global Components */
 .contact {
   @include FlexRow(space-evenly);
 }
+
+.fas,
+.fab {
+  @include setupIcon(45px);
+}
+
 #back-to-top {
   display: none; // invisible until scroll
   @include fix-to-page;
   @include bottomRight(2, 2);
 }
 
-// Header Components
+/* Header Components */
 header {
+  .logo {
+    // @include Grid(space-evenly);
+    img {
+      height: 1cm;
+      width: auto;
+    }
+  }
+  #topnav {
+    display: inline-block;
+    // @include FlexRow(space-evenly);
+  }
+  #sidenav {
+    @include FlexCol(start);
+    display: none;
+  }
 }
 
-// Main Components
+/* Main Components */
 main {
 }
 
-// Footer Components
+/* Footer Components */
 footer {
 }

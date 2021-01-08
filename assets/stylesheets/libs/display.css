@@ -24,6 +24,8 @@
 --------------------------------------------------------------*/
 * {
   box-sizing: content-box;
+  height: minmax(10px, auto);
+  width: minmax(10px, auto);
   max-height: 100%;
   max-width: 100%;
   padding: 0px;
@@ -74,6 +76,8 @@ footer {
   gap: 10px;
   align-content: space-evenly;
   justify-content: space-evenly;
+  grid-auto-rows: minmax(10px, auto);
+  grid-auto-columns: minmax(10px, auto);
   display: grid;
   grid-template-columns: auto auto auto;
 }
@@ -81,26 +85,7 @@ footer {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-#logo img {
-  height: 1cm;
-  width: auto;
-}
-
-#topnav {
-  display: inline-block;
-}
-
-#sidenav {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: space-evenly;
-  align-content: space-evenly;
-  justify-items: space-evenly;
-  justify-content: start;
-  display: none;
-}
-
+/* Global Components */
 .contact {
   display: flex;
   flex-direction: row;
@@ -111,9 +96,43 @@ footer {
   justify-content: space-evenly;
 }
 
+.fas,
+.fab {
+  height: 45px;
+  width: 45px;
+  border-radius: 22.5px;
+  font-size: 22.5px;
+  line-height: 45px;
+  vertical-align: baseline;
+  margin: 4.5px;
+  padding: 0.9px;
+}
+
 #back-to-top {
   display: none;
   position: fixed;
   bottom: 2%;
   right: 2%;
 }
+
+/* Header Components */
+header .logo img {
+  height: 1cm;
+  width: auto;
+}
+header #topnav {
+  display: inline-block;
+}
+header #sidenav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: space-evenly;
+  align-content: space-evenly;
+  justify-items: space-evenly;
+  justify-content: start;
+  display: none;
+}
+
+/* Main Components */
+/* Footer Components */

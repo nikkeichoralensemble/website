@@ -6,23 +6,69 @@
 --------------------------------------------------------------*/
 @media screen and (max-width: 1680px) {
   /* Basic */
-  body,
-input,
-textarea,
-select {
-    font-size: 12pt;
-    line-height: 1.75em;
-  }
+  /* Header */
+  /* Main */
+  /* Footer */
+  /* Components */
 }
 /*--------------------------------------------------------------
 # Large
 --------------------------------------------------------------*/
+@media screen and (max-width: 1280px) {
+  /* Basic */
+  /* Header */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
 /*--------------------------------------------------------------
 # Medium
 --------------------------------------------------------------*/
+@media screen and (max-width: 980px) {
+  /* Basic */
+  /* Header */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
 /*--------------------------------------------------------------
 # Small
 --------------------------------------------------------------*/
+@media screen and (max-width: 560px) {
+  /* Basic */
+  div {
+    display: block;
+  }
+
+  /* Header */
+  header #topnav,
+header .contact,
+header .logo img {
+    display: none;
+  }
+  header #sidenav {
+    display: flex;
+  }
+
+  footer {
+    display: block;
+  }
+
+  /* Main */
+  main {
+    display: block;
+  }
+
+  /* Footer */
+  /* Components */
+}
 /*--------------------------------------------------------------
 # XSmall
 --------------------------------------------------------------*/
+@media screen and (max-width: 360px) {
+  /* Basic */
+  /* Header */
+  /* Main */
+  /* Footer */
+  /* Components */
+}

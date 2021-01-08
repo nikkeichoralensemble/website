@@ -56,6 +56,10 @@ header {
     padding: 3em;
     margin: 3em;
   }
+  #open-nav-btn {
+    font-size: 30px;
+    cursor: pointer;
+  }
 }
 footer {
   color: var(--palette--white);
@@ -80,7 +84,6 @@ footer {
 .fab {
   color: var(--palette--black);
   background-color: var(--palette--white);
-  @include setupIcon(45px);
 
   &:hover {
     color: var(--palette--white);

@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
+
 /* Webfonts Setup */
 @font-face {
   font-family: "RalewayMedium";
@@ -22,11 +23,21 @@
   font-family: "GothicA1";
   src: url(../../font/GothicA1-Regular.ttf) format("truetype");
 }
+
 /* Global Variables */
 :root {
-  /* Layout */
-  --gutter-lr: 8%;
-  --gutter-tb: 3%;
+  /*** LAYOUT ***/
+  --gutter-tb: 3%; /* Top & Bottom */
+  --gutter-lr: 8%; /* Left & Right */
+
+  /* z-index */
+  --level--roof: 1000;
+  --level--top: 800;
+  --level--mid: 30;
+  --level--ground: 0;
+  --level--underground: -100;
+
+  /*** APPEARANCE ***/
   /* Fonts */
   --font--main: "RalewayMedium", sans-serif;
   --font--main-italic: "RalewayMediumItalic", sans-serif;
@@ -37,6 +48,7 @@
   --font--m: 32vw;
   --font--l: 48vw;
   --font--xl: 72vw;
+
   /* Palette. */
   --palette--theme: #4787c3;
   --palette--theme-dark: #235d9c;
@@ -46,14 +58,10 @@
   --palette--black: #2a324b;
   --palette--white: #ffffff;
   --palette--grey: #f5f5f5;
-  /* Responsive Screen Thersholds */
+
+  /*** Breakpoints ***/
+  /* unused for now */
   --screen--small: 200px;
   --screen--medium: 500px;
   --screen--large: 1000px;
-  /* Z-index */
-  --level--roof: 1000;
-  --level--top: 800;
-  --level--mid: 30;
-  --level--ground: 0;
-  --level--underground: -100;
 }

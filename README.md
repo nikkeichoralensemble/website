@@ -12,12 +12,13 @@ Please use Git!!
 
 ## Edit website content
 
-Edit HTML files under `templates/pages`
+Edit HTML files under.
 
 ## Edit website style
 
-Edit files under `assets/stylesheets/libs`
-If you are using SASS, use `sass --watch assets/stylesheets/libs --no-source-map`
+1. run `sass --watch assets/stylesheets/main.scss:assets/stylesheets/main.css --no-source-map`
+   or, use VSCode's Live Sass extension
+2. Edit files under `assets/stylesheets/libs`
 
 Each file is generally organized following this order:
 

@@ -1,0 +1,20 @@
+/*--------------------------------------------------------------
+# Full Style Sheet
+--------------------------------------------------------------*/
+
+// Variables
+@import "libs/vars";
+
+// SASS
+@import "libs/mixins";
+@import "libs/functions";
+
+//@import "libs/_vendors.scss"; // from TXT (not sure if need)
+
+@import "libs/global"; // Global Setup
+
+@import "libs/style"; // Main Style
+@import "libs/breakpoints"; // Breakpoints
+
+// Uncomment for Debug
+// @import "libs/_debug.css"

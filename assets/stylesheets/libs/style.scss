@@ -1,28 +1,9 @@
-/*--------------------------------------------------------------
-# Display Options
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/* For Font Awesome Icons */
-/*--------------------------------------------------------------
-# Positions
---------------------------------------------------------------*/
-/* Position on Page */
-/* Stacking Order on Page */
-/*--------------------------------------------------------------
-# Size (relative to parent)
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Animations
---------------------------------------------------------------*/
+@import "mixins.scss"; // helper classes
 /*--------------------------------------------------------------
 # Basic
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
+
 /*** APPEARANCE ***/
 h1,
 h2,
@@ -32,59 +13,50 @@ h5,
 h6 {
   font-family: var(--font--main);
 }
-
 b,
 strong {
   font-family: var(--font--main-bold);
 }
-
 i {
   font-family: var(--font--main-italic);
 }
-
 a,
 a:hover {
   text-decoration: none;
 }
-
 /*** ANIMATION ***/
+
 /*--------------------------------------------------------------
 # Page Setup
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
 navbar {
   max-height: 20vh;
-  width: 100vw;
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
-}
-navbar #navtabs {
-  display: inline-flex;
-  position: relative;
-  top: 0px;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-navbar .contact {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  transform: translate(0, 50%);
+  @include fill-width;
+  @include inner-margin;
+
+  #navtabs {
+    display: inline-flex;
+    // @include fix-to-parent;
+    position: relative;
+    @include dead-center;
+  }
+  .contact {
+    @include fix-to-parent;
+    @include topRight;
+    transform: translate(0, 50%);
+  }
 }
 
 main {
-  width: 100vw;
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
+  @include fill-width;
+  @include inner-margin;
 }
 
 footer {
-  width: 100vw;
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
-  display: Grid;
-  gap: 10px;
-  align-content: space-evenly;
-  justify-content: space-evenly;
-  grid-auto-rows: minmax(10px, auto);
-  grid-auto-columns: minmax(10px, auto);
+  @include fill-width;
+  @include inner-margin;
+  @include Grid;
   grid-template-columns: auto auto auto;
 }
 
@@ -95,7 +67,6 @@ footer,
 div {
   padding: 1em;
 }
-
 a {
   padding: 1em, 1em;
   margin: 1em, 1em;
@@ -104,28 +75,23 @@ a {
 body {
   background: var(--palette--accent-lighter);
 }
-
 navbar {
   background: var(--palette--white);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+  #navtabs > a {
+    font-size: 15px;
+    padding: 1em 1em;
+    margin: 1em 2em;
+    &:hover {
+      color: var(--palette--white);
+      background: var(--palette--theme);
+    }
+  }
+  #open-nav-btn {
+    font-size: 30px;
+    cursor: pointer;
+  }
 }
-navbar #navtabs > a {
-  font-size: 15px;
-  font-family: var(--font--main);
-  text-transform: lowercase;
-  color: var(--palette--black);
-  padding: 2em 2em;
-  margin: 0em 1em;
-}
-navbar #navtabs > a:hover {
-  color: var(--palette--white);
-  background: var(--palette--theme);
-}
-navbar #open-nav-btn {
-  font-size: 30px;
-  cursor: pointer;
-}
-
 footer {
   color: var(--palette--white);
   background: var(--palette--theme);
@@ -135,51 +101,50 @@ footer {
 # Components
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
+
 /* Navbar Components */
 navbar {
   display: inline-flex;
-}
-navbar .logo .tmp {
-  height: 40px;
-  width: 40px;
-}
-navbar .logo {
-  display: inline-block;
-}
-navbar .logo img {
-  height: 1cm;
-  width: 1cm;
+
+  .logo .tmp {
+    height: 40px;
+    width: 40px;
+  }
+  .logo {
+    display: inline-block;
+    a {
+      // width: 67%;
+    }
+    img {
+      // width: 33% !important;
+      height: 1cm;
+      width: 1cm;
+    }
+  }
 }
 
 /* Main Components */
+main {
+}
+
 /* Footer Components */
+footer {
+}
+
 /* Other Components */
 .contact {
-  display: flex;
-  flex-direction: row;
-  align-items: space-evenly;
-  align-content: space-evenly;
-  justify-items: space-evenly;
-  justify-content: space-evenly;
+  @include FlexRow(space-evenly);
 }
 
 .fas,
 .fab {
-  height: 45px;
-  width: 45px;
-  border-radius: 22.5px;
-  font-size: 22.5px;
-  line-height: 45px;
-  vertical-align: baseline;
-  margin: 4.5px;
-  padding: 0.9px;
+  @include setupIcon(45px);
 }
 
 #back-to-top {
-  display: none;
-  position: fixed;
-  bottom: 2%;
-  right: 2%;
+  display: none; // invisible until scroll
+  @include fix-to-page;
+  @include bottomRight(2, 2);
 }
 
 /*** APPEARANCE ***/
@@ -191,36 +156,31 @@ navbar .logo img {
 /* Main Components */
 /* Footer Components */
 /* Other Components */
+
 /*** ANIMATION ***/
+
 /*--------------------------------------------------------------
 # Navigations
 --------------------------------------------------------------*/
+
 /* #navtabs changes to #sidenav in small screens */
+
 #navtabs {
-  display: Grid;
-  gap: 10px;
-  align-content: space-evenly;
-  justify-content: space-evenly;
-  grid-auto-rows: minmax(10px, auto);
-  grid-auto-columns: minmax(10px, auto);
+  @include Grid;
 }
 
 #sidenav {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  z-index: var(--level--roof);
-  /* Stay on top */
-  height: 100vh;
-  /* 100% Full-height */
-  width: 0;
-  /* 0 width - change this with JavaScript */
-  background-color: #111;
-  /* Black*/
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidenav */
+  @include fix-to-page;
+  @include topLeft;
+  z-index: var(--level--roof); /* Stay on top */
+
+  height: 100vh; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  // padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
@@ -247,20 +207,27 @@ navbar .logo img {
   margin-left: 50px;
 }
 
+// /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+// navbar,
+// main,
+// footer {
+//   transition: margin-left 0.5s;
+//   padding: 20px;
+// }
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   #sidenav {
     padding-top: 15px;
-  }
-  #sidenav a {
-    font-size: 18px;
+    a {
+      font-size: 18px;
+    }
   }
 }
 /* controlled by javascript */
 #open-nav-btn {
   display: none;
 }
-
 #close-nav-btn {
   display: none;
 }
@@ -269,36 +236,42 @@ navbar .logo img {
 # Font Awesome Icons
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
+
 /*** APPEARANCE ***/
 .fas,
 .fab {
   color: var(--palette--black);
   background-color: var(--palette--white);
-}
-.fas:hover,
-.fab:hover {
-  color: var(--palette--white);
-  background: var(--palette--accent);
-  position: relative;
-  top: -5px;
+
+  &:hover {
+    color: var(--palette--white);
+    background: var(--palette--accent);
+    @include shiftUp;
+  }
 }
 
 .fas.fa-youtube:hover,
 .fab.fa-youtube:hover {
   background-color: #c4302b;
 }
-
 .fas.fa-facebook:hover,
 .fab.fa-facebook:hover {
   background-color: #4267b2;
 }
-
 .fas.fa-instagram:hover,
 .fab.fa-instagram:hover {
   background-color: #bc2a8d;
-  background: linear-gradient(45deg, #fccc63, #fbad50, #e95950, #cd486b, #bc2a8d, #8a3ab9, #4c68d7);
+  background: linear-gradient(
+    45deg,
+    #fccc63,
+    #fbad50,
+    #e95950,
+    #cd486b,
+    #bc2a8d,
+    #8a3ab9,
+    #4c68d7
+  );
 }
-
 .fas.fa-envelope:hover,
 .fab.fa-envelope:hover {
   background-color: #666666;
@@ -311,11 +284,11 @@ navbar .logo img {
   height: 40px;
   border-radius: 50px;
   /* color: #fff;
-    transition: all 0.4s;
-  }
-  .fas.fa-arrow-up:hover {
-    background: var(--palette--theme);
-    /* color: #fff; */
+  transition: all 0.4s;
+}
+.fas.fa-arrow-up:hover {
+  background: var(--palette--theme);
+  /* color: #fff; */
 }
 
 /*** ANIMATION ***/

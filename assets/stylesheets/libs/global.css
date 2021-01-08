@@ -8,7 +8,6 @@
   height: minmax(10px, fit-content);
   width: minmax(10px, fit-content);
 
-  overflow: hidden;
   place-self: center center;
 }
 

@@ -17,3 +17,6 @@ venv/
 # Project Files
 ref/
 _local-testing.html
+
+# Sass Map
+assets/stylesheets/libs/main.css.map

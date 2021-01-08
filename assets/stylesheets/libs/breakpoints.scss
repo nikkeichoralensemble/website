@@ -242,7 +242,7 @@ $breakpoints: ();
 --------------------------------------------------------------*/
 @include breakpoint("<=xlarge") {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
@@ -254,7 +254,7 @@ $breakpoints: ();
 
 @include breakpoint(">large") {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
@@ -262,7 +262,7 @@ $breakpoints: ();
 
 @include breakpoint("<=large") {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
@@ -274,7 +274,7 @@ $breakpoints: ();
 
 @include breakpoint(">medium") {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
@@ -282,7 +282,7 @@ $breakpoints: ();
 
 @include breakpoint("<=medium") {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
@@ -294,7 +294,7 @@ $breakpoints: ();
 
 @include breakpoint(">small") {
   /* Basic */
-  /* Header */
+  /* Navbar */
   navbar {
     #open-nav-btn {
       display: none;
@@ -310,7 +310,7 @@ $breakpoints: ();
   div {
     display: block;
   }
-  /* Header */
+  /* Navbar */
   navbar {
     #navtabs,
     .contact,
@@ -341,7 +341,7 @@ $breakpoints: ();
 --------------------------------------------------------------*/
 @include breakpoint(">xsmall") {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
@@ -349,7 +349,7 @@ $breakpoints: ();
 
 @include breakpoint("<=xsmall") {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */

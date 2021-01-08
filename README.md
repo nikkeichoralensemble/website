@@ -26,7 +26,7 @@ Each file is generally organized following this order:
     /*** LAYOUT ***/
     /*** APPEARANCE ***/
     /*** ANIMATIONS ***/
-/* Header */
+/* Navbar */
     /*** LAYOUT ***/
     /*** APPEARANCE ***/
     /*** ANIMATIONS ***/

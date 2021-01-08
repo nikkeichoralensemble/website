@@ -30,7 +30,7 @@
 --------------------------------------------------------------*/
 @media screen and (max-width: 1680px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
@@ -40,14 +40,14 @@
 --------------------------------------------------------------*/
 @media screen and (min-width: 1281px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
 }
 @media screen and (max-width: 1280px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
@@ -57,14 +57,14 @@
 --------------------------------------------------------------*/
 @media screen and (min-width: 981px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
 }
 @media screen and (max-width: 980px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
@@ -74,7 +74,7 @@
 --------------------------------------------------------------*/
 @media screen and (min-width: 561px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   navbar #open-nav-btn {
     display: none;
   }
@@ -89,7 +89,7 @@
     display: block;
   }
 
-  /* Header */
+  /* Navbar */
   navbar #navtabs,
 navbar .contact,
 navbar .logo img {
@@ -127,14 +127,14 @@ navbar .logo img {
 --------------------------------------------------------------*/
 @media screen and (min-width: 361px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
 }
 @media screen and (max-width: 360px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */

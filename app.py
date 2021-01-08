@@ -3,7 +3,7 @@ from pathlib import Path
 from flask import Flask
 from flask.templating import render_template
 
-app = Flask(__name__, static_folder="assets", template_folder="pages")
+app = Flask(__name__, static_folder="assets", template_folder=".")
 
 
 @app.route("/")

@@ -1,29 +1,13 @@
-@mixin RowContainer($justify: center) {
-  display: flex;
-  flex-direction: row;
+/*--------------------------------------------------------------
+# Display Options
+--------------------------------------------------------------*/
 
-  // for each row
-  justify-items: $justify;
-  align-items: center;
-
-  // for multiple rows
-  flex-wrap: wrap;
-  align-content: space-evenly;
-  justify-content: space-evenly;
+@mixin fix-to-page {
+  position: fixed;
 }
 
-@mixin ColContainer($justify: center) {
-  display: flex;
-  flex-direction: column;
-
-  // for each col
-  justify-items: $justify;
-  align-items: center;
-
-  // for multiple cols
-  flex-wrap: wrap;
-  align-content: space-evenly;
-  justify-content: space-evenly;
+@mixin fix-to-parent {
+  position: absolute;
 }
 
 @mixin topLeft($t: 0, $l: 0) {
@@ -46,13 +30,33 @@
   right: 0% + $r;
 }
 
-@mixin fix-to-page {
-  position: fixed;
+@mixin FlexRow($justify: center) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-items: center;
+  align-content: space-evenly;
+
+  justify-items: center;
+  justify-content: $justify;
 }
 
-@mixin fix-to-parent {
-  position: absolute;
+@mixin FlexCol($justify: center) {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  align-items: center;
+  align-content: space-evenly;
+
+  justify-items: center;
+  justify-content: $justify;
 }
+
+/*--------------------------------------------------------------
+# Appearance
+--------------------------------------------------------------*/
 
 @mixin fill-width {
   width: 100vw;
@@ -65,42 +69,42 @@
 /*--------------------------------------------------------------
 # Flexboxes
 --------------------------------------------------------------*/
-[class^="flex-"] {
-  /* base flex properties */
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
+// [class^="flex-"] {
+//   /* base flex properties */
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+// }
 
-.flex-row-center {
-  justify-content: center;
-  flex-direction: row;
-}
+// .flex-row-center {
+//   justify-content: center;
+//   flex-direction: row;
+// }
 
-.flex-row-spaced {
-  justify-content: space-between;
-  flex-direction: row;
-}
+// .flex-row-spaced {
+//   justify-content: space-between;
+//   flex-direction: row;
+// }
 
-.flex-row-even {
-  justify-content: space-evenly;
-  flex-direction: row;
-}
+// .flex-row-even {
+//   justify-content: space-evenly;
+//   flex-direction: row;
+// }
 
-.flex-col-center {
-  justify-content: center;
-  flex-direction: column;
-}
+// .flex-col-center {
+//   justify-content: center;
+//   flex-direction: column;
+// }
 
-.flex-col-space {
-  justify-content: space-between;
-  flex-direction: column;
-}
+// .flex-col-space {
+//   justify-content: space-between;
+//   flex-direction: column;
+// }
 
-.flex-col-even {
-  justify-content: space-evenly;
-  flex-direction: column;
-}
+// .flex-col-even {
+//   justify-content: space-evenly;
+//   flex-direction: column;
+// }
 
 /*--------------------------------------------------------------
 # Positions

@@ -1,43 +1,12 @@
 /*--------------------------------------------------------------
+# Display Options
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Appearance
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 # Flexboxes
 --------------------------------------------------------------*/
-[class^=flex-] {
-  /* base flex properties */
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.flex-row-center {
-  justify-content: center;
-  flex-direction: row;
-}
-
-.flex-row-spaced {
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-.flex-row-even {
-  justify-content: space-evenly;
-  flex-direction: row;
-}
-
-.flex-col-center {
-  justify-content: center;
-  flex-direction: column;
-}
-
-.flex-col-space {
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-.flex-col-even {
-  justify-content: space-evenly;
-  flex-direction: column;
-}
-
 /*--------------------------------------------------------------
 # Positions
 --------------------------------------------------------------*/

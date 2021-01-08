@@ -1,71 +1,10 @@
-@import "vars.scss";
-@import "utils.scss";
+// @import "vars.scss"; // variables
+// @import "utils.scss"; // helper classes
 
-/*--------------------------------------------------------------
-# Page Setup
---------------------------------------------------------------*/
-html {
-  height: 100%;
-}
-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-}
+@import "reset.scss"; // reset browser defined elements
 
-header {
-  grid-area: header;
-}
-main {
-  grid-area: main;
-}
-footer {
-  grid-area: footer;
-}
-
-/*--------------------------------------------------------------
-# Page Sections
---------------------------------------------------------------*/
-section,
-div {
-  box-sizing: border-box;
-  overflow: hidden;
-  margin: 0px;
-  padding: 0px;
-}
-
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-.back-to-top {
-  @include fix-to-page;
-  width: 40px;
-  height: 40px;
-  /* display: none; */
-  @include bottomRight(2, 2);
-  z-index: 99999;
-  i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    background: #34b7a7;
-    color: #fff;
-    transition: all 0.4s;
-    &:hover {
-      background: #3dc8b7;
-      color: #fff;
-    }
-  }
-}
+@import "page-layout.scss";
+@import "styles.scss";
 
 /*--------------------------------------------------------------
 # Debug Use

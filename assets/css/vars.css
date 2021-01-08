@@ -21,14 +21,12 @@
   font-family: "GothicA1";
   src: url(../font/GothicA1-Regular.ttf) format("truetype");
 }
-
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
 :root {
   /* Layout */
   --gutter: 10vw;
-
   /* Fonts */
   --font--main: "RalewayMedium", sans-serif;
   --font--main-italic: "RalewayMediumItalic", sans-serif;
@@ -39,7 +37,6 @@
   --font--m: 32vw;
   --font--l: 48vw;
   --font--xl: 72vw;
-
   /* Palette. */
   --palette--theme: #4787c3;
   --palette--theme-dark: #235d9c;
@@ -49,12 +46,10 @@
   --palette--black: #2a324b;
   --palette--white: #ffffff;
   --palette--grey: #f5f5f5;
-
   /* Responsive Screen Thersholds */
   --screen--small: 200px;
   --screen--medium: 500px;
   --screen--large: 1000px;
-
   /* Z-index */
   --level--roof: 1000;
   --level--top: 800;

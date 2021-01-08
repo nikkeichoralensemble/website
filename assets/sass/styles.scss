@@ -1,0 +1,144 @@
+@import "vars.scss"; // variables
+@import "utils.scss"; // helper classes
+/*--------------------------------------------------------------
+# Basic
+--------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font--main);
+}
+b,
+strong {
+  font-family: var(--font--main-bold);
+}
+i {
+  font-family: var(--font--main-italic);
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+/*--------------------------------------------------------------
+# Page Sections
+--------------------------------------------------------------*/
+body {
+  background: var(--palette--accent-lighter);
+}
+header {
+  background: var(--palette--white);
+  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+}
+footer {
+  background: var(--palette--theme);
+}
+.banner {
+  background: linear-gradient(transparent 50%, var(--palette--theme));
+}
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+nav > a {
+  // navigation tabs
+  padding: 3em;
+}
+
+.back-to-top {
+  @include fix-to-page;
+  @include bottomRight(2, 2);
+
+  width: 40px;
+  height: 40px;
+  display: none; // invisible until scroll
+  z-index: 999999;
+
+  i {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #34b7a7;
+    color: #fff;
+    transition: all 0.4s;
+    &:hover {
+      background: #3dc8b7;
+      color: #fff;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Icons
+--------------------------------------------------------------*/
+.fas,
+.fab {
+  background-color: #b3b3b3;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.fas:hover,
+.fab:hover {
+  position: relative;
+  top: -5px;
+  background: var(--palette--accent);
+}
+.fas:before,
+.fab:before {
+  color: #f2f5f3;
+  font-size: 32px;
+  line-height: 48px;
+}
+.fas:hover,
+.fab:hover {
+  position: relative;
+  top: -5px;
+}
+.fas.fa-youtube:hover,
+.fab.fa-youtube:hover {
+  background-color: #c4302b;
+}
+.fas.fa-facebook:hover,
+.fab.fa-facebook:hover {
+  background-color: #4267b2;
+}
+.fas.fa-instagram:hover,
+.fab.fa-instagram:hover {
+  background-color: #bc2a8d;
+  background: linear-gradient(
+    45deg,
+    #fccc63,
+    #fbad50,
+    #e95950,
+    #cd486b,
+    #bc2a8d,
+    #8a3ab9,
+    #4c68d7
+  );
+}
+.fas.fa-envelope:hover,
+.fab.fa-envelope:hover {
+  background-color: #666666;
+}
+
+.fas.fa-arrow-up {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  /* background: var(--palette--theme); */
+  /* color: #fff;
+  transition: all 0.4s;
+}
+.fas.fa-arrow-up:hover {
+  background: var(--palette--theme);
+  /* color: #fff; */
+}

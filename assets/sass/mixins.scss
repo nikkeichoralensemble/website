@@ -54,12 +54,13 @@
   justify-content: $justify;
 }
 
-@mixin setupGrid {
+@mixin Grid {
   display: Grid;
   grid-gap: 5%;
   align-content: space-evenly;
   justify-content: space-evenly;
 }
+
 /*--------------------------------------------------------------
 # Appearance
 --------------------------------------------------------------*/
@@ -76,11 +77,11 @@
 # Positions
 --------------------------------------------------------------*/
 /* Position on Page */
-.fix-to-page {
+@mixin fix-to-page {
   position: fixed;
 }
 
-.fix-to-parent {
+@mixin fix-to-parent {
   position: absolute;
 }
 
@@ -89,11 +90,11 @@
 /*--------------------------------------------------------------
 # Size (relative to parent)
 --------------------------------------------------------------*/
-.full-width {
+@mixin full-width {
   width: 100%;
 }
 
-.full-height {
+@mixin full-height {
   height: 100%;
 }
 

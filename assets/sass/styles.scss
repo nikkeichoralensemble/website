@@ -1,5 +1,5 @@
-@import "vars.scss"; // variables
-@import "utils.scss"; // helper classes
+@use "vars.scss"; // variables
+@use "mixins.scss"; // helper classes
 /*--------------------------------------------------------------
 # Basic
 --------------------------------------------------------------*/
@@ -22,6 +22,7 @@ a,
 a:hover {
   text-decoration: none;
 }
+
 /*--------------------------------------------------------------
 # Page Sections
 --------------------------------------------------------------*/
@@ -35,6 +36,10 @@ header {
 footer {
   background: var(--palette--theme);
 }
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
 .banner {
   background: linear-gradient(transparent 50%, var(--palette--theme));
 }

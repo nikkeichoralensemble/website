@@ -68,26 +68,10 @@
 # Positions
 --------------------------------------------------------------*/
 /* Position on Page */
-.fix-to-page {
-  position: fixed;
-}
-
-.fix-to-parent {
-  position: absolute;
-}
-
 /* Stacking Order on Page */
 /*--------------------------------------------------------------
 # Size (relative to parent)
 --------------------------------------------------------------*/
-.full-width {
-  width: 100%;
-}
-
-.full-height {
-  height: 100%;
-}
-
 /*--------------------------------------------------------------
 # Appearance
 --------------------------------------------------------------*/
@@ -120,19 +104,6 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "main" "footer";
-}
-
-header {
-  grid-area: header;
-}
-
-main {
-  grid-area: main;
-}
-
-footer {
-  grid-area: footer;
 }
 
 /*--------------------------------------------------------------
@@ -140,27 +111,24 @@ footer {
 --------------------------------------------------------------*/
 header {
   max-height: 20vh;
+  width: 100vw;
   display: grid;
   grid-template-columns: auto 2fr auto;
 }
-header * {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: space-evenly;
-  justify-items: center;
-  justify-content: center;
+header > * {
+  display: block;
 }
 
 main {
+  width: 100vw;
   display: block;
 }
-main * {
+main > * {
   display: block;
 }
 
 footer {
+  width: 100vw;
   display: Grid;
   grid-gap: 5%;
   align-content: space-evenly;
@@ -168,14 +136,8 @@ footer {
   display: grid;
   grid-template-columns: auto auto auto;
 }
-footer * {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: space-evenly;
-  justify-items: center;
-  justify-content: center;
+footer > * {
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -199,8 +161,4 @@ main section {
   overflow: hidden;
   margin: 0px;
   padding: 0px;
-}
-
-footer .ocf {
-  display: inline-block;
 }

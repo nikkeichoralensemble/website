@@ -1,6 +1,5 @@
-@import "vars.scss"; // variables
-@import "utils.scss"; // helper classes
-
+@use "vars.scss"; // variables
+@use "mixins.scss"; // helper classes
 /*--------------------------------------------------------------
 # Basic Setup
 --------------------------------------------------------------*/
@@ -21,24 +20,11 @@ html {
   height: 100%;
 }
 body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-}
+  min-height: 100%; // fill screen
 
-header {
-  grid-area: header;
-}
-main {
-  grid-area: main;
-}
-footer {
-  grid-area: footer;
+  display: grid;
+  grid-template-rows: auto 1fr auto; // header, main, footer
+  grid-template-columns: 1fr;
 }
 
 /*--------------------------------------------------------------
@@ -46,28 +32,34 @@ footer {
 --------------------------------------------------------------*/
 header {
   max-height: 20vh;
+  @include mixins.fill-width;
 
   display: grid;
   grid-template-columns: auto 2fr auto;
 
-  * {
-    @include FlexRow;
+  > * {
+    display: block;
   }
 }
 
 main {
+  @include mixins.fill-width;
+
   display: block;
-  * {
+  > * {
     display: block;
   }
 }
 
 footer {
-  @include setupGrid;
+  @include mixins.fill-width;
+
+  @include mixins.Grid;
   display: grid;
   grid-template-columns: auto auto auto;
-  * {
-    @include FlexRow;
+
+  > * {
+    display: block;
   }
 }
 
@@ -105,9 +97,9 @@ main {
 
 // Footer Components
 footer {
-  .ocf {
-    display: inline-block;
-  }
-  .copyright {
-  }
+  // .ocf {
+  //   display: inline-block;
+  // }
+  // .copyright {
+  // }
 }

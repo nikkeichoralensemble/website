@@ -134,8 +134,9 @@ table {
 # Animations
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Basic Setup
+# Basic
 --------------------------------------------------------------*/
+/*** LAYOUT ***/
 *,
 * > *,
 * > * > * {
@@ -154,9 +155,35 @@ p {
   text-align: left;
 }
 
+/*** APPEARANCE ***/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font--main);
+}
+
+b,
+strong {
+  font-family: var(--font--main-bold);
+}
+
+i {
+  font-family: var(--font--main-italic);
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+/** ANIMATION **/
 /*--------------------------------------------------------------
 # Page Setup
 --------------------------------------------------------------*/
+/*** LAYOUT ***/
 html {
   height: 100%;
 }
@@ -203,10 +230,69 @@ footer {
   grid-template-columns: auto auto auto;
 }
 
+/*** APPEARANCE ***/
+header,
+main,
+footer,
+div {
+  padding: 1em;
+}
+
+a {
+  padding: 1em, 1em;
+  margin: 1em, 1em;
+}
+
+body {
+  background: var(--palette--accent-lighter);
+}
+
+header {
+  background: var(--palette--white);
+  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+}
+header #topnav > a {
+  font-size: 15px;
+  padding: 100% 5%;
+  margin: 1em 2em;
+}
+header #topnav > a:hover {
+  color: var(--palette--white);
+  background: var(--palette--theme);
+}
+header #open-nav-btn {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+footer {
+  color: var(--palette--white);
+  background: var(--palette--theme);
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-/* Global Components */
+/*** LAYOUT ***/
+/* Header Components */
+header {
+  display: inline-flex;
+}
+header .logo .tmp {
+  height: 40px;
+  width: 40px;
+}
+header .logo {
+  display: inline-block;
+}
+header .logo img {
+  height: 1cm;
+  width: 1cm;
+}
+
+/* Main Components */
+/* Footer Components */
+/* Other Components */
 .contact {
   display: flex;
   flex-direction: row;
@@ -235,24 +321,16 @@ footer {
   right: 2%;
 }
 
-/* Header Components */
-header {
-  display: inline-flex;
-}
-header .logo .tmp {
-  height: 40px;
-  width: 40px;
-}
-header .logo {
-  display: inline-block;
-}
-header .logo img {
-  height: 1cm;
-  width: 1cm;
+/*** APPEARANCE ***/
+.banner {
+  background: linear-gradient(transparent 50%, var(--palette--theme));
 }
 
+/* Header Components */
 /* Main Components */
 /* Footer Components */
+/* Other Components */
+/** ANIMATION **/
 /*--------------------------------------------------------------
 # Navigations
 --------------------------------------------------------------*/
@@ -327,110 +405,10 @@ header .logo img {
 }
 
 /*--------------------------------------------------------------
-# Display Options
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/* For Font Awesome Icons */
-/*--------------------------------------------------------------
-# Positions
---------------------------------------------------------------*/
-/* Position on Page */
-/* Stacking Order on Page */
-/*--------------------------------------------------------------
-# Size (relative to parent)
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Animations
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Basic
---------------------------------------------------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font--main);
-}
-
-b,
-strong {
-  font-family: var(--font--main-bold);
-}
-
-i {
-  font-family: var(--font--main-italic);
-}
-
-a,
-a:hover {
-  text-decoration: none;
-}
-
-/*--------------------------------------------------------------
-# Padding and Margins
---------------------------------------------------------------*/
-header,
-main,
-footer,
-div {
-  padding: 1em;
-}
-
-a {
-  padding: 1em, 1em;
-  margin: 1em, 1em;
-}
-
-/*--------------------------------------------------------------
-# Page Sections
---------------------------------------------------------------*/
-body {
-  background: var(--palette--accent-lighter);
-}
-
-header {
-  background: var(--palette--white);
-  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
-}
-header #topnav > a {
-  font-size: 15px;
-  padding: 100% 5%;
-  margin: 1em 2em;
-}
-header #topnav > a:hover {
-  color: var(--palette--white);
-  background: var(--palette--theme);
-}
-header #open-nav-btn {
-  font-size: 30px;
-  cursor: pointer;
-}
-
-footer {
-  color: var(--palette--white);
-  background: var(--palette--theme);
-}
-
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-.banner {
-  background: linear-gradient(transparent 50%, var(--palette--theme));
-}
-
-/*--------------------------------------------------------------
-# Buttons
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 # Font Awesome Icons
 --------------------------------------------------------------*/
+/*** LAYOUT ***/
+/*** APPEARANCE ***/
 .fas,
 .fab {
   color: var(--palette--black);
@@ -479,33 +457,7 @@ footer {
     /* color: #fff; */
 }
 
-/*--------------------------------------------------------------
-# Display Options
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/* For Font Awesome Icons */
-/*--------------------------------------------------------------
-# Positions
---------------------------------------------------------------*/
-/* Position on Page */
-/* Stacking Order on Page */
-/*--------------------------------------------------------------
-# Size (relative to parent)
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Animations
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Navbar
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Font Awesome Icons
---------------------------------------------------------------*/
+/** ANIMATION **/
 .fas,
 .fab {
   /* property name | duration | easing function | delay */

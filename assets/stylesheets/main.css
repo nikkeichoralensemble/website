@@ -1,7 +1,70 @@
 /*--------------------------------------------------------------
 # Full Style Sheet
 --------------------------------------------------------------*/
-@import "libs/_vars.css";
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+/* Webfonts Setup */
+@font-face {
+  font-family: "RalewayMedium";
+  src: url(../../font/Raleway-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RalewayMediumItalic";
+  src: url(../../font/Raleway-MediumItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RalewayExtraLight";
+  src: url(../../font/Raleway-ExtraLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RalewayExtraLightItalic";
+  src: url(../../font/Raleway-ExtraLightItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "GothicA1";
+  src: url(../../font/GothicA1-Regular.ttf) format("truetype");
+}
+/* Global Variables */
+:root {
+  /*** LAYOUT ***/
+  --gutter-tb: 3%;
+  /* Top & Bottom */
+  --gutter-lr: 8%;
+  /* Left & Right */
+  /* z-index */
+  --level--roof: 1000;
+  --level--top: 800;
+  --level--mid: 30;
+  --level--ground: 0;
+  --level--underground: -100;
+  /*** APPEARANCE ***/
+  /* Fonts */
+  --font--main: "RalewayMedium", sans-serif;
+  --font--main-italic: "RalewayMediumItalic", sans-serif;
+  --font--main-light: "RalewayExtraLight", sans-serif;
+  --font--main-light-italic: "RalewayExtraLightItalic", sans-serif;
+  --font--body: "GothicA1", sans-serif;
+  --font--xs: 15vw;
+  --font--m: 32vw;
+  --font--l: 48vw;
+  --font--xl: 72vw;
+  /* Palette. */
+  --palette--theme: #4787c3;
+  --palette--theme-dark: #235d9c;
+  --patette--theme-light: #d0e0f0;
+  --palette--accent: #f65e89;
+  --palette--accent-lighter: #ffcacf;
+  --palette--black: #2a324b;
+  --palette--white: #ffffff;
+  --palette--grey: #f5f5f5;
+  /*** Breakpoints ***/
+  /* unused for now */
+  --screen--small: 200px;
+  --screen--medium: 500px;
+  --screen--large: 1000px;
+}
+
 /*--------------------------------------------------------------
 # Display Options
 --------------------------------------------------------------*/
@@ -23,7 +86,80 @@
 /*--------------------------------------------------------------
 # Animations
 --------------------------------------------------------------*/
-@import "libs/_global.css";
+/*--------------------------------------------------------------
+# Global Set
+--------------------------------------------------------------*/
+/* Reference:
+  http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain) */
+/*** LAYOUT ***/
+* {
+  box-sizing: content-box;
+  height: minmax(10px, fit-content);
+  width: minmax(10px, fit-content);
+  place-self: center center;
+}
+
+body,
+navbar,
+main,
+footer {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  /* fill up the whole screen */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* navbar main footer */
+}
+
+/*** APPEARANCE ***/
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+}
+
+p {
+  text-align: left;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*** ANIMATIONS ***/
 /*--------------------------------------------------------------
 # Display Options
 --------------------------------------------------------------*/

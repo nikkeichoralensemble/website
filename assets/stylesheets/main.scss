@@ -3,18 +3,18 @@
 --------------------------------------------------------------*/
 
 // Variables
-@import "libs/_vars.css";
+@import "libs/vars";
 
 // SASS
-@import "libs/_mixins.scss";
-@import "libs/_functions.scss";
+@import "libs/mixins";
+@import "libs/functions";
 
 //@import "libs/_vendors.scss"; // from TXT (not sure if need)
 
-@import "libs/_global.css"; // Global Setup
+@import "libs/global"; // Global Setup
 
-@import "libs/style.scss"; // Main Style
-@import "libs/breakpoints.scss"; // Breakpoints
+@import "libs/style"; // Main Style
+@import "libs/breakpoints"; // Breakpoints
 
 // Uncomment for Debug
 // @import "libs/_debug.css"

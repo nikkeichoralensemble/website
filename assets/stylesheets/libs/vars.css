@@ -4,23 +4,23 @@
 /* Webfonts Setup */
 @font-face {
   font-family: "RalewayMedium";
-  src: url(../font/Raleway-Medium.ttf) format("truetype");
+  src: url(../../font/Raleway-Medium.ttf) format("truetype");
 }
 @font-face {
   font-family: "RalewayMediumItalic";
-  src: url(../font/Raleway-MediumItalic.ttf) format("truetype");
+  src: url(../../font/Raleway-MediumItalic.ttf) format("truetype");
 }
 @font-face {
   font-family: "RalewayExtraLight";
-  src: url(../font/Raleway-ExtraLight.ttf) format("truetype");
+  src: url(../../font/Raleway-ExtraLight.ttf) format("truetype");
 }
 @font-face {
   font-family: "RalewayExtraLightItalic";
-  src: url(../font/Raleway-ExtraLightItalic.ttf) format("truetype");
+  src: url(../../font/Raleway-ExtraLightItalic.ttf) format("truetype");
 }
 @font-face {
   font-family: "GothicA1";
-  src: url(../font/GothicA1-Regular.ttf) format("truetype");
+  src: url(../../font/GothicA1-Regular.ttf) format("truetype");
 }
 /* Global Variables */
 :root {

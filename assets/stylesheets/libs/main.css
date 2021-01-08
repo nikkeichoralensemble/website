@@ -92,6 +92,9 @@ header #topnav {
   left: 50%;
   transform: translate(-50%, 0);
 }
+header #topnav a {
+  font-family: var(--font--main);
+}
 header .contact {
   position: absolute;
   top: 0%;

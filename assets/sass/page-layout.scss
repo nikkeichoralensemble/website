@@ -8,6 +8,7 @@
   overflow: scroll;
   text-align: left;
   vertical-align: middle;
+  place-self: center center;
 }
 
 img {
@@ -47,21 +48,7 @@ header {
   max-height: 20vh;
 
   display: grid;
-  grid-template-rows: 1fr;
   grid-template-columns: auto 2fr auto;
-  grid-template-areas:
-    "logo"
-    "topnav"
-    "contact";
-  .logo {
-    grid-area: logo;
-  }
-  #topnav {
-    grid-area: nav;
-  }
-  .contact {
-    grid-area: contact;
-  }
 
   * {
     @include FlexRow;
@@ -76,22 +63,9 @@ main {
 }
 
 footer {
+  @include setupGrid;
   display: grid;
-  grid-template-rows: auto;
   grid-template-columns: auto auto auto;
-  grid-template-areas:
-    "ocf"
-    "contact"
-    "copyright";
-  .ocf {
-    grid-area: ocf;
-  }
-  .contact {
-    grid-area: contact;
-  }
-  .copyright {
-    grid-area: copyright;
-  }
   * {
     @include FlexRow;
   }

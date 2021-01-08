@@ -65,9 +65,6 @@
 # Appearance
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Flexboxes
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 # Positions
 --------------------------------------------------------------*/
 /* Position on Page */
@@ -104,6 +101,7 @@
   overflow: scroll;
   text-align: left;
   vertical-align: middle;
+  place-self: center center;
 }
 
 img {
@@ -143,18 +141,7 @@ footer {
 header {
   max-height: 20vh;
   display: grid;
-  grid-template-rows: 1fr;
   grid-template-columns: auto 2fr auto;
-  grid-template-areas: "logo" "topnav" "contact";
-}
-header .logo {
-  grid-area: logo;
-}
-header #topnav {
-  grid-area: nav;
-}
-header .contact {
-  grid-area: contact;
 }
 header * {
   display: flex;
@@ -174,19 +161,12 @@ main * {
 }
 
 footer {
+  display: Grid;
+  grid-gap: 5%;
+  align-content: space-evenly;
+  justify-content: space-evenly;
   display: grid;
-  grid-template-rows: auto;
   grid-template-columns: auto auto auto;
-  grid-template-areas: "ocf" "contact" "copyright";
-}
-footer .ocf {
-  grid-area: ocf;
-}
-footer .contact {
-  grid-area: contact;
-}
-footer .copyright {
-  grid-area: copyright;
 }
 footer * {
   display: flex;

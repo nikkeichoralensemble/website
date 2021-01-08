@@ -3,14 +3,14 @@
 
 @import "reset.scss"; // reset browser defined elements
 
-@import "page-layout.scss";
+@import "display.scss";
 @import "styles.scss";
 
 /*--------------------------------------------------------------
 # Debug Use
 --------------------------------------------------------------*/
 body {
-  border: 5px solid yellow !important;
+  // border: 5px solid yellow !important;
 }
 body * {
   border: 1px solid red !important;

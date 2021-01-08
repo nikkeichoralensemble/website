@@ -169,14 +169,15 @@ body {
 # Basic Setup
 --------------------------------------------------------------*/
 * {
+  box-sizing: border-box;
+  min-height: 10px;
+  max-height: 10px;
+  max-height: 100%;
+  max-width: 100%;
   overflow: scroll;
   text-align: left;
   vertical-align: middle;
   place-self: center center;
-}
-
-img {
-  vertical-align: middle;
 }
 
 /*--------------------------------------------------------------
@@ -193,25 +194,15 @@ body {
   grid-template-columns: 1fr;
 }
 
-/*--------------------------------------------------------------
-# Header, Main, Footer Setup
---------------------------------------------------------------*/
 header {
   max-height: 20vh;
   width: 100vw;
   display: grid;
   grid-template-columns: auto 2fr auto;
 }
-header > * {
-  display: block;
-}
 
 main {
   width: 100vw;
-  display: block;
-}
-main > * {
-  display: block;
 }
 
 footer {
@@ -223,24 +214,52 @@ footer {
   display: grid;
   grid-template-columns: auto auto auto;
 }
-footer > * {
-  display: block;
-}
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+#logo img {
+  height: 1cm;
+  width: auto;
+}
+
+#topnav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+#sidenav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: start;
+  display: none;
+}
+
 .contact {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: center;
 }
 
 header .logo {
   display: inline-block;
 }
 header .logo img {
-  height: 100%;
-  max-height: 40px;
-  vertical-align: middle;
+  height: 1cm;
+  width: 1cm;
 }
 
 main section {
@@ -357,6 +376,16 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
+# Padding and Margins
+--------------------------------------------------------------*/
+header,
+main,
+footer,
+div {
+  padding: 1em;
+}
+
+/*--------------------------------------------------------------
 # Page Sections
 --------------------------------------------------------------*/
 body {
@@ -382,10 +411,6 @@ footer {
 /*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
-nav > a {
-  padding: 3em;
-}
-
 .back-to-top {
   position: fixed;
   bottom: 2%;
@@ -482,10 +507,6 @@ nav > a {
 /*--------------------------------------------------------------
 # Debug Use
 --------------------------------------------------------------*/
-body {
-  border: 5px solid yellow !important;
-}
-
 body * {
   border: 1px solid red !important;
 }

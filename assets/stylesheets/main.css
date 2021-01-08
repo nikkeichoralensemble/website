@@ -1,21 +1,18 @@
-@import "vars.scss"; // variables
-// @import "mixins.scss"; // helper classes
+@import "libs/vars.css";
 
-@import "_reset.scss";
+@import "libs/reset.css";
 
-@import "display.scss";
-@import "styles.scss";
-@import "animation.scss";
+@import "libs/display.css";
+@import "libs/styles.css";
+@import "libs/animation.css";
 
-@import "_breakpoints.scss";
-
-
+@import "libs/breakpoints.css";
 
 /*--------------------------------------------------------------
 # Debug Use
 --------------------------------------------------------------*/
 body {
-  // border: 5px solid yellow !important;
+  border: 5px solid yellow !important;
 }
 body * {
   border: 1px solid red !important;

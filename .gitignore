@@ -1,9 +1,18 @@
+# Python
+*.pyc
 __pycache__/
+_pypackages_
 
-.idea/
+# IDEs
 .vscode/
+.idea/
 
+# Environments
 env/
 venv/
 
+# Binary Files
+*.DS_Store
+
+# Project Files
 ref/

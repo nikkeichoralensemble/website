@@ -9,8 +9,25 @@
   width: minmax(10px, fit-content);
 
   overflow: hidden;
-  vertical-align: middle;
   place-self: center center;
+}
+
+body,
+header,
+main,
+footer {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%; /* fill up the whole screen */
+
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* header main footer */
 }
 
 /*** APPEARANCE ***/
@@ -21,6 +38,7 @@
 
 * {
   text-align: center;
+  vertical-align: middle;
 }
 p {
   text-align: left;

@@ -23,24 +23,6 @@
 # Basic
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
-*,
-* > *,
-* > * > * {
-  box-sizing: content-box;
-  height: minmax(10px, fit-content);
-  width: minmax(10px, fit-content);
-  padding: 0px;
-  margin: 0px;
-  overflow: hidden;
-  text-align: center;
-  vertical-align: middle;
-  place-self: center center;
-}
-
-p {
-  text-align: left;
-}
-
 /*** APPEARANCE ***/
 h1,
 h2,
@@ -70,16 +52,6 @@ a:hover {
 # Page Setup
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
-html {
-  height: 100%;
-}
-
-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
 header {
   max-height: 20vh;
   width: 100vw;
@@ -91,9 +63,6 @@ header #topnav {
   top: 0px;
   left: 50%;
   transform: translate(-50%, 0);
-}
-header #topnav a {
-  font-family: var(--font--main);
 }
 header .contact {
   position: absolute;

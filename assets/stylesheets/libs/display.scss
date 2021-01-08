@@ -2,19 +2,18 @@
 /*--------------------------------------------------------------
 # Basic Setup
 --------------------------------------------------------------*/
-* {
-  box-sizing: border-box;
-  // min-height: min-content;
-  // min-width: min-content;
-  height: minmax(10px, auto);
-  width: minmax(10px, auto);
-  max-height: 100%;
-  max-width: 100%;
+*,
+* > *,
+* > * > * {
+  box-sizing: content-box;
+
+  height: minmax(10px, fit-content);
+  width: minmax(10px, fit-content);
 
   padding: 0px;
   margin: 0px;
 
-  overflow: scroll; //TODO remove?
+  overflow: hidden;
 
   text-align: center;
   vertical-align: middle;
@@ -25,6 +24,10 @@ p {
   text-align: left;
 }
 
+// div {
+//   height: fit-content;
+//   width: fit-content;
+// }
 /*--------------------------------------------------------------
 # Page Setup
 --------------------------------------------------------------*/
@@ -32,43 +35,40 @@ html {
   height: 100%;
 }
 
-body,
-header,
-main,
-footer {
-  box-sizing: border-box;
-  @include fill-width;
-}
-
 body {
   min-height: 100%; // fill screen
 
   display: grid;
   grid-template-rows: auto 1fr auto; // header, main, footer
-  grid-template-columns: 1fr;
+  // grid-template-columns: 1fr;
 }
 
 header {
   max-height: 20vh;
+  @include fill-width;
+  @include inner-margin;
 
-  @include Grid;
-  grid-template-columns: auto auto auto;
-
-  .logo {
-    img {
-      max-height: 80%;
-      max-width: 80%;
-    }
-  }
   #topnav {
-    display: inline-block;
+    display: inline-flex;
+    // @include fix-to-parent;
+    position: relative;
+    @include dead-center;
+  }
+  .contact {
+    @include fix-to-parent;
+    @include topRight;
+    transform: translate(0, 50%);
   }
 }
 
 main {
+  @include fill-width;
+  @include inner-margin;
 }
 
 footer {
+  @include fill-width;
+  @include inner-margin;
   @include Grid;
   grid-template-columns: auto auto auto;
 }
@@ -94,20 +94,22 @@ footer {
 
 /* Header Components */
 header {
+  display: inline-flex;
+
+  .logo .tmp {
+    height: 40px;
+    width: 40px;
+  }
   .logo {
-    // @include Grid(space-evenly);
-    img {
-      height: 1cm;
-      width: auto;
-    }
-  }
-  #topnav {
     display: inline-block;
-    // @include FlexRow(space-evenly);
-  }
-  #sidenav {
-    @include FlexCol(start);
-    display: none;
+    a {
+      // width: 67%;
+    }
+    img {
+      // width: 33% !important;
+      height: 1cm;
+      width: 1cm;
+    }
   }
 }
 
@@ -120,19 +122,26 @@ footer {
 }
 
 /*--------------------------------------------------------------
-# Side Nav
+# Navigations
 --------------------------------------------------------------*/
-/* The side navigation menu */
+
+/* #topnav changes to #sidenav in small screens */
+
+#topnav {
+  @include Grid;
+}
+
 #sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
+  @include fix-to-page;
+  @include topLeft;
   z-index: var(--level--roof); /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
+
+  height: 100vh; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
+  // padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
@@ -160,20 +169,27 @@ footer {
   margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-header,
-main,
-footer {
-  transition: margin-left 0.5s;
-  padding: 20px;
-}
+// /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+// header,
+// main,
+// footer {
+//   transition: margin-left 0.5s;
+//   padding: 20px;
+// }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   #sidenav {
     padding-top: 15px;
+    a {
+      font-size: 18px;
+    }
   }
-  #sidenav a {
-    font-size: 18px;
-  }
+}
+/* controlled by javascript */
+#open-nav-btn {
+  display: none;
+}
+#close-nav-btn {
+  display: none;
 }

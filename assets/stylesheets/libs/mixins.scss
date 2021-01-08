@@ -1,7 +1,6 @@
 /*--------------------------------------------------------------
 # Display Options
 --------------------------------------------------------------*/
-
 @mixin fix-to-page {
   position: fixed;
 }
@@ -30,10 +29,16 @@
   right: 0% + $r;
 }
 
+@mixin dead-center {
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
 @mixin FlexRow($justify: space-evenly) {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
 
   // vertical alignment
   align-items: space-evenly;
@@ -47,7 +52,7 @@
 @mixin FlexCol($justify: space-evenly) {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
 
   // vertical alignment
   align-items: space-evenly;
@@ -70,6 +75,12 @@
 /*--------------------------------------------------------------
 # Appearance
 --------------------------------------------------------------*/
+@mixin inner-margin(
+  $top-bottom: -#{var(--gutter-tb)},
+  $left-right: -#{var(--gutter-lr)}
+) {
+  margin: 0% + $top-bottom, 0% + $left-right;
+}
 
 @mixin fill-width {
   width: 100vw;

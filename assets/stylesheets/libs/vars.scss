@@ -1,7 +1,8 @@
 /*--------------------------------------------------------------
-# Webfonts Setup
+# Variables
 --------------------------------------------------------------*/
 
+/* Webfonts Setup */
 @font-face {
   font-family: "RalewayMedium";
   src: url(../font/Raleway-Medium.ttf) format("truetype");
@@ -27,13 +28,11 @@
   src: url(../font/GothicA1-Regular.ttf) format("truetype");
 }
 
-/*--------------------------------------------------------------
-# Variables
---------------------------------------------------------------*/
-
+/* Global Variables */
 :root {
   /* Layout */
-  --gutter: 10vw;
+  --gutter-lr: 8%;
+  --gutter-tb: 3%;
 
   /* Fonts */
   --font--main: "RalewayMedium", sans-serif;

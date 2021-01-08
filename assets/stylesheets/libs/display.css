@@ -22,15 +22,15 @@
 /*--------------------------------------------------------------
 # Basic Setup
 --------------------------------------------------------------*/
-* {
-  box-sizing: border-box;
-  height: minmax(10px, auto);
-  width: minmax(10px, auto);
-  max-height: 100%;
-  max-width: 100%;
+*,
+* > *,
+* > * > * {
+  box-sizing: content-box;
+  height: minmax(10px, fit-content);
+  width: minmax(10px, fit-content);
   padding: 0px;
   margin: 0px;
-  overflow: scroll;
+  overflow: hidden;
   text-align: center;
   vertical-align: middle;
   place-self: center center;
@@ -47,40 +47,39 @@ html {
   height: 100%;
 }
 
-body,
-header,
-main,
-footer {
-  box-sizing: border-box;
-  width: 100vw;
-}
-
 body {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr;
 }
 
 header {
   max-height: 20vh;
-  display: Grid;
-  gap: 10px;
-  align-content: space-evenly;
-  justify-content: space-evenly;
-  grid-auto-rows: minmax(10px, auto);
-  grid-auto-columns: minmax(10px, auto);
-  grid-template-columns: auto auto auto;
-}
-header .logo img {
-  max-height: 80%;
-  max-width: 80%;
+  width: 100vw;
+  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
 }
 header #topnav {
-  display: inline-block;
+  display: inline-flex;
+  position: relative;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+header .contact {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  transform: translate(0, 50%);
+}
+
+main {
+  width: 100vw;
+  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
 }
 
 footer {
+  width: 100vw;
+  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
   display: Grid;
   gap: 10px;
   align-content: space-evenly;
@@ -97,7 +96,6 @@ footer {
 .contact {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: space-evenly;
   align-content: space-evenly;
   justify-items: space-evenly;
@@ -124,48 +122,50 @@ footer {
 }
 
 /* Header Components */
-header .logo img {
-  height: 1cm;
-  width: auto;
+header {
+  display: inline-flex;
 }
-header #topnav {
+header .logo .tmp {
+  height: 40px;
+  width: 40px;
+}
+header .logo {
   display: inline-block;
 }
-header #sidenav {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: space-evenly;
-  align-content: space-evenly;
-  justify-items: space-evenly;
-  justify-content: start;
-  display: none;
+header .logo img {
+  height: 1cm;
+  width: 1cm;
 }
 
 /* Main Components */
 /* Footer Components */
 /*--------------------------------------------------------------
-# Side Nav
+# Navigations
 --------------------------------------------------------------*/
-/* The side navigation menu */
+/* #topnav changes to #sidenav in small screens */
+#topnav {
+  display: Grid;
+  gap: 10px;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  grid-auto-rows: minmax(10px, auto);
+  grid-auto-columns: minmax(10px, auto);
+}
+
 #sidenav {
-  height: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: var(--level--roof);
+  /* Stay on top */
+  height: 100vh;
   /* 100% Full-height */
   width: 0;
   /* 0 width - change this with JavaScript */
-  position: fixed;
-  /* Stay in place */
-  z-index: var(--level--roof);
-  /* Stay on top */
-  top: 0;
-  /* Stay at the top */
-  left: 0;
   background-color: #111;
   /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
-  padding-top: 60px;
-  /* Place content 60px from the top */
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
 }
@@ -194,21 +194,20 @@ header #sidenav {
   margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-header,
-main,
-footer {
-  transition: margin-left 0.5s;
-  padding: 20px;
-}
-
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   #sidenav {
     padding-top: 15px;
   }
-
   #sidenav a {
     font-size: 18px;
   }
+}
+/* controlled by javascript */
+#open-nav-btn {
+  display: none;
+}
+
+#close-nav-btn {
+  display: none;
 }

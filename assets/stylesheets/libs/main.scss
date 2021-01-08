@@ -30,12 +30,12 @@ a:hover {
 # Page Setup
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
-header {
+navbar {
   max-height: 20vh;
   @include fill-width;
   @include inner-margin;
 
-  #topnav {
+  #navtabs {
     display: inline-flex;
     // @include fix-to-parent;
     position: relative;
@@ -61,7 +61,7 @@ footer {
 }
 
 /*** APPEARANCE ***/
-header,
+navbar,
 main,
 footer,
 div {
@@ -75,10 +75,10 @@ a {
 body {
   background: var(--palette--accent-lighter);
 }
-header {
+navbar {
   background: var(--palette--white);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
-  #topnav > a {
+  #navtabs > a {
     font-size: 15px;
     padding: 100% 5%;
     margin: 1em 2em;
@@ -103,7 +103,7 @@ footer {
 /*** LAYOUT ***/
 
 /* Header Components */
-header {
+navbar {
   display: inline-flex;
 
   .logo .tmp {
@@ -163,9 +163,9 @@ footer {
 # Navigations
 --------------------------------------------------------------*/
 
-/* #topnav changes to #sidenav in small screens */
+/* #navtabs changes to #sidenav in small screens */
 
-#topnav {
+#navtabs {
   @include Grid;
 }
 
@@ -208,7 +208,7 @@ footer {
 }
 
 // /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-// header,
+// navbar,
 // main,
 // footer {
 //   transition: margin-left 0.5s;

@@ -6,8 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/stylesheets/fontawesome-all.min.css" />
-    <!-- <link rel="stylesheet" href="assets/stylesheets/main.css" /> -->
-    <link rel="stylesheet" href="{{url_for('static', filename='stylesheets/main.css')}}" />
+    <link rel="stylesheet" href="assets/stylesheets/main.css" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/logo-square.png" />
@@ -16,16 +15,16 @@
   </head>
 
   <body>
-    <!-- Header -->
-    <header>
+
+    <navbar id="navbar">
       <button id="open-nav-btn" onclick="openNav()">&#9776;</button>
 
-      <nav id="topnav">
+      <div id="navtabs">
         <a href="javascript:void(0)" id="close-nav-btn" onclick="closeNav()">&times;</a>
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/auditions">Auditions</a>
-      </nav>
+      </div>
 
       <div class="contact">
         <a class="fas fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
@@ -33,15 +32,15 @@
         <a class="fas fa-facebook" href="https://www.facebook.com/wearenice"></a>
         <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
       </div>
-    </header>
+    </navbar>
 
     <!-- Main -->
-    <main>
+    <main id="main">
       Here's some main content.
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer id="footer">
       <div id="ocf">
         <p>
           Disclaimer: We are a student group acting independently of the University of California.
@@ -67,11 +66,10 @@
           Bootstrap template from <a href="http://html5up.net">HTML5 UP</a>.
         </p>
       </div>
-
     </footer>
 
     <!-- Back to Top -->
-    <a href="#" id="back-to-top" class="fas fa-alt-arrow-up"></a>
+    <a id="back-to-top" class="fas fa-alt-arrow-up" href="#" ></a>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>

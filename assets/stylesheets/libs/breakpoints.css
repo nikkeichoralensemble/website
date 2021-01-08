@@ -75,7 +75,7 @@
 @media screen and (min-width: 561px) {
   /* Basic */
   /* Header */
-  header #open-nav-btn {
+  navbar #open-nav-btn {
     display: none;
   }
 
@@ -90,12 +90,12 @@
   }
 
   /* Header */
-  header #topnav,
-header .contact,
-header .logo img {
+  navbar #navtabs,
+navbar .contact,
+navbar .logo img {
     display: none;
   }
-  header #open-nav-btn {
+  navbar #open-nav-btn {
     display: block;
   }
 

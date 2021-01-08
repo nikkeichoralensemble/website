@@ -2,7 +2,7 @@
 # Shift Main Down
 --------------------------------------------------------------*/
 // $(document).ready(function () {
-//   topHeight = $("header").outerHeight(true);
+//   topHeight = $("navbar").outerHeight(true);
 //   alert(topHeight);
 //   $("main").css({ "margin-top": topHeight + "px" });
 // });
@@ -60,15 +60,15 @@ function openNav() {
   document.getElementById("sidenav").style.display = "block";
   w = document.getElementById("sidenav").outerWidth(true);
 
-  document.getElementById("header").css({ "margin-right": w + "px" });
+  document.getElementById("navbar").css({ "margin-right": w + "px" });
   document.getElementById("main").css({ "margin-left": w + "px" });
   document.getElementById("footer").css({ "margin-left": w + "px" });
 
-  //   document.getElementById("header").style.marginLeft = w;
+  //   document.getElementById("navbar").style.marginLeft = w;
   //   document.getElementById("main").style.marginLeft = w;
   //   document.getElementById("footer").style.marginLeft = w;
 
-  document.getElementById("header").style.backgroundColor = "rgba(0,0,0,0.4)";
+  document.getElementById("navbar").style.backgroundColor = "rgba(0,0,0,0.4)";
   document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.4)";
   document.getElementById("footer").style.backgroundColor = "rgba(0,0,0,0.4)";
 }
@@ -77,11 +77,11 @@ function openNav() {
 function closeNav() {
   document.getElementById("sidenav").style.display = "none";
 
-  document.getElementById("header").style.marginLeft = "0px";
+  document.getElementById("navbar").style.marginLeft = "0px";
   document.getElementById("main").style.marginLeft = "0px";
   document.getElementById("footer").style.marginLeft = "0px";
 
-  document.getElementById("header").style.backgroundColor = "white";
+  document.getElementById("navbar").style.backgroundColor = "white";
   document.getElementById("main").style.backgroundColor = "white)";
   document.getElementById("footer").style.backgroundColor = "white";
 }

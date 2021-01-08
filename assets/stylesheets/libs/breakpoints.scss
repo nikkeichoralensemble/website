@@ -295,7 +295,7 @@ $breakpoints: ();
 @include breakpoint(">small") {
   /* Basic */
   /* Header */
-  header {
+  navbar {
     #open-nav-btn {
       display: none;
     }
@@ -311,8 +311,8 @@ $breakpoints: ();
     display: block;
   }
   /* Header */
-  header {
-    #topnav,
+  navbar {
+    #navtabs,
     .contact,
     .logo img {
       display: none;

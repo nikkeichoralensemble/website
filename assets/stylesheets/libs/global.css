@@ -13,7 +13,7 @@
 }
 
 body,
-header,
+navbar,
 main,
 footer {
   box-sizing: border-box;
@@ -27,7 +27,7 @@ body {
   min-height: 100%; /* fill up the whole screen */
 
   display: grid;
-  grid-template-rows: auto 1fr auto; /* header main footer */
+  grid-template-rows: auto 1fr auto; /* navbar main footer */
 }
 
 /*** APPEARANCE ***/

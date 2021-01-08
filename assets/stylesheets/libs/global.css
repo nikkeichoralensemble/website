@@ -1,0 +1,47 @@
+/*--------------------------------------------------------------
+# Global Set
+--------------------------------------------------------------*/
+/*** LAYOUT ***/
+* {
+  box-sizing: content-box;
+
+  height: minmax(10px, fit-content);
+  width: minmax(10px, fit-content);
+
+  overflow: hidden;
+  place-self: center center;
+}
+
+body,
+navbar,
+main,
+footer {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%; /* fill up the whole screen */
+
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* navbar main footer */
+}
+
+/*** APPEARANCE ***/
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+* {
+  text-align: center;
+  vertical-align: middle;
+}
+p {
+  text-align: left;
+}
+
+/*** ANIMATIONS ***/

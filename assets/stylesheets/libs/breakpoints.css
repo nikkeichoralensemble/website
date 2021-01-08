@@ -30,7 +30,7 @@
 --------------------------------------------------------------*/
 @media screen and (max-width: 1680px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
@@ -40,14 +40,14 @@
 --------------------------------------------------------------*/
 @media screen and (min-width: 1281px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
 }
 @media screen and (max-width: 1280px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
@@ -57,14 +57,14 @@
 --------------------------------------------------------------*/
 @media screen and (min-width: 981px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
 }
 @media screen and (max-width: 980px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
@@ -74,8 +74,8 @@
 --------------------------------------------------------------*/
 @media screen and (min-width: 561px) {
   /* Basic */
-  /* Header */
-  header #open-nav-btn {
+  /* Navbar */
+  navbar #open-nav-btn {
     display: none;
   }
 
@@ -89,13 +89,13 @@
     display: block;
   }
 
-  /* Header */
-  header #topnav,
-header .contact,
-header .logo img {
+  /* Navbar */
+  navbar #navtabs,
+navbar .contact,
+navbar .logo img {
     display: none;
   }
-  header #open-nav-btn {
+  navbar #open-nav-btn {
     display: block;
   }
 
@@ -127,14 +127,14 @@ header .logo img {
 --------------------------------------------------------------*/
 @media screen and (min-width: 361px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */
 }
 @media screen and (max-width: 360px) {
   /* Basic */
-  /* Header */
+  /* Navbar */
   /* Main */
   /* Footer */
   /* Components */

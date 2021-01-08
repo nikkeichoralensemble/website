@@ -14,19 +14,39 @@ Please use Git!!
 
 Edit HTML files under `templates/pages`
 
-They are generally organized following this order:
+## Edit website style
+
+Edit files under `assets/stylesheets/libs`
+If you are using SASS, use `sass --watch assets/stylesheets/libs --no-source-map`
+
+Each file is generally organized following this order:
 
 ```
 /* Basic */
+    /*** LAYOUT ***/
+    /*** APPEARANCE ***/
+    /*** ANIMATIONS ***/
 /* Header */
+    /*** LAYOUT ***/
+    /*** APPEARANCE ***/
+    /*** ANIMATIONS ***/
 /* Main */
+    /*** LAYOUT ***/
+    /*** APPEARANCE ***/
+    /*** ANIMATIONS ***/
 /* Footer */
+    /*** LAYOUT ***/
+    /*** APPEARANCE ***/
+    /*** ANIMATIONS ***/
 /* Components */
+    /*** LAYOUT ***/
+    /*** APPEARANCE ***/
+    /*** ANIMATIONS ***/
 ```
 
-## Edit website style
+where LAYOUT, APPARERANCE, and ANIMATIONS correspond to the **computed elements** when you inspect a page in a browser.
 
-Edit CSS files under `assets/css`
+To inspect a page, right-click the page in a browser, select "inspect".
 
 ## Deploying the website to OCF
 

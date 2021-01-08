@@ -65,7 +65,7 @@ a:hover {
   text-decoration: none;
 }
 
-/** ANIMATION **/
+/*** ANIMATION ***/
 /*--------------------------------------------------------------
 # Page Setup
 --------------------------------------------------------------*/
@@ -216,7 +216,7 @@ header .logo img {
 /* Main Components */
 /* Footer Components */
 /* Other Components */
-/** ANIMATION **/
+/*** ANIMATION ***/
 /*--------------------------------------------------------------
 # Navigations
 --------------------------------------------------------------*/
@@ -343,7 +343,7 @@ header .logo img {
     /* color: #fff; */
 }
 
-/** ANIMATION **/
+/*** ANIMATION ***/
 .fas,
 .fab {
   /* property name | duration | easing function | delay */

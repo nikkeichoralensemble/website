@@ -50,7 +50,7 @@ a,
 a:hover {
   text-decoration: none;
 }
-/** ANIMATION **/
+/*** ANIMATION ***/
 
 /*--------------------------------------------------------------
 # Page Setup
@@ -64,8 +64,10 @@ body {
   min-height: 100%; // fill screen
 
   display: grid;
-  grid-template-rows: auto 1fr auto; // header, main, footer
+  grid-template-rows: auto 1fr auto;
   // grid-template-columns: 1fr;
+
+  // header, main, footer
 }
 
 header {
@@ -195,7 +197,7 @@ footer {
 /* Footer Components */
 /* Other Components */
 
-/** ANIMATION **/
+/*** ANIMATION ***/
 
 /*--------------------------------------------------------------
 # Navigations
@@ -329,7 +331,7 @@ footer {
   /* color: #fff; */
 }
 
-/** ANIMATION **/
+/*** ANIMATION ***/
 .fas,
 .fab {
   /* property name | duration | easing function | delay */

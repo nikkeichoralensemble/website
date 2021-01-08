@@ -1,7 +1,59 @@
+@mixin RowContainer($justify: center) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin ColContainer($justify: center) {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin topLeft($t: 0, $l: 0) {
+  top: 0% + $t;
+  left: 0% + $l;
+}
+
+@mixin topRight($t: 0, $r: 0) {
+  top: 0%;
+  right: 0%;
+}
+
+@mixin bottomLeft() {
+  bottom: 0%;
+  left: 0%;
+}
+
+@mixin bottomRight($b: 0, $r: 0) {
+  bottom: 0% + $b;
+  right: 0% + $r;
+}
+
+@mixin fix-to-page {
+  position: fixed;
+}
+
+@mixin fix-to-parent {
+  position: absolute;
+}
+
+@mixin fill-width {
+  width: 100vw;
+}
+
+@mixin fill-height {
+  height: 100vh;
+}
+
 /*--------------------------------------------------------------
 # Flexboxes
 --------------------------------------------------------------*/
-[class^=flex-] {
+[class^="flex-"] {
   /* base flex properties */
   display: flex;
   flex-wrap: wrap;
@@ -51,6 +103,7 @@
 }
 
 /* Stacking Order on Page */
+
 /*--------------------------------------------------------------
 # Size (relative to parent)
 --------------------------------------------------------------*/
@@ -65,6 +118,7 @@
 /*--------------------------------------------------------------
 # Appearance
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 # Animations
 --------------------------------------------------------------*/

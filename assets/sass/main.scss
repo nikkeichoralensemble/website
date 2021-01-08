@@ -1,0 +1,109 @@
+@import "vars.scss";
+@import "utils.scss";
+
+/*--------------------------------------------------------------
+# Setup
+--------------------------------------------------------------*/
+* {
+  // position: absolute;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-height: 100vh;
+  max-width: 100vw;
+  margin: 0px;
+  padding: 0px;
+
+  // border: none;
+  // vertical-align: center;
+}
+
+body {
+  all: initial;
+  @include fill-height;
+  @include fill-width;
+}
+
+header {
+  @include RowContainer(space-between);
+  @include fix-to-page;
+  @include topLeft;
+  @include fill-width;
+  max-height: 20%;
+}
+
+main {
+  @include fill-width;
+  min-height: 100%;
+}
+
+footer {
+  @include RowContainer;
+  @include fill-width;
+  max-height: 20%;
+}
+
+.row {
+  @include RowContainer;
+}
+.col {
+  @include ColContainer;
+}
+
+/*--------------------------------------------------------------
+# Sticky Footer
+--------------------------------------------------------------*/
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+.back-to-top {
+  @include fix-to-page;
+  width: 40px;
+  height: 40px;
+  /* display: none; */
+  @include bottomRight(2, 2);
+  z-index: 99999;
+  i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #34b7a7;
+    color: #fff;
+    transition: all 0.4s;
+    &:hover {
+      background: #3dc8b7;
+      color: #fff;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Debug Use
+--------------------------------------------------------------*/
+body {
+  border: 5px solid yellow !important;
+}
+body * {
+  border: 1px solid red !important;
+}
+body *:hover {
+  border: 1px solid blue !important;
+}

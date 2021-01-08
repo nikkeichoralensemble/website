@@ -73,9 +73,9 @@
 # Shift Main Down
 --------------------------------------------------------------*/
 $(document).ready(function () {
-  topHeight = document.getElementById("nav").outerHeight(true);
+  topHeight = $("header").outerHeight(true);
   alert(topHeight);
-  document.getElementById("main").css({ "margin-top": topHeight + "px" });
+  $("main").css({ "margin-top": topHeight + "px" });
 });
 
 /*--------------------------------------------------------------

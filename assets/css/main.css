@@ -1,107 +1,228 @@
-@import "vars.css";
-@import "utils.css";
-
-/* @import "reset.css"; */
-
-@import "txt.css";
-
-@import "layout.css";
-@import "style.css";
+/*--------------------------------------------------------------
+# Webfonts Setup
+--------------------------------------------------------------*/
+@font-face {
+  font-family: "RalewayMedium";
+  src: url(../font/Raleway-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RalewayMediumItalic";
+  src: url(../font/Raleway-MediumItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RalewayExtraLight";
+  src: url(../font/Raleway-ExtraLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RalewayExtraLightItalic";
+  src: url(../font/Raleway-ExtraLightItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "GothicA1";
+  src: url(../font/GothicA1-Regular.ttf) format("truetype");
+}
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+:root {
+  /* Layout */
+  --gutter: 10vw;
+  /* Fonts */
+  --font--main: "RalewayMedium", sans-serif;
+  --font--main-italic: "RalewayMediumItalic", sans-serif;
+  --font--main-light: "RalewayExtraLight", sans-serif;
+  --font--main-light-italic: "RalewayExtraLightItalic", sans-serif;
+  --font--body: "GothicA1", sans-serif;
+  --font--xs: 15vw;
+  --font--m: 32vw;
+  --font--l: 48vw;
+  --font--xl: 72vw;
+  /* Palette. */
+  --palette--theme: #4787c3;
+  --palette--theme-dark: #235d9c;
+  --patette--theme-light: #d0e0f0;
+  --palette--accent: #f65e89;
+  --palette--accent-lighter: #ffcacf;
+  --palette--black: #2a324b;
+  --palette--white: #ffffff;
+  --palette--grey: #f5f5f5;
+  /* Responsive Screen Thersholds */
+  --screen--small: 200px;
+  --screen--medium: 500px;
+  --screen--large: 1000px;
+  /* Z-index */
+  --level--roof: 1000;
+  --level--top: 800;
+  --level--mid: 30;
+  --level--ground: 0;
+  --level--underground: -100;
+}
 
 /*--------------------------------------------------------------
-# Reset TXT
+# Flexboxes
 --------------------------------------------------------------*/
-*,
-*:hover,
-*:active {
+[class^=flex-] {
+  /* base flex properties */
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-row-center {
+  justify-content: center;
+  flex-direction: row;
+}
+
+.flex-row-spaced {
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.flex-row-even {
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.flex-col-center {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-col-space {
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.flex-col-even {
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+/*--------------------------------------------------------------
+# Positions
+--------------------------------------------------------------*/
+/* Position on Page */
+.fix-to-page {
+  position: fixed;
+}
+
+.fix-to-parent {
   position: absolute;
-  border: none !important;
-  min-height: 10px;
-  min-width: 10px;
-  height: min-content;
-  width: min-content;
 }
 
-p,
-ul,
-ol,
-dl,
-table {
-  margin-bottom: 0em;
+/* Stacking Order on Page */
+/*--------------------------------------------------------------
+# Size (relative to parent)
+--------------------------------------------------------------*/
+.full-width {
+  width: 100%;
 }
 
-#main {
-  min-height: 100%;
+.full-height {
+  height: 100%;
 }
 
-#nav {
-  position: initial;
-  width: auto;
-  padding: 0px;
-}
-
-#nav li {
-  padding: 0px;
-}
-
-#nav li:hover {
-  top: 0px;
-  color: #34b7a7;
-  background-color: transparent;
-  border: 1px solid var(--palette--theme);
-}
-
-.logo {
-  border: none;
+/*--------------------------------------------------------------
+# Appearance
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Animations
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Setup
+--------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+  max-height: 100vh;
+  max-width: 100vw;
   margin: 0px;
   padding: 0px;
 }
 
-/*--------------------------------------------------------------
-# Make Fixed Header
---------------------------------------------------------------*/
-#header {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
+body {
+  all: initial;
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  max-height: 20%;
+}
+
+main {
+  width: 100vw;
+  min-height: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-height: 20%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 /*--------------------------------------------------------------
-# Make Sticky Footer
+# Sticky Footer
 --------------------------------------------------------------*/
 html,
 body {
   height: 100%;
 }
+
 body {
   display: flex;
   flex-direction: column;
 }
-#main {
+
+.content {
   flex: 1 0 auto;
 }
-#footer {
-  width: 100%;
+
+.footer {
   flex-shrink: 0;
-  z-index: var(--level-top);
 }
 
 /*--------------------------------------------------------------
-# Back to top button
+# Components
 --------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
+  width: 40px;
+  height: 40px;
   /* display: none; */
-  right: 15px;
-  bottom: 15px;
+  bottom: 2%;
+  right: 2%;
   z-index: 99999;
 }
-
 .back-to-top i {
   display: flex;
   align-items: center;
@@ -114,25 +235,22 @@ body {
   color: #fff;
   transition: all 0.4s;
 }
-
 .back-to-top i:hover {
   background: #3dc8b7;
   color: #fff;
 }
 
 /*--------------------------------------------------------------
-# Contacts
---------------------------------------------------------------*/
-.contact {
-  display: flex;
-}
-
-/*--------------------------------------------------------------
 # Debug Use
 --------------------------------------------------------------*/
+body {
+  border: 5px solid yellow !important;
+}
 
-*,
-*:hover,
-*:active {
+body * {
   border: 1px solid red !important;
+}
+
+body *:hover {
+  border: 1px solid blue !important;
 }

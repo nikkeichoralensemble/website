@@ -129,86 +129,41 @@
 # Animations
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Setup
+# Page Setup
 --------------------------------------------------------------*/
-* {
-  box-sizing: border-box;
-  overflow: hidden;
-  max-height: 100vh;
-  max-width: 100vw;
-  margin: 0px;
-  padding: 0px;
-}
-
-body {
-  all: initial;
-  height: 100vh;
-  width: 100vw;
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  width: 100vw;
-  max-height: 20%;
-}
-
-main {
-  width: 100vw;
-  min-height: 100%;
-}
-
-footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  max-height: 20%;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.col {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-/*--------------------------------------------------------------
-# Sticky Footer
---------------------------------------------------------------*/
-html,
-body {
+html {
   height: 100%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
 }
 
-.content {
-  flex: 1 0 auto;
+header {
+  grid-area: header;
 }
 
-.footer {
-  flex-shrink: 0;
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/*--------------------------------------------------------------
+# Page Sections
+--------------------------------------------------------------*/
+section,
+div {
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
 }
 
 /*--------------------------------------------------------------

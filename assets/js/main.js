@@ -72,11 +72,11 @@
 /*--------------------------------------------------------------
 # Shift Main Down
 --------------------------------------------------------------*/
-$(document).ready(function () {
-  topHeight = $("header").outerHeight(true);
-  alert(topHeight);
-  $("main").css({ "margin-top": topHeight + "px" });
-});
+// $(document).ready(function () {
+//   topHeight = $("header").outerHeight(true);
+//   alert(topHeight);
+//   $("main").css({ "margin-top": topHeight + "px" });
+// });
 
 /*--------------------------------------------------------------
   # Add Active Tab

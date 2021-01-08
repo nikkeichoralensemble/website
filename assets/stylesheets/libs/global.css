@@ -1,6 +1,11 @@
 /*--------------------------------------------------------------
 # Global Set
 --------------------------------------------------------------*/
+/* Reference:
+  http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain) */
+
 /*** LAYOUT ***/
 * {
   box-sizing: content-box;
@@ -33,14 +38,37 @@ body {
 * {
   padding: 0px;
   margin: 0px;
-}
+  border: 0;
 
-* {
+  font-size: 100%;
+  font: inherit;
+  line-height: 1;
   text-align: center;
   vertical-align: middle;
 }
+
 p {
   text-align: left;
 }
 
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 /*** ANIMATIONS ***/

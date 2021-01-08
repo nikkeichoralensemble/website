@@ -71,10 +71,6 @@ header {
   background: var(--palette--white);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
 }
-header .logo img {
-  height: 5vh;
-  width: 5vh;
-}
 header #topnav > a {
   font-size: regular;
   padding: 3em;

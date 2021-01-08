@@ -1,4 +1,8 @@
-// breakpoints.scss v1.0 | @ajlkn | MIT licensed */
+@import "mixins.scss";
+
+/*--------------------------------------------------------------
+// breakpoints.scss v1.0 | @ajlkn | MIT licensed
+--------------------------------------------------------------*/
 
 // Vars.
 
@@ -248,6 +252,14 @@ $breakpoints: () !global;
 # Large
 --------------------------------------------------------------*/
 
+@include breakpoint(">large") {
+  /* Basic */
+  /* Header */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
 @include breakpoint("<=large") {
   /* Basic */
   /* Header */
@@ -259,6 +271,15 @@ $breakpoints: () !global;
 /*--------------------------------------------------------------
 # Medium
 --------------------------------------------------------------*/
+
+@include breakpoint(">medium") {
+  /* Basic */
+  /* Header */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
 @include breakpoint("<=medium") {
   /* Basic */
   /* Header */
@@ -270,6 +291,19 @@ $breakpoints: () !global;
 /*--------------------------------------------------------------
 # Small
 --------------------------------------------------------------*/
+
+@include breakpoint(">small") {
+  /* Basic */
+  /* Header */
+  header {
+    #open-nav-btn {
+      display: none;
+    }
+  }
+  /* Main */
+  /* Footer */
+  /* Components */
+}
 
 @include breakpoint("<=small") {
   /* Basic */
@@ -283,8 +317,8 @@ $breakpoints: () !global;
     .logo img {
       display: none;
     }
-    #sidenav {
-      display: flex;
+    #open-nav-btn {
+      display: block;
     }
   }
   footer {
@@ -297,13 +331,21 @@ $breakpoints: () !global;
   /* Footer */
   /* Components */
   .fas,
-  fab {
+  .fab {
+    @include setupIcon(20px);
   }
 }
 
 /*--------------------------------------------------------------
 # XSmall
 --------------------------------------------------------------*/
+@include breakpoint(">xsmall") {
+  /* Basic */
+  /* Header */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
 
 @include breakpoint("<=xsmall") {
   /* Basic */

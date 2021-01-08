@@ -2,21 +2,12 @@
   TXT by HTML5 UP
   html5up.net | @ajlkn
   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
---------------------------------------------------------------
+--------------------------------------------------------------*/
 
 (function ($) {
   var $window = $(window),
     $body = $("body"),
-    $nav = $("#nav");
-
-  // Breakpoints.
-  breakpoints({
-    xlarge: ["1281px", "1680px"],
-    large: ["981px", "1280px"],
-    medium: ["737px", "980px"],
-    small: ["361px", "736px"],
-    xsmall: [null, "360px"],
-  });
+    $nav = $("nav");
 
   // Play initial animations on page load.
   $window.on("load", function () {
@@ -26,48 +17,91 @@
   });
 
   // Dropdowns.
-  $("#nav > ul").dropotron({
-    mode: "fade",
-    noOpenerFade: true,
-    speed: 300,
-    alignment: "center",
-  });
+  // $("#nav > ul").dropotron({
+  //   mode: "fade",
+  //   noOpenerFade: true,
+  //   speed: 300,
+  //   alignment: "center",
+  // });
 
   // Scrolly
-  $(".scrolly").scrolly({
-    speed: 1000,
-    offset: function () {
-      return $nav.height() - 5;
-    },
-  });
+  // $(".scrolly").scrolly({
+  //   speed: 1000,
+  //   offset: function () {
+  //     return $nav.height() - 5;
+  //   },
+  // });
 
-  /*--------------------------------------------------------------
-  // Nav.
-  --------------------------------------------------------------
   // Title Bar.
-  $(
-    '<div id="titleBar">' +
-      '<a href="#navPanel" class="toggle"></a>' +
-      '<span class="title">' +
-      $("#logo").html() +
-      "</span>" +
-      "</div>"
-  ).appendTo($body);
+  // $(
+  //   '<div id="titleBar">' +
+  //     '<a href="#navPanel" class="toggle"></a>' +
+  //     '<span class="title">' +
+  //     $("#logo").html() +
+  //     "</span>" +
+  //     "</div>"
+  // ).appendTo($body);
 
   // Panel.
-  $('<div id="navPanel">' + "<nav>" + $("#nav").navList() + "</nav>" + "</div>")
-    .appendTo($body)
-    .panel({
-      delay: 500,
-      hideOnClick: true,
-      hideOnSwipe: true,
-      resetScroll: true,
-      resetForms: true,
-      side: "left",
-      target: $body,
-      visibleClass: "navPanel-visible",
-    });
+  // $('<div id="navPanel">' + "<nav>" + $("#nav").navList() + "</nav>" + "</div>")
+  //   .appendTo($body)
+  //   .panel({
+  //     delay: 500,
+  //     hideOnClick: true,
+  //     hideOnSwipe: true,
+  //     resetScroll: true,
+  //     resetForms: true,
+  //     side: "left",
+  //     target: $body,
+  //     visibleClass: "navPanel-visible",
+  //   });
 })(jQuery);
+
+/*--------------------------------------------------------------
+# Side Nav.
+--------------------------------------------------------------*/
+// Breakpoints.
+var bp = breakpoints({
+  xlarge: ["1281px", "1680px"],
+  large: ["981px", "1280px"],
+  medium: ["737px", "980px"],
+  small: ["361px", "736px"],
+  xsmall: [null, "360px"],
+});
+
+function changeNav() {
+  if (document.getElementById("topnav")) {
+    // document.getElementById("topnav").innerHTML=Date();
+    document.getElementById("topnav").setAttribute("id", "sidenav");
+  } else {
+    // document.getElementById("sidenav").innerHTML="test";
+    document.getElementById("sidenav").setAttribute("id", "topnav");
+  }
+}
+
+//function for screen resize
+function screen_resize() {
+  var h = parseInt(window.innerHeight);
+  var w = parseInt(window.innerWidth);
+
+  if (w <= 560) {
+    changeNav();
+  } else {
+    changeNav();
+  }
+}
+
+screen_resize(jQuery);
+
+// function openNav() {
+//   document.getElementById("sidenav").style.display = "flex";
+//   // document.getElementById("main").style.marginLeft = "250px";
+// }
+
+// function closeNav() {
+//   document.getElementById("sidenav").style.display = "none";
+//   // document.getElementById("main").style.marginLeft= "0";
+// }
 
 /*--------------------------------------------------------------
 # Shift Main Down

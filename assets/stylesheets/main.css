@@ -1,9 +1,22 @@
 @import "libs/vars.css";
 
-@import "libs/reset.css";
+/* @import "libs/reset.css"; */
 @import "libs/global.css";
 
 @import "libs/main.css";
 @import "libs/breakpoints.css";
 
 /* @import "libs/_debug.css" */
+
+/*navbar {
+    max-height: 15vh;
+}
+navtabs {
+    float: left;
+}
+navbar .contact {
+    transform: translate(0, 5%);
+}
+contact {
+    float: left;
+}*/

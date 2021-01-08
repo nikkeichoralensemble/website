@@ -18,6 +18,9 @@ venv/
 *.map
 ref/
 _local-testing.html
+<<<<<<< HEAD
 
 # Sass Map
 assets/stylesheets/libs/main.css.map
+=======
+>>>>>>> b97354052270a0cac7ed9beb65bd85b183af297e

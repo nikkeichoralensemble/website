@@ -58,31 +58,58 @@
   --level--underground: -100;
 }
 
-/*--------------------------------------------------------------
-# Display Options
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Positions
---------------------------------------------------------------*/
-/* Position on Page */
-/* Stacking Order on Page */
-/*--------------------------------------------------------------
-# Size (relative to parent)
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Animations
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Reset Elements
---------------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
 body {
-  margin: 0px;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /*--------------------------------------------------------------
@@ -151,6 +178,7 @@ body {
 /*--------------------------------------------------------------
 # Appearance
 --------------------------------------------------------------*/
+/* For Font Awesome Icons */
 /*--------------------------------------------------------------
 # Positions
 --------------------------------------------------------------*/
@@ -169,15 +197,19 @@ body {
 # Basic Setup
 --------------------------------------------------------------*/
 * {
-  box-sizing: border-box;
-  min-height: 10px;
-  max-height: 10px;
+  box-sizing: content-box;
   max-height: 100%;
   max-width: 100%;
+  padding: 0px;
+  margin: 0px;
   overflow: scroll;
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
   place-self: center center;
+}
+
+p {
+  text-align: left;
 }
 
 /*--------------------------------------------------------------
@@ -185,6 +217,14 @@ body {
 --------------------------------------------------------------*/
 html {
   height: 100%;
+}
+
+body,
+header,
+main,
+footer {
+  box-sizing: border-box;
+  width: 100vw;
 }
 
 body {
@@ -196,19 +236,16 @@ body {
 
 header {
   max-height: 20vh;
-  width: 100vw;
   display: grid;
-  grid-template-columns: auto 2fr auto;
+  grid-template-columns: auto auto auto;
 }
-
-main {
-  width: 100vw;
+header #topnav {
+  display: inline-block;
 }
 
 footer {
-  width: 100vw;
   display: Grid;
-  grid-gap: 5%;
+  gap: 10px;
   align-content: space-evenly;
   justify-content: space-evenly;
   display: grid;
@@ -224,22 +261,16 @@ footer {
 }
 
 #topnav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: space-evenly;
-  justify-items: center;
-  justify-content: space-evenly;
+  display: inline-block;
 }
 
 #sidenav {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: space-evenly;
   align-content: space-evenly;
-  justify-items: center;
+  justify-items: space-evenly;
   justify-content: start;
   display: none;
 }
@@ -248,25 +279,17 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: space-evenly;
   align-content: space-evenly;
-  justify-items: center;
-  justify-content: center;
+  justify-items: space-evenly;
+  justify-content: space-evenly;
 }
 
-header .logo {
-  display: inline-block;
-}
-header .logo img {
-  height: 1cm;
-  width: 1cm;
-}
-
-main section {
-  box-sizing: border-box;
-  overflow: hidden;
-  margin: 0px;
-  padding: 0px;
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
 }
 
 /*--------------------------------------------------------------
@@ -335,6 +358,7 @@ main section {
 /*--------------------------------------------------------------
 # Appearance
 --------------------------------------------------------------*/
+/* For Font Awesome Icons */
 /*--------------------------------------------------------------
 # Positions
 --------------------------------------------------------------*/
@@ -385,6 +409,11 @@ div {
   padding: 1em;
 }
 
+a {
+  padding: 1em, 1em;
+  margin: 1em, 1em;
+}
+
 /*--------------------------------------------------------------
 # Page Sections
 --------------------------------------------------------------*/
@@ -396,8 +425,18 @@ header {
   background: var(--palette--white);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
 }
+header .logo img {
+  height: 5vh;
+  width: 5vh;
+}
+header #topnav > a {
+  font-size: regular;
+  padding: 3em;
+  margin: 3em;
+}
 
 footer {
+  color: var(--palette--white);
   background: var(--palette--theme);
 }
 
@@ -411,60 +450,26 @@ footer {
 /*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
-.back-to-top {
-  position: fixed;
-  bottom: 2%;
-  right: 2%;
-  width: 40px;
-  height: 40px;
-  display: none;
-  z-index: 999999;
-}
-.back-to-top i {
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  background: #34b7a7;
-  color: #fff;
-  transition: all 0.4s;
-}
-.back-to-top i:hover {
-  background: #3dc8b7;
-  color: #fff;
-}
-
 /*--------------------------------------------------------------
-# Icons
+# Font Awesome Icons
 --------------------------------------------------------------*/
 .fas,
 .fab {
-  background-color: #b3b3b3;
-  font-size: 24px;
-  text-align: center;
-  vertical-align: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50px;
-  transition: all 0.4s;
+  color: var(--palette--black);
+  background-color: var(--palette--white);
+  height: 45px;
+  width: 45px;
+  border-radius: 22.5px;
+  font-size: 22.5px;
+  line-height: 45px;
+  vertical-align: baseline;
+  margin: 4.5px;
+  padding: 0.9px;
 }
-
 .fas:hover,
 .fab:hover {
-  position: relative;
-  top: -5px;
+  color: var(--palette--white);
   background: var(--palette--accent);
-}
-
-.fas:before,
-.fab:before {
-  color: #f2f5f3;
-  font-size: 32px;
-  line-height: 48px;
-}
-
-.fas:hover,
-.fab:hover {
   position: relative;
   top: -5px;
 }
@@ -491,11 +496,11 @@ footer {
 }
 
 .fas.fa-arrow-up {
+  background: var(--palette--theme);
   font-size: 24px;
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  /* background: var(--palette--theme); */
   /* color: #fff;
     transition: all 0.4s;
   }
@@ -504,6 +509,40 @@ footer {
     /* color: #fff; */
 }
 
+.fas,
+.fab {
+  /* property name | duration | easing function | delay */
+  transition: position 2s ease-in-out 0.5s;
+}
+
+/*--------------------------------------------------------------
+# Breakpoints
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# XLarge
+--------------------------------------------------------------*/
+@media screen and (max-width: 1680px) {
+  /* Basic */
+  body,
+input,
+textarea,
+select {
+    font-size: 12pt;
+    line-height: 1.75em;
+  }
+}
+/*--------------------------------------------------------------
+# Large
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Medium
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Small
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# XSmall
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Debug Use
 --------------------------------------------------------------*/

@@ -26,9 +26,7 @@
 --------------------------------------------------------------*/
 :root {
   /* Layout */
-  --gutter--side: 5%;
-  --gutter--side: 2%;
-
+  --gutter: 10vw;
   /* Fonts */
   --font--main: "RalewayMedium", sans-serif;
   --font--main-italic: "RalewayMediumItalic", sans-serif;

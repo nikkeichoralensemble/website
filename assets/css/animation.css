@@ -1,0 +1,5 @@
+.fas,
+.fab {
+  /* property name | duration | easing function | delay */
+  transition: position 2s ease-in-out 0.5s;
+}

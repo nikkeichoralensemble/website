@@ -30,33 +30,37 @@
   right: 0% + $r;
 }
 
-@mixin FlexRow($justify: center) {
+@mixin FlexRow($justify: space-evenly) {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 
-  align-items: center;
+  // vertical alignment
+  align-items: space-evenly;
   align-content: space-evenly;
 
-  justify-items: center;
+  // horizontal alignment
+  justify-items: space-evenly;
   justify-content: $justify;
 }
 
-@mixin FlexCol($justify: center) {
+@mixin FlexCol($justify: space-evenly) {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 
-  align-items: center;
+  // vertical alignment
+  align-items: space-evenly;
   align-content: space-evenly;
 
-  justify-items: center;
+  // horizontal alignment
+  justify-items: space-evenly;
   justify-content: $justify;
 }
 
 @mixin Grid {
   display: Grid;
-  grid-gap: 5%;
+  gap: 10px;
   align-content: space-evenly;
   justify-content: space-evenly;
 }
@@ -73,6 +77,20 @@
   height: 100vh;
 }
 
+/* For Font Awesome Icons */
+// size = height = width of "font awesome" elements
+
+@mixin setupIcon($size) {
+  height: $size;
+  width: $size;
+  border-radius: $size / 2;
+  font-size: $size / 2;
+  line-height: $size;
+  vertical-align: baseline;
+  margin: $size / 10;
+  padding: $size / 50;
+}
+
 /*--------------------------------------------------------------
 # Positions
 --------------------------------------------------------------*/
@@ -85,6 +103,10 @@
   position: absolute;
 }
 
+@mixin shiftUp {
+  position: relative;
+  top: -5px;
+}
 /* Stacking Order on Page */
 
 /*--------------------------------------------------------------

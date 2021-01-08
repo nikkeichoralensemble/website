@@ -1,10 +1,15 @@
 @import "vars.scss"; // variables
-@import "mixins.scss"; // helper classes
+// @import "mixins.scss"; // helper classes
 
-@import "reset.scss"; // reset browser defined elements
+@import "_reset.scss";
 
 @import "display.scss";
 @import "styles.scss";
+@import "animation.scss";
+
+@import "_breakpoints.scss";
+
+
 
 /*--------------------------------------------------------------
 # Debug Use

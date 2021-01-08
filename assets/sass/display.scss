@@ -1,20 +1,29 @@
 @use "vars.scss"; // variables
-@use "mixins.scss"; // helper classes
+@import "mixins.scss"; // helper classes
 /*--------------------------------------------------------------
 # Basic Setup
 --------------------------------------------------------------*/
 * {
-  box-sizing: border-box;
-
-  min-height: 10px;
-  max-height: 10px;
+  box-sizing: content-box;
+  // min-height: min-content;
+  // min-width: min-content;
+  // height: auto;
+  // width: auto;
   max-height: 100%;
   max-width: 100%;
 
+  padding: 0px;
+  margin: 0px;
+
   overflow: scroll; //TODO remove?
-  text-align: left;
+
+  text-align: center;
   vertical-align: middle;
   place-self: center center;
+}
+
+p {
+  text-align: left;
 }
 
 /*--------------------------------------------------------------
@@ -23,6 +32,15 @@
 html {
   height: 100%;
 }
+
+body,
+header,
+main,
+footer {
+  box-sizing: border-box;
+  @include fill-width;
+}
+
 body {
   min-height: 100%; // fill screen
 
@@ -33,20 +51,20 @@ body {
 
 header {
   max-height: 20vh;
-  @include mixins.fill-width;
 
   display: grid;
-  grid-template-columns: auto 2fr auto;
+  grid-template-columns: auto auto auto;
+
+  #topnav {
+    display: inline-block;
+  }
 }
 
 main {
-  @include mixins.fill-width;
 }
 
 footer {
-  @include mixins.fill-width;
-
-  @include mixins.Grid;
+  @include Grid;
   display: grid;
   grid-template-columns: auto auto auto;
 }
@@ -63,42 +81,30 @@ footer {
   }
 }
 #topnav {
-  @include FlexRow(space-evenly);
+  display: inline-block;
+  // @include FlexRow(space-evenly);
 }
 #sidenav {
   @include FlexCol(start);
   display: none;
 }
 .contact {
-  @include FlexRow(center);
+  @include FlexRow(space-evenly);
+}
+#back-to-top {
+  display: none; // invisible until scroll
+  @include fix-to-page;
+  @include bottomRight(2, 2);
 }
 
 // Header Components
 header {
-  .logo {
-    display: inline-block;
-    img {
-      height: 1cm;
-      width: 1cm;
-    }
-  }
 }
 
 // Main Components
 main {
-  section {
-    box-sizing: border-box;
-    overflow: hidden;
-    margin: 0px;
-    padding: 0px;
-  }
 }
 
 // Footer Components
 footer {
-  // .ocf {
-  //   display: inline-block;
-  // }
-  // .copyright {
-  // }
 }

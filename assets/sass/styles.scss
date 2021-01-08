@@ -1,5 +1,5 @@
 @use "vars.scss"; // variables
-@use "mixins.scss"; // helper classes
+@import "mixins.scss"; // helper classes
 /*--------------------------------------------------------------
 # Basic
 --------------------------------------------------------------*/
@@ -22,6 +22,7 @@ a,
 a:hover {
   text-decoration: none;
 }
+
 /*--------------------------------------------------------------
 # Padding and Margins
 --------------------------------------------------------------*/
@@ -30,6 +31,10 @@ main,
 footer,
 div {
   padding: 1em;
+}
+a {
+  padding: 1em, 1em;
+  margin: 1em, 1em;
 }
 
 /*--------------------------------------------------------------
@@ -41,8 +46,20 @@ body {
 header {
   background: var(--palette--white);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+  .logo {
+    img {
+      height: 5vh;
+      width: 5vh;
+    }
+  }
+  #topnav > a {
+    font-size: regular;
+    padding: 3em;
+    margin: 3em;
+  }
 }
 footer {
+  color: var(--palette--white);
   background: var(--palette--theme);
 }
 
@@ -56,61 +73,23 @@ footer {
 /*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
-.back-to-top {
-  @include fix-to-page;
-  @include bottomRight(2, 2);
-
-  width: 40px;
-  height: 40px;
-  display: none; // invisible until scroll
-  z-index: 999999;
-
-  i {
-    font-size: 24px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    background: #34b7a7;
-    color: #fff;
-    transition: all 0.4s;
-    &:hover {
-      background: #3dc8b7;
-      color: #fff;
-    }
-  }
-}
 
 /*--------------------------------------------------------------
-# Icons
+# Font Awesome Icons
 --------------------------------------------------------------*/
 .fas,
 .fab {
-  background-color: #b3b3b3;
-  font-size: 24px;
-  text-align: center;
-  vertical-align: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50px;
-  transition: all 0.4s;
+  color: var(--palette--black);
+  background-color: var(--palette--white);
+  @include setupIcon(45px);
+
+  &:hover {
+    color: var(--palette--white);
+    background: var(--palette--accent);
+    @include shiftUp;
+  }
 }
-.fas:hover,
-.fab:hover {
-  position: relative;
-  top: -5px;
-  background: var(--palette--accent);
-}
-.fas:before,
-.fab:before {
-  color: #f2f5f3;
-  font-size: 32px;
-  line-height: 48px;
-}
-.fas:hover,
-.fab:hover {
-  position: relative;
-  top: -5px;
-}
+
 .fas.fa-youtube:hover,
 .fab.fa-youtube:hover {
   background-color: #c4302b;
@@ -139,11 +118,11 @@ footer {
 }
 
 .fas.fa-arrow-up {
+  background: var(--palette--theme);
   font-size: 24px;
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  /* background: var(--palette--theme); */
   /* color: #fff;
   transition: all 0.4s;
 }

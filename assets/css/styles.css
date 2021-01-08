@@ -1,17 +1,216 @@
-/* Error: Undefined mixin.
- *    ,
- * 60 |   @include fix-to-page;
- *    |   ^^^^^^^^^^^^^^^^^^^^
- *    '
- *   assets/sass/styles.scss 60:3  root stylesheet */
+/*--------------------------------------------------------------
+# Webfonts Setup
+--------------------------------------------------------------*/
+@font-face {
+  font-family: "RalewayMedium";
+  src: url(../font/Raleway-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RalewayMediumItalic";
+  src: url(../font/Raleway-MediumItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RalewayExtraLight";
+  src: url(../font/Raleway-ExtraLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RalewayExtraLightItalic";
+  src: url(../font/Raleway-ExtraLightItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "GothicA1";
+  src: url(../font/GothicA1-Regular.ttf) format("truetype");
+}
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+:root {
+  /* Layout */
+  --gutter: 10vw;
+  /* Fonts */
+  --font--main: "RalewayMedium", sans-serif;
+  --font--main-italic: "RalewayMediumItalic", sans-serif;
+  --font--main-light: "RalewayExtraLight", sans-serif;
+  --font--main-light-italic: "RalewayExtraLightItalic", sans-serif;
+  --font--body: "GothicA1", sans-serif;
+  --font--xs: 15vw;
+  --font--m: 32vw;
+  --font--l: 48vw;
+  --font--xl: 72vw;
+  /* Palette. */
+  --palette--theme: #4787c3;
+  --palette--theme-dark: #235d9c;
+  --patette--theme-light: #d0e0f0;
+  --palette--accent: #f65e89;
+  --palette--accent-lighter: #ffcacf;
+  --palette--black: #2a324b;
+  --palette--white: #ffffff;
+  --palette--grey: #f5f5f5;
+  /* Responsive Screen Thersholds */
+  --screen--small: 200px;
+  --screen--medium: 500px;
+  --screen--large: 1000px;
+  /* Z-index */
+  --level--roof: 1000;
+  --level--top: 800;
+  --level--mid: 30;
+  --level--ground: 0;
+  --level--underground: -100;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
+/*--------------------------------------------------------------
+# Display Options
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Appearance
+--------------------------------------------------------------*/
+/* For Font Awesome Icons */
+/*--------------------------------------------------------------
+# Positions
+--------------------------------------------------------------*/
+/* Position on Page */
+/* Stacking Order on Page */
+/*--------------------------------------------------------------
+# Size (relative to parent)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Appearance
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Animations
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Basic
+--------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font--main);
+}
+
+b,
+strong {
+  font-family: var(--font--main-bold);
+}
+
+i {
+  font-family: var(--font--main-italic);
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Padding and Margins
+--------------------------------------------------------------*/
+header,
+main,
+footer,
+div {
   padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 60 \2502    @include fix-to-page;\a    \2502    ^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   assets/sass/styles.scss 60:3  root stylesheet";
+}
+
+a {
+  padding: 1em, 1em;
+  margin: 1em, 1em;
+}
+
+/*--------------------------------------------------------------
+# Page Sections
+--------------------------------------------------------------*/
+body {
+  background: var(--palette--accent-lighter);
+}
+
+header {
+  background: var(--palette--white);
+  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+}
+header .logo img {
+  height: 5vh;
+  width: 5vh;
+}
+header #topnav > a {
+  font-size: regular;
+  padding: 3em;
+  margin: 3em;
+}
+
+footer {
+  color: var(--palette--white);
+  background: var(--palette--theme);
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+.banner {
+  background: linear-gradient(transparent 50%, var(--palette--theme));
+}
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Font Awesome Icons
+--------------------------------------------------------------*/
+.fas,
+.fab {
+  color: var(--palette--black);
+  background-color: var(--palette--white);
+  height: 45px;
+  width: 45px;
+  border-radius: 22.5px;
+  font-size: 22.5px;
+  line-height: 45px;
+  vertical-align: baseline;
+  margin: 4.5px;
+  padding: 0.9px;
+}
+.fas:hover,
+.fab:hover {
+  color: var(--palette--white);
+  background: var(--palette--accent);
+  position: relative;
+  top: -5px;
+}
+
+.fas.fa-youtube:hover,
+.fab.fa-youtube:hover {
+  background-color: #c4302b;
+}
+
+.fas.fa-facebook:hover,
+.fab.fa-facebook:hover {
+  background-color: #4267b2;
+}
+
+.fas.fa-instagram:hover,
+.fab.fa-instagram:hover {
+  background-color: #bc2a8d;
+  background: linear-gradient(45deg, #fccc63, #fbad50, #e95950, #cd486b, #bc2a8d, #8a3ab9, #4c68d7);
+}
+
+.fas.fa-envelope:hover,
+.fab.fa-envelope:hover {
+  background-color: #666666;
+}
+
+.fas.fa-arrow-up {
+  background: var(--palette--theme);
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  /* color: #fff;
+    transition: all 0.4s;
+  }
+  .fas.fa-arrow-up:hover {
+    background: var(--palette--theme);
+    /* color: #fff; */
 }

@@ -1,17 +1,179 @@
-/* Error: Undefined mixin.
- *    ,
- * 66 |   @include FlexRow(space-evenly);
- *    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   assets/sass/display.scss 66:3  root stylesheet */
+/*--------------------------------------------------------------
+# Webfonts Setup
+--------------------------------------------------------------*/
+@font-face {
+  font-family: "RalewayMedium";
+  src: url(../font/Raleway-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RalewayMediumItalic";
+  src: url(../font/Raleway-MediumItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RalewayExtraLight";
+  src: url(../font/Raleway-ExtraLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RalewayExtraLightItalic";
+  src: url(../font/Raleway-ExtraLightItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "GothicA1";
+  src: url(../font/GothicA1-Regular.ttf) format("truetype");
+}
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+:root {
+  /* Layout */
+  --gutter: 10vw;
+  /* Fonts */
+  --font--main: "RalewayMedium", sans-serif;
+  --font--main-italic: "RalewayMediumItalic", sans-serif;
+  --font--main-light: "RalewayExtraLight", sans-serif;
+  --font--main-light-italic: "RalewayExtraLightItalic", sans-serif;
+  --font--body: "GothicA1", sans-serif;
+  --font--xs: 15vw;
+  --font--m: 32vw;
+  --font--l: 48vw;
+  --font--xl: 72vw;
+  /* Palette. */
+  --palette--theme: #4787c3;
+  --palette--theme-dark: #235d9c;
+  --patette--theme-light: #d0e0f0;
+  --palette--accent: #f65e89;
+  --palette--accent-lighter: #ffcacf;
+  --palette--black: #2a324b;
+  --palette--white: #ffffff;
+  --palette--grey: #f5f5f5;
+  /* Responsive Screen Thersholds */
+  --screen--small: 200px;
+  --screen--medium: 500px;
+  --screen--large: 1000px;
+  /* Z-index */
+  --level--roof: 1000;
+  --level--top: 800;
+  --level--mid: 30;
+  --level--ground: 0;
+  --level--underground: -100;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 66 \2502    @include FlexRow(space-evenly);\a    \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   assets/sass/display.scss 66:3  root stylesheet";
+/*--------------------------------------------------------------
+# Display Options
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Appearance
+--------------------------------------------------------------*/
+/* For Font Awesome Icons */
+/*--------------------------------------------------------------
+# Positions
+--------------------------------------------------------------*/
+/* Position on Page */
+/* Stacking Order on Page */
+/*--------------------------------------------------------------
+# Size (relative to parent)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Appearance
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Animations
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Basic Setup
+--------------------------------------------------------------*/
+* {
+  box-sizing: content-box;
+  max-height: 100%;
+  max-width: 100%;
+  padding: 0px;
+  margin: 0px;
+  overflow: scroll;
+  text-align: center;
+  vertical-align: middle;
+  place-self: center center;
+}
+
+p {
+  text-align: left;
+}
+
+/*--------------------------------------------------------------
+# Page Setup
+--------------------------------------------------------------*/
+html {
+  height: 100%;
+}
+
+body,
+header,
+main,
+footer {
+  box-sizing: border-box;
+  width: 100vw;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+}
+
+header {
+  max-height: 20vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+header #topnav {
+  display: inline-block;
+}
+
+footer {
+  display: Grid;
+  gap: 10px;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+#logo img {
+  height: 1cm;
+  width: auto;
+}
+
+#topnav {
+  display: inline-block;
+}
+
+#sidenav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: space-evenly;
+  align-content: space-evenly;
+  justify-items: space-evenly;
+  justify-content: start;
+  display: none;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: space-evenly;
+  align-content: space-evenly;
+  justify-items: space-evenly;
+  justify-content: space-evenly;
+}
+
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
 }

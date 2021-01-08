@@ -15,6 +15,7 @@ venv/
 *.DS_Store
 
 # Project Files
+*.map
 ref/
 _local-testing.html
 

@@ -3,32 +3,6 @@
 # Basic
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
-*,
-* > *,
-* > * > * {
-  box-sizing: content-box;
-
-  height: minmax(10px, fit-content);
-  width: minmax(10px, fit-content);
-
-  padding: 0px;
-  margin: 0px;
-
-  overflow: hidden;
-
-  text-align: center;
-  vertical-align: middle;
-  place-self: center center;
-}
-
-p {
-  text-align: left;
-}
-
-// div {
-//   height: fit-content;
-//   width: fit-content;
-// }
 
 /*** APPEARANCE ***/
 h1,

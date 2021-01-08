@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+# Global Set
+--------------------------------------------------------------*/
+/*** LAYOUT ***/
+* {
+  box-sizing: content-box;
+
+  height: minmax(10px, fit-content);
+  width: minmax(10px, fit-content);
+
+  overflow: hidden;
+  vertical-align: middle;
+  place-self: center center;
+}
+
+/*** APPEARANCE ***/
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+* {
+  text-align: center;
+}
+p {
+  text-align: left;
+}
+
+/*** ANIMATIONS ***/

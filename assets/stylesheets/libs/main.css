@@ -111,8 +111,8 @@ navbar {
 }
 navbar #navtabs > a {
   font-size: 15px;
-  padding: 100% 5%;
-  margin: 1em 2em;
+  margin: 1em 1em;
+  padding: 1em 2em; 
 }
 navbar #navtabs > a:hover {
   color: var(--palette--white);

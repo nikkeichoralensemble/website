@@ -70,17 +70,17 @@
     --screen--large: 1000px;
   }
   
+// Variables and Helper
+// @import url("vars.css");
+@import url("fontawesome-all.min.css");
+@import "mixins";
+@import "functions";
 
-// SASS
-@import "libs/mixins";
-@import "libs/functions";
+//@import "vendors"; // from TXT (not sure if need)
 
-//@import "libs/_vendors.scss"; // from TXT (not sure if need)
-
-@import "libs/global"; // Global Setup
-
-@import "libs/style"; // Main Style
-@import "libs/breakpoints"; // Breakpoints
+@import "global"; // Global Setup
+@import "style"; // Main Style
+@import "breakpoints"; // Breakpoints
 
 // Uncomment for Debug
 // @import "libs/_debug.css"

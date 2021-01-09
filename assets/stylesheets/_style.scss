@@ -1,4 +1,3 @@
-@import "mixins.scss"; // helper classes
 /*--------------------------------------------------------------
 # Basic
 --------------------------------------------------------------*/
@@ -13,12 +12,8 @@ h5,
 h6 {
   font-family: var(--font--main);
 }
-b,
-strong {
-  font-family: var(--font--main-bold);
-}
-i {
-  font-family: var(--font--main-italic);
+body {
+  font-family: var(--font--body);
 }
 a,
 a:hover {

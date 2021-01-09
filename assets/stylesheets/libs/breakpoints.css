@@ -1,0 +1,145 @@
+/*--------------------------------------------------------------
+# Display Options
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Appearance
+--------------------------------------------------------------*/
+/* For Font Awesome Icons */
+/*--------------------------------------------------------------
+# Positions
+--------------------------------------------------------------*/
+/* Position on Page */
+/* Stacking Order on Page */
+/*--------------------------------------------------------------
+# Size (relative to parent)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Appearance
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Animations
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+// breakpoints.scss v1.0 | @ajlkn | MIT licensed
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Breakpoints
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# XLarge
+--------------------------------------------------------------*/
+@media screen and (max-width: 1680px) {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+/*--------------------------------------------------------------
+# Large
+--------------------------------------------------------------*/
+@media screen and (min-width: 1281px) {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+@media screen and (max-width: 1280px) {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+/*--------------------------------------------------------------
+# Medium
+--------------------------------------------------------------*/
+@media screen and (min-width: 981px) {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+@media screen and (max-width: 980px) {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+/*--------------------------------------------------------------
+# Small
+--------------------------------------------------------------*/
+@media screen and (min-width: 561px) {
+  /* Basic */
+  /* Navbar */
+  navbar #open-nav-btn {
+    display: none;
+  }
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+@media screen and (max-width: 560px) {
+  /* Basic */
+  div {
+    display: block;
+  }
+  /* Navbar */
+  navbar #navtabs,
+  navbar .contact,
+  navbar .logo img {
+    display: none;
+  }
+  navbar #open-nav-btn {
+    display: block;
+  }
+  footer {
+    display: block;
+  }
+  /* Main */
+  main {
+    display: block;
+  }
+  /* Footer */
+  /* Components */
+  .fas,
+  .fab {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    font-size: 10px;
+    line-height: 20px;
+    vertical-align: baseline;
+    margin: 2px;
+    padding: 0.4px;
+  }
+}
+
+/*--------------------------------------------------------------
+# XSmall
+--------------------------------------------------------------*/
+@media screen and (min-width: 361px) {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+@media screen and (max-width: 360px) {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+/*# sourceMappingURL=breakpoints.css.map */

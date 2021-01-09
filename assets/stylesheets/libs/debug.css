@@ -1,0 +1,19 @@
+/*--------------------------------------------------------------
+# Debug Use
+--------------------------------------------------------------*/
+body {
+  border: 5px solid yellow !important;
+}
+
+body * {
+  border: 1px solid red !important;
+}
+
+body *:hover {
+  border: 1px solid blue !important;
+}
+
+* {
+  overflow: scroll;
+}
+/*# sourceMappingURL=debug.css.map */

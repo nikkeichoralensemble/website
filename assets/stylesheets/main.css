@@ -3,30 +3,32 @@
 # Full Style Sheet
 #
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Variables
---------------------------------------------------------------*/
 /* Webfonts Setup */
 @font-face {
   font-family: "RalewayMedium";
-  src: url(../../font/Raleway-Medium.ttf) format("truetype");
+  src: url("../font/Raleway-Medium.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "RalewayMediumItalic";
-  src: url(../../font/Raleway-MediumItalic.ttf) format("truetype");
+  src: url("../font/Raleway-MediumItalic.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "RalewayExtraLight";
-  src: url(../../font/Raleway-ExtraLight.ttf) format("truetype");
+  src: url("../font/Raleway-ExtraLight.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "RalewayExtraLightItalic";
-  src: url(../../font/Raleway-ExtraLightItalic.ttf) format("truetype");
+  src: url("../font/Raleway-ExtraLightItalic.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "GothicA1";
-  src: url(../../font/GothicA1-Regular.ttf) format("truetype");
+  src: url("../font/GothicA1-Regular.ttf") format("truetype");
 }
+
 /* Global Variables */
 :root {
   /*** LAYOUT ***/
@@ -97,8 +99,13 @@
   License: none (public domain) */
 /*** LAYOUT ***/
 * {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: minmax(10px, -webkit-fit-content);
+  height: minmax(10px, -moz-fit-content);
   height: minmax(10px, fit-content);
+  width: minmax(10px, -webkit-fit-content);
+  width: minmax(10px, -moz-fit-content);
   width: minmax(10px, fit-content);
   place-self: center center;
 }
@@ -107,7 +114,8 @@ body,
 navbar,
 main,
 footer {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -117,8 +125,10 @@ html {
 body {
   min-height: 100%;
   /* fill up the whole screen */
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
   /* navbar main footer */
 }
 
@@ -221,18 +231,24 @@ navbar {
   width: 100vw;
   margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
 }
+
 navbar #navtabs {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
   top: 0px;
   left: 50%;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
+
 navbar .contact {
   position: absolute;
   top: 0%;
   right: 0%;
-  transform: translate(0, 50%);
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
 }
 
 main {
@@ -245,21 +261,21 @@ footer {
   margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
   display: Grid;
   gap: 10px;
-  align-content: space-evenly;
-  justify-content: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  grid-template-columns: auto auto auto;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
 }
 
 /*** APPEARANCE ***/
 navbar,
 main,
 footer,
-div {
-  padding: 1em;
-}
-
 a {
   padding: 1em, 1em;
   margin: 1em, 1em;
@@ -271,17 +287,24 @@ body {
 
 navbar {
   background: var(--palette--white);
-  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
 }
+
 navbar #navtabs > a {
   font-size: 15px;
+  font-family: var(--font--main);
+  text-transform: lowercase;
+  color: var(--palette--black);
   padding: 1em 1em;
   margin: 1em 2em;
 }
+
 navbar #navtabs > a:hover {
   color: var(--palette--white);
   background: var(--palette--theme);
 }
+
 navbar #open-nav-btn {
   font-size: 30px;
   cursor: pointer;
@@ -290,6 +313,8 @@ navbar #open-nav-btn {
 footer {
   color: var(--palette--white);
   background: var(--palette--theme);
+  font-family: var(--font--body);
+  font-size: small;
 }
 
 /*--------------------------------------------------------------
@@ -298,30 +323,54 @@ footer {
 /*** LAYOUT ***/
 /* Navbar Components */
 navbar {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
+
 navbar .logo .tmp {
   height: 40px;
   width: 40px;
 }
+
 navbar .logo {
   display: inline-block;
 }
+
 navbar .logo img {
   height: 1cm;
   width: 1cm;
 }
 
 /* Main Components */
+#banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 /* Footer Components */
 /* Other Components */
 .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: space-evenly;
-  align-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
   justify-items: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .fas,
@@ -344,12 +393,30 @@ navbar .logo img {
 }
 
 /*** APPEARANCE ***/
-#banner {
-  background: linear-gradient(transparent 50%, var(--palette--theme)), url("../../images/group.jpg");
-}
-
 /* Navbar Components */
 /* Main Components */
+#banner {
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%), to(var(--palette--theme))), url("../images/group.jpg");
+  background: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#banner h1 {
+  font-size: 4vw;
+  color: var(--palette--white);
+  font-family: var(--font--main);
+}
+
+#banner h2 {
+  font-size: 1vw;
+  color: var(--palette--white);
+  font-family: var(--font--body);
+  padding: 1em;
+}
+
 /* Footer Components */
 /* Other Components */
 /*** ANIMATION ***/
@@ -360,8 +427,11 @@ navbar .logo img {
 #navtabs {
   display: Grid;
   gap: 10px;
-  align-content: space-evenly;
-  justify-content: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
 }
@@ -380,6 +450,7 @@ navbar .logo img {
   /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
 }
@@ -391,6 +462,7 @@ navbar .logo img {
   font-size: 25px;
   color: #818181;
   display: block;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -417,6 +489,7 @@ navbar .logo img {
     font-size: 18px;
   }
 }
+
 /* controlled by javascript */
 #open-nav-btn {
   display: none;
@@ -436,6 +509,7 @@ navbar .logo img {
   color: var(--palette--black);
   background-color: var(--palette--white);
 }
+
 .fas:hover,
 .fab:hover {
   color: var(--palette--white);
@@ -472,17 +546,18 @@ navbar .logo img {
   height: 40px;
   border-radius: 50px;
   /* color: #fff;
-    transition: all 0.4s;
-  }
-  .fas.fa-arrow-up:hover {
-    background: var(--palette--theme);
-    /* color: #fff; */
+  transition: all 0.4s;
+}
+.fas.fa-arrow-up:hover {
+  background: var(--palette--theme);
+  /* color: #fff; */
 }
 
 /*** ANIMATION ***/
 .fas,
 .fab {
   /* property name | duration | easing function | delay */
+  -webkit-transition: position 2s ease-in-out 0.5s;
   transition: position 2s ease-in-out 0.5s;
 }
 
@@ -523,6 +598,7 @@ navbar .logo img {
   /* Footer */
   /* Components */
 }
+
 /*--------------------------------------------------------------
 # Large
 --------------------------------------------------------------*/
@@ -533,6 +609,7 @@ navbar .logo img {
   /* Footer */
   /* Components */
 }
+
 @media screen and (max-width: 1280px) {
   /* Basic */
   /* Navbar */
@@ -540,6 +617,7 @@ navbar .logo img {
   /* Footer */
   /* Components */
 }
+
 /*--------------------------------------------------------------
 # Medium
 --------------------------------------------------------------*/
@@ -550,6 +628,7 @@ navbar .logo img {
   /* Footer */
   /* Components */
 }
+
 @media screen and (max-width: 980px) {
   /* Basic */
   /* Navbar */
@@ -557,6 +636,7 @@ navbar .logo img {
   /* Footer */
   /* Components */
 }
+
 /*--------------------------------------------------------------
 # Small
 --------------------------------------------------------------*/
@@ -566,40 +646,36 @@ navbar .logo img {
   navbar #open-nav-btn {
     display: none;
   }
-
   /* Main */
   /* Footer */
   /* Components */
 }
+
 @media screen and (max-width: 560px) {
   /* Basic */
   div {
     display: block;
   }
-
   /* Navbar */
   navbar #navtabs,
-navbar .contact,
-navbar .logo img {
+  navbar .contact,
+  navbar .logo img {
     display: none;
   }
   navbar #open-nav-btn {
     display: block;
   }
-
   footer {
     display: block;
   }
-
   /* Main */
   main {
     display: block;
   }
-
   /* Footer */
   /* Components */
   .fas,
-.fab {
+  .fab {
     height: 20px;
     width: 20px;
     border-radius: 10px;
@@ -610,6 +686,7 @@ navbar .logo img {
     padding: 0.4px;
   }
 }
+
 /*--------------------------------------------------------------
 # XSmall
 --------------------------------------------------------------*/
@@ -620,6 +697,7 @@ navbar .logo img {
   /* Footer */
   /* Components */
 }
+
 @media screen and (max-width: 360px) {
   /* Basic */
   /* Navbar */
@@ -627,3 +705,4 @@ navbar .logo img {
   /* Footer */
   /* Components */
 }
+/*# sourceMappingURL=main.css.map */

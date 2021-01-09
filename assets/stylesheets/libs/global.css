@@ -1,0 +1,83 @@
+/*--------------------------------------------------------------
+# Global Set
+--------------------------------------------------------------*/
+/* Reference:
+  http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain) */
+/*** LAYOUT ***/
+* {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: minmax(10px, -webkit-fit-content);
+  height: minmax(10px, -moz-fit-content);
+  height: minmax(10px, fit-content);
+  width: minmax(10px, -webkit-fit-content);
+  width: minmax(10px, -moz-fit-content);
+  width: minmax(10px, fit-content);
+  place-self: center center;
+}
+
+body,
+navbar,
+main,
+footer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  /* fill up the whole screen */
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+  /* navbar main footer */
+}
+
+/*** APPEARANCE ***/
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+}
+
+p {
+  text-align: left;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*** ANIMATIONS ***/
+/*# sourceMappingURL=global.css.map */

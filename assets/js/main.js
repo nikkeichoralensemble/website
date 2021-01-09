@@ -1,13 +1,4 @@
 /*--------------------------------------------------------------
-# Shift Main Down
---------------------------------------------------------------*/
-// $(document).ready(function () {
-//   topHeight = $("navbar").outerHeight(true);
-//   alert(topHeight);
-//   $("main").css({ "margin-top": topHeight + "px" });
-// });
-
-/*--------------------------------------------------------------
   # Add Active Tab
   --------------------------------------------------------------*/
 $(document).ready(function () {
@@ -21,80 +12,41 @@ $("nav a").click(function () {
 });
 
 /*--------------------------------------------------------------
-  # Back to Top Button
-  --------------------------------------------------------------*/
-$(window).scroll(function () {
-  if ($(this).scrollTop() > 100) {
-    document.getElementById("back-to-top").fadeIn("slow");
-  } else {
-    document.getElementById("back-to-top").fadeOut("slow");
-  }
-});
-
-document.getElementById("back-to-top").click(function () {
-  $("html, body").animate(
-    {
-      scrollTop: 0,
-    },
-    1500,
-    "easeInOutExpo"
-  );
-  return false;
-});
-
-/*--------------------------------------------------------------
   # Side Navigation
   --------------------------------------------------------------*/
+var $sidenav_width = "250px"
 
-/* Set the width of the side navigation to 250px */
+/* Open side navigation bar */
 function openNav() {
-  document.getElementById("sidenav").style.width = "100px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementById("sidenav").style.width = "0";
-}
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-function openNav() {
-  document.getElementById("sidenav").style.display = "block";
+  // document.getElementById("sidenav").style.display = "block";
   w = document.getElementById("sidenav").outerWidth(true);
 
-  document.getElementById("navbar").css({ "margin-right": w + "px" });
-  document.getElementById("main").css({ "margin-left": w + "px" });
-  document.getElementById("footer").css({ "margin-left": w + "px" });
+  /* Set the width of the side navigation */
+  document.getElementById("sidenav").style.width = $sidenav_width;
 
-  //   document.getElementById("navbar").style.marginLeft = w;
-  //   document.getElementById("main").style.marginLeft = w;
-  //   document.getElementById("footer").style.marginLeft = w;
+  /* Push page content to the right by adding a left margin */
+  // document.getElementById("navbar").css({ "margin-left": w + "px" });
+  // document.getElementById("main").css({ "margin-left": w + "px" });
+  // document.getElementById("footer").css({ "margin-left": w + "px" });
 
-  document.getElementById("navbar").style.backgroundColor = "rgba(0,0,0,0.4)";
-  document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.4)";
-  document.getElementById("footer").style.backgroundColor = "rgba(0,0,0,0.4)";
+  /* add a black background color to body */
+  // document.getElementById("navbar").style.backgroundColor = "rgba(0,0,0,0.4)";
+  // document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.4)";
+  // document.getElementById("footer").style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+/* Close side navigation bar */
 function closeNav() {
-  document.getElementById("sidenav").style.display = "none";
+  /* Set the width of the side navigation to 0 */
+  document.getElementById("sidenav").style.width = "0px";
 
-  document.getElementById("navbar").style.marginLeft = "0px";
-  document.getElementById("main").style.marginLeft = "0px";
-  document.getElementById("footer").style.marginLeft = "0px";
+  /* Remove the left margin of the page content */
+  // document.getElementById("navbar").style.marginLeft = "0px";
+  // document.getElementById("main").style.marginLeft = "0px";
+  // document.getElementById("footer").style.marginLeft = "0px";
 
-  document.getElementById("navbar").style.backgroundColor = "white";
-  document.getElementById("main").style.backgroundColor = "white)";
-  document.getElementById("footer").style.backgroundColor = "white";
-}
-
-/*--------------------------------------------------------------
-# Side Nav.
---------------------------------------------------------------*/
-function openNav() {
-  document.getElementById("topnav").style.id = "sidenav";
-  document.getElementById("sidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("sidenav").style.width = "0";
-  document.getElementById("sidenav").style.id = "topnav";
+  /* Remove the background color of body */
+  // document.getElementById("navbar").style.backgroundColor = "initial";
+  // document.getElementById("main").style.backgroundColor = "initial)";
+  // document.getElementById("footer").style.backgroundColor = "initial";
 }

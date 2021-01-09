@@ -146,12 +146,6 @@ footer {
   @include setupIcon(45px);
 }
 
-#back-to-top {
-  display: none; // invisible until scroll
-  @include fix-to-page;
-  @include bottomRight(2, 2);
-}
-
 /*** APPEARANCE ***/
 /* Navbar Components */
 /* Main Components */

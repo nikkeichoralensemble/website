@@ -55,6 +55,11 @@ footer {
   grid-template-columns: auto auto auto;
 }
 
+section {
+  @include inner-margin;
+  padding: 5% 10%;
+}
+
 /*** APPEARANCE ***/
 navbar,
 main,

@@ -215,7 +215,7 @@ a:hover {
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
 navbar {
-  max-height: 20vh;
+  max-height: 15vh;
   width: 100vw;
   margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
 }
@@ -230,7 +230,7 @@ navbar .contact {
   position: absolute;
   top: 0%;
   right: 0%;
-  transform: translate(0, 50%);
+  transform: translate(0, 5%);
 }
 
 main {

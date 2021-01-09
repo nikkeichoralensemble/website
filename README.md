@@ -12,12 +12,12 @@ Please use Git!!
 
 ## Edit website content
 
-Edit HTML files under.
+Edit HTML files that **do not** start with an underscore `_`
 
 ## Edit website style
 
 1. run `sass --watch assets/stylesheets/main.scss:assets/stylesheets/main.css --no-source-map`
-   or, use VSCode's Live Sass extension
+   <br> or, use VSCode's Live Sass extension
 2. Edit files under `assets/stylesheets/libs`
 
 Each file is generally organized following this order:

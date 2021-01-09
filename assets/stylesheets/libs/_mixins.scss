@@ -1,6 +1,145 @@
-/*--------------------------------------------------------------
+//--------------------------------------------------------------
+// Layout
+//--------------------------------------------------------------
+@mixin fix-to-page {
+  position: fixed;
+}
+
+@mixin fix-to-parent {
+  position: absolute;
+}
+
+@mixin topLeft($t: 0, $l: 0) {
+  top: 0% + $t;
+  left: 0% + $l;
+}
+
+@mixin topRight($t: 0, $r: 0) {
+  top: 0%;
+  right: 0%;
+}
+
+@mixin bottomLeft() {
+  bottom: 0%;
+  left: 0%;
+}
+
+@mixin bottomRight($b: 0, $r: 0) {
+  bottom: 0% + $b;
+  right: 0% + $r;
+}
+
+@mixin dead-center {
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@mixin FlexRow($justify: space-evenly) {
+  display: flex;
+  flex-direction: row;
+  // flex-wrap: wrap;
+
+  // vertical alignment
+  align-items: space-evenly;
+  align-content: space-evenly;
+
+  // horizontal alignment
+  justify-items: space-evenly;
+  justify-content: $justify;
+}
+
+@mixin FlexCol($justify: space-evenly) {
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+
+  // vertical alignment
+  align-items: space-evenly;
+  align-content: space-evenly;
+
+  // horizontal alignment
+  justify-items: space-evenly;
+  justify-content: $justify;
+}
+
+@mixin Grid {
+  display: Grid;
+  gap: 10px;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  grid-auto-rows: minmax(10px, auto);
+  grid-auto-columns: minmax(10px, auto);
+}
+
+@mixin fill-width {
+  width: 100vw;
+}
+
+@mixin fill-height {
+  height: 100vh;
+}
+
+//--------------------------------------------------------------
+// Appearance
+//--------------------------------------------------------------
+@mixin inner-margin(
+  $top-bottom: -#{var(--gutter-tb)},
+  $left-right: -#{var(--gutter-lr)}
+) {
+  margin: 0% + $top-bottom, 0% + $left-right;
+}
+
+// For Font Awesome Icons
+// size = height = width of "font awesome" elements
+
+@mixin setupIcon($size) {
+  height: $size;
+  width: $size;
+  border-radius: $size / 2;
+  font-size: $size / 2;
+  line-height: $size;
+  vertical-align: baseline;
+  margin: $size / 10;
+  padding: $size / 50;
+}
+
+//--------------------------------------------------------------
+// Positions
+//--------------------------------------------------------------
+// Position on Page
+@mixin fix-to-page {
+  position: fixed;
+}
+
+@mixin fix-to-parent {
+  position: absolute;
+}
+
+@mixin shiftUp {
+  position: relative;
+  top: -5px;
+}
+// Stacking Order on Page
+
+//--------------------------------------------------------------
+// Size (relative to parent)
+//--------------------------------------------------------------
+@mixin full-width {
+  width: 100%;
+}
+
+@mixin full-height {
+  height: 100%;
+}
+
+//--------------------------------------------------------------
+// Animations
+//--------------------------------------------------------------
+
+//--------------------------------------------------------------
 // breakpoints.scss v1.0 | @ajlkn | MIT licensed
---------------------------------------------------------------*/
+//--------------------------------------------------------------
 
 // Vars.
 
@@ -204,151 +343,4 @@ $breakpoints: ();
   @media #{$media} {
     @content;
   }
-}
-
-/*--------------------------------------------------------------
-# Breakpoints
---------------------------------------------------------------*/
-// These are ranges
-@include breakpoints(
-  (
-    xlarge: (
-      1281px,
-      1680px,
-    ),
-    large: (
-      981px,
-      1280px,
-    ),
-    medium: (
-      761px,
-      980px,
-    ),
-    small: (
-      361px,
-      560px,
-    ),
-    xsmall: (
-      null,
-      360px,
-    ),
-  )
-);
-
-/*--------------------------------------------------------------
-# XLarge
---------------------------------------------------------------*/
-@include breakpoint("<=xlarge") {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-/*--------------------------------------------------------------
-# Large
---------------------------------------------------------------*/
-
-@include breakpoint(">large") {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-@include breakpoint("<=large") {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-/*--------------------------------------------------------------
-# Medium
---------------------------------------------------------------*/
-
-@include breakpoint(">medium") {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-@include breakpoint("<=medium") {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-/*--------------------------------------------------------------
-# Small
---------------------------------------------------------------*/
-
-@include breakpoint(">small") {
-  /* Basic */
-  /* Navbar */
-  navbar {
-    #open-nav-btn {
-      display: none;
-    }
-  }
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-@include breakpoint("<=small") {
-  /* Basic */
-  div {
-    display: block;
-  }
-  /* Navbar */
-  navbar {
-    #navtabs,
-    .contact,
-    .logo img {
-      display: none;
-    }
-    #open-nav-btn {
-      display: block;
-    }
-  }
-  footer {
-    display: block;
-  }
-  /* Main */
-  main {
-    display: block;
-  }
-  /* Footer */
-  /* Components */
-  .fas,
-  .fab {
-    @include setupIcon(20px);
-  }
-}
-
-/*--------------------------------------------------------------
-# XSmall
---------------------------------------------------------------*/
-@include breakpoint(">xsmall") {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-@include breakpoint("<=xsmall") {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
 }

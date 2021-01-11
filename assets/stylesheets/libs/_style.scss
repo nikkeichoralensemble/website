@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# Page Setup
+# Navbar
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
 navbar {
@@ -24,28 +24,7 @@ navbar {
   }
 }
 
-main {
-  @include fill-width;
-  @include inner-margin;
-}
-
-footer {
-  @include fill-width;
-  @include inner-margin;
-  padding: 5% 10%;
-  @include Grid;
-  grid-template-columns: auto auto auto;
-}
-
-section {
-  @include inner-margin;
-  padding: 5% 10%;
-}
-
 /*** APPEARANCE ***/
-body {
-  background: var(--palette--accent-lighter);
-}
 
 navbar {
   background: var(--palette--white);

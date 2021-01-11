@@ -87,18 +87,12 @@ body {
   /* navbar main footer */
 }
 
-body,
-navbar,
-main,
-footer {
-  box-sizing: border-box !important;
+* {
+  box-sizing: border-box;
 }
 
 /* XXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXX */
 * {
-  box-sizing: content-box;
-  height: minmax(10px, fit-content);
-  width: minmax(10px, fit-content);
   place-self: center center;
 }
 
@@ -114,6 +108,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font--main);
+  font-size: 100%;
 }
 
 body {
@@ -157,10 +152,11 @@ table {
   border-spacing: 0;
 }
 
-a[role], a[role]:hover {
+a[role] {
   text-decoration: none;
 }
-a[role=button] {
+section > a[role=button] {
+  display: block;
   padding: 1em 3em;
 }
 

@@ -353,16 +353,9 @@ section > a[role=button] {
   color: var(--palette--white);
   font-family: var(--font--main);
 }
-<<<<<<< HEAD
-
-#banner p {
-  font-size: 1.3vw;
-  color: var(--palette--grey);
-=======
 .banner p {
   font-size: 1.5vw;
   color: var(--palette--white);
->>>>>>> be0b1f233b0350888c275a858649516a479f1b05
   font-family: var(--font--body);
   padding: 1em;
 }

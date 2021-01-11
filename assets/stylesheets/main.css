@@ -326,6 +326,22 @@ navbar .logo img {
 
 /*** APPEARANCE ***/
 /* Navbar Components */
+#navtabs a {
+  border-radius: 0px 0px 10px 10px;
+  top: -6px;
+  transition: top 0.15s ease-in-out;
+  transition: background-color 0.075s ease-in-out, color 0.075s ease-in-out;
+}
+
+#navtabs a:hover, #nav a.active {
+  top: 3px;
+}
+
+#navtavs a:hover {
+  background: var(--palette--accent-lighter);
+  color: var(--palette--black);
+}
+
 /* Main Components */
 #banner {
   width: 100%;

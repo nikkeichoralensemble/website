@@ -488,22 +488,3 @@ button #close-nav-btn {
   /* property name | duration | easing function | delay */
   transition: position 2s ease-in-out 0.5s;
 }
-
-/*--------------------------------------------------------------
-# Debug Use
---------------------------------------------------------------*/
-body {
-  border: 5px solid yellow !important;
-}
-
-body * {
-  border: 1px solid red !important;
-}
-
-body *:hover {
-  border: 1px solid blue !important;
-}
-
-* {
-  overflow: scroll;
-}

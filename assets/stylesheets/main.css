@@ -397,8 +397,8 @@ section > a[role="button"] {
 }
 
 #banner p {
-  font-size: 1vw;
-  color: var(--palette--white);
+  font-size: 2vw;
+  color: var(--palette--grey);
   font-family: var(--font--body);
   padding: 1em;
 }

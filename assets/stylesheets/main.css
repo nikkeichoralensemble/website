@@ -4,7 +4,7 @@
 #
 --------------------------------------------------------------*/
 /* Webfonts Setup */
-@import url(c:\Users\jiang\Documents\NiCE\website\website\assets\stylesheets\fontawesome-all.min.css);
+@import url(/Users/Jessica/Desktop/miscCS/website/assets/stylesheets/fontawesome-all.min.css);
 @font-face {
   font-family: "RalewayMedium";
   src: url("../webfonts/Raleway-Medium.ttf") format("truetype");
@@ -63,7 +63,7 @@
   --font--xl: 72px;
   /* Palette. */
   --palette--theme: #4787c3;
-  --patette--theme-lighter: #d0e0f0;
+  --palette--theme-lighter: #d0e0f0;
   --palette--theme-darker: #235d9c;
   --palette--accent: #f65e89;
   --palette--accent-lighter: #ffcacf;
@@ -420,6 +420,19 @@ section > a[role="button"] {
   color: var(--palette--grey);
   font-family: var(--font--body);
   padding: 1em;
+}
+
+.banner a {
+  background-color: var(--palette--theme);
+  color: var(--palette--white);
+  padding: 14px 40px;
+  border-radius: 12px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.banner a:hover {
+  background-color: var(--palette--theme-darker);
 }
 
 .banner#homebanner {

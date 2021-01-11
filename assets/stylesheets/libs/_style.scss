@@ -143,6 +143,16 @@ section > a[role="button"] {
     font-family: var(--font--body);
     padding: 1em;
   }
+  a {
+    background-color: var(--palette--theme);
+    color: var(--palette--white);
+    padding: 14px 40px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+  }
+  a:hover {
+    background-color: var(--palette--theme-darker);
+  }
   &#homebanner {
     height: 100vh; /* change this to fit image */
     background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
@@ -163,7 +173,6 @@ footer p {
   margin: 1em;
 }
 /* Other Components */
-
 /*** ANIMATION ***/
 
 /*--------------------------------------------------------------
@@ -240,7 +249,6 @@ button {
     display: none;
   }
 }
-
 /*--------------------------------------------------------------
 # Font Awesome Icons
 --------------------------------------------------------------*/

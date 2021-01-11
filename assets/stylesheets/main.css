@@ -328,6 +328,10 @@ section > a[role="button"] {
   padding: 4em;
 }
 
+#banner img {
+  padding-bottom: 1em;
+}
+
 /* Footer Components */
 #ocf {
   display: -webkit-box;
@@ -397,8 +401,8 @@ section > a[role="button"] {
 }
 
 #banner p {
-  font-size: 1.5vw;
-  color: var(--palette--white);
+  font-size: 1.3vw;
+  color: var(--palette--grey);
   font-family: var(--font--body);
   padding: 1em;
 }

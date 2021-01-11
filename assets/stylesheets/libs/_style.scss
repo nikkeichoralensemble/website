@@ -16,7 +16,7 @@ navbar {
   .contact {
     @include fix-to-parent;
     @include topRight;
-    transform: translate(0, 50%);
+    transform: translate(0, 5%);
   }
 }
 
@@ -140,12 +140,12 @@ main {
   background-size: cover;
   background-position: center;
   h1 {
-    font-size: 4vw;
+    font-size: 5vw;
     color: var(--palette--white);
     font-family: var(--font--main);
   }
   h2 {
-    font-size: 1vw;
+    font-size: 2vw;
     color: var(--palette--white);
     font-family: var(--font--body);
     padding: 1em;

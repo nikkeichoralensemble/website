@@ -73,4 +73,31 @@ table {
   border-spacing: 0;
 }
 
+.blue {
+  background-color: var(--palette--theme);
+  color: var(--palette--white);
+  a[role="button"] {
+    background: radial-gradient(--palette--theme-darker, --palette--white);
+  }
+}
+
+.white {
+  background-color: var(--palette--white);
+  color: var(--palette--black);
+  a[role="button"] {
+    background: radial-gradient(--palette--white, --palette--grey);
+  }
+}
+
+.pink {
+  background-color: var(--palette--accent-lighter);
+  color: var(--palette--accent-darker);
+  a[role="button"] {
+    background: radial-gradient(
+      --palette--accent-lighter,
+      --palette--accent-darker
+    );
+  }
+}
+
 /*** ANIMATIONS ***/

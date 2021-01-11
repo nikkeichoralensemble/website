@@ -139,15 +139,11 @@ table {
   border-spacing: 0;
 }
 
-/*** ANIMATIONS ***/
-/*------------------------------------------
-# helper classes
-------------------------------------------*/
 .blue {
   background-color: var(--palette--theme);
   color: var(--palette--white);
 }
-.blue button {
+.blue a[role=button] {
   background: radial-gradient(--palette--theme-darker, --palette--white);
 }
 
@@ -155,7 +151,7 @@ table {
   background-color: var(--palette--white);
   color: var(--palette--black);
 }
-.white button {
+.white a[role=button] {
   background: radial-gradient(--palette--white, --palette--grey);
 }
 
@@ -163,10 +159,11 @@ table {
   background-color: var(--palette--accent-lighter);
   color: var(--palette--accent-darker);
 }
-.pink button {
+.pink a[role=button] {
   background: radial-gradient(--palette--accent-lighter, --palette--accent-darker);
 }
 
+/*** ANIMATIONS ***/
 /*--------------------------------------------------------------
 # Basic
 --------------------------------------------------------------*/

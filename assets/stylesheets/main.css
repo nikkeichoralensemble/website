@@ -277,7 +277,7 @@ navbar .contact {
   position: absolute;
   top: 0%;
   right: 0%;
-  transform: translate(0, 0%);
+  transform: translate(0, 25%);
 }
 
 /*** APPEARANCE ***/

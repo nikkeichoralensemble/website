@@ -1,4 +1,3 @@
-@import "mixins.scss"; // helper classes
 /*--------------------------------------------------------------
 # Basic
 --------------------------------------------------------------*/
@@ -13,12 +12,8 @@ h5,
 h6 {
   font-family: var(--font--main);
 }
-b,
-strong {
-  font-family: var(--font--main-bold);
-}
-i {
-  font-family: var(--font--main-italic);
+body {
+  font-family: var(--font--body);
 }
 a,
 a:hover {
@@ -60,13 +55,18 @@ footer {
   grid-template-columns: auto auto auto;
 }
 
+section {
+  @include inner-margin;
+  padding: 5% 10%;
+}
+
 /*** APPEARANCE ***/
 navbar,
 main,
 footer,
-div {
-  padding: 1em;
-}
+// div {
+//   padding: 1em;
+// }
 a {
   padding: 1em, 1em;
   margin: 1em, 1em;
@@ -80,6 +80,9 @@ navbar {
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
   #navtabs > a {
     font-size: 15px;
+    font-family: var(--font--main);
+    text-transform: lowercase;
+    color: var(--palette--black);
     padding: 1em 1em;
     margin: 1em 2em;
     &:hover {
@@ -95,6 +98,8 @@ navbar {
 footer {
   color: var(--palette--white);
   background: var(--palette--theme);
+  font-family: var(--font--body);
+  font-size: small;
 }
 
 /*--------------------------------------------------------------
@@ -127,6 +132,11 @@ navbar {
 main {
 }
 
+#banner {
+  display: flex;
+  justify-content: center;
+}
+
 /* Footer Components */
 footer {
 }
@@ -141,19 +151,28 @@ footer {
   @include setupIcon(45px);
 }
 
-#back-to-top {
-  display: none; // invisible until scroll
-  @include fix-to-page;
-  @include bottomRight(2, 2);
-}
-
 /*** APPEARANCE ***/
-.banner {
-  background: linear-gradient(transparent 50%, var(--palette--theme));
-}
-
 /* Navbar Components */
 /* Main Components */
+#banner {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(transparent, 80%, var(--palette--theme)),
+    url("../images/group.jpg");
+  background-size: cover;
+  background-position: center;
+  h1 {
+    font-size: 4vw;
+    color: var(--palette--white);
+    font-family: var(--font--main);
+  }
+  h2 {
+    font-size: 1vw;
+    color: var(--palette--white);
+    font-family: var(--font--body);
+    padding: 1em;
+  }
+}
 /* Footer Components */
 /* Other Components */
 
@@ -296,4 +315,152 @@ footer {
 .fab {
   /* property name | duration | easing function | delay */
   transition: position 2s ease-in-out 0.5s;
+}
+
+
+/*--------------------------------------------------------------
+# Breakpoints
+--------------------------------------------------------------*/
+// These are ranges
+@include breakpoints(
+  (
+    xlarge: (
+      1281px,
+      1680px,
+    ),
+    large: (
+      981px,
+      1280px,
+    ),
+    medium: (
+      761px,
+      980px,
+    ),
+    small: (
+      361px,
+      560px,
+    ),
+    xsmall: (
+      null,
+      360px,
+    ),
+  )
+);
+
+/*--------------------------------------------------------------
+# XLarge
+--------------------------------------------------------------*/
+@include breakpoint("<=xlarge") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+/*--------------------------------------------------------------
+# Large
+--------------------------------------------------------------*/
+
+@include breakpoint(">large") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+@include breakpoint("<=large") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+/*--------------------------------------------------------------
+# Medium
+--------------------------------------------------------------*/
+
+@include breakpoint(">medium") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+@include breakpoint("<=medium") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+/*--------------------------------------------------------------
+# Small
+--------------------------------------------------------------*/
+
+@include breakpoint(">small") {
+  /* Basic */
+  /* Navbar */
+  navbar {
+    #open-nav-btn {
+      display: none;
+    }
+  }
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+@include breakpoint("<=small") {
+  /* Basic */
+  div {
+    display: block;
+  }
+  /* Navbar */
+  navbar {
+    #navtabs,
+    .contact,
+    .logo img {
+      display: none;
+    }
+    #open-nav-btn {
+      display: block;
+    }
+  }
+  footer {
+    display: block;
+  }
+  /* Main */
+  main {
+    display: block;
+  }
+  /* Footer */
+  /* Components */
+  .fas,
+  .fab {
+    @include setupIcon(20px);
+  }
+}
+
+/*--------------------------------------------------------------
+# XSmall
+--------------------------------------------------------------*/
+@include breakpoint(">xsmall") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+@include breakpoint("<=xsmall") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
 }

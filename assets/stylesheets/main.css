@@ -1,29 +1,29 @@
 /*--------------------------------------------------------------
+#
 # Full Style Sheet
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Variables
+#
 --------------------------------------------------------------*/
 /* Webfonts Setup */
+@import "fontawesome-all.min.css";
 @font-face {
   font-family: "RalewayMedium";
-  src: url(../../font/Raleway-Medium.ttf) format("truetype");
+  src: url("../webfonts/Raleway-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "RalewayMediumItalic";
-  src: url(../../font/Raleway-MediumItalic.ttf) format("truetype");
+  src: url("../webfonts/Raleway-MediumItalic.ttf") format("truetype");
 }
 @font-face {
   font-family: "RalewayExtraLight";
-  src: url(../../font/Raleway-ExtraLight.ttf) format("truetype");
+  src: url("../webfonts/Raleway-ExtraLight.ttf") format("truetype");
 }
 @font-face {
   font-family: "RalewayExtraLightItalic";
-  src: url(../../font/Raleway-ExtraLightItalic.ttf) format("truetype");
+  src: url("../webfonts/Raleway-ExtraLightItalic.ttf") format("truetype");
 }
 @font-face {
   font-family: "GothicA1";
-  src: url(../../font/GothicA1-Regular.ttf) format("truetype");
+  src: url("../webfonts/GothicA1-Regular.ttf") format("truetype");
 }
 /* Global Variables */
 :root {
@@ -66,28 +66,7 @@
 }
 
 /*--------------------------------------------------------------
-# Display Options
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/* For Font Awesome Icons */
-/*--------------------------------------------------------------
-# Positions
---------------------------------------------------------------*/
-/* Position on Page */
-/* Stacking Order on Page */
-/*--------------------------------------------------------------
-# Size (relative to parent)
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Animations
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Global Set
+# Global Settings
 --------------------------------------------------------------*/
 /* Reference:
   http://meyerweb.com/eric/tools/css/reset/ 
@@ -161,27 +140,6 @@ table {
 
 /*** ANIMATIONS ***/
 /*--------------------------------------------------------------
-# Display Options
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/* For Font Awesome Icons */
-/*--------------------------------------------------------------
-# Positions
---------------------------------------------------------------*/
-/* Position on Page */
-/* Stacking Order on Page */
-/*--------------------------------------------------------------
-# Size (relative to parent)
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Animations
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 # Basic
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
@@ -195,13 +153,8 @@ h6 {
   font-family: var(--font--main);
 }
 
-b,
-strong {
-  font-family: var(--font--main-bold);
-}
-
-i {
-  font-family: var(--font--main-italic);
+body {
+  font-family: var(--font--body);
 }
 
 a,
@@ -250,14 +203,15 @@ footer {
   grid-template-columns: auto auto auto;
 }
 
+section {
+  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
+  padding: 5% 10%;
+}
+
 /*** APPEARANCE ***/
 navbar,
 main,
 footer,
-div {
-  padding: 1em;
-}
-
 a {
   padding: 1em, 1em;
   margin: 1em, 1em;
@@ -273,6 +227,9 @@ navbar {
 }
 navbar #navtabs > a {
   font-size: 15px;
+  font-family: var(--font--main);
+  text-transform: lowercase;
+  color: var(--palette--black);
   padding: 1em 1em;
   margin: 1em 2em;
 }
@@ -288,6 +245,8 @@ navbar #open-nav-btn {
 footer {
   color: var(--palette--white);
   background: var(--palette--theme);
+  font-family: var(--font--body);
+  font-size: small;
 }
 
 /*--------------------------------------------------------------
@@ -311,6 +270,11 @@ navbar .logo img {
 }
 
 /* Main Components */
+#banner {
+  display: flex;
+  justify-content: center;
+}
+
 /* Footer Components */
 /* Other Components */
 .contact {
@@ -334,20 +298,28 @@ navbar .logo img {
   padding: 0.9px;
 }
 
-#back-to-top {
-  display: none;
-  position: fixed;
-  bottom: 2%;
-  right: 2%;
-}
-
 /*** APPEARANCE ***/
-.banner {
-  background: linear-gradient(transparent 50%, var(--palette--theme));
-}
-
 /* Navbar Components */
 /* Main Components */
+#banner {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#banner h1 {
+  font-size: 4vw;
+  color: var(--palette--white);
+  font-family: var(--font--main);
+}
+#banner h2 {
+  font-size: 1vw;
+  color: var(--palette--white);
+  font-family: var(--font--body);
+  padding: 1em;
+}
+
 /* Footer Components */
 /* Other Components */
 /*** ANIMATION ***/
@@ -484,30 +456,6 @@ navbar .logo img {
   transition: position 2s ease-in-out 0.5s;
 }
 
-/*--------------------------------------------------------------
-# Display Options
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/* For Font Awesome Icons */
-/*--------------------------------------------------------------
-# Positions
---------------------------------------------------------------*/
-/* Position on Page */
-/* Stacking Order on Page */
-/*--------------------------------------------------------------
-# Size (relative to parent)
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Appearance
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Animations
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-// breakpoints.scss v1.0 | @ajlkn | MIT licensed
---------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Breakpoints
 --------------------------------------------------------------*/

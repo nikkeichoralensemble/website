@@ -5,7 +5,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/stylesheets/fontawesome-all.min.css" />
     <link rel="stylesheet" href="assets/stylesheets/main.css" />
 
     <!-- Favicon -->
@@ -30,13 +29,15 @@
         <a class="fab fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
         <a class="fab fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/"></a>
         <a class="fab fa-facebook" href="https://www.facebook.com/wearenice"></a>
-        <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
+        <a class="fas fa-envelope" href="mailto:nikkeichoralensemble@gmail.com"></a>
       </div>
     </navbar>
 
     <!-- Main -->
     <main id="main">
+      {% block main %}
       Here's some main content.
+      {% endblock %}
     </main>
 
     <!-- Footer -->
@@ -47,14 +48,13 @@
           We take full responsibility for our organization and this web site.
         </p>
         <img src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin.svg" alt="Hosted by the OCF" />
-        <img src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin-dark.svg" alt="Hosted by the OCF" />
       </div>
 
       <div class="contact">
         <a class="fab fa-youtube" href="https://www.youtube.com/c/nikkeichoralensemble"></a>
         <a class="fab fa-instagram" href="https://www.instagram.com/nikkeichoralensemble/"></a>
         <a class="fab fa-facebook" href="https://www.facebook.com/wearenice"></a>
-        <a class="fas fa-envelope" href="nikkeichoralensemble@gmail.com"></a>
+        <a class="fas fa-envelope" href="mailto:nikkeichoralensemble@gmail.com"></a>
       </div>
 
       <div id="copyright">
@@ -67,9 +67,6 @@
         </p>
       </div>
     </footer>
-
-    <!-- Back to Top -->
-    <a id="back-to-top" class="fas fa-alt-arrow-up" href="#"></a>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>

@@ -1,20 +1,19 @@
 /*--------------------------------------------------------------
+#
 # Full Style Sheet
+#
 --------------------------------------------------------------*/
-
-// Variables
+  
+// Variables and Helper
 @import "libs/vars";
-
-// SASS
+@import "fontawesome-all.min.css";
 @import "libs/mixins";
 @import "libs/functions";
 
-//@import "libs/_vendors.scss"; // from TXT (not sure if need)
+//@import "vendors"; // from TXT (not sure if need)
 
 @import "libs/global"; // Global Setup
-
 @import "libs/style"; // Main Style
-@import "libs/breakpoints"; // Breakpoints
 
 // Uncomment for Debug
-// @import "libs/_debug.css"
+// @import " libs/debug"

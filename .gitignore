@@ -15,6 +15,7 @@ venv/
 *.DS_Store
 
 # Project Files
+assets/stylesheets/libs/*.css
 *.map
 ref/
 _local-testing.html

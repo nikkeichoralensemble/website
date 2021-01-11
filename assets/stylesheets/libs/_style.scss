@@ -92,7 +92,7 @@ section > a[role="button"] {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 6em;
+  padding: 4em;
 }
 
 /* Footer Components */
@@ -147,13 +147,18 @@ section > a[role="button"] {
   display: flex;
   flex-direction: column;
   h1 {
-    font-size: 4vw;
+    font-size: 5vw;
     color: var(--palette--white);
     font-family: var(--font--main);
   }
   p {
+<<<<<<< HEAD
     font-size: 2vw;
     color: var(--palette--grey);
+=======
+    font-size: 1.5vw;
+    color: var(--palette--white);
+>>>>>>> 2e15234afbacd5ea3739abd504a48eea971c25fe
     font-family: var(--font--body);
     padding: 1em;
   }

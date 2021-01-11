@@ -160,6 +160,17 @@ section > a[role="button"] {
     font-family: var(--font--body);
     padding: 1em;
   }
+  a {
+    background-color: var(--palette--theme);
+    color: var(--palette--white);
+    padding: 14px 40px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+  }
+
+  a:hover {
+    background-color: var(--palette--theme-darker);
+  }
 }
 
 #aboutbanner {
@@ -181,7 +192,6 @@ footer p {
   margin: 1em;
 }
 /* Other Components */
-
 /*** ANIMATION ***/
 
 /*--------------------------------------------------------------
@@ -258,12 +268,6 @@ button {
     display: none;
   }
 }
-
-.button {
-  background-color: --palette--accent;
-  border-radius: 12px;
-}
-
 /*--------------------------------------------------------------
 # Font Awesome Icons
 --------------------------------------------------------------*/

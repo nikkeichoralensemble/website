@@ -1,12 +1,11 @@
 {% extends "_template.html" %}
 
 {% block main %}
-<div id="banner" >
-  <img src="assets/images/whitenicelogo_small.png" width="100">
+<section class="banner" id="homebanner">
   <h1>We are NiCE!</h1>
-  <p>UC Berkeley's premier Japanese and English a cappella group</p>
-  <a role="button" href="about.html">About Us</a>
-</div>
+  <h2>UC Berkeley's premier Japanese and English a cappella group</h2>
+  <a role="button" href="/about">About Us</a>
+</section>
 
 <section class="pink">
   <h2>Interested in joining?</h2>
@@ -15,12 +14,9 @@
 
 <section class="white">
   <h2>Recent Performances</h2>
-  <div class="videoWrapper">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/PUslCt-1KkA" frameborder="0"
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/PUslCt-1KkA" frameborder="0"
     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>
-  </div>
+  </iframe>
 </section>
 
 {% endblock %}
-

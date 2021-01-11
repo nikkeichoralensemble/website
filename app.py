@@ -22,9 +22,14 @@ def auditions():
     return render_template("auditions.html")
 
 
-@app.route("/tmp")
-def tmp():
+@app.route("/hidden/template")
+def template():
     return render_template("_template.html")
+
+
+@app.route("/hidden/new")
+def newpage():
+    return render_template("_newpage.html")
 
 
 if __name__ == "__main__":

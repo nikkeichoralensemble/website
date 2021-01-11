@@ -285,7 +285,7 @@ section > a[role=button] {
   padding: 1em 3em;
 }
 
-#banner {
+.banner {
   display: flex;
   justify-content: center;
 }
@@ -324,38 +324,35 @@ section > a[role=button] {
 }
 
 /* Main Components */
-#banner {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group.jpg");
-  background-size: cover;
-  background-position: center;
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  align-content: space-evenly;
+  justify-items: space-evenly;
+  justify-content: space-evenly;
+  background-size: contain;
+  background-position: center center;
 }
-#banner h1 {
+.banner h1 {
   font-size: 4vw;
   color: var(--palette--white);
   font-family: var(--font--main);
 }
-#banner h2 {
+.banner h2 {
   font-size: 1vw;
   color: var(--palette--white);
   font-family: var(--font--body);
   padding: 1em;
 }
-
-#aboutbanner {
+.banner#homebanner {
+  background: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group1.jpg");
+}
+.banner#aboutbanner {
   background: url("../images/group2.jpg");
 }
-
-#auditionsbanner {
+.banner#auditionsbanner {
   background: url("../images/group3.jpg");
-}
-
-#aboutbanner, #auditionsbanner {
-  width: 100%;
-  height: 50vh;
-  background-size: cover;
-  background-position: center;
 }
 
 /* Footer Components */
@@ -495,4 +492,19 @@ button #close-nav-btn {
 .fab {
   /* property name | duration | easing function | delay */
   transition: position 2s ease-in-out 0.5s;
+}
+
+/*--------------------------------------------------------------
+# Debug Use
+--------------------------------------------------------------*/
+body {
+  border: 5px solid yellow !important;
+}
+
+body * {
+  border: 1px solid red !important;
+}
+
+body *:hover {
+  border: 1px solid blue !important;
 }

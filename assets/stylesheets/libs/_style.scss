@@ -88,7 +88,7 @@ section > a[role="button"] {
   padding: 1em 3em;
 }
 
-#banner {
+.banner {
   display: flex;
   justify-content: center;
 }
@@ -112,17 +112,17 @@ section > a[role="button"] {
 /* Navbar Components */
 #navtabs a {
   border-radius: 0px 0px 10px 10px;
-//   top: -6px;
-//   transition: top 0.15s ease-in-out;
-//   transition: background-color 0.075s ease-in-out, color 0.075s ease-in-out;
-// }
-// #navtabs a:hover,
-// #nav a.active {
-//   top: 3px;
-// }
-// #navtavs a:hover {
-//   background: var(--palette--accent-lighter);
-//   color: var(--palette--black);
+  //   top: -6px;
+  //   transition: top 0.15s ease-in-out;
+  //   transition: background-color 0.075s ease-in-out, color 0.075s ease-in-out;
+  // }
+  // #navtabs a:hover,
+  // #nav a.active {
+  //   top: 3px;
+  // }
+  // #navtavs a:hover {
+  //   background: var(--palette--accent-lighter);
+  //   color: var(--palette--black);
   // top: -6px;
   // transition: top .15s ease-in-out;
   // transition: background-color .075s ease-in-out, color .075s ease-in-out;
@@ -134,14 +134,37 @@ section > a[role="button"] {
 //   background: var(--palette--accent-lighter);
 // 	color: var(--palette--black);
 // }
+
 /* Main Components */
-#banner {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(transparent, 80%, var(--palette--theme)),
-    url("../images/group.jpg");
-  background-size: cover;
-  background-position: center;
+
+// .wrapper {
+//   width: 100%;
+//   /* whatever width you want */
+//   display: inline-block;
+//   position: relative;
+//   background-size: contain;
+//   background: url('https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Wiki-llama.jpg/1600px-Wiki-llama.jpg') top center no-repeat;
+//   margin: 0 auto;
+// }
+// .wrapper:after {
+//   padding-top: 75%;
+//   /* this llama image is 800x600 so set the padding top % to match 600/800 = .75 */
+//   display: block;
+//   content: '';
+// }
+
+.banner {
+  @include FlexCol;
+  // width: 100%;
+  // // height: 50vh;
+  background-size: contain;
+  background-position: center center;
+  // &:after {
+  //   /* this llama image is 800x600 so set the padding top % to match 600/800 = .75 */
+  //   padding-top: 75%;
+  //   display: block;
+  //   content: "";
+  // }
   h1 {
     font-size: 4vw;
     color: var(--palette--white);
@@ -153,20 +176,18 @@ section > a[role="button"] {
     font-family: var(--font--body);
     padding: 1em;
   }
+  &#homebanner {
+    background: linear-gradient(transparent, 80%, var(--palette--theme)),
+      url("../images/group1.jpg");
+  }
+  &#aboutbanner {
+    background: url("../images/group2.jpg");
+  }
+  &#auditionsbanner {
+    background: url("../images/group3.jpg");
+  }
 }
-#aboutbanner {
-  background: url("../images/group2.jpg");
-  
-}
-#auditionsbanner {
-  background: url("../images/group3.jpg");
-}
-#aboutbanner, #auditionsbanner {
-  width: 100%;
-  height: 50vh;
-  background-size: cover;
-  background-position: center;
-}
+
 /* Footer Components */
 #footer p {
   margin: 1em;

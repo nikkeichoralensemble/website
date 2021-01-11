@@ -143,7 +143,6 @@ section > a[role="button"] {
     font-family: var(--font--body);
     padding: 1em;
   }
-<<<<<<< HEAD
   a {
     background-color: var(--palette--theme);
     color: var(--palette--white);
@@ -151,25 +150,9 @@ section > a[role="button"] {
     border-radius: 12px;
     transition-duration: 0.4s;
   }
-
   a:hover {
     background-color: var(--palette--theme-darker);
   }
-}
-
-#aboutbanner {
-  background: url("../images/group2.jpg");
-}
-#auditionsbanner {
-  background: url("../images/group3.jpg");
-}
-#aboutbanner,
-#auditionsbanner {
-  width: 100%;
-  height: 50vh;
-  background-size: cover;
-  background-position: center;
-=======
   &#homebanner {
     height: 50vh; /* change this to fit image */
     background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
@@ -183,7 +166,6 @@ section > a[role="button"] {
     height: 50vh; /* change this to fit image */
     background-image: url("../images/group3.jpg");
   }
->>>>>>> d453c502833de405b96f6b5b2150a7cd964ecc7e
 }
 
 /* Footer Components */

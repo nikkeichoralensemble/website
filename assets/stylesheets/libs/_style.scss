@@ -90,7 +90,9 @@ section > a[role="button"] {
 
 #banner {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 6em;
 }
 
 /* Footer Components */
@@ -147,7 +149,7 @@ section > a[role="button"] {
     color: var(--palette--white);
     font-family: var(--font--main);
   }
-  h2 {
+  p {
     font-size: 1vw;
     color: var(--palette--white);
     font-family: var(--font--body);

@@ -45,10 +45,10 @@
   --font--main-light: "RalewayExtraLight", sans-serif;
   --font--main-light-italic: "RalewayExtraLightItalic", sans-serif;
   --font--body: "GothicA1", sans-serif;
-  --font--xs: 15vw;
-  --font--m: 32vw;
-  --font--l: 48vw;
-  --font--xl: 72vw;
+  --font--xs: 1vw;
+  --font--m: 2vw;
+  --font--l: 3vw;
+  --font--xl: 5vw;
   /* Palette. */
   --palette--theme: #4787c3;
   --patette--theme-lighter: #d0e0f0;
@@ -114,6 +114,15 @@ h5,
 h6 {
   font-family: var(--font--main);
   font-size: 100%;
+  color: var(--palette--black);
+}
+
+h1 {
+  font-size: var(--font--l);
+}
+
+h2 {
+  font-size: var(--font--m);
 }
 
 /*** APPEARANCE ***/
@@ -233,6 +242,10 @@ section {
 }
 
 /*** APPEARANCE ***/
+body {
+  background: var(--palette--accent-lighter);
+}
+
 navbar {
   background: var(--palette--white);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
@@ -308,19 +321,6 @@ section > a[role=button] {
 /* Navbar Components */
 #navtabs a {
   border-radius: 0px 0px 10px 10px;
-  top: -6px;
-  transition: top 0.15s ease-in-out;
-  transition: background-color 0.075s ease-in-out, color 0.075s ease-in-out;
-}
-
-#navtabs a:hover,
-#nav a.active {
-  top: 3px;
-}
-
-#navtavs a:hover {
-  background: var(--palette--accent-lighter);
-  color: var(--palette--black);
 }
 
 /* Main Components */

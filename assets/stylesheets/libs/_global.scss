@@ -48,6 +48,14 @@ h5,
 h6 {
   font-family: var(--font--main);
   font-size: 100%;
+  color: var(--palette--black);
+}
+
+h1 {
+  font-size: var(--font--l);
+}
+h2 {
+  font-size: var(--font--m);
 }
 
 /*** APPEARANCE ***/

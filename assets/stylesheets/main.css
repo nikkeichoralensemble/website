@@ -74,6 +74,18 @@
   v2.0 | 20110126
   License: none (public domain) */
 /*** LAYOUT ***/
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  /* fill up the whole screen */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* navbar main footer */
+}
+
 * {
   box-sizing: content-box;
   height: minmax(10px, fit-content);
@@ -88,23 +100,11 @@ footer {
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
-body {
-  min-height: 100%;
-  /* fill up the whole screen */
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  /* navbar main footer */
-}
-
 /*** APPEARANCE ***/
 * {
   padding: 0px;
   margin: 0px;
-  border: 0;
+  border: none;
   font-size: 100%;
   font: inherit;
   line-height: 1;
@@ -125,9 +125,7 @@ blockquote,
 q {
   quotes: none;
 }
-
-blockquote:before,
-blockquote:after,
+blockquote:before, blockquote:after,
 q:before,
 q:after {
   content: "";
@@ -137,6 +135,13 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+a[role], a[role]:hover {
+  text-decoration: none;
+}
+a[role=button] {
+  padding: 1em 3em;
 }
 
 .blue {

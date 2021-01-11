@@ -4,27 +4,32 @@
 #
 --------------------------------------------------------------*/
 /* Webfonts Setup */
-@import "fontawesome-all.min.css";
+@import url(c:\Users\jiang\Documents\NiCE\website\website\assets\stylesheets\fontawesome-all.min.css);
 @font-face {
   font-family: "RalewayMedium";
   src: url("../webfonts/Raleway-Medium.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "RalewayMediumItalic";
   src: url("../webfonts/Raleway-MediumItalic.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "RalewayExtraLight";
   src: url("../webfonts/Raleway-ExtraLight.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "RalewayExtraLightItalic";
   src: url("../webfonts/Raleway-ExtraLightItalic.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "GothicA1";
   src: url("../webfonts/GothicA1-Regular.ttf") format("truetype");
 }
+
 /* Global Variables */
 :root {
   /*** LAYOUT ***/
@@ -45,10 +50,10 @@
   --font--main-light: "RalewayExtraLight", sans-serif;
   --font--main-light-italic: "RalewayExtraLightItalic", sans-serif;
   --font--body: "GothicA1", sans-serif;
-  --font--xs: 15vw;
-  --font--m: 32vw;
-  --font--l: 48vw;
-  --font--xl: 72vw;
+  --font--xs: 1vw;
+  --font--m: 2vw;
+  --font--l: 3vw;
+  --font--xl: 5vw;
   /* Palette. */
   --palette--theme: #4787c3;
   --patette--theme-lighter: #d0e0f0;
@@ -82,13 +87,16 @@ html {
 body {
   min-height: 100%;
   /* fill up the whole screen */
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
   /* navbar main footer */
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* XXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXX */
@@ -109,10 +117,20 @@ h5,
 h6 {
   font-family: var(--font--main);
   font-size: 100%;
+  color: var(--palette--black);
+}
+
+h1 {
+  font-size: var(--font--l);
+}
+
+h2 {
+  font-size: var(--font--m);
 }
 
 body {
   font-family: var(--font--body);
+  color: var(--palette--black);
 }
 
 /*** APPEARANCE ***/
@@ -140,6 +158,7 @@ blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before,
 q:after {
@@ -155,7 +174,8 @@ table {
 a[role] {
   text-decoration: none;
 }
-section > a[role=button] {
+
+section > a[role="button"] {
   display: block;
   padding: 1em 3em;
 }
@@ -164,7 +184,8 @@ section > a[role=button] {
   background-color: var(--palette--theme);
   color: var(--palette--white);
 }
-.blue a[role=button] {
+
+.blue a[role="button"] {
   background: radial-gradient(--palette--theme-darker, --palette--white);
 }
 
@@ -172,7 +193,8 @@ section > a[role=button] {
   background-color: var(--palette--white);
   color: var(--palette--black);
 }
-.white a[role=button] {
+
+.white a[role="button"] {
   background: radial-gradient(--palette--white, --palette--grey);
 }
 
@@ -180,7 +202,8 @@ section > a[role=button] {
   background-color: var(--palette--accent-lighter);
   color: var(--palette--accent-darker);
 }
-.pink a[role=button] {
+
+.pink a[role="button"] {
   background: radial-gradient(--palette--accent-lighter, --palette--accent-darker);
 }
 
@@ -194,18 +217,24 @@ navbar {
   width: 100vw;
   margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
 }
+
 navbar #navtabs {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
   top: 0px;
   left: 50%;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
+
 navbar .contact {
   position: absolute;
   top: 0%;
   right: 0%;
-  transform: translate(0, 50%);
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
 }
 
 main {
@@ -218,11 +247,15 @@ footer {
   margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
   display: Grid;
   gap: 10px;
-  align-content: space-evenly;
-  justify-content: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  grid-template-columns: auto auto auto;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
 }
 
 section {
@@ -231,10 +264,7 @@ section {
 }
 
 /*** APPEARANCE ***/
-navbar,
-main,
-footer,
-a[role=button] {
+a[role="button"] {
   padding: 1em, 1em;
   margin: 1em, 1em;
 }
@@ -245,9 +275,11 @@ body {
 
 navbar {
   background: var(--palette--white);
-  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
 }
-navbar #navtabs > a[role=button] {
+
+navbar #navtabs > a[role="button"] {
   font-size: 15px;
   font-family: var(--font--main);
   text-transform: lowercase;
@@ -255,10 +287,12 @@ navbar #navtabs > a[role=button] {
   padding: 2em 2em;
   margin: 0em 2em;
 }
-navbar #navtabs > a[role=button]:hover {
+
+navbar #navtabs > a[role="button"]:hover {
   color: var(--palette--white);
   background: var(--palette--theme);
 }
+
 navbar #open-nav-btn {
   font-size: 30px;
   cursor: pointer;
@@ -277,15 +311,20 @@ footer {
 /*** LAYOUT ***/
 /* Navbar Components */
 navbar {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
+
 navbar .logo .tmp {
   height: 40px;
   width: 40px;
 }
+
 navbar .logo {
   display: inline-block;
 }
+
 navbar .logo img {
   height: 1cm;
   width: 1cm;
@@ -293,23 +332,39 @@ navbar .logo img {
 
 /* Main Components */
 #banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* Footer Components */
 #ocf {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 /* Other Components */
 .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: space-evenly;
-  align-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
   justify-items: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .fas,
@@ -328,33 +383,24 @@ navbar .logo img {
 /* Navbar Components */
 #navtabs a {
   border-radius: 0px 0px 10px 10px;
-  top: -6px;
-  transition: top 0.15s ease-in-out;
-  transition: background-color 0.075s ease-in-out, color 0.075s ease-in-out;
-}
-
-#navtabs a:hover, #nav a.active {
-  top: 3px;
-}
-
-#navtavs a:hover {
-  background: var(--palette--accent-lighter);
-  color: var(--palette--black);
 }
 
 /* Main Components */
 #banner {
   width: 100%;
   height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%), to(var(--palette--theme))), url("../images/group.jpg");
   background: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group.jpg");
   background-size: cover;
   background-position: center;
 }
+
 #banner h1 {
   font-size: 4vw;
   color: var(--palette--white);
   font-family: var(--font--main);
 }
+
 #banner h2 {
   font-size: 1vw;
   color: var(--palette--white);
@@ -376,8 +422,11 @@ navbar .logo img {
 #navtabs {
   display: Grid;
   gap: 10px;
-  align-content: space-evenly;
-  justify-content: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
 }
@@ -396,17 +445,19 @@ navbar .logo img {
   /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
-#sidenav a[role=button] {
+#sidenav a[role="button"] {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: block;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -429,14 +480,16 @@ navbar .logo img {
   #sidenav {
     padding-top: 15px;
   }
-  #sidenav a[role=button] {
+  #sidenav a[role="button"] {
     font-size: 18px;
   }
 }
+
 /* controlled by javascript */
 button #open-nav-btn {
   display: none;
 }
+
 button #close-nav-btn {
   display: none;
 }
@@ -451,6 +504,7 @@ button #close-nav-btn {
   color: var(--palette--black);
   background-color: var(--palette--white);
 }
+
 .fas:hover,
 .fab:hover {
   color: var(--palette--white);
@@ -487,16 +541,18 @@ button #close-nav-btn {
   height: 40px;
   border-radius: 50px;
   /* color: #fff;
-    transition: all 0.4s;
-  }
-  .fas.fa-arrow-up:hover {
-    background: var(--palette--theme);
-    /* color: #fff; */
+  transition: all 0.4s;
+}
+.fas.fa-arrow-up:hover {
+  background: var(--palette--theme);
+  /* color: #fff; */
 }
 
 /*** ANIMATION ***/
 .fas,
 .fab {
   /* property name | duration | easing function | delay */
+  -webkit-transition: position 2s ease-in-out 0.5s;
   transition: position 2s ease-in-out 0.5s;
 }
+/*# sourceMappingURL=main.css.map */

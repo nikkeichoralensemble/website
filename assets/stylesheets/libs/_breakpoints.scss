@@ -1,0 +1,147 @@
+
+/*--------------------------------------------------------------
+# Breakpoints
+--------------------------------------------------------------*/
+// These are ranges
+@include breakpoints(
+  (
+    xlarge: (
+      1281px,
+      1680px,
+    ),
+    large: (
+      981px,
+      1280px,
+    ),
+    medium: (
+      761px,
+      980px,
+    ),
+    small: (
+      361px,
+      560px,
+    ),
+    xsmall: (
+      null,
+      360px,
+    ),
+  )
+);
+
+/*--------------------------------------------------------------
+# XLarge
+--------------------------------------------------------------*/
+@include breakpoint("<=xlarge") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+/*--------------------------------------------------------------
+# Large
+--------------------------------------------------------------*/
+
+@include breakpoint(">large") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+@include breakpoint("<=large") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+/*--------------------------------------------------------------
+# Medium
+--------------------------------------------------------------*/
+
+@include breakpoint(">medium") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+@include breakpoint("<=medium") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+/*--------------------------------------------------------------
+# Small
+--------------------------------------------------------------*/
+
+@include breakpoint(">small") {
+  /* Basic */
+  /* Navbar */
+  navbar {
+    #open-nav-btn {
+      display: none;
+    }
+  }
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+@include breakpoint("<=small") {
+  /* Basic */
+  div {
+    display: block;
+  }
+  /* Navbar */
+  navbar {
+    #navtabs,
+    .contact,
+    .logo img {
+      display: none;
+    }
+    #open-nav-btn {
+      display: block;
+    }
+  }
+  footer {
+    display: block;
+  }
+  /* Main */
+  main {
+    display: block;
+  }
+  /* Footer */
+  /* Components */
+  .fas,
+  .fab {
+    @include setupIcon(20px);
+  }
+}
+
+/*--------------------------------------------------------------
+# XSmall
+--------------------------------------------------------------*/
+@include breakpoint(">xsmall") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+
+@include breakpoint("<=xsmall") {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}

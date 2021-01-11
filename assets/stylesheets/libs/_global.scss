@@ -9,7 +9,7 @@
 /*** LAYOUT ***/
 /* XXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXX */
 html {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
@@ -22,7 +22,6 @@ body {
 * {
   box-sizing: border-box;
 }
-
 /* XXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXX */
 
 * {
@@ -33,7 +32,12 @@ body {
 
 /*** TEXT SETUP ***/
 * {
-  font:inherit;
+  font: inherit;
+}
+
+html,
+body {
+  font-family: var(--font--body);
 }
 
 h1,
@@ -52,11 +56,6 @@ h1 {
 }
 h2 {
   font-size: var(--font--m);
-}
-
-body {
-  font-family: var(--font--body);
-  color: var(--palette--black);
 }
 
 /*** APPEARANCE ***/
@@ -96,20 +95,8 @@ table {
   border-spacing: 0;
 }
 
-// section {
-//   min-height: min-content;
-//   width: 100%;
-//   padding: 0px !important;
-// }
-
-a {
-  &[role]{
+a[role] {
     text-decoration: none;
-  }
-  section > &[role="button"] {
-    display: block;
-    padding: 1em 3em;
-  }
 }
 
 .blue {

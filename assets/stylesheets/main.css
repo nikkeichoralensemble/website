@@ -76,7 +76,7 @@
 /*** LAYOUT ***/
 /* XXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXX */
 html {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
@@ -101,6 +101,11 @@ body {
   font: inherit;
 }
 
+html,
+body {
+  font-family: var(--font--body);
+}
+
 h1,
 h2,
 h3,
@@ -109,10 +114,6 @@ h5,
 h6 {
   font-family: var(--font--main);
   font-size: 100%;
-}
-
-body {
-  font-family: var(--font--body);
 }
 
 /*** APPEARANCE ***/
@@ -155,10 +156,6 @@ table {
 a[role] {
   text-decoration: none;
 }
-section > a[role=button] {
-  display: block;
-  padding: 1em 3em;
-}
 
 .blue {
   background-color: var(--palette--theme);
@@ -190,6 +187,10 @@ section > a[role=button] {
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
 navbar {
+  display: inline-flex;
+}
+
+navbar {
   max-height: 20vh;
   width: 100vw;
   margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
@@ -216,6 +217,7 @@ main {
 footer {
   width: 100vw;
   margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
+  padding: 5% 10%;
   display: Grid;
   gap: 10px;
   align-content: space-evenly;
@@ -231,18 +233,6 @@ section {
 }
 
 /*** APPEARANCE ***/
-navbar,
-main,
-footer,
-a[role=button] {
-  padding: 1em, 1em;
-  margin: 1em, 1em;
-}
-
-body {
-  background: var(--palette--accent-lighter);
-}
-
 navbar {
   background: var(--palette--white);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
@@ -276,22 +266,12 @@ footer {
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
 /* Navbar Components */
-navbar {
-  display: inline-flex;
-}
-navbar .logo .tmp {
-  height: 40px;
-  width: 40px;
-}
-navbar .logo {
-  display: inline-block;
-}
-navbar .logo img {
-  height: 1cm;
-  width: 1cm;
+/* Main Components */
+section > a[role=button] {
+  display: block;
+  padding: 1em 3em;
 }
 
-/* Main Components */
 #banner {
   display: flex;
   justify-content: center;
@@ -333,7 +313,8 @@ navbar .logo img {
   transition: background-color 0.075s ease-in-out, color 0.075s ease-in-out;
 }
 
-#navtabs a:hover, #nav a.active {
+#navtabs a:hover,
+#nav a.active {
   top: 3px;
 }
 

@@ -72,13 +72,14 @@
 }
 
 /*--------------------------------------------------------------
-# Global Settings
+# Global
 --------------------------------------------------------------*/
 /* Reference:
   http://meyerweb.com/eric/tools/css/reset/ 
   v2.0 | 20110126
   License: none (public domain) */
 /*** LAYOUT ***/
+/* XXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXX */
 html {
   height: 100%;
 }
@@ -93,6 +94,15 @@ body {
   /* navbar main footer */
 }
 
+body,
+navbar,
+main,
+footer {
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+}
+
+/* XXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXX */
 * {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -105,12 +115,22 @@ body {
   place-self: center center;
 }
 
-body,
-navbar,
-main,
-footer {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+/*** TEXT SETUP ***/
+* {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font--main);
+}
+
+body {
+  font-family: var(--font--body);
 }
 
 /*** APPEARANCE ***/
@@ -187,34 +207,6 @@ a[role="button"] {
 }
 
 /*** ANIMATIONS ***/
-/*--------------------------------------------------------------
-# Basic
---------------------------------------------------------------*/
-/*** LAYOUT ***/
-/*** APPEARANCE ***/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font--main);
-}
-
-body {
-  font-family: var(--font--body);
-}
-
-a[role="button"],
-a[role="button"]:hover {
-  text-decoration: none;
-}
-
-button {
-  padding: 1em 3em;
-}
-
-/*** ANIMATION ***/
 /*--------------------------------------------------------------
 # Page Setup
 --------------------------------------------------------------*/
@@ -578,126 +570,5 @@ button #close-nav-btn {
   /* property name | duration | easing function | delay */
   -webkit-transition: position 2s ease-in-out 0.5s;
   transition: position 2s ease-in-out 0.5s;
-}
-
-/*--------------------------------------------------------------
-# Breakpoints
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# XLarge
---------------------------------------------------------------*/
-@media screen and (max-width: 1680px) {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-/*--------------------------------------------------------------
-# Large
---------------------------------------------------------------*/
-@media screen and (min-width: 1281px) {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-@media screen and (max-width: 1280px) {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-/*--------------------------------------------------------------
-# Medium
---------------------------------------------------------------*/
-@media screen and (min-width: 981px) {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-@media screen and (max-width: 980px) {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-/*--------------------------------------------------------------
-# Small
---------------------------------------------------------------*/
-@media screen and (min-width: 561px) {
-  /* Basic */
-  /* Navbar */
-  navbar #open-nav-btn {
-    display: none;
-  }
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-@media screen and (max-width: 560px) {
-  /* Basic */
-  div {
-    display: block;
-  }
-  /* Navbar */
-  navbar #navtabs,
-  navbar .contact,
-  navbar .logo img {
-    display: none;
-  }
-  navbar #open-nav-btn {
-    display: block;
-  }
-  footer {
-    display: block;
-  }
-  /* Main */
-  main {
-    display: block;
-  }
-  /* Footer */
-  /* Components */
-  .fas,
-  .fab {
-    height: 20px;
-    width: 20px;
-    border-radius: 10px;
-    font-size: 10px;
-    line-height: 20px;
-    vertical-align: baseline;
-    margin: 2px;
-    padding: 0.4px;
-  }
-}
-
-/*--------------------------------------------------------------
-# XSmall
---------------------------------------------------------------*/
-@media screen and (min-width: 361px) {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
-}
-
-@media screen and (max-width: 360px) {
-  /* Basic */
-  /* Navbar */
-  /* Main */
-  /* Footer */
-  /* Components */
 }
 /*# sourceMappingURL=main.css.map */

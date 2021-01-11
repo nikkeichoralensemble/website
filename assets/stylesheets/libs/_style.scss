@@ -86,8 +86,8 @@ navbar {
     font-family: var(--font--main);
     text-transform: lowercase;
     color: var(--palette--black);
-    padding: 1em 1em;
-    margin: 1em 2em;
+    padding: 2em 2em;
+    margin: 0em 2em;
     &:hover {
       color: var(--palette--white);
       background: var(--palette--theme);

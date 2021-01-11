@@ -259,8 +259,8 @@ navbar #navtabs > a[role=button] {
   font-family: var(--font--main);
   text-transform: lowercase;
   color: var(--palette--black);
-  padding: 1em 1em;
-  margin: 1em 2em;
+  padding: 2em 2em;
+  margin: 0em 2em;
 }
 navbar #navtabs > a[role=button]:hover {
   color: var(--palette--white);

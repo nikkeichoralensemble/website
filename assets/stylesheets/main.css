@@ -4,7 +4,7 @@
 #
 --------------------------------------------------------------*/
 /* Webfonts Setup */
-@import url(/Users/Jessica/Desktop/miscCS/website/assets/stylesheets/fontawesome-all.min.css);
+@import url(c:\Users\jiang\Documents\NiCE\website\website\assets\stylesheets\fontawesome-all.min.css);
 @font-face {
   font-family: "RalewayMedium";
   src: url("../webfonts/Raleway-Medium.ttf") format("truetype");
@@ -397,13 +397,8 @@ section > a[role="button"] {
 }
 
 #banner p {
-<<<<<<< HEAD
-  font-size: 2vw;
-  color: var(--palette--grey);
-=======
   font-size: 1.5vw;
   color: var(--palette--white);
->>>>>>> 2e15234afbacd5ea3739abd504a48eea971c25fe
   font-family: var(--font--body);
   padding: 1em;
 }

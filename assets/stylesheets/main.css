@@ -4,37 +4,31 @@
 #
 --------------------------------------------------------------*/
 /* Webfonts Setup */
-@import url(/Users/Jessica/Desktop/miscCS/website/assets/stylesheets/fontawesome-all.min.css);
+@import "fontawesome-all.min.css";
 @font-face {
   font-family: "RalewayMedium";
   src: url("../webfonts/Raleway-Medium.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "RalewayMediumItalic";
   src: url("../webfonts/Raleway-MediumItalic.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "RalewayExtraLight";
   src: url("../webfonts/Raleway-ExtraLight.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "RalewayExtraLightItalic";
   src: url("../webfonts/Raleway-ExtraLightItalic.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "RalewayBold";
   src: url("../webfonts/Raleway-Bold.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "GothicA1";
   src: url("../webfonts/GothicA1-Regular.ttf") format("truetype");
 }
-
 /* Global Variables */
 :root {
   /*** LAYOUT ***/
@@ -79,13 +73,24 @@
 }
 
 /*--------------------------------------------------------------
+# Global Reset
+--------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  place-self: center center;
+}
+
+/*--------------------------------------------------------------
 # Global Layout
 --------------------------------------------------------------*/
 /* Reference:
   http://meyerweb.com/eric/tools/css/reset/ 
   v2.0 | 20110126
   License: none (public domain) */
-/* XXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXX */
+/* XXX Do not edit below this line XXX */
 html {
   height: 100vh;
 }
@@ -93,21 +98,46 @@ html {
 body {
   min-height: 100%;
   /* fill up the whole screen */
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto 1fr auto;
-      grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
   /* navbar main footer */
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+main {
+  width: 100vw;
 }
 
-/* XXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXX */
-* {
-  place-self: center center;
+footer {
+  width: 100vw;
+  display: Grid;
+  gap: 10px;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  grid-auto-rows: minmax(10px, auto);
+  grid-auto-columns: minmax(10px, auto);
+  grid-template-columns: auto auto auto;
+}
+
+/* XXX Do not edit above this line XXX */
+/*------------------------------------------
+# Global Apprearance
+------------------------------------------*/
+body {
+  background: var(--palette--accent-lighter);
+}
+
+main {
+  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
+}
+
+section {
+  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
+  padding: 5% 10%;
+}
+
+footer {
+  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
+  padding: 5% 10%;
 }
 
 /*------------------------------------------
@@ -153,14 +183,8 @@ p {
 }
 
 /*------------------------------------------
-# Global Apperance
+# Global Default Components
 ------------------------------------------*/
-* {
-  padding: 0px;
-  margin: 0px;
-  border: none;
-}
-
 p {
   text-align: left;
   font-size: var(--font--s);
@@ -175,7 +199,6 @@ blockquote,
 q {
   quotes: none;
 }
-
 blockquote:before, blockquote:after,
 q:before,
 q:after {
@@ -189,7 +212,7 @@ table {
 }
 
 /*------------------------------------------
-# Global Custom Styling
+# Global Custom Components
 ------------------------------------------*/
 a[role] {
   text-decoration: none;
@@ -199,8 +222,7 @@ a[role] {
   background-color: var(--palette--theme);
   color: var(--palette--white);
 }
-
-.blue a[role="button"] {
+.blue a[role=button] {
   background: radial-gradient(--palette--theme-darker, --palette--white);
 }
 
@@ -208,8 +230,7 @@ a[role] {
   background-color: var(--palette--white);
   color: var(--palette--black);
 }
-
-.white a[role="button"] {
+.white a[role=button] {
   background: radial-gradient(--palette--white, --palette--grey);
 }
 
@@ -217,8 +238,7 @@ a[role] {
   background-color: var(--palette--accent-lighter);
   color: var(--palette--accent-darker);
 }
-
-.pink a[role="button"] {
+.pink a[role=button] {
   background: radial-gradient(--palette--accent-lighter, --palette--accent-darker);
 }
 
@@ -226,12 +246,10 @@ a[role] {
 # Global Animations
 ------------------------------------------*/
 /*--------------------------------------------------------------
-# Page Setup
+# Navbar
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
 navbar {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
@@ -240,65 +258,26 @@ navbar {
   width: 100vw;
   margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
 }
-
 navbar #navtabs {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
   top: 0px;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
-
 navbar .contact {
   position: absolute;
   top: 0%;
   right: 0%;
-  -webkit-transform: translate(0, 0%);
-          transform: translate(0, 0%);
-}
-
-main {
-  width: 100vw;
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
-}
-
-footer {
-  width: 100vw;
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
-  padding: 5% 10%;
-  display: Grid;
-  gap: 10px;
-  -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  grid-auto-rows: minmax(10px, auto);
-  grid-auto-columns: minmax(10px, auto);
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
-}
-
-section {
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
-  padding: 5% 10%;
+  transform: translate(0, 0%);
 }
 
 /*** APPEARANCE ***/
-body {
-  background: var(--palette--accent-lighter);
-}
-
 navbar {
   background: var(--palette--white);
-  -webkit-box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
 }
-
-navbar #navtabs > a[role="button"] {
+navbar #navtabs > a[role=button] {
   font-size: 15px;
   font-family: var(--font--main);
   text-transform: lowercase;
@@ -306,12 +285,10 @@ navbar #navtabs > a[role="button"] {
   padding: 2em 2em;
   margin: 0em 2em;
 }
-
-navbar #navtabs > a[role="button"]:hover {
+navbar #navtabs > a[role=button]:hover {
   color: var(--palette--white);
   background: var(--palette--theme);
 }
-
 navbar #open-nav-btn {
   font-size: 30px;
   cursor: pointer;
@@ -330,59 +307,35 @@ footer {
 /*** LAYOUT ***/
 /* Navbar Components */
 /* Main Components */
-section > a[role="button"] {
+section > a[role=button] {
   display: block;
   padding: 1em 3em;
 }
 
 .banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: space-evenly;
-      -ms-flex-align: space-evenly;
-          align-items: space-evenly;
-  -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
+  flex-direction: column;
+  align-items: space-evenly;
+  align-content: space-evenly;
   justify-items: space-evenly;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   width: 100vw;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 /* Footer Components */
 #ocf {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 /* Other Components */
 .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: space-evenly;
-      -ms-flex-align: space-evenly;
-          align-items: space-evenly;
-  -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
+  flex-direction: row;
+  align-items: space-evenly;
+  align-content: space-evenly;
   justify-items: space-evenly;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .fas,
@@ -408,46 +361,37 @@ section > a[role="button"] {
   background-repeat: no-repeat;
   background-position: center center;
 }
-
 .banner h1 {
   font-size: 5vw;
   color: var(--palette--white);
   font-family: var(--font--main);
 }
-
 .banner p {
   font-size: 1.3vw;
   color: var(--palette--grey);
   font-family: var(--font--body);
   padding: 1em;
 }
-
 .banner a {
   background-color: var(--palette--theme);
   color: var(--palette--white);
   padding: 14px 40px;
   border-radius: 12px;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
-
 .banner a:hover {
   background-color: var(--palette--theme-darker);
 }
-
 .banner#homebanner {
   height: 100vh;
   /* change this to fit image */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%), to(var(--palette--theme))), url("../images/group1.jpg");
   background-image: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group1.jpg");
 }
-
 .banner#aboutbanner {
   height: 50vh;
   /* change this to fit image */
   background-image: url("../images/group2.jpg");
 }
-
 .banner#auditionsbanner {
   height: 50vh;
   /* change this to fit image */
@@ -468,11 +412,8 @@ footer p {
 #navtabs {
   display: Grid;
   gap: 10px;
-  -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  align-content: space-evenly;
+  justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
 }
@@ -491,19 +432,17 @@ footer p {
   /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
-#sidenav a[role="button"] {
+#sidenav a[role=button] {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: block;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -526,16 +465,14 @@ footer p {
   #sidenav {
     padding-top: 15px;
   }
-  #sidenav a[role="button"] {
+  #sidenav a[role=button] {
     font-size: 18px;
   }
 }
-
 /* controlled by javascript */
 button #open-nav-btn {
   display: none;
 }
-
 button #close-nav-btn {
   display: none;
 }
@@ -550,7 +487,6 @@ button #close-nav-btn {
   color: var(--palette--black);
   background-color: var(--palette--white);
 }
-
 .fas:hover,
 .fab:hover {
   color: var(--palette--white);
@@ -587,18 +523,16 @@ button #close-nav-btn {
   height: 40px;
   border-radius: 50px;
   /* color: #fff;
-  transition: all 0.4s;
-}
-.fas.fa-arrow-up:hover {
-  background: var(--palette--theme);
-  /* color: #fff; */
+    transition: all 0.4s;
+  }
+  .fas.fa-arrow-up:hover {
+    background: var(--palette--theme);
+    /* color: #fff; */
 }
 
 /*** ANIMATION ***/
 .fas,
 .fab {
   /* property name | duration | easing function | delay */
-  -webkit-transition: position 2s ease-in-out 0.5s;
   transition: position 2s ease-in-out 0.5s;
 }
-/*# sourceMappingURL=main.css.map */

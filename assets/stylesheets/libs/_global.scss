@@ -1,4 +1,19 @@
 /*--------------------------------------------------------------
+# Global Reset
+--------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+
+  padding: 0px;
+  margin: 0px;
+  border: none;
+
+  // height: minmax(10px, fit-content);
+  // width: minmax(10px, fit-content);
+  place-self: center center;
+}
+
+/*--------------------------------------------------------------
 # Global Layout
 --------------------------------------------------------------*/
 /* Reference:
@@ -6,7 +21,7 @@
   v2.0 | 20110126
   License: none (public domain) */
 
-/* XXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXX */
+/* XXX Do not edit below this line XXX */
 html {
   @include fill-height;
 }
@@ -18,15 +33,36 @@ body {
   grid-template-rows: auto 1fr auto; /* navbar main footer */
 }
 
-* {
-  box-sizing: border-box;
+main {
+  @include fill-width;
 }
-/* XXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXX */
 
-* {
-  // height: minmax(10px, fit-content);
-  // width: minmax(10px, fit-content);
-  place-self: center center;
+footer {
+  @include fill-width;
+  @include Grid;
+  grid-template-columns: auto auto auto;
+}
+/* XXX Do not edit above this line XXX */
+
+/*------------------------------------------
+# Global Apprearance
+------------------------------------------*/
+body {
+  background: var(--palette--accent-lighter);
+}
+
+main {
+  @include inner-margin;
+}
+
+section {
+  @include inner-margin;
+  padding: 5% 10%;
+}
+
+footer {
+  @include inner-margin;
+  padding: 5% 10%;
 }
 
 /*------------------------------------------
@@ -71,14 +107,8 @@ p {
 }
 
 /*------------------------------------------
-# Global Apperance
+# Global Default Components
 ------------------------------------------*/
-* {
-  padding: 0px;
-  margin: 0px;
-  border: none;
-}
-
 p {
   text-align: left;
   font-size: var(--font--s);
@@ -105,7 +135,7 @@ table {
 }
 
 /*------------------------------------------
-# Global Custom Styling
+# Global Custom Components
 ------------------------------------------*/
 a[role] {
   text-decoration: none;
@@ -113,6 +143,14 @@ a[role] {
 
 .blue {
   background-color: var(--palette--theme);
+  color: var(--palette--white);
+  a[role="button"] {
+    background: radial-gradient(--palette--theme-darker, --palette--white);
+  }
+}
+
+.lightblue {
+  background-color: var(--palette--theme-lighter);
   color: var(--palette--white);
   a[role="button"] {
     background: radial-gradient(--palette--theme-darker, --palette--white);

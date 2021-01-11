@@ -16,7 +16,7 @@ navbar {
   .contact {
     @include fix-to-parent;
     @include topRight;
-    transform: translate(0, 5%);
+    transform: translate(0, 0%);
   }
 }
 

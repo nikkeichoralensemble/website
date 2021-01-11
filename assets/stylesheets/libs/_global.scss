@@ -119,6 +119,14 @@ a[role] {
   }
 }
 
+.lightblue {
+  background-color: var(--palette--theme-lighter);
+  color: var(--palette--white);
+  a[role="button"] {
+    background: radial-gradient(--palette--theme-darker, --palette--white);
+  }
+}
+
 .white {
   background-color: var(--palette--white);
   color: var(--palette--black);

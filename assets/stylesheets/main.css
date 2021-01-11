@@ -147,7 +147,7 @@ footer {
   font: inherit;
   font-size: 100%;
   font: inherit;
-  line-height: 1;
+  line-height: 1.5;
   text-align: center;
   vertical-align: middle;
 }
@@ -230,8 +230,7 @@ a[role] {
   background-color: var(--palette--theme-lighter);
   color: var(--palette--white);
 }
-
-.lightblue a[role="button"] {
+.lightblue a[role=button] {
   background: radial-gradient(--palette--theme-darker, --palette--white);
 }
 

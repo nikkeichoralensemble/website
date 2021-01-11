@@ -2,7 +2,7 @@
 
 {% block main %}
 <div id="banner" >
-  <img src="assets/images/whitenicelogo_small.png">
+  <img src="assets/images/whitenicelogo_small.png" width="80">
   <h1>We are NiCE!</h1>
   <h2>UC Berkeley's premier Japanese and English a cappella group</h2>
   <a role="button" href="about.html">About Us</a>
@@ -15,7 +15,11 @@
 
 <section class="white">
   <h2>Recent Performances</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/PUslCt-1KkA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="videoWrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PUslCt-1KkA" frameborder="0"
+    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
 </section>
 
 {% endblock %}

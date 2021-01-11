@@ -336,14 +336,26 @@ section > a[role="button"] {
 }
 
 .banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: space-evenly;
-  align-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
   justify-items: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100vw;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 /* Footer Components */
@@ -409,16 +421,20 @@ section > a[role="button"] {
   font-family: var(--font--body);
   padding: 1em;
 }
+
 .banner#homebanner {
-  height: 50vh;
+  height: 100vh;
   /* change this to fit image */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%), to(var(--palette--theme))), url("../images/group1.jpg");
   background-image: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group1.jpg");
 }
+
 .banner#aboutbanner {
   height: 50vh;
   /* change this to fit image */
   background-image: url("../images/group2.jpg");
 }
+
 .banner#auditionsbanner {
   height: 50vh;
   /* change this to fit image */

@@ -144,7 +144,7 @@ section > a[role="button"] {
     padding: 1em;
   }
   &#homebanner {
-    height: 50vh; /* change this to fit image */
+    height: 100vh; /* change this to fit image */
     background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
       url("../images/group1.jpg");
   }

@@ -1,3 +1,33 @@
+/*------------------------------------------
+# helper classes
+------------------------------------------*/
+.blue {
+  background-color: var(--palette--theme);
+  color: var(--palette--white);
+  button {
+    background: radial-gradient(--palette--theme-darker, --palette--white);
+  }
+}
+
+.white {
+  background-color: var(--palette--white);
+  color: var(--palette--black);
+  button {
+    background: radial-gradient(--palette--white, --palette--grey);
+  }
+}
+
+.pink {
+  background-color: var(--palette--accent-lighter);
+  color: var(--palette--accent-darker);
+  button {
+    background: radial-gradient(
+      --palette--accent-lighter,
+      --palette--accent-darker
+    );
+  }
+}
+
 /*--------------------------------------------------------------
 # Basic
 --------------------------------------------------------------*/
@@ -15,9 +45,12 @@ h6 {
 body {
   font-family: var(--font--body);
 }
-a,
-a:hover {
+a[role="button"],
+a[role="button"]:hover {
   text-decoration: none;
+}
+button {
+  padding: 1em 3em;
 }
 /*** ANIMATION ***/
 
@@ -67,7 +100,7 @@ footer,
 // div {
 //   padding: 1em;
 // }
-a {
+a[role="button"] {
   padding: 1em, 1em;
   margin: 1em, 1em;
 }
@@ -78,7 +111,7 @@ body {
 navbar {
   background: var(--palette--white);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
-  #navtabs > a {
+  #navtabs > a[role="button"] {
     font-size: 15px;
     font-family: var(--font--main);
     text-transform: lowercase;
@@ -117,7 +150,7 @@ navbar {
   }
   .logo {
     display: inline-block;
-    a {
+    a[role="button"] {
       // width: 67%;
     }
     img {
@@ -207,7 +240,7 @@ main {
 }
 
 /* The navigation menu links */
-#sidenav a {
+#sidenav a[role="button"] {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -242,17 +275,19 @@ main {
 @media screen and (max-height: 450px) {
   #sidenav {
     padding-top: 15px;
-    a {
+    a[role="button"] {
       font-size: 18px;
     }
   }
 }
 /* controlled by javascript */
-#open-nav-btn {
-  display: none;
-}
-#close-nav-btn {
-  display: none;
+button {
+  #open-nav-btn {
+    display: none;
+  }
+  #close-nav-btn {
+    display: none;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -320,7 +355,6 @@ main {
   /* property name | duration | easing function | delay */
   transition: position 2s ease-in-out 0.5s;
 }
-
 
 /*--------------------------------------------------------------
 # Breakpoints

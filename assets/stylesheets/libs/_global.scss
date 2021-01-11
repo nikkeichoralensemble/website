@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# Global Settings
+# Global
 --------------------------------------------------------------*/
 /* Reference:
   http://meyerweb.com/eric/tools/css/reset/ 
@@ -7,6 +7,7 @@
   License: none (public domain) */
 
 /*** LAYOUT ***/
+/* XXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXX */
 html {
   height: 100%;
 }
@@ -18,6 +19,14 @@ body {
   grid-template-rows: auto 1fr auto; /* navbar main footer */
 }
 
+body,
+navbar,
+main,
+footer {
+  box-sizing: border-box !important;
+}
+/* XXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXX */
+
 * {
   box-sizing: content-box;
 
@@ -27,11 +36,22 @@ body {
   place-self: center center;
 }
 
-body,
-navbar,
-main,
-footer {
-  box-sizing: border-box;
+/*** TEXT SETUP ***/
+* {
+  font:inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font--main);
+}
+
+body {
+  font-family: var(--font--body);
 }
 
 /*** APPEARANCE ***/

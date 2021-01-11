@@ -235,8 +235,8 @@ navbar .contact {
   position: absolute;
   top: 0%;
   right: 0%;
-  -webkit-transform: translate(0, 50%);
-          transform: translate(0, 50%);
+  -webkit-transform: translate(0, 0%);
+          transform: translate(0, 0%);
 }
 
 main {
@@ -384,7 +384,7 @@ section > a[role="button"] {
 }
 
 #banner h1 {
-  font-size: 4vw;
+  font-size: 5vw;
   color: var(--palette--white);
   font-family: var(--font--main);
 }

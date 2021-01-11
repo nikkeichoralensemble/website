@@ -117,17 +117,17 @@ section > a[role="button"] {
 /* Navbar Components */
 #navtabs a {
   border-radius: 0px 0px 10px 10px;
-//   top: -6px;
-//   transition: top 0.15s ease-in-out;
-//   transition: background-color 0.075s ease-in-out, color 0.075s ease-in-out;
-// }
-// #navtabs a:hover,
-// #nav a.active {
-//   top: 3px;
-// }
-// #navtavs a:hover {
-//   background: var(--palette--accent-lighter);
-//   color: var(--palette--black);
+  //   top: -6px;
+  //   transition: top 0.15s ease-in-out;
+  //   transition: background-color 0.075s ease-in-out, color 0.075s ease-in-out;
+  // }
+  // #navtabs a:hover,
+  // #nav a.active {
+  //   top: 3px;
+  // }
+  // #navtavs a:hover {
+  //   background: var(--palette--accent-lighter);
+  //   color: var(--palette--black);
   // top: -6px;
   // transition: top .15s ease-in-out;
   // transition: background-color .075s ease-in-out, color .075s ease-in-out;
@@ -140,9 +140,9 @@ section > a[role="button"] {
 // 	color: var(--palette--black);
 // }
 /* Main Components */
-#banner {
+.banner {
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   background: linear-gradient(transparent, 80%, var(--palette--theme)),
     url("../images/group.jpg");
   background-size: cover;
@@ -161,21 +161,23 @@ section > a[role="button"] {
     padding: 1em;
   }
 }
+
 #aboutbanner {
   background: url("../images/group2.jpg");
-  
 }
 #auditionsbanner {
-  background: url("../images/group3.jpg"); 
+  background: url("../images/group3.jpg");
 }
-#aboutbanner, #auditionsbanner {
+#aboutbanner,
+#auditionsbanner {
   width: 100%;
   height: 50vh;
   background-size: cover;
   background-position: center;
 }
+
 /* Footer Components */
-#footer p {
+footer p {
   margin: 1em;
 }
 /* Other Components */

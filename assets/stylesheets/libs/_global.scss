@@ -1,15 +1,14 @@
 /*--------------------------------------------------------------
-# Global
+# Global Layout
 --------------------------------------------------------------*/
 /* Reference:
   http://meyerweb.com/eric/tools/css/reset/ 
   v2.0 | 20110126
   License: none (public domain) */
 
-/*** LAYOUT ***/
 /* XXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXX */
 html {
-  height: 100vh;
+  @include fill-height;
 }
 
 body {
@@ -30,9 +29,17 @@ body {
   place-self: center center;
 }
 
-/*** TEXT SETUP ***/
+/*------------------------------------------
+# Global Text
+------------------------------------------*/
 * {
   font: inherit;
+
+  font-size: 100%;
+  font: inherit;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
 }
 
 html,
@@ -59,17 +66,13 @@ h2 {
   text-transform: lowercase;
 }
 
-/*** APPEARANCE ***/
+/*------------------------------------------
+# Global Apperance
+------------------------------------------*/
 * {
   padding: 0px;
   margin: 0px;
   border: none;
-
-  font-size: 100%;
-  font: inherit;
-  line-height: 1;
-  text-align: center;
-  vertical-align: middle;
 }
 
 p {
@@ -96,8 +99,11 @@ table {
   border-spacing: 0;
 }
 
+/*------------------------------------------
+# Global Custom Styling
+------------------------------------------*/
 a[role] {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .blue {
@@ -127,4 +133,6 @@ a[role] {
   }
 }
 
-/*** ANIMATIONS ***/
+/*------------------------------------------
+# Global Animations
+------------------------------------------*/

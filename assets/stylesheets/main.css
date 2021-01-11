@@ -294,15 +294,15 @@ section > a[role=button] {
   padding: 1em 3em;
 }
 
-#banner {
+.banner {
   display: flex;
   flex-direction: column;
+  align-items: space-evenly;
+  align-content: space-evenly;
+  justify-items: space-evenly;
+  justify-content: space-evenly;
+  width: 100vw;
   justify-content: flex-end;
-  padding: 4em;
-}
-
-#banner img {
-  padding-bottom: 1em;
 }
 
 /* Footer Components */
@@ -340,13 +340,9 @@ section > a[role=button] {
 
 /* Main Components */
 .banner {
-  width: 100%;
-  height: 50vh;
-  background: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group.jpg");
   background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .banner h1 {
   font-size: 5vw;
@@ -354,26 +350,25 @@ section > a[role=button] {
   font-family: var(--font--main);
 }
 .banner p {
-  font-size: 1.5vw;
-  color: var(--palette--white);
+  font-size: 1.3vw;
+  color: var(--palette--grey);
   font-family: var(--font--body);
   padding: 1em;
 }
-
-#aboutbanner {
-  background: url("../images/group2.jpg");
-}
-
-#auditionsbanner {
-  background: url("../images/group3.jpg");
-}
-
-#aboutbanner,
-#auditionsbanner {
-  width: 100%;
+.banner#homebanner {
   height: 50vh;
-  background-size: cover;
-  background-position: center;
+  /* change this to fit image */
+  background-image: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group1.jpg");
+}
+.banner#aboutbanner {
+  height: 50vh;
+  /* change this to fit image */
+  background-image: url("../images/group2.jpg");
+}
+.banner#auditionsbanner {
+  height: 50vh;
+  /* change this to fit image */
+  background-image: url("../images/group3.jpg");
 }
 
 /* Footer Components */

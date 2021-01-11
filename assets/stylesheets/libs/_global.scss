@@ -19,20 +19,15 @@ body {
   grid-template-rows: auto 1fr auto; /* navbar main footer */
 }
 
-body,
-navbar,
-main,
-footer {
-  box-sizing: border-box !important;
+* {
+  box-sizing: border-box;
 }
+
 /* XXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXX */
 
 * {
-  box-sizing: content-box;
-
-  height: minmax(10px, fit-content);
-  width: minmax(10px, fit-content);
-
+  // height: minmax(10px, fit-content);
+  // width: minmax(10px, fit-content);
   place-self: center center;
 }
 
@@ -48,6 +43,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font--main);
+  font-size: 100%;
 }
 
 body {
@@ -91,11 +87,18 @@ table {
   border-spacing: 0;
 }
 
+// section {
+//   min-height: min-content;
+//   width: 100%;
+//   padding: 0px !important;
+// }
+
 a {
-  &[role], &[role]:hover {
+  &[role]{
     text-decoration: none;
   }
-  &[role="button"] {
+  section > &[role="button"] {
+    display: block;
     padding: 1em 3em;
   }
 }

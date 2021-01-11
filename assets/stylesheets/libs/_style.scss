@@ -144,8 +144,10 @@ section > a[role="button"] {
     url("../images/group.jpg");
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
   h1 {
-    font-size: 5vw;
+    font-size: 4vw;
     color: var(--palette--white);
     font-family: var(--font--main);
   }

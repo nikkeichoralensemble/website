@@ -381,10 +381,17 @@ section > a[role="button"] {
   background: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group.jpg");
   background-size: cover;
   background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #banner h1 {
-  font-size: 5vw;
+  font-size: 4vw;
   color: var(--palette--white);
   font-family: var(--font--main);
 }

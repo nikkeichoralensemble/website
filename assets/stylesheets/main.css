@@ -181,7 +181,7 @@ a:hover {
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
 navbar {
-  max-height: 15vh;
+  max-height: 20vh;
   width: 100vw;
   margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
 }
@@ -255,8 +255,8 @@ navbar #navtabs > a {
   font-family: var(--font--main);
   text-transform: lowercase;
   color: var(--palette--black);
-  padding: 1em 1em;
-  margin: 1em 2em;
+  padding: 2em 2em;
+  margin: 0em 2em;
 }
 
 navbar #navtabs > a:hover {

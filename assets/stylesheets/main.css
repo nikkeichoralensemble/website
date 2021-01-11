@@ -201,12 +201,8 @@ navbar .contact {
   position: absolute;
   top: 0%;
   right: 0%;
-<<<<<<< HEAD
   -webkit-transform: translate(0, 50%);
           transform: translate(0, 50%);
-=======
-  transform: translate(0, 5%);
->>>>>>> eff1d1463d0fe20e9b4d532661ee5bc341a28289
 }
 
 main {

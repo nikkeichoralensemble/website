@@ -39,7 +39,8 @@ navbar {
   overflow: visible;
 }
 
-main {
+main,
+section {
   @include fill-width;
 }
 
@@ -65,6 +66,7 @@ main {
 section {
   // @include inner-margin;
   padding: var(--gutter);
+  @include Grid;
 }
 
 footer {
@@ -88,6 +90,7 @@ footer {
 html,
 body {
   font-family: var(--font--body);
+  font-size: var(--font--regular);
 }
 
 h1,
@@ -103,13 +106,14 @@ h6 {
 
 h1 {
   font-family: var(--font--main-bold);
-  font-size: var(--font--l);
+  font-size: var(--font--xlarge);
 }
 h2 {
-  font-size: var(--font--m);
+  font-size: var(--font--large);
   text-transform: lowercase;
 }
 p {
+  font-size: var(--font--regular);
   color: var(--palette--black);
   margin: 1em;
 }

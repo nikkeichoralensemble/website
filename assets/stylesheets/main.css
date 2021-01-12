@@ -51,11 +51,13 @@
   --font--main-light-italic: "RalewayExtraLightItalic", sans-serif;
   --font--main-bold: "RalewayBold", sans-serif;
   --font--body: "GothicA1", sans-serif;
-  --font--xs: 12px;
-  --font--s: 20px;
-  --font--m: 36px;
-  --font--l: 48px;
-  --font--xl: 72px;
+  --font--xsmall: 12px;
+  --font--small: 15px;
+  --font--regular: 20px;
+  /* default */
+  --font--medium: 36px;
+  --font--large: 48px;
+  --font--xlarge: 72px;
   /* Palette. */
   --palette--theme: #4787c3;
   --palette--theme-lighter: #d0e0f0;
@@ -113,7 +115,8 @@ navbar {
   overflow: visible;
 }
 
-main {
+main,
+section {
   width: 100vw;
 }
 
@@ -139,6 +142,12 @@ body {
 
 section {
   padding: var(--gutter);
+  display: Grid;
+  gap: 10px;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  grid-auto-rows: minmax(10px, auto);
+  grid-auto-columns: minmax(10px, auto);
 }
 
 footer {
@@ -160,6 +169,7 @@ footer {
 html,
 body {
   font-family: var(--font--body);
+  font-size: var(--font--regular);
 }
 
 h1,
@@ -175,15 +185,16 @@ h6 {
 
 h1 {
   font-family: var(--font--main-bold);
-  font-size: var(--font--l);
+  font-size: var(--font--xlarge);
 }
 
 h2 {
-  font-size: var(--font--m);
+  font-size: var(--font--large);
   text-transform: lowercase;
 }
 
 p {
+  font-size: var(--font--regular);
   color: var(--palette--black);
   margin: 1em;
 }
@@ -226,7 +237,7 @@ table {
 ------------------------------------------*/
 /* Social Media */
 .contact {
-  display: inline-flex;
+  display: inline-flex !important;
   flex-direction: row;
   flex-wrap: no-wrap;
   align-items: space-evenly;
@@ -335,7 +346,7 @@ navbar {
 }
 navbar #navtabs {
   grid-area: navtab;
-  display: inline-flex;
+  display: inline-flex !important;
   flex-direction: row;
   flex-wrap: no-wrap;
   align-items: space-evenly;
@@ -357,7 +368,7 @@ navbar #sidenav {
   /* 100% Full-height */
   width: 0;
   /* 0 width - change this with JavaScript */
-  display: inline-flex;
+  display: inline-flex !important;
   flex-direction: column;
   flex-wrap: no-wrap;
   align-items: space-evenly;
@@ -387,7 +398,7 @@ navbar {
 }
 #sidenav > a[role=button] {
   width: 100%;
-  font-size: var(--font--m);
+  font-size: var(--font--medium);
   border-top: 1px solid var(--palette--white);
   border-bottom: 1px solid var(--palette--white);
   color: var(--palette--white);
@@ -399,11 +410,11 @@ navbar {
   position: absolute;
   top: 0%;
   right: 0%;
-  font-size: var(--font--m);
+  font-size: var(--font--medium);
 }
 
 #navtabs > a[role=button] {
-  font-size: var(--font--s);
+  font-size: var(--font--small);
   font-family: var(--font--main);
   text-transform: lowercase;
   color: var(--palette--black);
@@ -428,7 +439,7 @@ navbar {
 
 #open-nav-btn,
 #close-nav-btn {
-  font-size: var(--font--m);
+  font-size: var(--font--medium);
 }
 
 /*** ANIMATIONS ***/
@@ -449,14 +460,11 @@ navbar {
 # Main Content
 ------------------------------------------*/
 /*** LAYOUT ***/
-section > a[role=button] {
-  display: block;
-}
-
 /*** APPEARANCE ***/
 section a[role=button] {
   width: max-content;
   padding: 1em 1em;
+  margin: 2em 1em;
   border-radius: var(--corner-roundedness);
   border: var(--little-border);
 }
@@ -506,15 +514,14 @@ section a[role=button] {
 }
 
 /* banner only components */
-.banner {
-  display: inline-flex;
+section[role=banner] {
+  display: inline-flex !important;
   flex-direction: column;
   flex-wrap: no-wrap;
   align-items: space-evenly;
   align-content: space-evenly;
   justify-items: space-evenly;
   justify-content: space-evenly;
-  width: 100vw;
   justify-content: flex-end;
 }
 
@@ -524,7 +531,7 @@ section[role=banner] {
   background-position: center center;
 }
 section[role=banner] h1 {
-  font-size: 5vw;
+  font-size: var(--font-xlarge);
   color: var(--palette--white);
   font-family: var(--font--main);
 }
@@ -552,7 +559,7 @@ section[role=banner]#auditionsbanner {
 
 /* FAQ */
 #faq details {
-  font-size: var(--font--m);
+  font-size: var(--font--medium);
   background-color: #f6f7f8;
   padding: 0.5em;
   margin: 0.5em;
@@ -577,7 +584,7 @@ footer {
   color: var(--palette--white);
   background: var(--palette--theme);
   font-family: var(--font--body);
-  font-size: var(--font--s);
+  font-size: var(--font--small);
 }
 
 /*** ANIMATIONS ***/

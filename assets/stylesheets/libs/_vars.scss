@@ -46,11 +46,13 @@
   --font--main-light-italic: "RalewayExtraLightItalic", sans-serif;
   --font--main-bold: "RalewayBold", sans-serif;
   --font--body: "GothicA1", sans-serif;
-  --font--xs: 12px; // TODO fix units
-  --font--s: 20px;
-  --font--m: 36px;
-  --font--l: 48px;
-  --font--xl: 72px;
+
+  --font--xsmall: 12px; // TODO fix units
+  --font--small: 15px;
+  --font--regular: 20px; /* default */
+  --font--medium: 36px;
+  --font--large: 48px;
+  --font--xlarge: 72px;
 
   /* Palette. */
   --palette--theme: #4787c3;

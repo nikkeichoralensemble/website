@@ -22,6 +22,7 @@ a[role] {
   /* navtabs and social-media buttons */
   text-decoration: none;
 }
+
 /*--------------------------------------------------------------
 # Font Awesome Icons
 --------------------------------------------------------------*/
@@ -133,7 +134,7 @@ navbar {
   // padding-top: 60px; /* Place content 60px from the top */
   > a[role="button"] {
     width: 100%;
-    font-size: var(--font--m);
+    font-size: var(--font--medium);
     border-top: 1px solid var(--palette--white);
     border-bottom: 1px solid var(--palette--white);
     color: var(--palette--white);
@@ -144,13 +145,13 @@ navbar {
   #close-nav-btn {
     position: absolute;
     @include topRight(2%, 2%);
-    font-size: var(--font--m);
+    font-size: var(--font--medium);
   }
 }
 
 #navtabs {
   > a[role="button"] {
-    font-size: var(--font--s);
+    font-size: var(--font--small);
     font-family: var(--font--main);
     text-transform: lowercase;
 
@@ -180,7 +181,7 @@ navbar {
 
 #open-nav-btn,
 #close-nav-btn {
-  font-size: var(--font--m);
+  font-size: var(--font--medium);
 }
 
 /*** ANIMATIONS ***/
@@ -202,14 +203,12 @@ navbar {
 # Main Content
 ------------------------------------------*/
 /*** LAYOUT ***/
-section > a[role="button"] {
-  display: block;
-}
 
 /*** APPEARANCE ***/
 section a[role="button"] {
   width: max-content;
   padding: 1em 1em;
+  margin: 2em 1em;
   border-radius: var(--corner-roundedness);
   border: var(--little-border);
 }
@@ -267,9 +266,8 @@ section a[role="button"] {
 }
 
 /* banner only components */
-.banner {
+section[role="banner"] {
   @include FlexCol; // for child elements
-  @include fill-width;
   justify-content: flex-end;
 }
 
@@ -278,7 +276,7 @@ section[role="banner"] {
   background-repeat: no-repeat;
   background-position: center center;
   h1 {
-    font-size: 5vw;
+    font-size: var(--font-xlarge);
     color: var(--palette--white);
     font-family: var(--font--main);
   }
@@ -305,7 +303,7 @@ section[role="banner"] {
 
 /* FAQ */
 #faq details {
-  font-size: var(--font--m);
+  font-size: var(--font--medium);
   background-color: #f6f7f8;
   padding: 0.5em;
   margin: 0.5em;
@@ -327,7 +325,7 @@ footer {
   color: var(--palette--white);
   background: var(--palette--theme);
   font-family: var(--font--body);
-  font-size: var(--font--s);
+  font-size: var(--font--small);
 }
 
 /*** ANIMATIONS ***/

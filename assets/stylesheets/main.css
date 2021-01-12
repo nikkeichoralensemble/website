@@ -67,6 +67,7 @@
   --palette--white: #ffffff;
   --palette--grey: #f5f5f5;
   /* Styling */
+  --little-border: 0.5px solid rgba(0, 0, 0, 0.5);
   --corner-roundedness: 10px;
   /*** Breakpoints ***/
   /* unused for now */
@@ -250,6 +251,11 @@ footer img[role=logo] {
   height: auto;
   width: 50%;
   /* w.r.t.  grid slot */
+}
+
+a[role] {
+  /* navtabs and social-media buttons */
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -448,22 +454,22 @@ section > a[role=button] {
 }
 
 /*** APPEARANCE ***/
-a[role] {
-  /* navtabs and social-media buttons */
-  text-decoration: none;
+section a[role=button] {
+  width: max-content;
+  padding: 1em 1em;
+  border-radius: var(--corner-roundedness);
+  border: var(--little-border);
 }
 
-a[role=button] {
-  padding: 1em 3em;
-}
-
-/* info & content */
 .blue {
   background-color: var(--palette--theme);
   color: var(--palette--white);
 }
 .blue a[role=button] {
   background: radial-gradient(--palette--theme-darker, --palette--white);
+}
+.blue a[role=button]:hover {
+  background-color: var(--palette--theme-lighter);
 }
 
 .lightblue:not([role=banner]) {
@@ -473,6 +479,9 @@ a[role=button] {
 .lightblue a[role=button] {
   background: radial-gradient(--palette--theme-darker, --palette--white);
 }
+.lightblue a[role=button]:hover {
+  background-color: var(--palette--theme-darker);
+}
 
 .white:not([role=banner]) {
   background-color: var(--palette--white);
@@ -480,6 +489,9 @@ a[role=button] {
 }
 .white a[role=button] {
   background: radial-gradient(--palette--white, --palette--grey);
+}
+.white a[role=button]:hover {
+  background-color: var(--palette--theme-darker);
 }
 
 .pink:not([role=banner]) {
@@ -489,8 +501,11 @@ a[role=button] {
 .pink a[role=button] {
   background: radial-gradient(--palette--accent-lighter, --palette--accent-darker);
 }
+.pink a[role=button]:hover {
+  background-color: var(--palette--theme-darker);
+}
 
-/* banners */
+/* banner only components */
 .banner {
   display: inline-flex;
   flex-direction: column;
@@ -519,16 +534,6 @@ section[role=banner] p {
   font-family: var(--font--body);
   padding: 1em;
 }
-section[role=banner] a {
-  background-color: var(--palette--theme);
-  color: var(--palette--white);
-  padding: 14px 40px;
-  border-radius: 12px;
-  transition-duration: 0.4s;
-}
-section[role=banner] a:hover {
-  background-color: var(--palette--theme-darker);
-}
 section[role=banner]#homebanner {
   height: 100vh;
   /* change this to fit image */
@@ -555,6 +560,10 @@ section[role=banner]#auditionsbanner {
 }
 
 /*** ANIMATIONS ***/
+a[role=button] {
+  transition: color 0.4s ease-in-out;
+}
+
 /*------------------------------------------
 # Footer
 ------------------------------------------*/

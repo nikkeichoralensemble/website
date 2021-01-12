@@ -18,7 +18,10 @@ footer img[role="logo"] {
   height: auto;
   width: 50%; /* w.r.t.  grid slot */
 }
-
+a[role] {
+  /* navtabs and social-media buttons */
+  text-decoration: none;
+}
 /*--------------------------------------------------------------
 # Font Awesome Icons
 --------------------------------------------------------------*/
@@ -204,16 +207,13 @@ section > a[role="button"] {
 }
 
 /*** APPEARANCE ***/
-
-a[role] {
-  /* navtabs and social-media buttons */
-  text-decoration: none;
-}
-a[role="button"] {
-  padding: 1em 3em;
+section a[role="button"] {
+  width: max-content;
+  padding: 1em 1em;
+  border-radius: var(--corner-roundedness);
+  border: var(--little-border);
 }
 
-/* info & content */
 .blue {
   // &:not(section[role="banner"]) {
   background-color: var(--palette--theme);
@@ -221,6 +221,9 @@ a[role="button"] {
   // }
   a[role="button"] {
     background: radial-gradient(--palette--theme-darker, --palette--white);
+    &:hover {
+      background-color: var(--palette--theme-lighter);
+    }
   }
 }
 .lightblue {
@@ -230,6 +233,9 @@ a[role="button"] {
   }
   a[role="button"] {
     background: radial-gradient(--palette--theme-darker, --palette--white);
+    &:hover {
+      background-color: var(--palette--theme-darker);
+    }
   }
 }
 .white {
@@ -239,6 +245,9 @@ a[role="button"] {
   }
   a[role="button"] {
     background: radial-gradient(--palette--white, --palette--grey);
+    &:hover {
+      background-color: var(--palette--theme-darker);
+    }
   }
 }
 .pink {
@@ -251,10 +260,13 @@ a[role="button"] {
       --palette--accent-lighter,
       --palette--accent-darker
     );
+    &:hover {
+      background-color: var(--palette--theme-darker);
+    }
   }
 }
 
-/* banners */
+/* banner only components */
 .banner {
   @include FlexCol; // for child elements
   @include fill-width;
@@ -275,16 +287,6 @@ section[role="banner"] {
     color: var(--palette--grey);
     font-family: var(--font--body);
     padding: 1em;
-  }
-  a {
-    background-color: var(--palette--theme);
-    color: var(--palette--white);
-    padding: 14px 40px;
-    border-radius: 12px;
-    transition-duration: 0.4s;
-  }
-  a:hover {
-    background-color: var(--palette--theme-darker);
   }
   &#homebanner {
     height: 100vh; /* change this to fit image */
@@ -310,6 +312,9 @@ section[role="banner"] {
   border-radius: var(--corner-roundedness);
 }
 /*** ANIMATIONS ***/
+a[role="button"] {
+  transition: color 0.4s ease-in-out;
+}
 /*------------------------------------------
 # Footer
 ------------------------------------------*/

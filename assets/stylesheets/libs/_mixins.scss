@@ -71,6 +71,9 @@
   justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
+  > * {
+    margin: 0px !important;
+  }
 }
 
 @mixin fill-width {

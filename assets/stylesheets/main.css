@@ -131,6 +131,9 @@ footer {
   grid-template-rows: 1fr;
   grid-template-columns: repeat(4, 1fr);
 }
+footer > * {
+  margin: 0px !important;
+}
 
 /* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
 /*------------------------------------------
@@ -148,6 +151,9 @@ section {
   justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
+}
+section > * {
+  margin: 0px !important;
 }
 
 footer {
@@ -252,12 +258,6 @@ img[role=logo] {
   width: minmax(20px, 20vw);
 }
 
-.banner img[role=logo] {
-  height: auto;
-  width: 20%;
-  /* w.r.t. viewport */
-}
-
 footer img[role=logo] {
   height: auto;
   width: 50%;
@@ -343,6 +343,9 @@ navbar {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: ". navtab navtab navtab contact";
+}
+navbar > * {
+  margin: 0px !important;
 }
 navbar #navtabs {
   grid-area: navtab;
@@ -457,14 +460,13 @@ navbar {
 }
 
 /*------------------------------------------
-# Main Content
+# General Main Content
 ------------------------------------------*/
 /*** LAYOUT ***/
 /*** APPEARANCE ***/
 section a[role=button] {
   width: max-content;
   padding: 1em 1em;
-  margin: 2em 1em;
   border-radius: var(--corner-roundedness);
   border: var(--little-border);
 }
@@ -513,32 +515,54 @@ section a[role=button] {
   background-color: var(--palette--theme-darker);
 }
 
-/* banner only components */
-section[role=banner] {
-  display: inline-flex !important;
-  flex-direction: column;
-  flex-wrap: no-wrap;
-  align-items: space-evenly;
-  align-content: space-evenly;
-  justify-items: space-evenly;
-  justify-content: space-evenly;
-  justify-content: flex-end;
+/*** ANIMATIONS ***/
+/*------------------------------------------
+# Banner
+------------------------------------------*/
+/*** LAYOUT ***/
+section[role=banner] img[role=logo] {
+  height: auto;
+  width: 10%;
+  /* w.r.t. viewport */
 }
 
+section[role=banner] {
+  display: Grid;
+  gap: 10px;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  grid-auto-rows: minmax(10px, auto);
+  grid-auto-columns: minmax(10px, auto);
+  grid-template-rows: repeat(5, 1fr) repeat(4, auto);
+  grid-template-areas: "." "." "." "." "." "logo" "title" "title" "subtitle" "button";
+}
+section[role=banner] > * {
+  margin: 0px !important;
+}
+section[role=banner] img[role=logo] {
+  grid-area: logo;
+}
+section[role=banner] h1 {
+  grid-area: title;
+}
+section[role=banner] p {
+  grid-area: subtitle;
+}
+section[role=banner] a[role=button] {
+  grid-area: button;
+}
+
+/*** APPEARANCE ***/
 section[role=banner] {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 section[role=banner] h1 {
-  font-size: var(--font-xlarge);
   color: var(--palette--white);
-  font-family: var(--font--main);
 }
 section[role=banner] p {
-  font-size: 1.3vw;
   color: var(--palette--grey);
-  font-family: var(--font--body);
   padding: 1em;
 }
 section[role=banner]#homebanner {

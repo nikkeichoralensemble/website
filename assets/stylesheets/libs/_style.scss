@@ -10,10 +10,7 @@ img[role="logo"] {
   height: minmax(20px, 20vw);
   width: minmax(20px, 20vw);
 }
-.banner img[role="logo"] {
-  height: auto;
-  width: 20%; /* w.r.t. viewport */
-}
+
 footer img[role="logo"] {
   height: auto;
   width: 50%; /* w.r.t.  grid slot */
@@ -200,7 +197,7 @@ navbar {
 }
 
 /*------------------------------------------
-# Main Content
+# General Main Content
 ------------------------------------------*/
 /*** LAYOUT ***/
 
@@ -208,7 +205,7 @@ navbar {
 section a[role="button"] {
   width: max-content;
   padding: 1em 1em;
-  margin: 2em 1em;
+  // margin: 2em 1em;
   border-radius: var(--corner-roundedness);
   border: var(--little-border);
 }
@@ -264,26 +261,50 @@ section a[role="button"] {
     }
   }
 }
+/*** ANIMATIONS ***/
 
-/* banner only components */
-section[role="banner"] {
-  @include FlexCol; // for child elements
-  justify-content: flex-end;
+/*------------------------------------------
+# Banner
+------------------------------------------*/
+/*** LAYOUT ***/
+
+// section[role="banner"] {
+//   @include FlexCol; // for child elements
+//   justify-content: flex-end;
+// }
+
+section[role="banner"] img[role="logo"] {
+  height: auto;
+  width: 10%; /* w.r.t. viewport */
 }
 
+section[role="banner"] {
+  @include Grid;
+  grid-template-rows: repeat(5, 1fr) repeat(4, auto);
+  grid-template-areas: "." "." "." "." "." "logo" "title" "title" "subtitle" "button";
+  img[role="logo"] {
+    grid-area: logo;
+  }
+  h1 {
+    grid-area: title;
+  }
+  p {
+    grid-area: subtitle;
+  }
+  a[role="button"] {
+    grid-area: button;
+  }
+}
+/*** APPEARANCE ***/
 section[role="banner"] {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   h1 {
-    font-size: var(--font-xlarge);
     color: var(--palette--white);
-    font-family: var(--font--main);
   }
   p {
-    font-size: 1.3vw;
     color: var(--palette--grey);
-    font-family: var(--font--body);
     padding: 1em;
   }
   &#homebanner {

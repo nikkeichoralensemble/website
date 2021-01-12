@@ -64,11 +64,13 @@
   justify-content: space-evenly;
 }
 
-@mixin Grid {
-  display: Grid;
+@mixin Grid($spacing-x: space-evenly, $spacing-y: space-evenly) {
+  display: inline-grid;
   gap: 10px;
-  align-content: space-evenly;
-  justify-content: space-evenly;
+  align-items: $spacing-y;
+  align-content: $spacing-y;
+  justify-items: $spacing-x;
+  justify-content: $spacing-x;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
   > * {

@@ -19,7 +19,9 @@ a[role] {
   /* navtabs and social-media buttons */
   text-decoration: none;
 }
-
+.contact {
+  padding: 0.5em;
+}
 /*--------------------------------------------------------------
 # Font Awesome Icons
 --------------------------------------------------------------*/
@@ -84,22 +86,35 @@ a[role] {
  */
 
 /*** LAYOUT ***/
+/* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
 navbar {
-  @include Grid; // for child elements
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  // box-sizing: border-box;
+  // @include inner-margin;
+  padding: 0px !important;
+  @include Grid(space-around, space-around); // for child elements
+  grid-template-columns: repeat(9, 1fr) 0.1fr;
   grid-template-rows: auto;
-  grid-template-areas: ". navtab navtab navtab contact";
+  grid-template-areas: ". . . navtab navtab navtab . contact contact .";
 
   #navtabs {
     grid-area: navtab;
-    // overflow: visible;
-    @include FlexRow; // for child elements
+    overflow: visible;
+
+    @include Grid(space-around);
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    > a[role="button"] {
+      line-height: 5; // center text
+      justify-self: stretch;
+      align-self: stretch; // fill up navbar
+    }
   }
   .contact {
     grid-area: contact;
   }
 }
-
+/* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
 navbar #sidenav {
   @include fix-to-page;
   @include topLeft;
@@ -154,11 +169,11 @@ navbar {
 
     color: var(--palette--black);
 
-    padding: 2em 2em;
-    margin: 0em 2em;
+    // padding: 2em 2em;
+    // margin: 0em 2em;
 
     &:hover {
-      top: -6px;
+      // top: -6px;
       border-radius: 0px 0px var(--corner-roundedness) var(--corner-roundedness);
       color: var(--palette--white);
       background-color: var(--palette--theme);
@@ -204,8 +219,7 @@ navbar {
 /*** APPEARANCE ***/
 section a[role="button"] {
   width: max-content;
-  padding: 1em 1em;
-  // margin: 2em 1em;
+  padding: 0.8em 1em;
   border-radius: var(--corner-roundedness);
   border: var(--little-border);
 }
@@ -305,7 +319,6 @@ section[role="banner"] {
   }
   p {
     color: var(--palette--grey);
-    padding: 1em;
   }
   &#homebanner {
     height: 100vh; /* change this to fit image */

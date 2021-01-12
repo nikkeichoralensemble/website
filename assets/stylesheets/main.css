@@ -225,8 +225,9 @@ table {
 ------------------------------------------*/
 /* Social Media */
 .contact {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
+  flex-wrap: no-wrap;
   align-items: space-evenly;
   align-content: space-evenly;
   justify-items: space-evenly;
@@ -315,19 +316,28 @@ footer img[role=logo] {
  * #navtabs hides and #sidenav shows for small screens 
  */
 /*** LAYOUT ***/
-navbar #navtabs {
-  width: 60%;
-  display: flex;
+navbar {
+  display: inline-flex;
   flex-direction: row;
+  flex-wrap: no-wrap;
   align-items: space-evenly;
   align-content: space-evenly;
   justify-items: space-evenly;
   justify-content: space-evenly;
-  position: relative;
-  top: 0px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  justify-content: space-between;
+}
+
+navbar #navtabs {
+  padding-left: 15%;
+  width: 60%;
   overflow: visible;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  align-items: space-evenly;
+  align-content: space-evenly;
+  justify-items: space-evenly;
+  justify-content: space-evenly;
 }
 
 navbar #sidenav {
@@ -340,21 +350,15 @@ navbar #sidenav {
   /* 100% Full-height */
   width: 0;
   /* 0 width - change this with JavaScript */
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+  flex-wrap: no-wrap;
   align-items: space-evenly;
   align-content: space-evenly;
   justify-items: space-evenly;
   justify-content: space-evenly;
   overflow-x: hidden;
   /* Disable horizontal scroll */
-}
-
-navbar .contact {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  transform: translate(0, 25%);
 }
 
 /* used for breakpoints */
@@ -486,8 +490,9 @@ a[role=button] {
 
 /* banners */
 .banner {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+  flex-wrap: no-wrap;
   align-items: space-evenly;
   align-content: space-evenly;
   justify-items: space-evenly;

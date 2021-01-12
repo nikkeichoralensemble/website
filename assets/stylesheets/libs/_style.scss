@@ -3,7 +3,7 @@
 ------------------------------------------*/
 /* Social Media */
 .contact {
-  @include FlexRow(space-evenly);
+  @include FlexRow; // for child elements
 }
 /* Logo */
 img[role="logo"] {
@@ -83,11 +83,17 @@ footer img[role="logo"] {
  */
 
 /*** LAYOUT ***/
+navbar {
+  @include FlexRow; // for child elements
+  justify-content: space-between;
+}
 navbar #navtabs {
+  padding-left: 15%;
   width: 60%; // equals to 60vw since parent is navbar
-  @include FlexRow;
-  @include dead-center;
+  // @include dead-center;
   overflow: visible;
+
+  @include FlexRow; // for child elements
 }
 
 navbar #sidenav {
@@ -98,14 +104,14 @@ navbar #sidenav {
   height: 100vh; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
 
-  @include FlexCol;
+  @include FlexCol; // for child elements
   overflow-x: hidden; /* Disable horizontal scroll */
 }
 
 navbar .contact {
-  @include fix-to-parent;
-  @include topRight;
-  transform: translate(0, 25%);
+  // @include fix-to-parent;
+  // @include topRight;
+  // transform: translate(0, 25%);
 }
 
 /* used for breakpoints */
@@ -253,7 +259,7 @@ a[role="button"] {
 
 /* banners */
 .banner {
-  @include FlexCol;
+  @include FlexCol; // for child elements
   @include fill-width;
   justify-content: flex-end;
 }

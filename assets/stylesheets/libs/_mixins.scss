@@ -36,10 +36,10 @@
   transform: translate(-50%, 0);
 }
 
-@mixin FlexRow($justify: space-evenly) {
-  display: flex;
+@mixin FlexRow {
+  display: inline-flex;
   flex-direction: row;
-  // flex-wrap: wrap;
+  flex-wrap: no-wrap;
 
   // vertical alignment
   align-items: space-evenly;
@@ -47,13 +47,13 @@
 
   // horizontal alignment
   justify-items: space-evenly;
-  justify-content: $justify;
+  justify-content: space-evenly;
 }
 
-@mixin FlexCol($justify: space-evenly) {
-  display: flex;
+@mixin FlexCol {
+  display: inline-flex;
   flex-direction: column;
-  // flex-wrap: wrap;
+  flex-wrap: no-wrap;
 
   // vertical alignment
   align-items: space-evenly;
@@ -61,7 +61,7 @@
 
   // horizontal alignment
   justify-items: space-evenly;
-  justify-content: $justify;
+  justify-content: space-evenly;
 }
 
 @mixin Grid {

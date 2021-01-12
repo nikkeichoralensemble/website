@@ -105,11 +105,15 @@ navbar #navtabs {
 }
 
 navbar #sidenav {
-  @include FlexCol;
-  height: 100vh;
   @include fix-to-page;
   @include topLeft;
   z-index: var(--level--roof); /* Stay on top */ //TODO check if this works
+
+  height: 100vh; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+
+  @include FlexCol;
+  overflow-x: hidden; /* Disable horizontal scroll */
 }
 
 navbar .contact {
@@ -118,12 +122,11 @@ navbar .contact {
   transform: translate(0, 25%);
 }
 
-button {
+/* used for breakpoints */
+#open-nav-btn,
+#close-nav-btn {
   /* used for breakpoints */
-  &#open-nav-btn,
-  &#close-nav-btn {
-    display: none;
-  }
+  // display: none;
 }
 
 /*** APPEARANCE ***/
@@ -132,23 +135,44 @@ navbar {
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
 }
 
-#navtabs > a[role="button"] {
-  font-size: var(--font--s);
-  font-family: var(--font--main);
-  text-transform: lowercase;
-
-  color: var(--palette--black);
-  padding: 2em 2em;
-  margin: 0em 2em;
-
-  &:hover {
-    top: -6px;
-    border-radius: 0px 0px 10px 10px;
+#sidenav {
+  background: var(--palette--theme);
+  color: var(--palette--white);
+  // padding-top: 60px; /* Place content 60px from the top */
+  > a[role="button"] {
+    width: 100%;
+    font-size: var(--font--m);
+    border-top: 1px solid var(--palette--white);
+    border-bottom: 1px solid var(--palette--white);
     color: var(--palette--white);
-    background: var(--palette--theme);
+    &:hover {
+      background-color: var(--palette--theme-lighter);
+    }
   }
-  &:active {
-    /* when clicked */
+  #close-nav-btn {
+    position: absolute;
+    @include topRight(2%, 2%);
+    font-size: var(--font--m);
+  }
+}
+
+#navtabs {
+  > a[role="button"] {
+    font-size: var(--font--s);
+    font-family: var(--font--main);
+    text-transform: lowercase;
+
+    color: var(--palette--black);
+
+    padding: 2em 2em;
+    margin: 0em 2em;
+
+    &:hover {
+      top: -6px;
+      border-radius: 0px 0px 10px 10px;
+      color: var(--palette--white);
+      background-color: var(--palette--theme);
+    }
   }
   &#homebanner {
     background: linear-gradient(transparent, 80%, var(--palette--theme)),
@@ -162,7 +186,8 @@ navbar {
   }
 }
 
-#open-nav-btn {
+#open-nav-btn,
+#close-nav-btn {
   font-size: var(--font--m);
 }
 
@@ -173,109 +198,70 @@ navbar {
   // transition: background-color .075s ease-in-out, color .075s ease-in-out;
 }
 
-// TODO fix sidebar
-
 #sidenav {
-  @include fix-to-page;
-  @include topLeft;
-  z-index: var(--level--roof); /* Stay on top */
-
-  height: 100vh; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  // padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-/* The navigation menu links */
 #sidenav a[role="button"] {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: var(--font--m);
-  color: #818181;
-  display: block;
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
-#sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-#sidenav #close-nav-btn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-// /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-// navbar,
-// main,
-// footer {
-//   transition: margin-left 0.5s;
-//   padding: 20px;
-// }
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  #sidenav {
-    padding-top: 15px;
-    a[role="button"] {
-      font-size: 18px;
-    }
-  }
-}
 /*------------------------------------------
 # Main Content
 ------------------------------------------*/
+/*** LAYOUT ***/
+section > a[role="button"] {
+  display: block;
+}
+
+/*** APPEARANCE ***/
+
 a[role] {
   /* navtabs and social-media buttons */
   text-decoration: none;
 }
+a[role="button"] {
+  padding: 1em 3em;
+}
+
 /* info & content */
-section[role="content"] {
-  > a[role="button"] {
-    display: block;
-    padding: 1em 3em;
-  }
-  &.blue {
+.blue {
+  &:not(section[role="banner"]) {
     background-color: var(--palette--theme);
     color: var(--palette--white);
-    a[role="button"] {
-      background: radial-gradient(--palette--theme-darker, --palette--white);
-    }
   }
-
-  &.lightblue {
+  a[role="button"] {
+    background: radial-gradient(--palette--theme-darker, --palette--white);
+  }
+}
+.lightblue {
+  &:not(section[role="banner"]) {
     background-color: var(--palette--theme-lighter);
     color: var(--palette--white);
-    a[role="button"] {
-      background: radial-gradient(--palette--theme-darker, --palette--white);
-    }
   }
-
-  &.white {
+  a[role="button"] {
+    background: radial-gradient(--palette--theme-darker, --palette--white);
+  }
+}
+.white {
+  &:not(section[role="banner"]) {
     background-color: var(--palette--white);
     color: var(--palette--black);
-    a[role="button"] {
-      background: radial-gradient(--palette--white, --palette--grey);
-    }
   }
-
-  &.pink {
+  a[role="button"] {
+    background: radial-gradient(--palette--white, --palette--grey);
+  }
+}
+.pink {
+  &:not(section[role="banner"]) {
     background-color: var(--palette--accent-lighter);
     color: var(--palette--accent-darker);
-    a[role="button"] {
-      background: radial-gradient(
-        --palette--accent-lighter,
-        --palette--accent-darker
-      );
-    }
+  }
+  a[role="button"] {
+    background: radial-gradient(
+      --palette--accent-lighter,
+      --palette--accent-darker
+    );
   }
 }
 
@@ -328,13 +314,8 @@ section[role="banner"] {
 
 /* FAQ */
 section#faq {
-  question {
-    @extend h4;
-  }
-  answer {
-    @extend p;
-  }
 }
+/*** ANIMATIONS ***/
 /*------------------------------------------
 # Footer
 ------------------------------------------*/

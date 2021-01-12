@@ -14,12 +14,12 @@ $("nav a").click(function () {
 /*--------------------------------------------------------------
   # Side Navigation
   --------------------------------------------------------------*/
-var $sidenav_width = "250px"
+var $sidenav_width = "250px";
 
 /* Open side navigation bar */
 function openNav() {
   // document.getElementById("sidenav").style.display = "block";
-  w = document.getElementById("sidenav").outerWidth(true);
+  // w = document.getElementById("sidenav").outerWidth(true);
 
   /* Set the width of the side navigation */
   document.getElementById("sidenav").style.width = $sidenav_width;
@@ -47,6 +47,6 @@ function closeNav() {
 
   /* Remove the background color of body */
   // document.getElementById("navbar").style.backgroundColor = "initial";
-  // document.getElementById("main").style.backgroundColor = "initial)";
+  // document.getElementById("main").style.backgroundColor = "initial";
   // document.getElementById("footer").style.backgroundColor = "initial";
 }

@@ -66,6 +66,8 @@
   --palette--black: #2a324b;
   --palette--white: #ffffff;
   --palette--grey: #f5f5f5;
+  /* Styling */
+  --corner-roundedness: 10px;
   /*** Breakpoints ***/
   /* unused for now */
   --screen--small: 200px;
@@ -299,20 +301,6 @@ footer img[role=logo] {
   background-color: #666666;
 }
 
-.fas.fa-arrow-up {
-  background: var(--palette--theme);
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  /* color: #fff;
-    transition: all 0.4s;
-  }
-  .fas.fa-arrow-up:hover {
-    background: var(--palette--theme);
-    /* color: #fff; */
-}
-
 /*** ANIMATIONS ***/
 .fas,
 .fab {
@@ -412,7 +400,7 @@ navbar {
 }
 #navtabs > a[role=button]:hover {
   top: -6px;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px var(--corner-roundedness) var(--corner-roundedness);
   color: var(--palette--white);
   background-color: var(--palette--theme);
 }
@@ -551,6 +539,14 @@ section[role=banner]#auditionsbanner {
 }
 
 /* FAQ */
+#faq details {
+  font-size: var(--font--m);
+  background-color: #f6f7f8;
+  padding: 0.5em;
+  margin: 0.5em;
+  border-radius: var(--corner-roundedness);
+}
+
 /*** ANIMATIONS ***/
 /*------------------------------------------
 # Footer

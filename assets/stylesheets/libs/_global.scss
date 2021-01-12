@@ -17,10 +17,10 @@
 /*--------------------------------------------------------------
 # Global Layout
 --------------------------------------------------------------*/
-/* Reference:
+/* reference:
   http://meyerweb.com/eric/tools/css/reset/ 
   v2.0 | 20110126
-  License: none (public domain) */
+  license: none (public domain) */
 
 html {
   @include fill-height;
@@ -113,8 +113,12 @@ p {
 }
 
 /*------------------------------------------
-# Global Built-In Components
+# HTML Built-Ins
 ------------------------------------------*/
+button {
+  cursor: pointer;
+}
+
 p {
   text-align: left;
   font-size: var(--font--s);
@@ -139,52 +143,3 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-button {
-  cursor: pointer;
-}
-
-/*------------------------------------------
-# Global Custom Components
-------------------------------------------*/
-a[role] {
-  text-decoration: none;
-}
-
-.blue {
-  background-color: var(--palette--theme);
-  color: var(--palette--white);
-  a[role="button"] {
-    background: radial-gradient(--palette--theme-darker, --palette--white);
-  }
-}
-
-.lightblue {
-  background-color: var(--palette--theme-lighter);
-  color: var(--palette--white);
-  a[role="button"] {
-    background: radial-gradient(--palette--theme-darker, --palette--white);
-  }
-}
-
-.white {
-  background-color: var(--palette--white);
-  color: var(--palette--black);
-  a[role="button"] {
-    background: radial-gradient(--palette--white, --palette--grey);
-  }
-}
-
-.pink {
-  background-color: var(--palette--accent-lighter);
-  color: var(--palette--accent-darker);
-  a[role="button"] {
-    background: radial-gradient(
-      --palette--accent-lighter,
-      --palette--accent-darker
-    );
-  }
-}
-
-/*------------------------------------------
-# Global Animations
-------------------------------------------*/

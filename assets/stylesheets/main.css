@@ -317,20 +317,18 @@ footer img[role=logo] {
  */
 /*** LAYOUT ***/
 navbar {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: no-wrap;
-  align-items: space-evenly;
+  display: Grid;
+  gap: 10px;
   align-content: space-evenly;
-  justify-items: space-evenly;
   justify-content: space-evenly;
-  justify-content: space-between;
+  grid-auto-rows: minmax(10px, auto);
+  grid-auto-columns: minmax(10px, auto);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: ". navtab navtab navtab contact";
 }
-
 navbar #navtabs {
-  padding-left: 15%;
-  width: 60%;
-  overflow: visible;
+  grid-area: navtab;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: no-wrap;
@@ -338,6 +336,9 @@ navbar #navtabs {
   align-content: space-evenly;
   justify-items: space-evenly;
   justify-content: space-evenly;
+}
+navbar .contact {
+  grid-area: contact;
 }
 
 navbar #sidenav {
@@ -365,6 +366,7 @@ navbar #sidenav {
 #open-nav-btn,
 #close-nav-btn {
   /* used for breakpoints */
+  display: none;
 }
 
 /*** APPEARANCE ***/

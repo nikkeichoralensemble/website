@@ -84,16 +84,19 @@ footer img[role="logo"] {
 
 /*** LAYOUT ***/
 navbar {
-  @include FlexRow; // for child elements
-  justify-content: space-between;
-}
-navbar #navtabs {
-  padding-left: 15%;
-  width: 60%; // equals to 60vw since parent is navbar
-  // @include dead-center;
-  overflow: visible;
+  @include Grid; // for child elements
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: ". navtab navtab navtab contact";
 
-  @include FlexRow; // for child elements
+  #navtabs {
+    grid-area: navtab;
+    // overflow: visible;
+    @include FlexRow; // for child elements
+  }
+  .contact {
+    grid-area: contact;
+  }
 }
 
 navbar #sidenav {
@@ -108,17 +111,11 @@ navbar #sidenav {
   overflow-x: hidden; /* Disable horizontal scroll */
 }
 
-navbar .contact {
-  // @include fix-to-parent;
-  // @include topRight;
-  // transform: translate(0, 25%);
-}
-
 /* used for breakpoints */
 #open-nav-btn,
 #close-nav-btn {
   /* used for breakpoints */
-  // display: none;
+  display: none;
 }
 
 /*** APPEARANCE ***/

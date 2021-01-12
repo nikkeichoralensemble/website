@@ -30,7 +30,7 @@ navbar {
   background: var(--palette--white);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
   #navtabs > a[role="button"] {
-    font-size: 15px;
+    font-size: var(--font--s);
     font-family: var(--font--main);
     text-transform: lowercase;
     color: var(--palette--black);
@@ -42,8 +42,7 @@ navbar {
     }
   }
   #open-nav-btn {
-    font-size: 30px;
-    cursor: pointer;
+    font-size: var(--font--m);
   }
 }
 
@@ -51,7 +50,7 @@ footer {
   color: var(--palette--white);
   background: var(--palette--theme);
   font-family: var(--font--body);
-  font-size: small;
+  font-size: var(--font--s);
 }
 
 /*--------------------------------------------------------------
@@ -107,7 +106,8 @@ section > a[role="button"] {
   // transition: top .15s ease-in-out;
   // transition: background-color .075s ease-in-out, color .075s ease-in-out;
 }
-.banner {
+
+section[role="banner"] {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -182,7 +182,7 @@ footer p {
 #sidenav a[role="button"] {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: var(--font--m);
   color: #818181;
   display: block;
   transition: 0.3s;

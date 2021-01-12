@@ -36,6 +36,7 @@
   /* Top & Bottom */
   --gutter-lr: 8%;
   /* Left & Right */
+  --gutter: 3% 8%;
   /* z-index */
   --level--roof: 1000;
   --level--top: 800;
@@ -72,6 +73,8 @@
   --screen--large: 1000px;
 }
 
+/* reference: https://gist.github.com/3rdTheMagical/004b9bc6e30aa6d4d45b59065d30a0c0 */
+/* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
 /*--------------------------------------------------------------
 # Global Reset
 --------------------------------------------------------------*/
@@ -90,7 +93,6 @@
   http://meyerweb.com/eric/tools/css/reset/ 
   v2.0 | 20110126
   License: none (public domain) */
-/* XXX Do not edit below this line XXX */
 html {
   height: 100vh;
 }
@@ -101,6 +103,10 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   /* navbar main footer */
+}
+
+navbar {
+  overflow: visible;
 }
 
 main {
@@ -115,10 +121,11 @@ footer {
   justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-/* XXX Do not edit above this line XXX */
+/* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
 /*------------------------------------------
 # Global Apprearance
 ------------------------------------------*/
@@ -126,18 +133,12 @@ body {
   background: var(--palette--accent-lighter);
 }
 
-main {
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
-}
-
 section {
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
-  padding: 5% 10%;
+  padding: var(--gutter);
 }
 
 footer {
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
-  padding: 5% 10%;
+  padding: var(--gutter);
 }
 
 /*------------------------------------------
@@ -180,10 +181,11 @@ h2 {
 
 p {
   color: var(--palette--black);
+  margin: 1em;
 }
 
 /*------------------------------------------
-# Global Default Components
+# Global Built-In Components
 ------------------------------------------*/
 p {
   text-align: left;
@@ -209,6 +211,10 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
 }
 
 /*------------------------------------------
@@ -286,7 +292,7 @@ navbar {
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
 }
 navbar #navtabs > a[role=button] {
-  font-size: 15px;
+  font-size: var(--font--s);
   font-family: var(--font--main);
   text-transform: lowercase;
   color: var(--palette--black);
@@ -298,15 +304,14 @@ navbar #navtabs > a[role=button]:hover {
   background: var(--palette--theme);
 }
 navbar #open-nav-btn {
-  font-size: 30px;
-  cursor: pointer;
+  font-size: var(--font--m);
 }
 
 footer {
   color: var(--palette--white);
   background: var(--palette--theme);
   font-family: var(--font--body);
-  font-size: small;
+  font-size: var(--font--s);
 }
 
 /*--------------------------------------------------------------
@@ -364,43 +369,43 @@ section > a[role=button] {
   border-radius: 0px 0px 10px 10px;
 }
 
-.banner {
+section[role=banner] {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
-.banner h1 {
+section[role=banner] h1 {
   font-size: 5vw;
   color: var(--palette--white);
   font-family: var(--font--main);
 }
-.banner p {
+section[role=banner] p {
   font-size: 1.3vw;
   color: var(--palette--grey);
   font-family: var(--font--body);
   padding: 1em;
 }
-.banner a {
+section[role=banner] a {
   background-color: var(--palette--theme);
   color: var(--palette--white);
   padding: 14px 40px;
   border-radius: 12px;
   transition-duration: 0.4s;
 }
-.banner a:hover {
+section[role=banner] a:hover {
   background-color: var(--palette--theme-darker);
 }
-.banner#homebanner {
+section[role=banner]#homebanner {
   height: 100vh;
   /* change this to fit image */
   background-image: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group1.jpg");
 }
-.banner#aboutbanner {
+section[role=banner]#aboutbanner {
   height: 50vh;
   /* change this to fit image */
   background-image: url("../images/group2.jpg");
 }
-.banner#auditionsbanner {
+section[role=banner]#auditionsbanner {
   height: 50vh;
   /* change this to fit image */
   background-image: url("../images/group3.jpg");
@@ -448,7 +453,7 @@ footer p {
 #sidenav a[role=button] {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: var(--font--m);
   color: #818181;
   display: block;
   transition: 0.3s;

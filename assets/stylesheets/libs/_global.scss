@@ -1,3 +1,4 @@
+/* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
 /*--------------------------------------------------------------
 # Global Reset
 --------------------------------------------------------------*/
@@ -21,7 +22,6 @@
   v2.0 | 20110126
   License: none (public domain) */
 
-/* XXX Do not edit below this line XXX */
 html {
   @include fill-height;
 }
@@ -33,6 +33,10 @@ body {
   grid-template-rows: auto 1fr auto; /* navbar main footer */
 }
 
+navbar {
+  overflow: visible;
+}
+
 main {
   @include fill-width;
 }
@@ -40,9 +44,10 @@ main {
 footer {
   @include fill-width;
   @include Grid;
-  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(4, 1fr);
 }
-/* XXX Do not edit above this line XXX */
+/* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
 
 /*------------------------------------------
 # Global Apprearance
@@ -52,17 +57,17 @@ body {
 }
 
 main {
-  @include inner-margin;
+  // @include inner-margin;
 }
 
 section {
-  @include inner-margin;
-  padding: 5% 10%;
+  // @include inner-margin;
+  padding: var(--gutter);
 }
 
 footer {
-  @include inner-margin;
-  padding: 5% 10%;
+  // @include inner-margin;
+  padding: var(--gutter);
 }
 
 /*------------------------------------------
@@ -104,10 +109,11 @@ h2 {
 }
 p {
   color: var(--palette--black);
+  margin: 1em;
 }
 
 /*------------------------------------------
-# Global Default Components
+# Global Built-In Components
 ------------------------------------------*/
 p {
   text-align: left;
@@ -132,6 +138,9 @@ q {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+button {
+  cursor: pointer;
 }
 
 /*------------------------------------------

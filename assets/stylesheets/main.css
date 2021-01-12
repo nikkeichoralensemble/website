@@ -69,8 +69,8 @@
   --palette--white: #ffffff;
   --palette--grey: #f5f5f5;
   /* Styling */
-  --little-border: 0.5px solid var(--palette--grey);
-  --litte-drowshadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.5);
+  --little-border: 0.2px solid #2a324b20;
+  --litte-drowshadow: 0px 0px 25px 0px #2a324baa;
   --corner-roundedness: 10px;
   /*** Breakpoints ***/
   /* unused for now */
@@ -253,6 +253,7 @@ img[role=logo] {
 /* Buttons */
 a[role] {
   text-decoration: none;
+  border: var(--little-border);
 }
 
 /* Social Media */
@@ -410,6 +411,8 @@ navbar {
   box-shadow: var(--little-dropshadow);
 }
 navbar #navtabs > a[role=button] {
+  border: var(--little-border);
+  border-top: none;
   border-radius: 0px 0px var(--corner-roundedness) var(--corner-roundedness);
   box-shadow: var(--little-dropshadow);
   font-size: var(--font--small);
@@ -480,6 +483,7 @@ section a[role=button] {
   padding: 0.8em 1em;
   border-radius: var(--corner-roundedness);
   border: var(--little-border);
+  box-shadow: var(--little-shadow);
 }
 
 /* color sections */

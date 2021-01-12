@@ -10,6 +10,7 @@ img[role="logo"] {
 /* Buttons */
 a[role] {
   text-decoration: none;
+  border: var(--little-border);
 }
 
 /* Social Media */
@@ -135,7 +136,8 @@ navbar {
 
   #navtabs {
     > a[role="button"] {
-      // border-top: none;
+      border: var(--little-border);
+      border-top: none;
       border-radius: 0px 0px var(--corner-roundedness) var(--corner-roundedness);
       box-shadow: var(--little-dropshadow);
 
@@ -213,6 +215,7 @@ section a[role="button"] {
   padding: 0.8em 1em;
   border-radius: var(--corner-roundedness);
   border: var(--little-border);
+  box-shadow: var(--little-shadow);
 }
 
 /* color sections */

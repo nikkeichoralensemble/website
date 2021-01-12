@@ -343,7 +343,7 @@ a[role] {
 /*** LAYOUT ***/
 /* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
 navbar {
-  padding: 0px !important;
+  position: fixed;
   display: inline-grid;
   gap: 10px;
   align-items: space-around;
@@ -543,12 +543,6 @@ section a[role=button] {
 # Banner
 ------------------------------------------*/
 /*** LAYOUT ***/
-section[role=banner] img[role=logo] {
-  height: auto;
-  width: 10%;
-  /* w.r.t. viewport */
-}
-
 section[role=banner] {
   display: inline-grid;
   gap: 10px;
@@ -558,14 +552,17 @@ section[role=banner] {
   justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  grid-template-rows: repeat(5, 1fr) repeat(4, auto);
-  grid-template-areas: "." "." "." "." "." "logo" "title" "title" "subtitle" "button";
+  grid-template-rows: repeat(5, 1fr) repeat(4, auto) 0.5fr;
+  grid-template-areas: "." "." "." "." "." "logo" "title" "title" "subtitle" "button" ".";
 }
 section[role=banner] > * {
   margin: 0px !important;
 }
 section[role=banner] img[role=logo] {
   grid-area: logo;
+  height: auto;
+  width: 10%;
+  /* w.r.t. viewport */
 }
 section[role=banner] h1 {
   grid-area: title;

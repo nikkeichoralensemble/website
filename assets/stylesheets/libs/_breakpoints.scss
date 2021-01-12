@@ -5,12 +5,12 @@
 @include breakpoints(
   (
     large: (
-      901px,
+      931px,
       1680px,
     ),
     medium: (
       561px,
-      900px,
+      930px,
     ),
     small: (
       null,
@@ -53,6 +53,9 @@
 @include breakpoint("<=medium") {
   /* Basic */
   /* Navbar */
+  navbar {
+    display: block;
+  }
   /* Main */
   /* Footer */
   /* Components */

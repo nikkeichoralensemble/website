@@ -88,9 +88,8 @@ a[role] {
 /*** LAYOUT ***/
 /* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
 navbar {
-  // box-sizing: border-box;
-  // @include inner-margin;
-  padding: 0px !important;
+  position: fixed;
+
   @include Grid(space-around, space-around); // for child elements
   grid-template-columns: repeat(9, 1fr) 0.1fr;
   grid-template-rows: auto;
@@ -281,23 +280,16 @@ section a[role="button"] {
 # Banner
 ------------------------------------------*/
 /*** LAYOUT ***/
-
-// section[role="banner"] {
-//   @include FlexCol; // for child elements
-//   justify-content: flex-end;
-// }
-
-section[role="banner"] img[role="logo"] {
-  height: auto;
-  width: 10%; /* w.r.t. viewport */
-}
-
 section[role="banner"] {
   @include Grid;
-  grid-template-rows: repeat(5, 1fr) repeat(4, auto);
-  grid-template-areas: "." "." "." "." "." "logo" "title" "title" "subtitle" "button";
+  grid-template-rows: repeat(5, 1fr) repeat(4, auto) 0.5fr;
+  grid-template-areas: "." "." "." "." "." "logo" "title" "title" "subtitle" "button" ".";
+
   img[role="logo"] {
     grid-area: logo;
+
+    height: auto;
+    width: 10%; /* w.r.t. viewport */
   }
   h1 {
     grid-area: title;
@@ -309,6 +301,7 @@ section[role="banner"] {
     grid-area: button;
   }
 }
+
 /*** APPEARANCE ***/
 section[role="banner"] {
   background-size: cover;

@@ -30,6 +30,7 @@
 }
 
 @mixin dead-center {
+  position: relative;
   top: 0px;
   left: 50%;
   transform: translate(-50%, 0);
@@ -96,12 +97,14 @@
 @mixin setupIcon($size) {
   height: $size;
   width: $size;
-  border-radius: $size / 2;
+
   font-size: $size / 2;
   line-height: $size;
-  vertical-align: baseline;
+  text-align: center;
+  vertical-align: middle;
+
+  border-radius: $size / 2; /* make circle */
   margin: $size / 10;
-  padding: $size / 50;
 }
 
 //--------------------------------------------------------------

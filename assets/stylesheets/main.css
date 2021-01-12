@@ -22,6 +22,10 @@
   src: url("../webfonts/Raleway-ExtraLightItalic.ttf") format("truetype");
 }
 @font-face {
+  font-family: "RalewayBold";
+  src: url("../webfonts/Raleway-Bold.ttf") format("truetype");
+}
+@font-face {
   font-family: "GothicA1";
   src: url("../webfonts/GothicA1-Regular.ttf") format("truetype");
 }
@@ -32,6 +36,7 @@
   /* Top & Bottom */
   --gutter-lr: 8%;
   /* Left & Right */
+  --gutter: 3% 8%;
   /* z-index */
   --level--roof: 1000;
   --level--top: 800;
@@ -44,14 +49,16 @@
   --font--main-italic: "RalewayMediumItalic", sans-serif;
   --font--main-light: "RalewayExtraLight", sans-serif;
   --font--main-light-italic: "RalewayExtraLightItalic", sans-serif;
+  --font--main-bold: "RalewayBold", sans-serif;
   --font--body: "GothicA1", sans-serif;
-  --font--xs: 1vw;
-  --font--m: 2vw;
-  --font--l: 3vw;
-  --font--xl: 5vw;
+  --font--xs: 12px;
+  --font--s: 20px;
+  --font--m: 36px;
+  --font--l: 48px;
+  --font--xl: 72px;
   /* Palette. */
   --palette--theme: #4787c3;
-  --patette--theme-lighter: #d0e0f0;
+  --palette--theme-lighter: #d0e0f0;
   --palette--theme-darker: #235d9c;
   --palette--accent: #f65e89;
   --palette--accent-lighter: #ffcacf;
@@ -66,15 +73,26 @@
   --screen--large: 1000px;
 }
 
+/* reference: https://gist.github.com/3rdTheMagical/004b9bc6e30aa6d4d45b59065d30a0c0 */
+/* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
 /*--------------------------------------------------------------
-# Global
+# Global Reset
 --------------------------------------------------------------*/
-/* Reference:
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  place-self: center center;
+}
+
+/*--------------------------------------------------------------
+# Global Layout
+--------------------------------------------------------------*/
+/* reference:
   http://meyerweb.com/eric/tools/css/reset/ 
   v2.0 | 20110126
-  License: none (public domain) */
-/*** LAYOUT ***/
-/* XXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXX */
+  license: none (public domain) */
 html {
   height: 100vh;
 }
@@ -87,18 +105,53 @@ body {
   /* navbar main footer */
 }
 
-* {
-  box-sizing: border-box;
+navbar {
+  width: 100vw;
+  overflow: visible;
 }
 
-/* XXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXX */
-* {
-  place-self: center center;
+main {
+  width: 100vw;
 }
 
-/*** TEXT SETUP ***/
+footer {
+  width: 100vw;
+  display: Grid;
+  gap: 10px;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  grid-auto-rows: minmax(10px, auto);
+  grid-auto-columns: minmax(10px, auto);
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
+/*------------------------------------------
+# Global Apprearance
+------------------------------------------*/
+body {
+  background: var(--palette--accent-lighter);
+}
+
+section {
+  padding: var(--gutter);
+}
+
+footer {
+  padding: var(--gutter);
+}
+
+/*------------------------------------------
+# Global Text
+------------------------------------------*/
 * {
   font: inherit;
+  font-size: 100%;
+  font: inherit;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
 }
 
 html,
@@ -110,6 +163,7 @@ h1,
 h2,
 h3,
 h4,
+section#faq question,
 h5,
 h6 {
   font-family: var(--font--main);
@@ -118,27 +172,30 @@ h6 {
 }
 
 h1 {
+  font-family: var(--font--main-bold);
   font-size: var(--font--l);
 }
 
 h2 {
   font-size: var(--font--m);
+  text-transform: lowercase;
 }
 
-/*** APPEARANCE ***/
-* {
-  padding: 0px;
-  margin: 0px;
-  border: none;
-  font-size: 100%;
-  font: inherit;
-  line-height: 1;
-  text-align: center;
-  vertical-align: middle;
+p, section#faq answer {
+  color: var(--palette--black);
+  margin: 1em;
 }
 
-p {
+/*------------------------------------------
+# HTML Built-Ins
+------------------------------------------*/
+button {
+  cursor: pointer;
+}
+
+p, section#faq answer {
   text-align: left;
+  font-size: var(--font--s);
 }
 
 ol,
@@ -162,140 +219,10 @@ table {
   border-spacing: 0;
 }
 
-a[role] {
-  text-decoration: none;
-}
-
-.blue {
-  background-color: var(--palette--theme);
-  color: var(--palette--white);
-}
-.blue a[role=button] {
-  background: radial-gradient(--palette--theme-darker, --palette--white);
-}
-
-.white {
-  background-color: var(--palette--white);
-  color: var(--palette--black);
-}
-.white a[role=button] {
-  background: radial-gradient(--palette--white, --palette--grey);
-}
-
-.pink {
-  background-color: var(--palette--accent-lighter);
-  color: var(--palette--accent-darker);
-}
-.pink a[role=button] {
-  background: radial-gradient(--palette--accent-lighter, --palette--accent-darker);
-}
-
-/*** ANIMATIONS ***/
-/*--------------------------------------------------------------
-# Page Setup
---------------------------------------------------------------*/
-/*** LAYOUT ***/
-navbar {
-  display: inline-flex;
-}
-
-navbar {
-  max-height: 20vh;
-  width: 100vw;
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
-}
-navbar #navtabs {
-  display: inline-flex;
-  position: relative;
-  top: 0px;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-navbar .contact {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  transform: translate(0, 50%);
-}
-
-main {
-  width: 100vw;
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
-}
-
-footer {
-  width: 100vw;
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
-  padding: 5% 10%;
-  display: Grid;
-  gap: 10px;
-  align-content: space-evenly;
-  justify-content: space-evenly;
-  grid-auto-rows: minmax(10px, auto);
-  grid-auto-columns: minmax(10px, auto);
-  grid-template-columns: auto auto auto;
-}
-
-section {
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
-  padding: 5% 10%;
-}
-
-/*** APPEARANCE ***/
-body {
-  background: var(--palette--accent-lighter);
-}
-
-navbar {
-  background: var(--palette--white);
-  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
-}
-navbar #navtabs > a[role=button] {
-  font-size: 15px;
-  font-family: var(--font--main);
-  text-transform: lowercase;
-  color: var(--palette--black);
-  padding: 2em 2em;
-  margin: 0em 2em;
-}
-navbar #navtabs > a[role=button]:hover {
-  color: var(--palette--white);
-  background: var(--palette--theme);
-}
-navbar #open-nav-btn {
-  font-size: 30px;
-  cursor: pointer;
-}
-
-footer {
-  color: var(--palette--white);
-  background: var(--palette--theme);
-  font-family: var(--font--body);
-  font-size: small;
-}
-
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-/*** LAYOUT ***/
-/* Navbar Components */
-/* Main Components */
-section > a[role=button] {
-  display: block;
-  padding: 1em 3em;
-}
-
-.banner {
-  display: flex;
-  justify-content: center;
-}
-
-/* Footer Components */
-#ocf {
-  display: flex;
-}
-
-/* Other Components */
+/*------------------------------------------
+# Custom Components
+------------------------------------------*/
+/* Social Media */
 .contact {
   display: flex;
   flex-direction: row;
@@ -305,139 +232,41 @@ section > a[role=button] {
   justify-content: space-evenly;
 }
 
-.fas,
-.fab {
-  height: 45px;
-  width: 45px;
-  border-radius: 22.5px;
-  font-size: 22.5px;
-  line-height: 45px;
-  vertical-align: baseline;
-  margin: 4.5px;
-  padding: 0.9px;
+/* Logo */
+img[role=logo] {
+  height: minmax(20px, 20vw);
+  width: minmax(20px, 20vw);
 }
 
-/*** APPEARANCE ***/
-/* Navbar Components */
-#navtabs a {
-  border-radius: 0px 0px 10px 10px;
+.banner img[role=logo] {
+  height: auto;
+  width: 20%;
+  /* w.r.t. viewport */
 }
 
-/* Main Components */
-.banner {
-  display: flex;
-  flex-direction: column;
-  align-items: space-evenly;
-  align-content: space-evenly;
-  justify-items: space-evenly;
-  justify-content: space-evenly;
-  background-size: contain;
-  background-position: center center;
-}
-.banner h1 {
-  font-size: 4vw;
-  color: var(--palette--white);
-  font-family: var(--font--main);
-}
-.banner h2 {
-  font-size: 1vw;
-  color: var(--palette--white);
-  font-family: var(--font--body);
-  padding: 1em;
-}
-.banner#homebanner {
-  background: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group1.jpg");
-}
-.banner#aboutbanner {
-  background: url("../images/group2.jpg");
-}
-.banner#auditionsbanner {
-  background: url("../images/group3.jpg");
-}
-
-/* Footer Components */
-#footer p {
-  margin: 1em;
-}
-
-/* Other Components */
-/*** ANIMATION ***/
-/*--------------------------------------------------------------
-# Navigations
---------------------------------------------------------------*/
-/* #navtabs changes to #sidenav in small screens */
-#navtabs {
-  display: Grid;
-  gap: 10px;
-  align-content: space-evenly;
-  justify-content: space-evenly;
-  grid-auto-rows: minmax(10px, auto);
-  grid-auto-columns: minmax(10px, auto);
-}
-
-#sidenav {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  z-index: var(--level--roof);
-  /* Stay on top */
-  height: 100vh;
-  /* 100% Full-height */
-  width: 0;
-  /* 0 width - change this with JavaScript */
-  background-color: #111;
-  /* Black*/
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-#sidenav a[role=button] {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-#sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-#sidenav #close-nav-btn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  #sidenav {
-    padding-top: 15px;
-  }
-  #sidenav a[role=button] {
-    font-size: 18px;
-  }
-}
-/* controlled by javascript */
-button #open-nav-btn {
-  display: none;
-}
-button #close-nav-btn {
-  display: none;
+footer img[role=logo] {
+  height: auto;
+  width: 50%;
+  /* w.r.t.  grid slot */
 }
 
 /*--------------------------------------------------------------
 # Font Awesome Icons
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
+.fas,
+.fab {
+  height: 45px;
+  width: 45px;
+  font-size: 22.5px;
+  line-height: 45px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 22.5px;
+  /* make circle */
+  margin: 4.5px;
+}
+
 /*** APPEARANCE ***/
 .fas,
 .fab {
@@ -448,8 +277,6 @@ button #close-nav-btn {
 .fab:hover {
   color: var(--palette--white);
   background: var(--palette--accent);
-  position: relative;
-  top: -5px;
 }
 
 .fas.fa-youtube:hover,
@@ -487,13 +314,271 @@ button #close-nav-btn {
     /* color: #fff; */
 }
 
-/*** ANIMATION ***/
+/*** ANIMATIONS ***/
 .fas,
 .fab {
   /* property name | duration | easing function | delay */
   transition: position 2s ease-in-out 0.5s;
 }
 
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+/* Note
+ * #navtabs hides and #sidenav shows for small screens 
+ */
+/*** LAYOUT ***/
+navbar #navtabs {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: space-evenly;
+  align-content: space-evenly;
+  justify-items: space-evenly;
+  justify-content: space-evenly;
+  position: relative;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: visible;
+}
+
+navbar #sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  align-content: space-evenly;
+  justify-items: space-evenly;
+  justify-content: space-evenly;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: var(--level--roof);
+  /* Stay on top */
+}
+
+navbar .contact {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  transform: translate(0, 25%);
+}
+
+button {
+  /* used for breakpoints */
+}
+button#open-nav-btn, button#close-nav-btn {
+  display: none;
+}
+
+/*** APPEARANCE ***/
+navbar {
+  background: var(--palette--white);
+  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+}
+
+#navtabs > a[role=button] {
+  font-size: var(--font--s);
+  font-family: var(--font--main);
+  text-transform: lowercase;
+  color: var(--palette--black);
+  padding: 2em 2em;
+  margin: 0em 2em;
+}
+#navtabs > a[role=button]:hover {
+  top: -6px;
+  border-radius: 0px 0px 10px 10px;
+  color: var(--palette--white);
+  background: var(--palette--theme);
+}
+#navtabs > a[role=button]:active {
+  /* when clicked */
+}
+#navtabs > a[role=button]#homebanner {
+  background: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group1.jpg");
+}
+#navtabs > a[role=button]#aboutbanner {
+  background: url("../images/group2.jpg");
+}
+#navtabs > a[role=button]#auditionsbanner {
+  background: url("../images/group3.jpg");
+}
+
+#open-nav-btn {
+  font-size: var(--font--m);
+}
+
+/*** ANIMATIONS ***/
+#navtabs > a[role=button] {
+  transition: top 0.15s ease-in-out;
+}
+
+#sidenav {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: var(--level--roof);
+  /* Stay on top */
+  height: 100vh;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+#sidenav a[role=button] {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: var(--font--m);
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+#sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+#sidenav #close-nav-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  #sidenav {
+    padding-top: 15px;
+  }
+  #sidenav a[role=button] {
+    font-size: 18px;
+  }
+}
+/*------------------------------------------
+# Main Content
+------------------------------------------*/
+a[role] {
+  /* navtabs and social-media buttons */
+  text-decoration: none;
+}
+
+/* info & content */
+section[role=content] > a[role=button] {
+  display: block;
+  padding: 1em 3em;
+}
+section[role=content].blue {
+  background-color: var(--palette--theme);
+  color: var(--palette--white);
+}
+section[role=content].blue a[role=button] {
+  background: radial-gradient(--palette--theme-darker, --palette--white);
+}
+section[role=content].lightblue {
+  background-color: var(--palette--theme-lighter);
+  color: var(--palette--white);
+}
+section[role=content].lightblue a[role=button] {
+  background: radial-gradient(--palette--theme-darker, --palette--white);
+}
+section[role=content].white {
+  background-color: var(--palette--white);
+  color: var(--palette--black);
+}
+section[role=content].white a[role=button] {
+  background: radial-gradient(--palette--white, --palette--grey);
+}
+section[role=content].pink {
+  background-color: var(--palette--accent-lighter);
+  color: var(--palette--accent-darker);
+}
+section[role=content].pink a[role=button] {
+  background: radial-gradient(--palette--accent-lighter, --palette--accent-darker);
+}
+
+/* banners */
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  align-content: space-evenly;
+  justify-items: space-evenly;
+  justify-content: space-evenly;
+  width: 100vw;
+  justify-content: flex-end;
+}
+
+section[role=banner] {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+section[role=banner] h1 {
+  font-size: 5vw;
+  color: var(--palette--white);
+  font-family: var(--font--main);
+}
+section[role=banner] p, section[role=banner] section#faq answer, section#faq section[role=banner] answer {
+  font-size: 1.3vw;
+  color: var(--palette--grey);
+  font-family: var(--font--body);
+  padding: 1em;
+}
+section[role=banner] a {
+  background-color: var(--palette--theme);
+  color: var(--palette--white);
+  padding: 14px 40px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+section[role=banner] a:hover {
+  background-color: var(--palette--theme-darker);
+}
+section[role=banner]#homebanner {
+  height: 100vh;
+  /* change this to fit image */
+  background-image: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group1.jpg");
+}
+section[role=banner]#aboutbanner {
+  height: 50vh;
+  /* change this to fit image */
+  background-image: url("../images/group2.jpg");
+}
+section[role=banner]#auditionsbanner {
+  height: 50vh;
+  /* change this to fit image */
+  background-image: url("../images/group3.jpg");
+}
+
+/* FAQ */
+/*------------------------------------------
+# Footer
+------------------------------------------*/
+/*** LAYOUT ***/
+footer#ocf {
+  display: flex;
+}
+
+/*** APPERANCE ***/
+footer {
+  color: var(--palette--white);
+  background: var(--palette--theme);
+  font-family: var(--font--body);
+  font-size: var(--font--s);
+}
+
+/*** ANIMATIONS ***/
 /*--------------------------------------------------------------
 # Debug Use
 --------------------------------------------------------------*/

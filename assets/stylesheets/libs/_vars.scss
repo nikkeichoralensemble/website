@@ -16,6 +16,10 @@
   src: url("../webfonts/Raleway-ExtraLightItalic.ttf") format("truetype");
 }
 @font-face {
+  font-family: "RalewayBold";
+  src: url("../webfonts/Raleway-Bold.ttf") format("truetype");
+}
+@font-face {
   font-family: "GothicA1";
   src: url("../webfonts/GothicA1-Regular.ttf") format("truetype");
 }
@@ -25,6 +29,7 @@
   /*** LAYOUT ***/
   --gutter-tb: 3%; /* Top & Bottom */
   --gutter-lr: 8%; /* Left & Right */
+  --gutter: 3% 8%;
 
   /* z-index */
   --level--roof: 1000;
@@ -39,15 +44,17 @@
   --font--main-italic: "RalewayMediumItalic", sans-serif;
   --font--main-light: "RalewayExtraLight", sans-serif;
   --font--main-light-italic: "RalewayExtraLightItalic", sans-serif;
+  --font--main-bold: "RalewayBold", sans-serif;
   --font--body: "GothicA1", sans-serif;
-  --font--xs: 1vw; // TODO fix units
-  --font--m: 2vw;
-  --font--l: 3vw;
-  --font--xl: 5vw;
+  --font--xs: 12px; // TODO fix units
+  --font--s: 20px;
+  --font--m: 36px;
+  --font--l: 48px;
+  --font--xl: 72px;
 
   /* Palette. */
   --palette--theme: #4787c3;
-  --patette--theme-lighter: #d0e0f0;
+  --palette--theme-lighter: #d0e0f0;
   --palette--theme-darker: #235d9c;
   --palette--accent: #f65e89;
   --palette--accent-lighter: #ffcacf;

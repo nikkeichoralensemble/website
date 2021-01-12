@@ -1,15 +1,29 @@
+/* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
 /*--------------------------------------------------------------
-# Global
+# Global Reset
 --------------------------------------------------------------*/
-/* Reference:
+* {
+  box-sizing: border-box;
+
+  padding: 0px;
+  margin: 0px;
+  border: none;
+
+  // height: minmax(10px, fit-content);
+  // width: minmax(10px, fit-content);
+  place-self: center center;
+}
+
+/*--------------------------------------------------------------
+# Global Layout
+--------------------------------------------------------------*/
+/* reference:
   http://meyerweb.com/eric/tools/css/reset/ 
   v2.0 | 20110126
-  License: none (public domain) */
+  license: none (public domain) */
 
-/*** LAYOUT ***/
-/* XXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXX */
 html {
-  height: 100vh;
+  @include fill-height;
 }
 
 body {
@@ -19,20 +33,56 @@ body {
   grid-template-rows: auto 1fr auto; /* navbar main footer */
 }
 
-* {
-  box-sizing: border-box;
-}
-/* XXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXX */
-
-* {
-  // height: minmax(10px, fit-content);
-  // width: minmax(10px, fit-content);
-  place-self: center center;
+navbar {
+  @include fill-width;
+  // display: inline-flex;
+  overflow: visible;
 }
 
-/*** TEXT SETUP ***/
+main {
+  @include fill-width;
+}
+
+footer {
+  @include fill-width;
+  @include Grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(4, 1fr);
+}
+/* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
+
+/*------------------------------------------
+# Global Apprearance
+------------------------------------------*/
+body {
+  background: var(--palette--accent-lighter);
+}
+
+main {
+  // @include inner-margin;
+}
+
+section {
+  // @include inner-margin;
+  padding: var(--gutter);
+}
+
+footer {
+  // @include inner-margin;
+  padding: var(--gutter);
+}
+
+/*------------------------------------------
+# Global Text
+------------------------------------------*/
 * {
   font: inherit;
+
+  font-size: 100%;
+  font: inherit;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
 }
 
 html,
@@ -52,27 +102,28 @@ h6 {
 }
 
 h1 {
+  font-family: var(--font--main-bold);
   font-size: var(--font--l);
 }
 h2 {
   font-size: var(--font--m);
+  text-transform: lowercase;
+}
+p {
+  color: var(--palette--black);
+  margin: 1em;
 }
 
-/*** APPEARANCE ***/
-* {
-  padding: 0px;
-  margin: 0px;
-  border: none;
-
-  font-size: 100%;
-  font: inherit;
-  line-height: 1;
-  text-align: center;
-  vertical-align: middle;
+/*------------------------------------------
+# HTML Built-Ins
+------------------------------------------*/
+button {
+  cursor: pointer;
 }
 
 p {
   text-align: left;
+  font-size: var(--font--s);
 }
 
 ol,
@@ -94,36 +145,3 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-a[role] {
-  text-decoration: none;
-}
-
-.blue {
-  background-color: var(--palette--theme);
-  color: var(--palette--white);
-  a[role="button"] {
-    background: radial-gradient(--palette--theme-darker, --palette--white);
-  }
-}
-
-.white {
-  background-color: var(--palette--white);
-  color: var(--palette--black);
-  a[role="button"] {
-    background: radial-gradient(--palette--white, --palette--grey);
-  }
-}
-
-.pink {
-  background-color: var(--palette--accent-lighter);
-  color: var(--palette--accent-darker);
-  a[role="button"] {
-    background: radial-gradient(
-      --palette--accent-lighter,
-      --palette--accent-darker
-    );
-  }
-}
-
-/*** ANIMATIONS ***/

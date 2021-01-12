@@ -1,18 +1,24 @@
 {% extends "_template.html" %}
 
 {% block main %}
-<section class="banner" id="auditionsbanner"></section>
-<h1>Join NiCE!</h1>
-<section>
-  <h4>Interested in singing, performing, and making friends? Enjoy both Japanese and English music?</h4>
+
+<section role="banner" id="auditionsbanner"></section>
+
+<section role="header">
+  <h1>Join NiCE!</h1>
+</section>
+
+<section role="content">
+  <summary>Interested in singing, performing, and making friends? Enjoy both Japanese and English music?</summary>
   <p>If so, then NiCE might be the group for you! Nikkei Choral Ensemble (otherwise known as NiCE) is holding virtual
     auditions for the Spring 2021 semester for singers in all voice parts and beatboxers, so if you’re interested in
     joining us, sign up for an audition slot below! </p>
-  <button href="about.html">SPRING 2021 AUDITIONS NOW OPEN!</button>
+  <a role="button" href="/about">SPRING 2021 AUDITIONS NOW OPEN!</a>
   <p>Auditions this semester will be running from January 19th to January 30th on a sign-up-only basis, so make sure
     to secure an audition slot early! No Japanese knowledge required.</p>
 </section>
-<section>
+
+<section role="content">
   <h2>What are we doing in Spring 2021?</h2>
   <p>In Spring 2021, our focus will be on creating—as a group, we will be recording songs and making music videos to
     release throughout the semester. In addition to this, we will also be having solo workshops with all members every
@@ -20,24 +26,47 @@
     and Thursdays will usually be one hour, while solo workshops on Saturdays will be two hours.
   </p>
 </section>
-<section>
-  <h2 id="faq">Frequently Asked Questions</h2>
-  <h4> Q: Do I have to be Japanese to join? </h4>
-  <p>Nope! And no Japanese language knowledge is necessary, either. </p>
-  <h4> Q: What does an audition entail? </h4>
-  <p>We will ask you to come prepared with an excerpt of a song of your choice and an excerpt of a song of our choice.
-    In addition, there will be a few basic warm-up and learning exercises.</p>
-  <h4> Q: What if I don't know my vocal part? </h4>
-  <p>We'll help you figure it out during the audition!</p>
-  <h4> Q: What if I don't have any prior experience? </h4>
-  <p>No prior experience is required. We're all learning together. We just ask that you be willing to put in the
-    effort to make sure you are performance-ready for gigs and showcase.</p>
-  <h4> Q: What if I've already auditioned for NiCE?</h4>
-  <p>No worries, there is no limit on the number of times you can audition for NiCE. In fact, several past and current
-    members of NiCE are those who have auditioned multiple times before joining!</p>
-  <h4> Q: Does NiCE perform? </h4>
-  <p>This depends on the type of semester. Normally, we are invited to perform at various gigs throughout the semester
-    and hold a showcase at the end of each semester. However, due to the pandemic, we have been unable to perform in
-    person. Instead, we will be focusing on producing content that can be shared online!</p>
+
+<section role="content" id="faq">
+
+  <h2>Frequently Asked summarys</h2>
+
+  <details>
+    <summary> Q: Do I have to be Japanese to join? </summary>
+    <p>Nope! And no Japanese language knowledge is necessary, either. </p>
+  </details>
+
+  <details>
+    <summary> Q: What does an audition entail? </summary>
+    <p>We will ask you to come prepared with an excerpt of a song of your choice and an excerpt of a song of our
+      choice.
+      In addition, there will be a few basic warm-up and learning exercises.</p>
+  </details>
+
+  <details>
+    <summary> Q: What if I don't know my vocal part? </summary>
+    <p>We'll help you figure it out during the audition!</p>
+  </details>
+
+  <details>
+    <summary> Q: What if I don't have any prior experience? </summary>
+    <p>No prior experience is required. We're all learning together. We just ask that you be willing to put in the
+      effort to make sure you are performance-ready for gigs and showcase.</p>
+  </details>
+
+  <details>
+    <summary> Q: What if I've already auditioned for NiCE?</summary>
+    <p>No worries, there is no limit on the number of times you can audition for NiCE. In fact, several past and
+      current members of NiCE are those who have auditioned multiple times before joining!</p>
+  </details>
+
+  <details>
+    <summary> Q: Does NiCE perform? </summary>
+    <p>This depends on the type of semester. Normally, we are invited to perform at various gigs throughout the
+      semester and hold a showcase at the end of each semester. However, due to the pandemic, we have been unable to
+      perform in person. Instead, we will be focusing on producing content that can be shared online!</p>
+  </details>
+
 </section>
+
 {% endblock %}

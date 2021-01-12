@@ -1,280 +1,32 @@
-/*--------------------------------------------------------------
-# Page Setup
---------------------------------------------------------------*/
-/*** LAYOUT ***/
-navbar {
-  display: inline-flex;
-}
-
-navbar {
-  max-height: 20vh;
-  @include fill-width;
-  @include inner-margin;
-
-  #navtabs {
-    display: inline-flex;
-    // @include fix-to-parent;
-    position: relative;
-    @include dead-center;
-  }
-  .contact {
-    @include fix-to-parent;
-    @include topRight;
-    transform: translate(0, 50%);
-  }
-}
-
-main {
-  @include fill-width;
-  @include inner-margin;
-}
-
-footer {
-  @include fill-width;
-  @include inner-margin;
-  padding: 5% 10%;
-  @include Grid;
-  grid-template-columns: auto auto auto;
-}
-
-section {
-  @include inner-margin;
-  padding: 5% 10%;
-}
-
-/*** APPEARANCE ***/
-body {
-  background: var(--palette--accent-lighter);
-}
-
-navbar {
-  background: var(--palette--white);
-  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
-  #navtabs > a[role="button"] {
-    font-size: 15px;
-    font-family: var(--font--main);
-    text-transform: lowercase;
-    color: var(--palette--black);
-    padding: 2em 2em;
-    margin: 0em 2em;
-    &:hover {
-      color: var(--palette--white);
-      background: var(--palette--theme);
-    }
-  }
-  #open-nav-btn {
-    font-size: 30px;
-    cursor: pointer;
-  }
-}
-
-footer {
-  color: var(--palette--white);
-  background: var(--palette--theme);
-  font-family: var(--font--body);
-  font-size: small;
-}
-
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-/*** LAYOUT ***/
-
-/* Navbar Components */
-
-/* Main Components */
-section > a[role="button"] {
-  display: block;
-  padding: 1em 3em;
-}
-
-.banner {
-  display: flex;
-  justify-content: center;
-}
-
-/* Footer Components */
-#ocf {
-  display: flex;
-}
-
-/* Other Components */
+/*------------------------------------------
+# Custom Components
+------------------------------------------*/
+/* Social Media */
 .contact {
   @include FlexRow(space-evenly);
 }
-
-.fas,
-.fab {
-  @include setupIcon(45px);
+/* Logo */
+img[role="logo"] {
+  height: minmax(20px, 20vw);
+  width: minmax(20px, 20vw);
 }
-
-/*** APPEARANCE ***/
-/* Navbar Components */
-#navtabs a {
-  border-radius: 0px 0px 10px 10px;
-  //   top: -6px;
-  //   transition: top 0.15s ease-in-out;
-  //   transition: background-color 0.075s ease-in-out, color 0.075s ease-in-out;
-  // }
-  // #navtabs a:hover,
-  // #nav a.active {
-  //   top: 3px;
-  // }
-  // #navtavs a:hover {
-  //   background: var(--palette--accent-lighter);
-  //   color: var(--palette--black);
-  // top: -6px;
-  // transition: top .15s ease-in-out;
-  // transition: background-color .075s ease-in-out, color .075s ease-in-out;
+.banner img[role="logo"] {
+  height: auto;
+  width: 20%; /* w.r.t. viewport */
 }
-// #navtabs a:hover, #nav a.active {
-//   top: 3px;
-// }
-// #navtavs a:hover {
-//   background: var(--palette--accent-lighter);
-// 	color: var(--palette--black);
-// }
-
-/* Main Components */
-
-// .wrapper {
-//   width: 100%;
-//   /* whatever width you want */
-//   display: inline-block;
-//   position: relative;
-//   background-size: contain;
-//   background: url('https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Wiki-llama.jpg/1600px-Wiki-llama.jpg') top center no-repeat;
-//   margin: 0 auto;
-// }
-// .wrapper:after {
-//   padding-top: 75%;
-//   /* this llama image is 800x600 so set the padding top % to match 600/800 = .75 */
-//   display: block;
-//   content: '';
-// }
-
-.banner {
-  @include FlexCol;
-  // width: 100%;
-  // // height: 50vh;
-  background-size: contain;
-  background-position: center center;
-  // &:after {
-  //   /* this llama image is 800x600 so set the padding top % to match 600/800 = .75 */
-  //   padding-top: 75%;
-  //   display: block;
-  //   content: "";
-  // }
-  h1 {
-    font-size: 4vw;
-    color: var(--palette--white);
-    font-family: var(--font--main);
-  }
-  h2 {
-    font-size: 1vw;
-    color: var(--palette--white);
-    font-family: var(--font--body);
-    padding: 1em;
-  }
-  &#homebanner {
-    background: linear-gradient(transparent, 80%, var(--palette--theme)),
-      url("../images/group1.jpg");
-  }
-  &#aboutbanner {
-    background: url("../images/group2.jpg");
-  }
-  &#auditionsbanner {
-    background: url("../images/group3.jpg");
-  }
-}
-
-/* Footer Components */
-#footer p {
-  margin: 1em;
-}
-/* Other Components */
-
-/*** ANIMATION ***/
-
-/*--------------------------------------------------------------
-# Navigations
---------------------------------------------------------------*/
-
-/* #navtabs changes to #sidenav in small screens */
-
-#navtabs {
-  @include Grid;
-}
-
-#sidenav {
-  @include fix-to-page;
-  @include topLeft;
-  z-index: var(--level--roof); /* Stay on top */
-
-  height: 100vh; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  // padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-#sidenav a[role="button"] {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-#sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-#sidenav #close-nav-btn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-// /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-// navbar,
-// main,
-// footer {
-//   transition: margin-left 0.5s;
-//   padding: 20px;
-// }
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  #sidenav {
-    padding-top: 15px;
-    a[role="button"] {
-      font-size: 18px;
-    }
-  }
-}
-/* controlled by javascript */
-button {
-  #open-nav-btn {
-    display: none;
-  }
-  #close-nav-btn {
-    display: none;
-  }
+footer img[role="logo"] {
+  height: auto;
+  width: 50%; /* w.r.t.  grid slot */
 }
 
 /*--------------------------------------------------------------
 # Font Awesome Icons
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
+.fas,
+.fab {
+  @include setupIcon(45px);
+}
 
 /*** APPEARANCE ***/
 .fas,
@@ -285,7 +37,7 @@ button {
   &:hover {
     color: var(--palette--white);
     background: var(--palette--accent);
-    @include shiftUp;
+    // @include shiftUp;
   }
 }
 
@@ -330,9 +82,272 @@ button {
   /* color: #fff; */
 }
 
-/*** ANIMATION ***/
+/*** ANIMATIONS ***/
 .fas,
 .fab {
   /* property name | duration | easing function | delay */
   transition: position 2s ease-in-out 0.5s;
 }
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+/* Note
+ * #navtabs hides and #sidenav shows for small screens 
+ */
+
+/*** LAYOUT ***/
+navbar #navtabs {
+  width: 60%; // equals to 60vw since parent is navbar
+  @include FlexRow;
+  @include dead-center;
+  overflow: visible;
+}
+
+navbar #sidenav {
+  @include FlexCol;
+  height: 100vh;
+  @include fix-to-page;
+  @include topLeft;
+  z-index: var(--level--roof); /* Stay on top */ //TODO check if this works
+}
+
+navbar .contact {
+  @include fix-to-parent;
+  @include topRight;
+  transform: translate(0, 25%);
+}
+
+button {
+  /* used for breakpoints */
+  &#open-nav-btn,
+  &#close-nav-btn {
+    display: none;
+  }
+}
+
+/*** APPEARANCE ***/
+navbar {
+  background: var(--palette--white);
+  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+}
+
+#navtabs > a[role="button"] {
+  font-size: var(--font--s);
+  font-family: var(--font--main);
+  text-transform: lowercase;
+
+  color: var(--palette--black);
+  padding: 2em 2em;
+  margin: 0em 2em;
+
+  &:hover {
+    top: -6px;
+    border-radius: 0px 0px 10px 10px;
+    color: var(--palette--white);
+    background: var(--palette--theme);
+  }
+  &:active {
+    /* when clicked */
+  }
+  &#homebanner {
+    background: linear-gradient(transparent, 80%, var(--palette--theme)),
+      url("../images/group1.jpg");
+  }
+  &#aboutbanner {
+    background: url("../images/group2.jpg");
+  }
+  &#auditionsbanner {
+    background: url("../images/group3.jpg");
+  }
+}
+
+#open-nav-btn {
+  font-size: var(--font--m);
+}
+
+/*** ANIMATIONS ***/
+
+#navtabs > a[role="button"] {
+  transition: top 0.15s ease-in-out;
+  // transition: background-color .075s ease-in-out, color .075s ease-in-out;
+}
+
+// TODO fix sidebar
+
+#sidenav {
+  @include fix-to-page;
+  @include topLeft;
+  z-index: var(--level--roof); /* Stay on top */
+
+  height: 100vh; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  // padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+#sidenav a[role="button"] {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: var(--font--m);
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+#sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+#sidenav #close-nav-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+// /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+// navbar,
+// main,
+// footer {
+//   transition: margin-left 0.5s;
+//   padding: 20px;
+// }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  #sidenav {
+    padding-top: 15px;
+    a[role="button"] {
+      font-size: 18px;
+    }
+  }
+}
+/*------------------------------------------
+# Main Content
+------------------------------------------*/
+a[role] {
+  /* navtabs and social-media buttons */
+  text-decoration: none;
+}
+/* info & content */
+section[role="content"] {
+  > a[role="button"] {
+    display: block;
+    padding: 1em 3em;
+  }
+  &.blue {
+    background-color: var(--palette--theme);
+    color: var(--palette--white);
+    a[role="button"] {
+      background: radial-gradient(--palette--theme-darker, --palette--white);
+    }
+  }
+
+  &.lightblue {
+    background-color: var(--palette--theme-lighter);
+    color: var(--palette--white);
+    a[role="button"] {
+      background: radial-gradient(--palette--theme-darker, --palette--white);
+    }
+  }
+
+  &.white {
+    background-color: var(--palette--white);
+    color: var(--palette--black);
+    a[role="button"] {
+      background: radial-gradient(--palette--white, --palette--grey);
+    }
+  }
+
+  &.pink {
+    background-color: var(--palette--accent-lighter);
+    color: var(--palette--accent-darker);
+    a[role="button"] {
+      background: radial-gradient(
+        --palette--accent-lighter,
+        --palette--accent-darker
+      );
+    }
+  }
+}
+
+/* banners */
+.banner {
+  @include FlexCol;
+  @include fill-width;
+  justify-content: flex-end;
+}
+
+section[role="banner"] {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  h1 {
+    font-size: 5vw;
+    color: var(--palette--white);
+    font-family: var(--font--main);
+  }
+  p {
+    font-size: 1.3vw;
+    color: var(--palette--grey);
+    font-family: var(--font--body);
+    padding: 1em;
+  }
+  a {
+    background-color: var(--palette--theme);
+    color: var(--palette--white);
+    padding: 14px 40px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+  }
+  a:hover {
+    background-color: var(--palette--theme-darker);
+  }
+  &#homebanner {
+    height: 100vh; /* change this to fit image */
+    background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
+      url("../images/group1.jpg");
+  }
+  &#aboutbanner {
+    height: 50vh; /* change this to fit image */
+    background-image: url("../images/group2.jpg");
+  }
+  &#auditionsbanner {
+    height: 50vh; /* change this to fit image */
+    background-image: url("../images/group3.jpg");
+  }
+}
+
+/* FAQ */
+section#faq {
+  question {
+    @extend h4;
+  }
+  answer {
+    @extend p;
+  }
+}
+/*------------------------------------------
+# Footer
+------------------------------------------*/
+/*** LAYOUT ***/
+footer#ocf {
+  display: flex;
+}
+/*** APPERANCE ***/
+footer {
+  color: var(--palette--white);
+  background: var(--palette--theme);
+  font-family: var(--font--body);
+  font-size: var(--font--s);
+}
+
+/*** ANIMATIONS ***/

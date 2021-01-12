@@ -464,7 +464,7 @@ a[role=button] {
 }
 
 /* info & content */
-.blue:not(section[role=banner]) {
+.blue {
   background-color: var(--palette--theme);
   color: var(--palette--white);
 }
@@ -472,7 +472,7 @@ a[role=button] {
   background: radial-gradient(--palette--theme-darker, --palette--white);
 }
 
-.lightblue:not(section[role=banner]) {
+.lightblue:not([role=banner]) {
   background-color: var(--palette--theme-lighter);
   color: var(--palette--white);
 }
@@ -480,7 +480,7 @@ a[role=button] {
   background: radial-gradient(--palette--theme-darker, --palette--white);
 }
 
-.white:not(section[role=banner]) {
+.white:not([role=banner]) {
   background-color: var(--palette--white);
   color: var(--palette--black);
 }
@@ -488,7 +488,7 @@ a[role=button] {
   background: radial-gradient(--palette--white, --palette--grey);
 }
 
-.pink:not(section[role=banner]) {
+.pink:not([role=banner]) {
   background-color: var(--palette--accent-lighter);
   color: var(--palette--accent-darker);
 }
@@ -569,17 +569,3 @@ footer {
 }
 
 /*** ANIMATIONS ***/
-/*--------------------------------------------------------------
-# Debug Use
---------------------------------------------------------------*/
-body {
-  border: 5px solid yellow !important;
-}
-
-body * {
-  border: 1px solid red !important;
-}
-
-body *:hover {
-  border: 1px solid blue !important;
-}

@@ -1,25 +1,20 @@
 /*------------------------------------------
 # Custom Components
 ------------------------------------------*/
-/* Social Media */
-.contact {
-  @include FlexRow; // for child elements
-}
 /* Logo */
 img[role="logo"] {
   height: minmax(20px, 20vw);
   width: minmax(20px, 20vw);
 }
 
-footer img[role="logo"] {
-  height: auto;
-  width: 50%; /* w.r.t.  grid slot */
-}
+/* Buttons */
 a[role] {
-  /* navtabs and social-media buttons */
   text-decoration: none;
 }
+
+/* Social Media */
 .contact {
+  @include FlexRow; // for child elements
   padding: 0.5em;
 }
 /*--------------------------------------------------------------
@@ -86,14 +81,14 @@ a[role] {
  */
 
 /*** LAYOUT ***/
-/* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
 navbar {
+  /* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
   position: fixed;
-
+  height: 7.5vh;
   @include Grid(space-around, space-around); // for child elements
-  grid-template-columns: repeat(9, 1fr) 0.1fr;
+  grid-template-columns: 0.3fr 1fr 1fr 1fr 1.2fr 1.2fr 1.2fr 1fr 1fr 1fr 0.3fr;
   grid-template-rows: auto;
-  grid-template-areas: ". . . navtab navtab navtab . contact contact .";
+  grid-template-areas: ". . . . navtab navtab navtab . contact contact .";
 
   #navtabs {
     grid-area: navtab;
@@ -112,89 +107,86 @@ navbar {
   .contact {
     grid-area: contact;
   }
-}
-/* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
-navbar #sidenav {
-  @include fix-to-page;
-  @include topLeft;
-  z-index: var(--level--roof); /* Stay on top */ //TODO check if this works
+  /* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
 
-  height: 100vh; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
+  #sidenav {
+    @include fix-to-page;
+    @include topLeft;
+    z-index: var(--level--roof); /* Stay on top */ //TODO check if this works
 
-  @include FlexCol; // for child elements
-  overflow-x: hidden; /* Disable horizontal scroll */
-}
+    height: 100vh; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
 
-/* used for breakpoints */
-#open-nav-btn,
-#close-nav-btn {
+    @include FlexCol; // for child elements
+    overflow-x: hidden; /* Disable horizontal scroll */
+  }
   /* used for breakpoints */
-  display: none;
+  #open-nav-btn,
+  #close-nav-btn {
+    /* used for breakpoints */
+    display: none;
+  }
 }
 
 /*** APPEARANCE ***/
 navbar {
   background: var(--palette--white);
-  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
-}
+  box-shadow: var(--little-dropshadow);
 
-#sidenav {
-  background: var(--palette--theme);
-  color: var(--palette--white);
-  // padding-top: 60px; /* Place content 60px from the top */
-  > a[role="button"] {
-    width: 100%;
-    font-size: var(--font--medium);
-    border-top: 1px solid var(--palette--white);
-    border-bottom: 1px solid var(--palette--white);
-    color: var(--palette--white);
-    &:hover {
-      background-color: var(--palette--theme-lighter);
-    }
-  }
-  #close-nav-btn {
-    position: absolute;
-    @include topRight(2%, 2%);
-    font-size: var(--font--medium);
-  }
-}
-
-#navtabs {
-  > a[role="button"] {
-    font-size: var(--font--small);
-    font-family: var(--font--main);
-    text-transform: lowercase;
-
-    color: var(--palette--black);
-
-    // padding: 2em 2em;
-    // margin: 0em 2em;
-
-    &:hover {
-      // top: -6px;
+  #navtabs {
+    > a[role="button"] {
+      // border-top: none;
       border-radius: 0px 0px var(--corner-roundedness) var(--corner-roundedness);
-      color: var(--palette--white);
-      background-color: var(--palette--theme);
+      box-shadow: var(--little-dropshadow);
+
+      font-size: var(--font--small);
+      font-family: var(--font--main);
+      text-transform: lowercase;
+
+      background-color: var(--palette--white);
+      color: var(--palette--black);
+
+      &:hover {
+        color: var(--palette--white);
+        background-color: var(--palette--theme);
+      }
+    }
+    &#homebanner {
+      background: linear-gradient(transparent, 80%, var(--palette--theme)),
+        url("../images/group1.jpg");
+    }
+    &#aboutbanner {
+      background: url("../images/group2.jpg");
+    }
+    &#auditionsbanner {
+      background: url("../images/group3.jpg");
     }
   }
-  &#homebanner {
-    background: linear-gradient(transparent, 80%, var(--palette--theme)),
-      url("../images/group1.jpg");
+  #sidenav {
+    background: var(--palette--theme);
+    color: var(--palette--white);
+    // padding-top: 60px; /* Place content 60px from the top */
+    > a[role="button"] {
+      width: 100%;
+      font-size: var(--font--medium);
+      border-top: 1px solid var(--palette--white);
+      border-bottom: 1px solid var(--palette--white);
+      color: var(--palette--white);
+      &:hover {
+        background-color: var(--palette--theme-lighter);
+      }
+    }
+    #close-nav-btn {
+      position: absolute;
+      @include topRight(2%, 2%);
+      font-size: var(--font--medium);
+    }
   }
-  &#aboutbanner {
-    background: url("../images/group2.jpg");
-  }
-  &#auditionsbanner {
-    background: url("../images/group3.jpg");
+  #open-nav-btn,
+  #close-nav-btn {
+    font-size: var(--font--medium);
   }
 }
-
-#open-nav-btn,
-#close-nav-btn {
-  font-size: var(--font--medium);
-}
-
 /*** ANIMATIONS ***/
 
 #navtabs > a[role="button"] {
@@ -223,57 +215,82 @@ section a[role="button"] {
   border: var(--little-border);
 }
 
-.blue {
-  // &:not(section[role="banner"]) {
-  background-color: var(--palette--theme);
-  color: var(--palette--white);
-  // }
-  a[role="button"] {
-    background: radial-gradient(--palette--theme-darker, --palette--white);
-    &:hover {
-      background-color: var(--palette--theme-lighter);
-    }
-  }
-}
-.lightblue {
-  &:not([role="banner"]) {
-    background-color: var(--palette--theme-lighter);
-    color: var(--palette--white);
-  }
-  a[role="button"] {
-    background: radial-gradient(--palette--theme-darker, --palette--white);
-    &:hover {
-      background-color: var(--palette--theme-darker);
-    }
-  }
-}
-.white {
-  &:not([role="banner"]) {
+/* color sections */
+section:not([role="banner"]) {
+  &.white {
     background-color: var(--palette--white);
     color: var(--palette--black);
   }
-  a[role="button"] {
-    background: radial-gradient(--palette--white, --palette--grey);
-    &:hover {
-      background-color: var(--palette--theme-darker);
-    }
+  &.blue {
+    background-color: var(--palette--theme);
+    color: var(--palette--white);
   }
-}
-.pink {
-  &:not([role="banner"]) {
+  &.lightblue {
+    background-color: var(--palette--theme-lighter);
+    color: var(--palette--black);
+  }
+  &.pink {
+    background-color: var(--palette--accent);
+    color: var(--palette--white);
+  }
+  &.lightpink {
     background-color: var(--palette--accent-lighter);
     color: var(--palette--accent-darker);
   }
-  a[role="button"] {
-    background: radial-gradient(
-      --palette--accent-lighter,
-      --palette--accent-darker
-    );
-    &:hover {
-      background-color: var(--palette--theme-darker);
-    }
+}
+
+/* color buttons */
+@mixin setButton($bk1, $text1, $bk2, $text2) {
+  background-color: $bk1;
+  color: $text1;
+  &:hover {
+    background-color: $bk2;
+    color: $text2;
   }
 }
+main a[role="button"] {
+  &.white {
+    @include setButton(
+      var(--palette--white),
+      var(--palette--black),
+      var(--palette--grey),
+      var(--palette--black)
+    );
+  }
+  &.blue {
+    @include setButton(
+      var(--palette--theme),
+      var(--palette--white),
+      var(--palette--theme-lighter),
+      var(--palette--theme-darker)
+    );
+  }
+  &.lightblue {
+    @include setButton(
+      var(--palette--theme-lighter),
+      var(--palette--theme-darker),
+      var(--palette--theme),
+      var(--palette--white)
+    );
+  }
+  &.pink {
+    @include setButton(
+      var(--palette--accent-darker),
+      var(--palette--white),
+      var(--palette--accent),
+      var(--palette--white)
+    );
+  }
+  &.lightpink {
+    @include setButton(
+      var(--palette--accent-lighter),
+      var(--palette--black),
+      var(--palette--accent),
+      var(--palette--white)
+    );
+  }
+}
+
 /*** ANIMATIONS ***/
 
 /*------------------------------------------
@@ -335,16 +352,22 @@ section[role="banner"] {
   margin: 0.5em;
   border-radius: var(--corner-roundedness);
 }
+
 /*** ANIMATIONS ***/
-a[role="button"] {
-  transition: color 0.4s ease-in-out;
-}
+// a[role="button"] {
+//   transition: color 0.4s ease-in-out;
+// }
+
 /*------------------------------------------
 # Footer
 ------------------------------------------*/
 /*** LAYOUT ***/
 footer#ocf {
   display: flex;
+}
+footer img[role="logo"] {
+  height: auto;
+  width: 50%; /* w.r.t.  grid slot */
 }
 /*** APPERANCE ***/
 footer {

@@ -106,6 +106,7 @@ body {
 }
 
 navbar {
+  width: 100vw;
   overflow: visible;
 }
 
@@ -231,6 +232,24 @@ table {
   justify-content: space-evenly;
 }
 
+/* Logo */
+img[role=logo] {
+  height: minmax(20px, 20vw);
+  width: minmax(20px, 20vw);
+}
+
+.banner img[role=logo] {
+  height: auto;
+  width: 20%;
+  /* w.r.t. viewport */
+}
+
+footer img[role=logo] {
+  height: auto;
+  width: 50%;
+  /* w.r.t.  grid slot */
+}
+
 /*--------------------------------------------------------------
 # Font Awesome Icons
 --------------------------------------------------------------*/
@@ -257,8 +276,6 @@ table {
 .fab:hover {
   color: var(--palette--white);
   background: var(--palette--accent);
-  position: relative;
-  top: -5px;
 }
 
 .fas.fa-youtube:hover,
@@ -296,7 +313,7 @@ table {
     /* color: #fff; */
 }
 
-/*** RESPONSIVE ***/
+/*** ANIMATIONS ***/
 .fas,
 .fab {
   /* property name | duration | easing function | delay */
@@ -306,27 +323,40 @@ table {
 /*--------------------------------------------------------------
 # Navbar
 --------------------------------------------------------------*/
+/* Note
+ * #navtabs hides and #sidenav shows for small screens 
+ */
 /*** LAYOUT ***/
-navbar {
-  display: inline-flex;
-}
-
-navbar {
-  max-height: 20vh;
-  width: 100vw;
-  margin: 0%-var(--gutter-tb), 0%-var(--gutter-lr);
-}
 navbar #navtabs {
-  display: Grid;
-  gap: 10px;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: space-evenly;
   align-content: space-evenly;
+  justify-items: space-evenly;
   justify-content: space-evenly;
-  grid-auto-rows: minmax(10px, auto);
-  grid-auto-columns: minmax(10px, auto);
+  position: relative;
   top: 0px;
   left: 50%;
   transform: translate(-50%, 0);
+  overflow: visible;
 }
+
+navbar #sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  align-content: space-evenly;
+  justify-items: space-evenly;
+  justify-content: space-evenly;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: var(--level--roof);
+  /* Stay on top */
+}
+
 navbar .contact {
   position: absolute;
   top: 0%;
@@ -334,12 +364,20 @@ navbar .contact {
   transform: translate(0, 25%);
 }
 
+button {
+  /* used for breakpoints */
+}
+button#open-nav-btn, button#close-nav-btn {
+  display: none;
+}
+
 /*** APPEARANCE ***/
 navbar {
   background: var(--palette--white);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
 }
-navbar #navtabs > a[role=button] {
+
+#navtabs > a[role=button] {
   font-size: var(--font--s);
   font-family: var(--font--main);
   text-transform: lowercase;
@@ -347,30 +385,25 @@ navbar #navtabs > a[role=button] {
   padding: 2em 2em;
   margin: 0em 2em;
 }
-navbar #navtabs > a[role=button]:hover {
+#navtabs > a[role=button]:hover {
+  top: -6px;
+  border-radius: 0px 0px 10px 10px;
   color: var(--palette--white);
   background: var(--palette--theme);
 }
-navbar #open-nav-btn {
+#navtabs > a[role=button]:active {
+  /* when clicked */
+}
+
+#open-nav-btn {
   font-size: var(--font--m);
 }
 
-#navtabs a {
-  border-radius: 0px 0px 10px 10px;
+/*** ANIMATIONS ***/
+#navtabs > a[role=button] {
+  transition: top 0.15s ease-in-out;
 }
 
-/*** RESPONSIVE ***/
-/* display controlled by javascript */
-#open-nav-btn {
-  display: none;
-}
-
-#close-nav-btn {
-  display: none;
-}
-
-/* #navtabs changes to #sidenav in small screens */
-/* Interactive */
 #sidenav {
   position: fixed;
   top: 0%;
@@ -532,4 +565,19 @@ footer {
 
 #ocf {
   display: flex;
+}
+
+/*--------------------------------------------------------------
+# Debug Use
+--------------------------------------------------------------*/
+body {
+  border: 5px solid yellow !important;
+}
+
+body * {
+  border: 1px solid red !important;
+}
+
+body *:hover {
+  border: 1px solid blue !important;
 }

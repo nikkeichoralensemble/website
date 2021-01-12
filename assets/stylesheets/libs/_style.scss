@@ -5,6 +5,19 @@
 .contact {
   @include FlexRow(space-evenly);
 }
+/* Logo */
+img[role="logo"] {
+  height: minmax(20px, 20vw);
+  width: minmax(20px, 20vw);
+}
+.banner img[role="logo"] {
+  height: auto;
+  width: 20%; /* w.r.t. viewport */
+}
+footer img[role="logo"] {
+  height: auto;
+  width: 50%; /* w.r.t.  grid slot */
+}
 
 /*--------------------------------------------------------------
 # Font Awesome Icons
@@ -24,7 +37,7 @@
   &:hover {
     color: var(--palette--white);
     background: var(--palette--accent);
-    @include shiftUp;
+    // @include shiftUp;
   }
 }
 
@@ -69,7 +82,7 @@
   /* color: #fff; */
 }
 
-/*** RESPONSIVE ***/
+/*** ANIMATIONS ***/
 .fas,
 .fab {
   /* property name | duration | easing function | delay */
@@ -79,27 +92,37 @@
 /*--------------------------------------------------------------
 # Navbar
 --------------------------------------------------------------*/
+/* Note
+ * #navtabs hides and #sidenav shows for small screens 
+ */
+
 /*** LAYOUT ***/
-navbar {
-  display: inline-flex;
+navbar #navtabs {
+  width: 60%; // equals to 60vw since parent is navbar
+  @include FlexRow;
+  @include dead-center;
+  overflow: visible;
 }
 
-navbar {
-  max-height: 20vh;
-  @include fill-width;
-  @include inner-margin;
+navbar #sidenav {
+  @include FlexCol;
+  height: 100vh;
+  @include fix-to-page;
+  @include topLeft;
+  z-index: var(--level--roof); /* Stay on top */ //TODO check if this works
+}
 
-  #navtabs {
-    @include Grid;
-    // display: inline-flex;
-    // @include fix-to-parent;
-    // position: relative;
-    @include dead-center;
-  }
-  .contact {
-    @include fix-to-parent;
-    @include topRight;
-    transform: translate(0, 25%);
+navbar .contact {
+  @include fix-to-parent;
+  @include topRight;
+  transform: translate(0, 25%);
+}
+
+button {
+  /* used for breakpoints */
+  &#open-nav-btn,
+  &#close-nav-btn {
+    display: none;
   }
 }
 
@@ -107,56 +130,41 @@ navbar {
 navbar {
   background: var(--palette--white);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
-  #navtabs > a[role="button"] {
-    font-size: var(--font--s);
-    font-family: var(--font--main);
-    text-transform: lowercase;
-    color: var(--palette--black);
-    padding: 2em 2em;
-    margin: 0em 2em;
-    &:hover {
-      color: var(--palette--white);
-      background: var(--palette--theme);
-    }
+}
+
+#navtabs > a[role="button"] {
+  font-size: var(--font--s);
+  font-family: var(--font--main);
+  text-transform: lowercase;
+
+  color: var(--palette--black);
+  padding: 2em 2em;
+  margin: 0em 2em;
+
+  &:hover {
+    top: -6px;
+    border-radius: 0px 0px 10px 10px;
+    color: var(--palette--white);
+    background: var(--palette--theme);
   }
-  #open-nav-btn {
-    font-size: var(--font--m);
+  &:active {
+    /* when clicked */
   }
 }
 
-#navtabs a {
-  border-radius: 0px 0px 10px 10px;
-  //   top: -6px;
-  //   transition: top 0.15s ease-in-out;
-  //   transition: background-color 0.075s ease-in-out, color 0.075s ease-in-out;
-  // }
-  // #navtabs a:hover,
-  // #nav a.active {
-  //   top: 3px;
-  // }
-  // #navtavs a:hover {
-  //   background: var(--palette--accent-lighter);
-  //   color: var(--palette--black);
-  // top: -6px;
-  // transition: top .15s ease-in-out;
-  // transition: background-color .075s ease-in-out, color .075s ease-in-out;
-}
-
-/*** RESPONSIVE ***/
-
-/* display controlled by javascript */
 #open-nav-btn {
-  display: none;
+  font-size: var(--font--m);
 }
-#close-nav-btn {
-  display: none;
+
+/*** ANIMATIONS ***/
+
+#navtabs > a[role="button"] {
+  transition: top 0.15s ease-in-out;
+  // transition: background-color .075s ease-in-out, color .075s ease-in-out;
 }
 
 // TODO fix sidebar
 
-/* #navtabs changes to #sidenav in small screens */
-
-/* Interactive */
 #sidenav {
   @include fix-to-page;
   @include topLeft;

@@ -329,12 +329,15 @@ section#faq {
 # Footer
 ------------------------------------------*/
 /*** LAYOUT ***/
+footer#ocf {
+  display: flex;
+}
+/*** APPERANCE ***/
 footer {
   color: var(--palette--white);
   background: var(--palette--theme);
   font-family: var(--font--body);
   font-size: var(--font--s);
 }
-#ocf {
-  display: flex;
-}
+
+/*** ANIMATIONS ***/

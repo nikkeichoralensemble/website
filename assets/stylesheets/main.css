@@ -258,12 +258,13 @@ footer img[role=logo] {
 .fab {
   height: 45px;
   width: 45px;
-  border-radius: 22.5px;
   font-size: 22.5px;
   line-height: 45px;
-  vertical-align: baseline;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 22.5px;
+  /* make circle */
   margin: 4.5px;
-  padding: 0.9px;
 }
 
 /*** APPEARANCE ***/
@@ -556,6 +557,11 @@ section[role=banner]#auditionsbanner {
 # Footer
 ------------------------------------------*/
 /*** LAYOUT ***/
+footer#ocf {
+  display: flex;
+}
+
+/*** APPERANCE ***/
 footer {
   color: var(--palette--white);
   background: var(--palette--theme);
@@ -563,10 +569,7 @@ footer {
   font-size: var(--font--s);
 }
 
-#ocf {
-  display: flex;
-}
-
+/*** ANIMATIONS ***/
 /*--------------------------------------------------------------
 # Debug Use
 --------------------------------------------------------------*/

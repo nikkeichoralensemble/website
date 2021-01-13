@@ -313,7 +313,7 @@ section[role="banner"] {
   @include Grid;
   grid-template-rows: repeat(5, 1fr) repeat(3, auto) 0.2fr auto 0.5fr;
   grid-template-areas: "." "." "." "." "." "logo" "title" "subtitle" "." "button" ".";
-  row-gap: 0px;
+  row-gap: 1px;
 
   img[role="logo"] {
     grid-area: logo;

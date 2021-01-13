@@ -718,7 +718,7 @@ section[role="banner"] img[role="logo"] {
   -ms-grid-column: 1;
   grid-area: logo;
   height: auto;
-  width: 10%;
+  width: 15%;
   /* w.r.t. viewport */
 }
 

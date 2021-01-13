@@ -218,6 +218,15 @@ section a[role="button"] {
   box-shadow: var(--little-shadow);
 }
 
+/* color exceptions */
+.pinktext {
+  color: var(--palette--accent-darker);
+}
+
+.whitetext {
+  color: var(--palette--white);
+}
+
 /* color sections */
 section:not([role="banner"]) {
   &.white {

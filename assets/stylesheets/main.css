@@ -4,7 +4,7 @@
 #
 --------------------------------------------------------------*/
 /* Webfonts Setup */
-@import url(/Users/Jessica/Desktop/miscCS/website/assets/stylesheets/fontawesome-all.min.css);
+@import url(c:\Users\jiang\Documents\NiCE\website\website\assets\stylesheets\fontawesome-all.min.css);
 @font-face {
   font-family: "RalewayMedium";
   src: url("../webfonts/Raleway-Medium.ttf") format("truetype");
@@ -221,16 +221,19 @@ h6 {
 h1 {
   font-family: var(--font--main-bold);
   font-size: var(--font--xlarge);
+  color: var(--palette--white);
 }
 
 h2 {
   font-size: var(--font--large);
   text-transform: lowercase;
+  color: var(--palette--black);
 }
 
 p {
   font-size: var(--font--regular);
   margin: 1em;
+  color: var(--palette--black);
 }
 
 /*------------------------------------------
@@ -584,6 +587,15 @@ section a[role="button"] {
           box-shadow: var(--little-shadow);
 }
 
+/* color exceptions */
+.pinktext {
+  color: var(--palette--accent-darker);
+}
+
+.whitetext {
+  color: var(--palette--white);
+}
+
 /* color sections */
 section:not([role="banner"]).white {
   background-color: var(--palette--white);
@@ -681,10 +693,9 @@ section[role="banner"] {
           justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  -ms-grid-rows: (1fr)[5] (auto)[3] 0.2fr auto 0.5fr;
-      grid-template-rows: repeat(5, 1fr) repeat(3, auto) 0.2fr auto 0.5fr;
-      grid-template-areas: "." "." "." "." "." "logo" "title" "subtitle" "." "button" ".";
-  row-gap: 0px;
+  -ms-grid-rows: (1fr)[5] (auto)[4] 0.5fr;
+      grid-template-rows: repeat(5, 1fr) repeat(4, auto) 0.5fr;
+      grid-template-areas: "." "." "." "." "." "logo" "title" "title" "subtitle" "button" ".";
 }
 
 section[role="banner"] > * {
@@ -702,12 +713,13 @@ section[role="banner"] img[role="logo"] {
 
 section[role="banner"] h1 {
   -ms-grid-row: 7;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: title;
 }
 
 section[role="banner"] p {
-  -ms-grid-row: 8;
+  -ms-grid-row: 9;
   -ms-grid-column: 1;
   grid-area: subtitle;
 }

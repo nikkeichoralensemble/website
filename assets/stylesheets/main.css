@@ -848,6 +848,30 @@ section[role="banner"]#auditionsbanner {
   background-image: url("../images/group3.jpg");
 }
 
+/* Current Members */
+.profilebutton:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-box-shadow: 0 0 6px 0 var(--palette--theme);
+          box-shadow: 0 0 6px 0 var(--palette--theme);
+}
+
+.profilebutton:hover .memberphoto {
+  opacity: 0.3;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.profilebutton:hover h3 {
+  color: var(--palette--accent);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.profilebutton span {
+  opacity: 0;
+}
+
 /* FAQ */
 #faq details {
   background-color: #f6f7f8;

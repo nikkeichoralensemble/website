@@ -238,7 +238,7 @@ navbar {
 }
 
 #samee {
-  background: url("../images/samee.jpg");
+  background: url("../images/samee.jpg"), ;
   background-size: cover;
   background-position: center;
 }
@@ -438,6 +438,25 @@ section[role="banner"] {
     height: 50vh; /* change this to fit image */
     background-image: url("../images/group3.jpg");
   }
+}
+
+/* Current Members */
+.profilebutton:hover {
+  transition: all 0.5s;
+  box-shadow: 0 0 6px 0 var(--palette--theme);
+  .memberphoto {
+    opacity: 0.3;
+    transition: all 0.5s;
+  }
+  h3 {
+    color: var(--palette--accent);
+    // opacity: 0.3;
+    transition: all 0.5s;
+  }
+}
+
+.profilebutton span {
+  opacity: 0;
 }
 
 /* FAQ */

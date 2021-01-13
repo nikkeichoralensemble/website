@@ -302,14 +302,15 @@ main a[role="button"] {
 /*** LAYOUT ***/
 section[role="banner"] {
   @include Grid;
-  grid-template-rows: repeat(5, 1fr) repeat(4, auto) 0.5fr;
-  grid-template-areas: "." "." "." "." "." "logo" "title" "title" "subtitle" "button" ".";
+  grid-template-rows: repeat(5, 1fr) repeat(3, auto) 0.2fr auto 0.5fr;
+  grid-template-areas: "." "." "." "." "." "logo" "title" "subtitle" "." "button" ".";
+  row-gap: 0px;
 
   img[role="logo"] {
     grid-area: logo;
 
     height: auto;
-    width: 10%; /* w.r.t. viewport */
+    width: 15%; /* w.r.t. viewport */
   }
   h1 {
     grid-area: title;

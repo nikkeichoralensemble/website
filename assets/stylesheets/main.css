@@ -4,7 +4,7 @@
 #
 --------------------------------------------------------------*/
 /* Webfonts Setup */
-@import url(/Users/Jessica/Desktop/miscCS/website/assets/stylesheets/fontawesome-all.min.css);
+@import url(c:\Users\jiang\Documents\NiCE\website\website\assets\stylesheets\fontawesome-all.min.css);
 @font-face {
   font-family: "RalewayMedium";
   src: url("../webfonts/Raleway-Medium.ttf") format("truetype");
@@ -575,6 +575,7 @@ navbar #close-nav-btn {
 # General Main Content
 ------------------------------------------*/
 /*** LAYOUT ***/
+/* Member Photos */
 .grid-container {
   display: -ms-grid;
   display: grid;
@@ -584,6 +585,23 @@ navbar #close-nav-btn {
 
 .grid-item {
   padding: 2em;
+}
+
+.memberphoto {
+  height: 400px;
+  width: 300px;
+}
+
+#samee {
+  background: url("../images/samee.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#emma {
+  background: url("../images/emma.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /*** APPEARANCE ***/
@@ -704,8 +722,8 @@ section[role="banner"] {
           justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  -ms-grid-rows: (1fr)[5] (auto)[3] 0.2fr auto 0.5fr;
-      grid-template-rows: repeat(5, 1fr) repeat(3, auto) 0.2fr auto 0.5fr;
+  -ms-grid-rows: (1fr)[5] (auto)[3] 0.3fr auto 0.5fr;
+      grid-template-rows: repeat(5, 1fr) repeat(3, auto) 0.3fr auto 0.5fr;
       grid-template-areas: "." "." "." "." "." "logo" "title" "subtitle" "." "button" ".";
   row-gap: 1px;
 }

@@ -208,12 +208,31 @@ navbar {
 # General Main Content
 ------------------------------------------*/
 /*** LAYOUT ***/
+
+/* Member Photos */
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
 }
 .grid-item {
   padding: 2em;
+}
+
+.memberphoto {
+  height: 400px;
+  width: 300px;
+}
+
+#samee {
+  background: url("../images/samee.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#emma {
+  background: url("../images/emma.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /*** APPEARANCE ***/
@@ -318,7 +337,7 @@ main a[role="button"] {
 /*** LAYOUT ***/
 section[role="banner"] {
   @include Grid;
-  grid-template-rows: repeat(5, 1fr) repeat(3, auto) 0.2fr auto 0.5fr;
+  grid-template-rows: repeat(5, 1fr) repeat(3, auto) 0.3fr auto 0.5fr;
   grid-template-areas: "." "." "." "." "." "logo" "title" "subtitle" "." "button" ".";
   row-gap: 1px;
 

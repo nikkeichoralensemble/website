@@ -575,6 +575,17 @@ navbar #close-nav-btn {
 # General Main Content
 ------------------------------------------*/
 /*** LAYOUT ***/
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+  padding: 2em;
+}
+
 /*** APPEARANCE ***/
 section a[role="button"] {
   width: -webkit-max-content;

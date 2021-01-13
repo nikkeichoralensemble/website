@@ -337,7 +337,7 @@ main a[role="button"] {
 /*** LAYOUT ***/
 section[role="banner"] {
   @include Grid;
-  grid-template-rows: repeat(5, 1fr) repeat(3, auto) 0.3fr auto 0.5fr;
+  grid-template-rows: repeat(5, 1fr) repeat(3, auto) 0.5fr auto 0.3fr;
   grid-template-areas: "." "." "." "." "." "logo" "title" "subtitle" "." "button" ".";
   row-gap: 1px;
 
@@ -365,6 +365,7 @@ section[role="banner"] {
   background-position: center center;
   h1 {
     color: var(--palette--white);
+    line-height: 1;
   }
   p {
     color: var(--palette--grey);

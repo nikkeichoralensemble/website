@@ -208,6 +208,13 @@ navbar {
 # General Main Content
 ------------------------------------------*/
 /*** LAYOUT ***/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.grid-item {
+  padding: 2em;
+}
 
 /*** APPEARANCE ***/
 section a[role="button"] {

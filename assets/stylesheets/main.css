@@ -4,31 +4,37 @@
 #
 --------------------------------------------------------------*/
 /* Webfonts Setup */
-@import "fontawesome-all.min.css";
+@import url(c:\Users\jiang\Documents\NiCE\website\website\assets\stylesheets\fontawesome-all.min.css);
 @font-face {
   font-family: "RalewayMedium";
   src: url("../webfonts/Raleway-Medium.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "RalewayMediumItalic";
   src: url("../webfonts/Raleway-MediumItalic.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "RalewayExtraLight";
   src: url("../webfonts/Raleway-ExtraLight.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "RalewayExtraLightItalic";
   src: url("../webfonts/Raleway-ExtraLightItalic.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "RalewayBold";
   src: url("../webfonts/Raleway-Bold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "GothicA1";
   src: url("../webfonts/GothicA1-Regular.ttf") format("truetype");
 }
+
 /* Global Variables */
 :root {
   /*** LAYOUT ***/
@@ -85,7 +91,8 @@
 # Global Reset
 --------------------------------------------------------------*/
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0px;
   margin: 0px;
   border: none;
@@ -106,8 +113,10 @@ html {
 body {
   min-height: 100%;
   /* fill up the whole screen */
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
   /* navbar main footer */
 }
 
@@ -123,17 +132,26 @@ section {
 
 footer {
   width: 100vw;
+  display: -ms-inline-grid;
   display: inline-grid;
   gap: 10px;
-  align-items: space-evenly;
-  align-content: space-evenly;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
   justify-items: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
 }
+
 footer > * {
   margin: 0px !important;
 }
@@ -148,15 +166,22 @@ body {
 
 section {
   padding: var(--gutter);
+  display: -ms-inline-grid;
   display: inline-grid;
   gap: 10px;
-  align-items: space-evenly;
-  align-content: space-evenly;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
   justify-items: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
 }
+
 section > * {
   margin: 0px !important;
 }
@@ -196,16 +221,19 @@ h6 {
 h1 {
   font-family: var(--font--main-bold);
   font-size: var(--font--xlarge);
+  color: var(--palette--white);
 }
 
 h2 {
   font-size: var(--font--large);
   text-transform: lowercase;
+  color: var(--palette--black);
 }
 
 p {
   font-size: var(--font--regular);
   margin: 1em;
+  color: var(--palette--black);
 }
 
 /*------------------------------------------
@@ -229,6 +257,7 @@ blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before,
 q:after {
@@ -245,7 +274,7 @@ table {
 # Custom Components
 ------------------------------------------*/
 /* Logo */
-img[role=logo] {
+img[role="logo"] {
   height: minmax(20px, 20vw);
   width: minmax(20px, 20vw);
 }
@@ -258,13 +287,24 @@ a[role] {
 
 /* Social Media */
 .contact {
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
   display: inline-flex !important;
-  flex-direction: row;
-  flex-wrap: no-wrap;
-  align-items: space-evenly;
-  align-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
   justify-items: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 0.5em;
 }
 
@@ -291,6 +331,7 @@ a[role] {
   color: var(--palette--black);
   background-color: var(--palette--white);
 }
+
 .fas:hover,
 .fab:hover {
   color: var(--palette--white);
@@ -322,6 +363,7 @@ a[role] {
 .fas,
 .fab {
   /* property name | duration | easing function | delay */
+  -webkit-transition: position 2s ease-in-out 0.5s;
   transition: position 2s ease-in-out 0.5s;
 }
 
@@ -336,49 +378,77 @@ navbar {
   /* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
   position: fixed;
   height: 7.5vh;
+  display: -ms-inline-grid;
   display: inline-grid;
   gap: 10px;
-  align-items: space-around;
-  align-content: space-around;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
   justify-items: space-around;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  grid-template-columns: 0.3fr 1fr 1fr 1fr 1.2fr 1.2fr 1.2fr 1fr 1fr 1fr 0.3fr;
-  grid-template-rows: auto;
-  grid-template-areas: ". . . . navtab navtab navtab . contact contact .";
+  -ms-grid-columns: 0.3fr 1fr 1fr 1fr 1.2fr 1.2fr 1.2fr 1fr 1fr 1fr 0.3fr;
+      grid-template-columns: 0.3fr 1fr 1fr 1fr 1.2fr 1.2fr 1.2fr 1fr 1fr 1fr 0.3fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: ". . . . navtab navtab navtab . contact contact .";
   /* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
   /* used for breakpoints */
 }
+
 navbar > * {
   margin: 0px !important;
 }
+
 navbar #navtabs {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
   grid-area: navtab;
   overflow: visible;
+  display: -ms-inline-grid;
   display: inline-grid;
   gap: 10px;
-  align-items: space-evenly;
-  align-content: space-evenly;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
   justify-items: space-around;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   height: 100%;
   width: 100%;
 }
+
 navbar #navtabs > * {
   margin: 0px !important;
 }
-navbar #navtabs > a[role=button] {
+
+navbar #navtabs > a[role="button"] {
   line-height: 5;
-  justify-self: stretch;
-  align-self: stretch;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
 }
+
 navbar .contact {
+  -ms-grid-row: 1;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 2;
   grid-area: contact;
 }
+
 navbar #sidenav {
   position: fixed;
   top: 0%;
@@ -389,16 +459,28 @@ navbar #sidenav {
   /* 100% Full-height */
   width: 0;
   /* 0 width - change this with JavaScript */
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
   display: inline-flex !important;
-  flex-direction: column;
-  flex-wrap: no-wrap;
-  align-items: space-evenly;
-  align-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
   justify-items: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   overflow-x: hidden;
   /* Disable horizontal scroll */
 }
+
 navbar #open-nav-btn,
 navbar #close-nav-btn {
   /* used for breakpoints */
@@ -408,68 +490,84 @@ navbar #close-nav-btn {
 /*** APPEARANCE ***/
 navbar {
   background: var(--palette--white);
-  box-shadow: var(--little-dropshadow);
+  -webkit-box-shadow: var(--little-dropshadow);
+          box-shadow: var(--little-dropshadow);
 }
-navbar #navtabs > a[role=button] {
+
+navbar #navtabs > a[role="button"] {
   border: var(--little-border);
   border-top: none;
   border-radius: 0px 0px var(--corner-roundedness) var(--corner-roundedness);
-  box-shadow: var(--little-dropshadow);
+  -webkit-box-shadow: var(--little-dropshadow);
+          box-shadow: var(--little-dropshadow);
   font-size: var(--font--small);
   font-family: var(--font--main);
   text-transform: lowercase;
   background-color: var(--palette--white);
   color: var(--palette--black);
 }
-navbar #navtabs > a[role=button]:hover {
+
+navbar #navtabs > a[role="button"]:hover {
   color: var(--palette--white);
   background-color: var(--palette--theme);
 }
+
 navbar #navtabs#homebanner {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%), to(var(--palette--theme))), url("../images/group1.jpg");
   background: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group1.jpg");
 }
+
 navbar #navtabs#aboutbanner {
   background: url("../images/group2.jpg");
 }
+
 navbar #navtabs#auditionsbanner {
   background: url("../images/group3.jpg");
 }
+
 navbar #sidenav {
   background: var(--palette--theme);
   color: var(--palette--white);
 }
-navbar #sidenav > a[role=button] {
+
+navbar #sidenav > a[role="button"] {
   width: 100%;
   font-size: var(--font--medium);
   border-top: 1px solid var(--palette--white);
   border-bottom: 1px solid var(--palette--white);
   color: var(--palette--white);
 }
-navbar #sidenav > a[role=button]:hover {
+
+navbar #sidenav > a[role="button"]:hover {
   background-color: var(--palette--theme-lighter);
 }
+
 navbar #sidenav #close-nav-btn {
   position: absolute;
   top: 0%;
   right: 0%;
   font-size: var(--font--medium);
 }
+
 navbar #open-nav-btn,
 navbar #close-nav-btn {
   font-size: var(--font--medium);
 }
 
 /*** ANIMATIONS ***/
-#navtabs > a[role=button] {
+#navtabs > a[role="button"] {
+  -webkit-transition: top 0.15s ease-in-out;
   transition: top 0.15s ease-in-out;
 }
 
 #sidenav {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
 }
 
-#sidenav a[role=button] {
+#sidenav a[role="button"] {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -478,74 +576,99 @@ navbar #close-nav-btn {
 ------------------------------------------*/
 /*** LAYOUT ***/
 /*** APPEARANCE ***/
-section a[role=button] {
+section a[role="button"] {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   padding: 0.8em 1em;
   border-radius: var(--corner-roundedness);
   border: var(--little-border);
-  box-shadow: var(--little-shadow);
+  -webkit-box-shadow: var(--little-shadow);
+          box-shadow: var(--little-shadow);
+}
+
+/* color exceptions */
+.pinktext {
+  color: var(--palette--accent-darker);
+}
+
+.whitetext {
+  color: var(--palette--white);
 }
 
 /* color sections */
-section:not([role=banner]).white {
+section:not([role="banner"]).white {
   background-color: var(--palette--white);
   color: var(--palette--black);
 }
-section:not([role=banner]).blue {
+
+section:not([role="banner"]).blue {
   background-color: var(--palette--theme);
   color: var(--palette--white);
 }
-section:not([role=banner]).lightblue {
+
+section:not([role="banner"]).lightblue {
   background-color: var(--palette--theme-lighter);
   color: var(--palette--black);
 }
-section:not([role=banner]).pink {
+
+section:not([role="banner"]).pink {
   background-color: var(--palette--accent);
   color: var(--palette--white);
 }
-section:not([role=banner]).lightpink {
+
+section:not([role="banner"]).lightpink {
   background-color: var(--palette--accent-lighter);
   color: var(--palette--accent-darker);
 }
 
 /* color buttons */
-main a[role=button].white {
+main a[role="button"].white {
   background-color: var(--palette--white);
   color: var(--palette--black);
 }
-main a[role=button].white:hover {
+
+main a[role="button"].white:hover {
   background-color: var(--palette--grey);
   color: var(--palette--black);
 }
-main a[role=button].blue {
+
+main a[role="button"].blue {
   background-color: var(--palette--theme);
   color: var(--palette--white);
 }
-main a[role=button].blue:hover {
+
+main a[role="button"].blue:hover {
   background-color: var(--palette--theme-lighter);
   color: var(--palette--theme-darker);
 }
-main a[role=button].lightblue {
+
+main a[role="button"].lightblue {
   background-color: var(--palette--theme-lighter);
   color: var(--palette--theme-darker);
 }
-main a[role=button].lightblue:hover {
+
+main a[role="button"].lightblue:hover {
   background-color: var(--palette--theme);
   color: var(--palette--white);
 }
-main a[role=button].pink {
+
+main a[role="button"].pink {
   background-color: var(--palette--accent-darker);
   color: var(--palette--white);
 }
-main a[role=button].pink:hover {
+
+main a[role="button"].pink:hover {
   background-color: var(--palette--accent);
   color: var(--palette--white);
 }
-main a[role=button].lightpink {
+
+main a[role="button"].lightpink {
   background-color: var(--palette--accent-lighter);
   color: var(--palette--black);
 }
-main a[role=button].lightpink:hover {
+
+main a[role="button"].lightpink:hover {
   background-color: var(--palette--accent);
   color: var(--palette--white);
 }
@@ -555,60 +678,87 @@ main a[role=button].lightpink:hover {
 # Banner
 ------------------------------------------*/
 /*** LAYOUT ***/
-section[role=banner] {
+section[role="banner"] {
+  display: -ms-inline-grid;
   display: inline-grid;
   gap: 10px;
-  align-items: space-evenly;
-  align-content: space-evenly;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
   justify-items: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  grid-template-rows: repeat(5, 1fr) repeat(4, auto) 0.5fr;
-  grid-template-areas: "." "." "." "." "." "logo" "title" "title" "subtitle" "button" ".";
+  -ms-grid-rows: (1fr)[5] (auto)[4] 0.5fr;
+      grid-template-rows: repeat(5, 1fr) repeat(4, auto) 0.5fr;
+      grid-template-areas: "." "." "." "." "." "logo" "title" "title" "subtitle" "button" ".";
 }
-section[role=banner] > * {
+
+section[role="banner"] > * {
   margin: 0px !important;
 }
-section[role=banner] img[role=logo] {
+
+section[role="banner"] img[role="logo"] {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
   grid-area: logo;
   height: auto;
   width: 10%;
   /* w.r.t. viewport */
 }
-section[role=banner] h1 {
+
+section[role="banner"] h1 {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
   grid-area: title;
 }
-section[role=banner] p {
+
+section[role="banner"] p {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
   grid-area: subtitle;
 }
-section[role=banner] a[role=button] {
+
+section[role="banner"] a[role="button"] {
+  -ms-grid-row: 10;
+  -ms-grid-column: 1;
   grid-area: button;
 }
 
 /*** APPEARANCE ***/
-section[role=banner] {
+section[role="banner"] {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
-section[role=banner] h1 {
+
+section[role="banner"] h1 {
   color: var(--palette--white);
 }
-section[role=banner] p {
+
+section[role="banner"] p {
   color: var(--palette--grey);
 }
-section[role=banner]#homebanner {
+
+section[role="banner"]#homebanner {
   height: 100vh;
   /* change this to fit image */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%), to(var(--palette--theme))), url("../images/group1.jpg");
   background-image: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group1.jpg");
 }
-section[role=banner]#aboutbanner {
+
+section[role="banner"]#aboutbanner {
   height: 50vh;
   /* change this to fit image */
   background-image: url("../images/group2.jpg");
 }
-section[role=banner]#auditionsbanner {
+
+section[role="banner"]#auditionsbanner {
   height: 50vh;
   /* change this to fit image */
   background-image: url("../images/group3.jpg");
@@ -628,10 +778,12 @@ section[role=banner]#auditionsbanner {
 ------------------------------------------*/
 /*** LAYOUT ***/
 footer#ocf {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
-footer img[role=logo] {
+footer img[role="logo"] {
   height: auto;
   width: 50%;
   /* w.r.t.  grid slot */
@@ -646,3 +798,4 @@ footer {
 }
 
 /*** ANIMATIONS ***/
+/*# sourceMappingURL=main.css.map */

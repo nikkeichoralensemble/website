@@ -106,14 +106,17 @@ h6 {
 h1 {
   font-family: var(--font--main-bold);
   font-size: var(--font--xlarge);
+  color: var(--palette--white);
 }
 h2 {
   font-size: var(--font--large);
   text-transform: lowercase;
+  color: var(--palette--black)
 }
 p {
   font-size: var(--font--regular);
   margin: 1em;
+  color: var(--palette--black);
 }
 
 /*------------------------------------------

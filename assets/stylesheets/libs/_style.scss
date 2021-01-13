@@ -218,6 +218,20 @@ navbar {
   padding: 2em;
 }
 
+.profilebutton {
+  background-color: var(--palette--white);
+  border-style: solid;
+  border-width: 10px; 
+  border-color: var(--palette--white);
+  border-radius: 3px;
+  outline: none;
+}
+
+#currentmembers h3 {
+  color: var(--palette--theme-darker);
+  padding-top: 0.5em;
+}
+
 .memberphoto {
   height: 400px;
   width: 300px;
@@ -231,6 +245,48 @@ navbar {
 
 #emma {
   background: url("../images/emma.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#roger {
+  background: url("../images/roger.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#jessica {
+  background: url("../images/jessica.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#april {
+  background: url("../images/april.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#jon {
+  background: url("../images/jon.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#hiro {
+  background: url("../images/hiro.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#extra1 {
+  background: url("../images/extra1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#extra2 {
+  background: url("../images/extra2.jpg");
   background-size: cover;
   background-position: center;
 }

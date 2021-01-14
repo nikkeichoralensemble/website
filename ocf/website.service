@@ -1,0 +1,10 @@
+[Unit]
+Description=Nikkei Choral Ensemble Webapp
+ConditionHost=vampires
+
+[Install]
+WantedBy=default.target
+
+[Service]
+ExecStart=/home/n/ni/nice/website/run
+Restart=always

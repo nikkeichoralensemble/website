@@ -221,7 +221,7 @@ navbar {
 .profilebutton {
   background-color: var(--palette--white);
   border-style: solid;
-  border-width: 10px; 
+  border-width: 10px;
   border-color: var(--palette--white);
   border-radius: 3px;
   outline: none;
@@ -238,7 +238,7 @@ navbar {
 }
 
 #samee {
-  background: url("../images/samee.jpg"), ;
+  background: url("../images/samee.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -300,11 +300,10 @@ section a[role="button"] {
   box-shadow: var(--little-shadow);
 }
 
-/* color exceptions */
+/* color text */
 .pinktext {
   color: var(--palette--accent-darker);
 }
-
 .whitetext {
   color: var(--palette--white);
 }
@@ -486,10 +485,12 @@ footer img[role="logo"] {
 }
 /*** APPERANCE ***/
 footer {
-  color: var(--palette--white);
   background: var(--palette--theme);
-  font-family: var(--font--body);
-  font-size: var(--font--small);
+  p {
+    color: var(--palette--white);
+    font-family: var(--font--main);
+    font-size: var(--font--small);
+  }
 }
 
 /*** ANIMATIONS ***/

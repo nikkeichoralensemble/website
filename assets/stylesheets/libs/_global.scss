@@ -111,7 +111,13 @@ h1 {
 h2 {
   font-size: var(--font--large);
   text-transform: lowercase;
-  color: var(--palette--black)
+  color: var(--palette--black);
+}
+
+b {
+  font-family: var(--font--main-bold);
+  line-height: 1.6em;
+  font-weight: bold;
 }
 p {
   font-size: var(--font--regular);

@@ -1,4 +1,4 @@
-#!/home/u/us/user/website/venv/bin/python
+#!/home/n/ni/nice/website/env/bin/python3
 import os
 import sys
 

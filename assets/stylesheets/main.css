@@ -734,6 +734,7 @@ section[role=banner]#auditionsbanner {
 
 /* FAQ */
 #faq details {
+  width: 70vw;
   background-color: #f6f7f8;
   padding: 0.5em;
   margin: 0.5em;

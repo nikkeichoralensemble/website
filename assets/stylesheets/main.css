@@ -206,8 +206,6 @@ h2 {
 
 b {
   font-family: var(--font--main-bold);
-  line-height: 1.6em;
-  font-weight: bold;
 }
 
 p {
@@ -758,6 +756,10 @@ footer img[role=logo] {
 }
 
 /*** APPERANCE ***/
+footer #copyright p {
+  text-align: right;
+}
+
 footer {
   background: var(--palette--theme);
 }
@@ -765,6 +767,9 @@ footer p {
   color: var(--palette--white);
   font-family: var(--font--main);
   font-size: var(--font--small);
+}
+footer a {
+  color: var(--palette--black);
 }
 
 /*** ANIMATIONS ***/

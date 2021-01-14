@@ -479,17 +479,24 @@ section[role="banner"] {
 footer#ocf {
   display: flex;
 }
+
 footer img[role="logo"] {
   height: auto;
   width: 50%; /* w.r.t.  grid slot */
 }
 /*** APPERANCE ***/
+footer #copyright p {
+  text-align: right;
+}
 footer {
   background: var(--palette--theme);
   p {
     color: var(--palette--white);
     font-family: var(--font--main);
     font-size: var(--font--small);
+  }
+  a {
+    color: var(--palette--black);
   }
 }
 

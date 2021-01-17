@@ -88,6 +88,8 @@
   padding: 0px;
   margin: 0px;
   border: none;
+  max-width: 100%;
+  z-index: inherit;
   place-self: center center;
 }
 
@@ -103,7 +105,9 @@ html {
 }
 
 body {
-  min-height: 100%;
+  min-height: 100vh;
+  /* fill up the whole screen */
+  width: 100vw;
   /* fill up the whole screen */
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -113,31 +117,44 @@ body {
 navbar {
   width: 100vw;
   overflow: visible;
+  z-index: 1;
 }
 
-main,
-section {
+main {
   width: 100vw;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 footer {
   width: 100vw;
-  display: inline-grid;
-  gap: 10px;
-  align-items: space-evenly;
-  align-content: space-evenly;
-  justify-items: space-evenly;
-  justify-content: space-evenly;
+  display: Grid;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
+  gap: 10px;
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: space-evenly;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(4, 1fr);
 }
-footer > * {
-  margin: 0px !important;
-}
 
 /* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
+img {
+  width: 100%;
+  height: auto;
+}
+
 /*------------------------------------------
 # Global Apprearance
 ------------------------------------------*/
@@ -145,21 +162,7 @@ body {
   background: var(--palette--accent-lighter);
 }
 
-section {
-  padding: var(--gutter);
-  display: inline-grid;
-  gap: 10px;
-  align-items: space-evenly;
-  align-content: space-evenly;
-  justify-items: space-evenly;
-  justify-content: space-evenly;
-  grid-auto-rows: minmax(10px, auto);
-  grid-auto-columns: minmax(10px, auto);
-}
-section > * {
-  margin: 0px !important;
-}
-
+section,
 footer {
   padding: var(--gutter);
 }
@@ -190,6 +193,7 @@ h5,
 h6 {
   font-family: var(--font--main);
   font-size: 100%;
+  margin: 0.5em 0;
 }
 
 h1 {
@@ -248,6 +252,24 @@ table {
 }
 
 /*------------------------------------------
+# Other Components
+------------------------------------------*/
+.videoWrapper {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 56.25%;
+  width: 80%;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*------------------------------------------
 # Custom Components
 ------------------------------------------*/
 /* Logo */
@@ -264,12 +286,12 @@ a[role] {
 
 /* Social Media */
 .contact {
-  display: inline-flex !important;
+  display: flex;
   flex-direction: row;
   flex-wrap: no-wrap;
-  align-items: space-evenly;
+  align-items: center;
   align-content: space-evenly;
-  justify-items: space-evenly;
+  justify-items: center;
   justify-content: space-evenly;
   padding: 0.5em;
 }
@@ -342,40 +364,34 @@ navbar {
   /* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
   position: fixed;
   height: 7.5vh;
-  display: inline-grid;
-  gap: 10px;
-  align-items: space-around;
-  align-content: space-around;
-  justify-items: space-around;
-  justify-content: space-around;
+  display: Grid;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
+  gap: 10px;
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: space-evenly;
   grid-template-columns: 0.3fr 1fr 1fr 1fr 1.2fr 1.2fr 1.2fr 1fr 1fr 1fr 0.3fr;
   grid-template-rows: auto;
   grid-template-areas: ". . . . navtab navtab navtab . contact contact .";
   /* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
   /* used for breakpoints */
 }
-navbar > * {
-  margin: 0px !important;
-}
 navbar #navtabs {
   grid-area: navtab;
   overflow: visible;
-  display: inline-grid;
-  gap: 10px;
-  align-items: space-evenly;
-  align-content: space-evenly;
-  justify-items: space-around;
-  justify-content: space-around;
+  display: Grid;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
+  gap: 10px;
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: space-evenly;
   grid-template-columns: 1fr 1fr 1fr;
   height: 100%;
   width: 100%;
-}
-navbar #navtabs > * {
-  margin: 0px !important;
 }
 navbar #navtabs > a[role=button] {
   line-height: 5;
@@ -395,12 +411,12 @@ navbar #sidenav {
   /* 100% Full-height */
   width: 0;
   /* 0 width - change this with JavaScript */
-  display: inline-flex !important;
+  display: flex;
   flex-direction: column;
   flex-wrap: no-wrap;
-  align-items: space-evenly;
+  align-items: center;
   align-content: space-evenly;
-  justify-items: space-evenly;
+  justify-items: center;
   justify-content: space-evenly;
   overflow-x: hidden;
   /* Disable horizontal scroll */
@@ -483,87 +499,8 @@ navbar #close-nav-btn {
 # General Main Content
 ------------------------------------------*/
 /*** LAYOUT ***/
-/* Member Photos */
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-
-.grid-item {
-  padding: 2em;
-}
-
-.profilebutton {
-  background-color: var(--palette--white);
-  border-style: solid;
-  border-width: 10px;
-  border-color: var(--palette--white);
-  border-radius: 3px;
-  outline: none;
-}
-
-#currentmembers h3 {
-  color: var(--palette--theme-darker);
-  padding-top: 0.5em;
-}
-
-.memberphoto {
-  height: 400px;
-  width: 300px;
-}
-
-#samee {
-  background: url("../images/samee.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#emma {
-  background: url("../images/emma.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#roger {
-  background: url("../images/roger.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#jessica {
-  background: url("../images/jessica.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#april {
-  background: url("../images/april.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#jon {
-  background: url("../images/jon.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#hiro {
-  background: url("../images/hiro.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#extra1 {
-  background: url("../images/extra1.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#extra2 {
-  background: url("../images/extra2.jpg");
-  background-size: cover;
-  background-position: center;
+section#alumni p {
+  text-align: center;
 }
 
 /*** APPEARANCE ***/
@@ -654,20 +591,17 @@ main a[role=button].lightpink:hover {
 ------------------------------------------*/
 /*** LAYOUT ***/
 section[role=banner] {
-  display: inline-grid;
-  gap: 10px;
-  align-items: space-evenly;
-  align-content: space-evenly;
-  justify-items: space-evenly;
-  justify-content: space-evenly;
+  display: Grid;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
+  gap: 10px;
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: space-evenly;
   grid-template-rows: repeat(5, 1fr) repeat(3, auto) 0.5fr auto 0.3fr;
   grid-template-areas: "." "." "." "." "." "logo" "title" "subtitle" "." "button" ".";
   row-gap: 1px;
-}
-section[role=banner] > * {
-  margin: 0px !important;
 }
 section[role=banner] img[role=logo] {
   grid-area: logo;
@@ -714,25 +648,106 @@ section[role=banner]#auditionsbanner {
   background-image: url("../images/group3.jpg");
 }
 
-/* Current Members */
-.profilebutton:hover {
-  transition: all 0.5s;
+/*------------------------------------------
+# Current Members
+------------------------------------------*/
+/* Member Photos */
+.grid-container {
+  display: Grid;
+  grid-auto-rows: minmax(10px, auto);
+  grid-auto-columns: minmax(10px, auto);
+  gap: 10px;
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1em 3%;
+}
+
+.memberprofile {
+  background-color: var(--palette--white);
+  border-style: solid;
+  border-width: 10px;
+  border-color: var(--palette--white);
+  border-radius: 3px;
+  outline: none;
+}
+.memberprofile .memberphoto {
+  height: 300px;
+  width: 240px;
+}
+.memberprofile h3 {
+  color: var(--palette--theme-darker);
+  padding-top: 0.5em;
+}
+.memberprofile:hover {
   box-shadow: 0 0 6px 0 var(--palette--theme);
 }
-.profilebutton:hover .memberphoto {
+.memberprofile:hover .memberphoto,
+.memberprofile:hover h3 {
   opacity: 0.3;
   transition: all 0.5s;
 }
-.profilebutton:hover h3 {
-  color: var(--palette--accent);
-  transition: all 0.5s;
+
+#samee {
+  background: url("../images/samee.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.profilebutton span {
-  opacity: 0;
+#emma {
+  background: url("../images/emma.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-/* FAQ */
+#roger {
+  background: url("../images/roger.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#jessica {
+  background: url("../images/jessica.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#april {
+  background: url("../images/april.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#jon {
+  background: url("../images/jon.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#hiro {
+  background: url("../images/hiro.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#extra1 {
+  background: url("../images/extra1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#extra2 {
+  background: url("../images/extra2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/*------------------------------------
+# FAQs
+------------------------------------*/
 #faq details {
   width: 70vw;
   background-color: #f6f7f8;
@@ -774,3 +789,117 @@ footer a {
 }
 
 /*** ANIMATIONS ***/
+/*--------------------------------------------------------------
+# Breakpoints
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Large -> Deskto
+--------------------------------------------------------------*/
+@media screen and (min-width: 1681px) {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+@media screen and (max-width: 1680px) {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+/*--------------------------------------------------------------
+# Medium -> Tablet & Half Desktop
+--------------------------------------------------------------*/
+@media screen and (min-width: 931px) {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+@media screen and (max-width: 930px) {
+  /* Basic */
+  /* Navbar */
+  /* Main */
+  /* Footer */
+  /* Components */
+}
+/*--------------------------------------------------------------
+# Small -> Mobile
+--------------------------------------------------------------*/
+@media screen and (min-width: 561px) {
+  /* Basic */
+  /* Navbar */
+  navbar #open-nav-btn,
+navbar #close-nav-btn {
+    display: none;
+  }
+
+  /* Main */
+  /* Footer */
+  /* Components */
+  .fas,
+.fab {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 15px;
+    /* make circle */
+    margin: 3px;
+  }
+}
+@media screen and (max-width: 560px) {
+  /* Basic */
+  div {
+    display: block;
+  }
+
+  /* Navbar */
+  navbar #navtabs,
+navbar .contact {
+    display: none;
+  }
+
+  /* Main */
+  /* Footer */
+  /* Components */
+  .fas,
+.fab {
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10px;
+    /* make circle */
+    margin: 2px;
+  }
+}
+/*---------------------------------------------------------------
+    Automatic Video Resizing 
+---------------------------------------------------------------*/
+/*
+@mixin aspectRatioBox($width, $height) {
+  overflow: hidden;
+  padding-top: percentage($height / $width);
+  position: relative;
+
+  iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}*/
+/*------------------------------------------
+# TODO FIX
+------------------------------------------*/
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

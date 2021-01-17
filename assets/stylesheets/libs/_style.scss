@@ -18,6 +18,7 @@ a[role] {
   @include FlexRow; // for child elements
   padding: 0.5em;
 }
+
 /*--------------------------------------------------------------
 # Font Awesome Icons
 --------------------------------------------------------------*/
@@ -86,7 +87,7 @@ navbar {
   /* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
   position: fixed;
   height: 7.5vh;
-  @include Grid(space-around, space-around); // for child elements
+  @include Grid; // for child elements
   grid-template-columns: 0.3fr 1fr 1fr 1fr 1.2fr 1.2fr 1.2fr 1fr 1fr 1fr 0.3fr;
   grid-template-rows: auto;
   grid-template-areas: ". . . . navtab navtab navtab . contact contact .";
@@ -95,7 +96,7 @@ navbar {
     grid-area: navtab;
     overflow: visible;
 
-    @include Grid(space-around);
+    @include Grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 100%;
     width: 100%;
@@ -208,87 +209,8 @@ navbar {
 # General Main Content
 ------------------------------------------*/
 /*** LAYOUT ***/
-
-/* Member Photos */
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-.grid-item {
-  padding: 2em;
-}
-
-.profilebutton {
-  background-color: var(--palette--white);
-  border-style: solid;
-  border-width: 10px;
-  border-color: var(--palette--white);
-  border-radius: 3px;
-  outline: none;
-}
-
-#currentmembers h3 {
-  color: var(--palette--theme-darker);
-  padding-top: 0.5em;
-}
-
-.memberphoto {
-  height: 400px;
-  width: 300px;
-}
-
-#samee {
-  background: url("../images/samee.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#emma {
-  background: url("../images/emma.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#roger {
-  background: url("../images/roger.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#jessica {
-  background: url("../images/jessica.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#april {
-  background: url("../images/april.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#jon {
-  background: url("../images/jon.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#hiro {
-  background: url("../images/hiro.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#extra1 {
-  background: url("../images/extra1.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#extra2 {
-  background: url("../images/extra2.jpg");
-  background-size: cover;
-  background-position: center;
+section#alumni p {
+  text-align: center;
 }
 
 /*** APPEARANCE ***/
@@ -440,26 +362,101 @@ section[role="banner"] {
   }
 }
 
-/* Current Members */
-.profilebutton:hover {
-  transition: all 0.5s;
-  box-shadow: 0 0 6px 0 var(--palette--theme);
+/*------------------------------------------
+# Current Members
+------------------------------------------*/
+
+/* Member Photos */
+
+.grid-container {
+  @include Grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1em 3%;
+}
+
+.memberprofile {
+  background-color: var(--palette--white);
+  border-style: solid;
+  border-width: 10px;
+  border-color: var(--palette--white);
+  border-radius: 3px;
+  outline: none;
   .memberphoto {
-    opacity: 0.3;
-    transition: all 0.5s;
+    height: 300px;
+    width: 240px;
   }
   h3 {
-    color: var(--palette--accent);
-    // opacity: 0.3;
-    transition: all 0.5s;
+    color: var(--palette--theme-darker);
+    padding-top: 0.5em;
+  }
+  &:hover {
+    box-shadow: 0 0 6px 0 var(--palette--theme);
+    .memberphoto,
+    h3 {
+      opacity: 0.3;
+      transition: all 0.5s;
+    }
   }
 }
 
-.profilebutton span {
-  opacity: 0;
+#samee {
+  background: url("../images/samee.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-/* FAQ */
+#emma {
+  background: url("../images/emma.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#roger {
+  background: url("../images/roger.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#jessica {
+  background: url("../images/jessica.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#april {
+  background: url("../images/april.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#jon {
+  background: url("../images/jon.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#hiro {
+  background: url("../images/hiro.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#extra1 {
+  background: url("../images/extra1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#extra2 {
+  background: url("../images/extra2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/*------------------------------------
+# FAQs
+------------------------------------*/
 #faq details {
   width: 70vw;
   background-color: #f6f7f8;

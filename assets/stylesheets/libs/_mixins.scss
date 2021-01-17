@@ -37,45 +37,44 @@
 }
 
 @mixin FlexRow {
-  display: inline-flex !important;
+  display: flex;
   flex-direction: row;
   flex-wrap: no-wrap;
 
   // vertical alignment
-  align-items: space-evenly;
+  align-items: center;
   align-content: space-evenly;
 
   // horizontal alignment
-  justify-items: space-evenly;
+  justify-items: center;
   justify-content: space-evenly;
 }
 
 @mixin FlexCol {
-  display: inline-flex !important;
+  display: flex;
   flex-direction: column;
   flex-wrap: no-wrap;
 
   // vertical alignment
-  align-items: space-evenly;
+  align-items: center;
   align-content: space-evenly;
 
   // horizontal alignment
-  justify-items: space-evenly;
+  justify-items: center;
   justify-content: space-evenly;
 }
 
-@mixin Grid($spacing-x: space-evenly, $spacing-y: space-evenly) {
-  display: inline-grid;
-  gap: 10px;
-  align-items: $spacing-y;
-  align-content: $spacing-y;
-  justify-items: $spacing-x;
-  justify-content: $spacing-x;
+@mixin Grid {
+  display: Grid;
+
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  > * {
-    margin: 0px !important;
-  }
+  gap: 10px;
+
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: space-evenly;
 }
 
 @mixin fill-width {
@@ -86,15 +85,17 @@
   height: 100vh;
 }
 
+@mixin full-width {
+  width: 100%; // relative to parent
+}
+
+@mixin full-height {
+  height: 100%; // relative to parent
+}
+
 //--------------------------------------------------------------
 // Appearance
 //--------------------------------------------------------------
-@mixin inner-margin(
-  $top-bottom: -#{var(--gutter-tb)},
-  $left-right: -#{var(--gutter-lr)}
-) {
-  margin: 0% + $top-bottom, 0% + $left-right;
-}
 
 // For Font Awesome Icons
 // size = height = width of "font awesome" elements
@@ -129,17 +130,6 @@
   top: -5px;
 }
 // Stacking Order on Page
-
-//--------------------------------------------------------------
-// Size (relative to parent)
-//--------------------------------------------------------------
-@mixin full-width {
-  width: 100%;
-}
-
-@mixin full-height {
-  height: 100%;
-}
 
 //--------------------------------------------------------------
 // Animations

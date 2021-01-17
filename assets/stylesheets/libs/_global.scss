@@ -9,8 +9,10 @@
   margin: 0px;
   border: none;
 
-  // height: minmax(10px, fit-content);
-  // width: minmax(10px, fit-content);
+  max-width: 100%;
+
+  z-index: inherit;
+
   place-self: center center;
 }
 
@@ -27,7 +29,8 @@ html {
 }
 
 body {
-  min-height: 100%; /* fill up the whole screen */
+  min-height: 100vh; /* fill up the whole screen */
+  @include fill-width; /* fill up the whole screen */
 
   display: grid;
   grid-template-rows: auto 1fr auto; /* navbar main footer */
@@ -35,22 +38,34 @@ body {
 
 navbar {
   @include fill-width;
-  // display: inline-flex;
   overflow: visible;
+  z-index: 1;
 }
 
-main,
-section {
+main {
   @include fill-width;
+  // z-index: 0;
+}
+
+section {
+  @include FlexCol;
+  @include full-width;
 }
 
 footer {
   @include fill-width;
+
   @include Grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(4, 1fr);
+  // z-index: 0;
 }
 /* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
+
+img {
+  width: 100%;
+  height: auto;
+}
 
 /*------------------------------------------
 # Global Apprearance
@@ -59,18 +74,8 @@ body {
   background: var(--palette--accent-lighter);
 }
 
-main {
-  // @include inner-margin;
-}
-
-section {
-  // @include inner-margin;
-  padding: var(--gutter);
-  @include Grid;
-}
-
+section,
 footer {
-  // @include inner-margin;
   padding: var(--gutter);
 }
 
@@ -101,6 +106,7 @@ h5,
 h6 {
   font-family: var(--font--main);
   font-size: 100%;
+  margin: 0.5em 0;
 }
 
 h1 {
@@ -153,4 +159,22 @@ q {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/*------------------------------------------
+# Other Components
+------------------------------------------*/
+
+.videoWrapper {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 56.25%; // 16:9
+  width: 80%;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

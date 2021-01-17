@@ -122,6 +122,9 @@ navbar {
     width: 0; /* 0 width - change this with JavaScript */
 
     @include FlexCol; // for child elements
+    justify-content: flex-start;
+    padding-top: 20vh;
+
     overflow-x: hidden; /* Disable horizontal scroll */
   }
   /* used for breakpoints */
@@ -174,8 +177,8 @@ navbar {
     > a[role="button"] {
       width: 100%;
       font-size: var(--font--medium);
-      border-top: 1px solid var(--palette--white);
-      border-bottom: 1px solid var(--palette--white);
+      border-top: 0.5px solid var(--palette--white);
+      border-bottom: 0.5px solid var(--palette--white);
       color: var(--palette--white);
       &:hover {
         background-color: var(--palette--theme-lighter);
@@ -485,14 +488,22 @@ section[role="banner"] {
 # Footer
 ------------------------------------------*/
 /*** LAYOUT ***/
+footer {
+  @include Grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  // z-index: 0;
+}
+
 footer#ocf {
   display: flex;
 }
 
 footer img[role="logo"] {
   height: auto;
-  width: 50%; /* w.r.t.  grid slot */
+  width: 30vw;
 }
+
 /*** APPERANCE ***/
 footer #copyright p {
   text-align: right;

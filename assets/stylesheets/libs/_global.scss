@@ -54,11 +54,6 @@ section {
 
 footer {
   @include fill-width;
-
-  @include Grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(4, 1fr);
-  // z-index: 0;
 }
 /* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
 

@@ -137,16 +137,6 @@ section {
 
 footer {
   width: 100vw;
-  display: Grid;
-  grid-auto-rows: minmax(10px, auto);
-  grid-auto-columns: minmax(10px, auto);
-  gap: 10px;
-  align-items: center;
-  align-content: space-evenly;
-  justify-items: center;
-  justify-content: space-evenly;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(4, 1fr);
 }
 
 /* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
@@ -422,6 +412,8 @@ navbar #sidenav {
   align-content: space-evenly;
   justify-items: center;
   justify-content: space-evenly;
+  justify-content: flex-start;
+  padding-top: 20vh;
   overflow-x: hidden;
   /* Disable horizontal scroll */
 }
@@ -467,8 +459,8 @@ navbar #sidenav {
 navbar #sidenav > a[role=button] {
   width: 100%;
   font-size: var(--font--medium);
-  border-top: 1px solid var(--palette--white);
-  border-bottom: 1px solid var(--palette--white);
+  border-top: 0.5px solid var(--palette--white);
+  border-bottom: 0.5px solid var(--palette--white);
   color: var(--palette--white);
 }
 navbar #sidenav > a[role=button]:hover {
@@ -774,14 +766,26 @@ section[role=banner]#auditionsbanner {
 # Footer
 ------------------------------------------*/
 /*** LAYOUT ***/
+footer {
+  display: Grid;
+  grid-auto-rows: minmax(10px, auto);
+  grid-auto-columns: minmax(10px, auto);
+  gap: 10px;
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: space-evenly;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
 footer#ocf {
   display: flex;
 }
 
 footer img[role=logo] {
   height: auto;
-  width: 50%;
-  /* w.r.t.  grid slot */
+  width: 30vw;
 }
 
 /*** APPERANCE ***/
@@ -837,6 +841,55 @@ footer a {
   /* Navbar */
   /* Main */
   /* Footer */
+  footer {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "contact contact contact" "ocf ocf ocf" "nicelogo nice nice";
+  }
+  footer .contact {
+    grid-area: contact;
+  }
+  footer #ocf {
+    grid-area: ocf;
+    display: Grid;
+    grid-auto-rows: minmax(10px, auto);
+    grid-auto-columns: minmax(10px, auto);
+    gap: 10px;
+    align-items: center;
+    align-content: space-evenly;
+    justify-items: center;
+    justify-content: space-evenly;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "text text ocflogo";
+  }
+  footer #ocf p {
+    grid-area: text;
+  }
+  footer #ocf a {
+    grid-area: ocflogo;
+  }
+  footer > img[role=logo] {
+    grid-area: nicelogo;
+    height: 60%;
+    width: auto;
+  }
+  footer #copyright {
+    grid-area: nice;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    align-items: center;
+    align-content: space-evenly;
+    justify-items: center;
+    justify-content: space-evenly;
+  }
+  footer #copyright p {
+    text-align: center;
+  }
+  footer #copyright br {
+    display: none;
+  }
+
   /* Components */
 }
 /*--------------------------------------------------------------
@@ -884,6 +937,13 @@ navbar #close-nav-btn {
 
   /* Main */
   /* Footer */
+  footer {
+    grid-template-columns: 1fr;
+  }
+  footer br {
+    display: block !important;
+  }
+
   /* Components */
   .fas,
 .fab {

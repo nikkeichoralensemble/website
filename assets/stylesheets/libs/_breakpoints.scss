@@ -62,6 +62,41 @@
   /* Navbar */
   /* Main */
   /* Footer */
+  footer {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "contact contact contact" "ocf ocf ocf" "nicelogo nice nice";
+    .contact {
+      grid-area: contact;
+    }
+    #ocf {
+      grid-area: ocf;
+      @include Grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "text text ocflogo";
+      p {
+        grid-area: text;
+      }
+      a {
+        grid-area: ocflogo;
+      }
+    }
+    > img[role="logo"] {
+      grid-area: nicelogo;
+      height: 60%;
+      width: auto;
+    }
+    #copyright {
+      grid-area: nice;
+      @include FlexRow;
+      p {
+        text-align: center;
+      }
+      br {
+        display: none;
+      }
+    }
+  }
   /* Components */
 }
 
@@ -105,6 +140,12 @@
   }
   /* Main */
   /* Footer */
+  footer {
+    grid-template-columns: 1fr;
+    br {
+      display: block !important;
+    }
+  }
   /* Components */
   .fas,
   .fab {

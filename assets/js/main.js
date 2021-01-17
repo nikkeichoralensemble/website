@@ -14,7 +14,7 @@ $("nav a").click(function () {
 /*--------------------------------------------------------------
   # Side Navigation
   --------------------------------------------------------------*/
-var $sidenav_width = "250px";
+var $sidenav_width = "200px";
 
 /* Open side navigation bar */
 function openNav() {

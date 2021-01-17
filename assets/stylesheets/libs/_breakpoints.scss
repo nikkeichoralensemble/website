@@ -98,6 +98,10 @@
     .contact {
       @include hide;
     }
+    #open-nav-btn,
+    #close-nav-btn {
+      @include show;
+    }
   }
   /* Main */
   /* Footer */
@@ -107,26 +111,6 @@
     @include setupIcon(20px); // smaller icons
   }
 }
-
-/*---------------------------------------------------------------
-    Automatic Video Resizing 
----------------------------------------------------------------*/
-
-/*
-@mixin aspectRatioBox($width, $height) {
-  overflow: hidden;
-  padding-top: percentage($height / $width);
-  position: relative;
-
-  iframe {
-    border: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-}*/
 
 /*------------------------------------------
 # TODO FIX

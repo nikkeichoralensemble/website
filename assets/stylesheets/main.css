@@ -193,7 +193,7 @@ h5,
 h6 {
   font-family: var(--font--main);
   font-size: 100%;
-  margin: 0.5em 0;
+  margin: 0.3em 0;
 }
 
 h1 {
@@ -214,7 +214,7 @@ b {
 
 p {
   font-size: var(--font--regular);
-  margin: 1em;
+  margin: 0.8em;
   color: var(--palette--black);
 }
 
@@ -282,6 +282,10 @@ img[role=logo] {
 a[role] {
   text-decoration: none;
   border: var(--little-border);
+}
+
+section[role=content] a[role=button] {
+  margin: 0.5em;
 }
 
 /* Social Media */
@@ -499,6 +503,11 @@ navbar #close-nav-btn {
 # General Main Content
 ------------------------------------------*/
 /*** LAYOUT ***/
+section[role=header] {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 section#alumni p {
   text-align: center;
 }
@@ -599,9 +608,9 @@ section[role=banner] {
   align-content: space-evenly;
   justify-items: center;
   justify-content: space-evenly;
-  grid-template-rows: repeat(5, 1fr) repeat(3, auto) 0.5fr auto 0.3fr;
-  grid-template-areas: "." "." "." "." "." "logo" "title" "subtitle" "." "button" ".";
-  row-gap: 1px;
+  grid-template-rows: 6fr auto auto auto 0.1fr auto 0.3fr;
+  grid-template-areas: "." "logo" "title" "subtitle" "." "button" ".";
+  row-gap: 10px;
 }
 section[role=banner] img[role=logo] {
   grid-area: logo;
@@ -610,13 +619,17 @@ section[role=banner] img[role=logo] {
   /* w.r.t. viewport */
 }
 section[role=banner] h1 {
+  margin: 0em;
   grid-area: title;
 }
 section[role=banner] p {
+  margin: 0em;
   grid-area: subtitle;
 }
 section[role=banner] a[role=button] {
+  margin: 0.5em;
   grid-area: button;
+  border: 0.5px solid rgba(204, 204, 204, 0.5);
 }
 
 /*** APPEARANCE ***/
@@ -864,6 +877,10 @@ navbar #close-nav-btn {
 navbar .contact {
     display: none;
   }
+  navbar #open-nav-btn,
+navbar #close-nav-btn {
+    display: block;
+  }
 
   /* Main */
   /* Footer */
@@ -881,24 +898,6 @@ navbar .contact {
     margin: 2px;
   }
 }
-/*---------------------------------------------------------------
-    Automatic Video Resizing 
----------------------------------------------------------------*/
-/*
-@mixin aspectRatioBox($width, $height) {
-  overflow: hidden;
-  padding-top: percentage($height / $width);
-  position: relative;
-
-  iframe {
-    border: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-}*/
 /*------------------------------------------
 # TODO FIX
 ------------------------------------------*/

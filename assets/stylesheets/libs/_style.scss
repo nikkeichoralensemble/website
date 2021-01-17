@@ -12,7 +12,9 @@ a[role] {
   text-decoration: none;
   border: var(--little-border);
 }
-
+section[role="content"] a[role="button"] {
+  margin: 0.5em;
+}
 /* Social Media */
 .contact {
   @include FlexRow; // for child elements
@@ -209,6 +211,11 @@ navbar {
 # General Main Content
 ------------------------------------------*/
 /*** LAYOUT ***/
+section[role="header"] {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 section#alumni p {
   text-align: center;
 }
@@ -314,9 +321,9 @@ main a[role="button"] {
 /*** LAYOUT ***/
 section[role="banner"] {
   @include Grid;
-  grid-template-rows: repeat(5, 1fr) repeat(3, auto) 0.5fr auto 0.3fr;
-  grid-template-areas: "." "." "." "." "." "logo" "title" "subtitle" "." "button" ".";
-  row-gap: 1px;
+  grid-template-rows: 6fr auto auto auto 0.1fr auto 0.3fr;
+  grid-template-areas: "." "logo" "title" "subtitle" "." "button" ".";
+  row-gap: 10px;
 
   img[role="logo"] {
     grid-area: logo;
@@ -325,13 +332,17 @@ section[role="banner"] {
     width: 15%; /* w.r.t. viewport */
   }
   h1 {
+    margin: 0em;
     grid-area: title;
   }
   p {
+    margin: 0em;
     grid-area: subtitle;
   }
   a[role="button"] {
+    margin: 0.5em;
     grid-area: button;
+    border: 0.5px solid hsla(0%, 0%, 80%, 0.5);
   }
 }
 

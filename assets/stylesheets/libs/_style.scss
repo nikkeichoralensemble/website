@@ -491,7 +491,7 @@ section[role="banner"] {
 footer {
   @include Grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   // z-index: 0;
 }
 
@@ -501,10 +501,10 @@ footer#ocf {
 
 footer img[role="logo"] {
   height: auto;
-  width: 30vw;
+  width: 10vw;
 }
 
-/*** APPERANCE ***/
+/*** APPEARANCE ***/
 footer #copyright p {
   text-align: right;
 }

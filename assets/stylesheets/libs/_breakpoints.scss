@@ -27,7 +27,7 @@
 }
 
 /*--------------------------------------------------------------
-# Large -> Deskto
+# Large -> Desktop
 --------------------------------------------------------------*/
 @include breakpoint(">large") {
   /* Basic */
@@ -42,6 +42,14 @@
   /* Navbar */
   /* Main */
   /* Footer */
+  footer {
+    a {
+      img {
+        height: auto;
+        width: 10vw;
+      }
+    }
+  }
   /* Components */
 }
 
@@ -79,6 +87,10 @@
       }
       a {
         grid-area: ocflogo;
+        img {
+          height: auto;
+          width: 100%;
+        }
       }
     }
     > img[role="logo"] {

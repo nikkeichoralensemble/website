@@ -45,7 +45,7 @@ Each file is generally organized following this order:
     /*** ANIMATIONS ***/
 ```
 
-where LAYOUT, APPARERANCE, and ANIMATIONS correspond to the **computed elements** when you inspect a page in a browser.
+where LAYOUT, APPEARANCE, and ANIMATIONS correspond to the **computed elements** when you inspect a page in a browser.
 
 To inspect a page, right-click the page in a browser, select "inspect".
 

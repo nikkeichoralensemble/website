@@ -1185,3 +1185,17 @@ footer a {
 ------------------------------------------*/
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 /*# sourceMappingURL=main.css.map */
+
+
+/*--------------------------------------------------------------
+# Debug Use
+--------------------------------------------------------------*/
+/* body {
+  border: 5px solid yellow !important;
+}
+body * {
+  border: 1px solid red !important;
+}
+body *:hover {
+  border: 1px solid blue !important;
+} */

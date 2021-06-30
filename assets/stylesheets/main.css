@@ -56,10 +56,9 @@
   --font--body: "GothicA1", sans-serif;
   --font--xsmall: 12px;
   --font--small: 15px;
-  --font--regular: 20px;
-  /* default */
-  --font--medium: 36px;
-  --font--large: 48px;
+  --font--regular: 18px;
+  --font--medium: 32px;
+  --font--large: 45px;
   --font--xlarge: 72px;
   /* Palette. */
   --palette--theme: #4787c3;
@@ -464,7 +463,7 @@ navbar #navtabs {
 }
 
 navbar #navtabs > a[role="button"] {
-  line-height: 5;
+  line-height: 4;
   -ms-grid-column-align: stretch;
       justify-self: stretch;
   -ms-flex-item-align: stretch;
@@ -534,7 +533,7 @@ navbar #navtabs > a[role="button"] {
   border-radius: 0px 0px var(--corner-roundedness) var(--corner-roundedness);
   -webkit-box-shadow: var(--little-dropshadow);
           box-shadow: var(--little-dropshadow);
-  font-size: var(--font--small);
+  font-size: var(--font--regular);
   font-family: var(--font--main);
   text-transform: lowercase;
   background-color: var(--palette--white);

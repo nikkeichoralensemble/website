@@ -22,9 +22,9 @@ def auditions():
     return render_template("auditions.html")
 
 
-@app.route("/hidden/template")
+@app.route("/hidden/base")
 def template():
-    return render_template("_template.html")
+    return render_template("base.html")
 
 
 @app.route("/hidden/new")

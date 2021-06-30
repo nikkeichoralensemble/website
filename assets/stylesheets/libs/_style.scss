@@ -25,11 +25,26 @@ section[role="content"] a[role="button"] {
 # Font Awesome Icons
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
-.fas,
-.fab {
-  @include setupIcon(45px);
+nav {
+  .fas,
+  .fab {
+    @include setupIcon(45px);
+  }
 }
 
+#main {
+  .fas,
+  .fab {
+    @include setupIcon(80px);
+  }
+}
+
+footer {
+  .fas,
+  .fab {
+    @include setupIcon(50px);
+  }
+}
 /*** APPEARANCE ***/
 .fas,
 .fab {
@@ -490,8 +505,8 @@ section[role="banner"] {
 /*** LAYOUT ***/
 footer {
   @include Grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  // grid-template-rows: auto;
+  // grid-template-columns: auto auto auto;
   // z-index: 0;
 }
 

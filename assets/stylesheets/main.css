@@ -326,8 +326,8 @@ section[role="content"] a[role="button"] {
 # Font Awesome Icons
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
-.fas,
-.fab {
+nav .fas,
+nav .fab {
   height: 45px;
   width: 45px;
   font-size: 22.5px;
@@ -337,6 +337,32 @@ section[role="content"] a[role="button"] {
   border-radius: 22.5px;
   /* make circle */
   margin: 4.5px;
+}
+
+#main .fas,
+#main .fab {
+  height: 80px;
+  width: 80px;
+  font-size: 40px;
+  line-height: 80px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 40px;
+  /* make circle */
+  margin: 8px;
+}
+
+footer .fas,
+footer .fab {
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 25px;
+  /* make circle */
+  margin: 5px;
 }
 
 /*** APPEARANCE ***/
@@ -395,7 +421,7 @@ navbar {
   display: Grid;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  gap: 10px;
+  gap: 8px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -423,7 +449,7 @@ navbar #navtabs {
   display: Grid;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  gap: 10px;
+  gap: 8px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -701,7 +727,7 @@ section[role="banner"] {
   display: Grid;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  gap: 10px;
+  gap: 8px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -791,7 +817,7 @@ section[role="banner"]#auditionsbanner {
   display: Grid;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  gap: 10px;
+  gap: 8px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -913,7 +939,7 @@ footer {
   display: Grid;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  gap: 10px;
+  gap: 8px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -923,10 +949,6 @@ footer {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 footer#ocf {
@@ -979,6 +1001,12 @@ footer a {
   /* Navbar */
   /* Main */
   /* Footer */
+  footer {
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
   footer a img {
     height: auto;
     width: 10vw;
@@ -989,7 +1017,7 @@ footer a {
 /*--------------------------------------------------------------
 # Medium -> Tablet & Half Desktop
 --------------------------------------------------------------*/
-@media screen and (min-width: 931px) {
+@media screen and (min-width: 751px) {
   /* Basic */
   /* Navbar */
   /* Main */
@@ -997,33 +1025,31 @@ footer a {
   /* Components */
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 750px) {
   /* Basic */
   /* Navbar */
   /* Main */
   /* Footer */
   footer {
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
     -ms-grid-rows: auto auto auto;
         grid-template-rows: auto auto auto;
-        grid-template-areas: "contact contact contact" "ocf ocf ocf" "nicelogo nice nice";
+    -ms-grid-columns: 1pr;
+        grid-template-columns: 1pr;
+        grid-template-areas: "contact" "ocf" "nice";
   }
   footer .contact {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
     grid-area: contact;
   }
   footer #ocf {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
     grid-area: ocf;
     display: Grid;
     grid-auto-rows: minmax(10px, auto);
     grid-auto-columns: minmax(10px, auto);
-    gap: 10px;
+    gap: 8px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1033,19 +1059,19 @@ footer a {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "text text ocflogo";
+    gap: 0px;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "text" "ocflogo";
   }
   footer #ocf p {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
     grid-area: text;
   }
   footer #ocf a {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
     grid-area: ocflogo;
   }
   footer #ocf a img {
@@ -1053,16 +1079,13 @@ footer a {
     width: 100%;
   }
   footer > img[role="logo"] {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
     grid-area: nicelogo;
     height: 60%;
     width: auto;
   }
   footer #copyright {
     -ms-grid-row: 3;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
+    -ms-grid-column: 1;
     grid-area: nice;
     display: -webkit-box;
     display: -ms-flexbox;

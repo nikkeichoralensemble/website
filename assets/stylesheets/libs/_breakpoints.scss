@@ -5,12 +5,12 @@
 @include breakpoints(
   (
     large: (
-      931px,
+      751px,
       1680px,
     ),
     medium: (
       561px,
-      930px,
+      750px,
     ),
     small: (
       null,
@@ -43,6 +43,8 @@
   /* Main */
   /* Footer */
   footer {
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
     a {
       img {
         height: auto;
@@ -71,17 +73,18 @@
   /* Main */
   /* Footer */
   footer {
-    grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "contact contact contact" "ocf ocf ocf" "nicelogo nice nice";
+    grid-template-columns: 1pr;
+    grid-template-areas: "contact" "ocf" "nice";
     .contact {
       grid-area: contact;
     }
     #ocf {
       grid-area: ocf;
       @include Grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: "text text ocflogo";
+      gap: 0px;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "text" "ocflogo";
       p {
         grid-area: text;
       }

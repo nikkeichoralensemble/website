@@ -16,9 +16,8 @@ Edit HTML files that **do not** start with an underscore `_`
 
 ## Edit website style
 
-1. run `sass --watch assets/stylesheets/main.scss:assets/stylesheets/main.css --no-source-map`
-   <br> or, use VSCode's Live Sass extension
-2. Edit files under `assets/stylesheets/libs`
+Edit `assets/stylesheets/main.css`
+Look at template.txt and outline.txt to get an idea.
 
 Each file is generally organized following this order:
 

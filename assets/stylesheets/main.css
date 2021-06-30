@@ -37,10 +37,6 @@
 /* Global Variables */
 :root {
   /*** LAYOUT ***/
-  --gutter-tb: 3%;
-  /* Top & Bottom */
-  --gutter-lr: 8%;
-  /* Left & Right */
   --gutter: 3% 8%;
   /* z-index */
   --level--roof: 1000;
@@ -48,6 +44,8 @@
   --level--mid: 30;
   --level--ground: 0;
   --level--underground: -100;
+
+
   /*** APPEARANCE ***/
   /* Fonts */
   --font--main: "RalewayMedium", sans-serif;
@@ -84,8 +82,11 @@
   --screen--large: 1000px;
 }
 
-/* reference: https://gist.github.com/3rdTheMagical/004b9bc6e30aa6d4d45b59065d30a0c0 */
 /* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
+/* reference:
+  http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  license: none (public domain) */
 /*--------------------------------------------------------------
 # Global Reset
 --------------------------------------------------------------*/
@@ -103,10 +104,6 @@
 /*--------------------------------------------------------------
 # Global Layout
 --------------------------------------------------------------*/
-/* reference:
-  http://meyerweb.com/eric/tools/css/reset/ 
-  v2.0 | 20110126
-  license: none (public domain) */
 html {
   height: 100vh;
 }
@@ -158,8 +155,8 @@ section {
 footer {
   width: 100vw;
 }
-
 /* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
+
 img {
   width: 100%;
   height: auto;
@@ -413,6 +410,7 @@ footer .fab {
 /* Note
  * #navtabs hides and #sidenav shows for small screens 
  */
+
 /*** LAYOUT ***/
 navbar {
   /* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
@@ -719,6 +717,8 @@ main a[role="button"].lightpink:hover {
 }
 
 /*** ANIMATIONS ***/
+/* none for now */
+
 /*------------------------------------------
 # Banner
 ------------------------------------------*/
@@ -931,6 +931,8 @@ section[role="banner"]#auditionsbanner {
 }
 
 /*** ANIMATIONS ***/
+/* none for now */
+
 /*------------------------------------------
 # Footer
 ------------------------------------------*/
@@ -982,6 +984,8 @@ footer a {
 }
 
 /*** ANIMATIONS ***/
+/* none for now */
+
 /*--------------------------------------------------------------
 # Breakpoints
 --------------------------------------------------------------*/

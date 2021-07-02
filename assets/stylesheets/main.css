@@ -45,7 +45,6 @@
   --level--ground: 0;
   --level--underground: -100;
 
-
   /*** APPEARANCE ***/
   /* Fonts */
   --font--main: "RalewayMedium", sans-serif;
@@ -91,7 +90,7 @@
 --------------------------------------------------------------*/
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0px;
   margin: 0px;
   border: none;
@@ -115,7 +114,7 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto 1fr auto;
-      grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
   /* navbar main footer */
 }
 
@@ -135,19 +134,19 @@ section {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
+  align-content: space-evenly;
   justify-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   width: 100%;
 }
 
@@ -246,7 +245,8 @@ q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
+blockquote:before,
+blockquote:after,
 q:before,
 q:after {
   content: "";
@@ -261,14 +261,14 @@ table {
 /*------------------------------------------
 # Other Components
 ------------------------------------------*/
-.videoWrapper {
+.wrapper {
   position: relative;
   padding-top: 25px;
   padding-bottom: 56.25%;
   width: 80%;
 }
 
-.videoWrapper iframe {
+.wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -302,19 +302,19 @@ section[role="content"] a[role="button"] {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
+  align-content: space-evenly;
   justify-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   padding: 0.5em;
 }
 
@@ -387,7 +387,16 @@ footer .fab {
 .fas.fa-instagram:hover,
 .fab.fa-instagram:hover {
   background-color: #bc2a8d;
-  background: linear-gradient(45deg, #fccc63, #fbad50, #e95950, #cd486b, #bc2a8d, #8a3ab9, #4c68d7);
+  background: linear-gradient(
+    45deg,
+    #fccc63,
+    #fbad50,
+    #e95950,
+    #cd486b,
+    #bc2a8d,
+    #8a3ab9,
+    #4c68d7
+  );
 }
 
 .fas.fa-envelope:hover,
@@ -420,19 +429,19 @@ navbar {
   grid-auto-columns: minmax(10px, auto);
   gap: 8px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
+  align-content: space-evenly;
   justify-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -ms-grid-columns: 0.3fr 1fr 1fr 1fr 1.2fr 1.2fr 1.2fr 1fr 1fr 1fr 0.3fr;
-      grid-template-columns: 0.3fr 1fr 1fr 1fr 1.2fr 1.2fr 1.2fr 1fr 1fr 1fr 0.3fr;
+  grid-template-columns: 0.3fr 1fr 1fr 1fr 1.2fr 1.2fr 1.2fr 1fr 1fr 1fr 0.3fr;
   -ms-grid-rows: auto;
-      grid-template-rows: auto;
-      grid-template-areas: ". . . . navtab navtab navtab . contact contact .";
+  grid-template-rows: auto;
+  grid-template-areas: ". . . . navtab navtab navtab . contact contact .";
   /* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
   /* used for breakpoints */
 }
@@ -448,16 +457,16 @@ navbar #navtabs {
   grid-auto-columns: minmax(10px, auto);
   gap: 8px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
+  align-content: space-evenly;
   justify-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   height: 100%;
   width: 100%;
 }
@@ -465,10 +474,10 @@ navbar #navtabs {
 navbar #navtabs > a[role="button"] {
   line-height: 4;
   -ms-grid-column-align: stretch;
-      justify-self: stretch;
+  justify-self: stretch;
   -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
 }
 
 navbar .contact {
@@ -493,22 +502,22 @@ navbar #sidenav {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
+  align-content: space-evenly;
   justify-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   padding-top: 20vh;
   overflow-x: hidden;
   /* Disable horizontal scroll */
@@ -524,7 +533,7 @@ navbar #close-nav-btn {
 navbar {
   background: var(--palette--white);
   -webkit-box-shadow: var(--little-dropshadow);
-          box-shadow: var(--little-dropshadow);
+  box-shadow: var(--little-dropshadow);
 }
 
 navbar #navtabs > a[role="button"] {
@@ -532,7 +541,7 @@ navbar #navtabs > a[role="button"] {
   border-top: none;
   border-radius: 0px 0px var(--corner-roundedness) var(--corner-roundedness);
   -webkit-box-shadow: var(--little-dropshadow);
-          box-shadow: var(--little-dropshadow);
+  box-shadow: var(--little-dropshadow);
   font-size: var(--font--regular);
   font-family: var(--font--main);
   text-transform: lowercase;
@@ -546,8 +555,17 @@ navbar #navtabs > a[role="button"]:hover {
 }
 
 navbar #navtabs#homebanner {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%), to(var(--palette--theme))), url("../images/group1.jpg");
-  background: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group1.jpg");
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(transparent),
+      color-stop(80%),
+      to(var(--palette--theme))
+    ),
+    url("../images/group1.jpg");
+  background: linear-gradient(transparent, 80%, var(--palette--theme)),
+    url("../images/group1.jpg");
 }
 
 navbar #navtabs#aboutbanner {
@@ -626,7 +644,7 @@ section a[role="button"] {
   border-radius: var(--corner-roundedness);
   border: var(--little-border);
   -webkit-box-shadow: var(--little-shadow);
-          box-shadow: var(--little-shadow);
+  box-shadow: var(--little-shadow);
 }
 
 /* color text */
@@ -728,17 +746,17 @@ section[role="banner"] {
   grid-auto-columns: minmax(10px, auto);
   gap: 8px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
+  align-content: space-evenly;
   justify-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -ms-grid-rows: 6fr auto auto auto 0.1fr auto 0.3fr;
-      grid-template-rows: 6fr auto auto auto 0.1fr auto 0.3fr;
-      grid-template-areas: "." "logo" "title" "subtitle" "." "button" ".";
+  grid-template-rows: 6fr auto auto auto 0.1fr auto 0.3fr;
+  grid-template-areas: "." "logo" "title" "subtitle" "." "button" ".";
   row-gap: 10px;
 }
 
@@ -792,8 +810,17 @@ section[role="banner"] p {
 section[role="banner"]#homebanner {
   height: 100vh;
   /* change this to fit image */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%), to(var(--palette--theme))), url("../images/group1.jpg");
-  background-image: linear-gradient(transparent, 80%, var(--palette--theme)), url("../images/group1.jpg");
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(transparent),
+      color-stop(80%),
+      to(var(--palette--theme))
+    ),
+    url("../images/group1.jpg");
+  background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
+    url("../images/group1.jpg");
 }
 
 section[role="banner"]#aboutbanner {
@@ -818,18 +845,18 @@ section[role="banner"]#auditionsbanner {
   grid-auto-columns: minmax(10px, auto);
   gap: 8px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
+  align-content: space-evenly;
   justify-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  -ms-grid-columns: (minmax(240px, 1fr)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1em 3%;
 }
 
@@ -852,17 +879,17 @@ section[role="banner"]#auditionsbanner {
   padding-top: 0.5em;
 }
 
-.memberprofile:hover {
+/* .memberprofile:hover {
   -webkit-box-shadow: 0 0 6px 0 var(--palette--theme);
-          box-shadow: 0 0 6px 0 var(--palette--theme);
-}
+  box-shadow: 0 0 6px 0 var(--palette--theme);
+} */
 
-.memberprofile:hover .memberphoto,
+/* .memberprofile:hover .memberphoto,
 .memberprofile:hover h3 {
   opacity: 0.3;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-}
+} */
 
 #samee {
   background: url("../images/samee.jpg");
@@ -942,14 +969,14 @@ footer {
   grid-auto-columns: minmax(10px, auto);
   gap: 8px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
+  align-content: space-evenly;
   justify-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 footer#ocf {
@@ -1006,9 +1033,9 @@ footer a {
   /* Footer */
   footer {
     -ms-grid-rows: auto;
-        grid-template-rows: auto;
+    grid-template-rows: auto;
     -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
   }
   footer a img {
     height: auto;
@@ -1035,10 +1062,10 @@ footer a {
   /* Footer */
   footer {
     -ms-grid-rows: auto auto auto;
-        grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto;
     -ms-grid-columns: 1pr;
-        grid-template-columns: 1pr;
-        grid-template-areas: "contact" "ocf" "nice";
+    grid-template-columns: 1pr;
+    grid-template-areas: "contact" "ocf" "nice";
   }
   footer .contact {
     -ms-grid-row: 1;
@@ -1054,18 +1081,18 @@ footer a {
     grid-auto-columns: minmax(10px, auto);
     gap: 8px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -ms-flex-line-pack: space-evenly;
-        align-content: space-evenly;
+    align-content: space-evenly;
     justify-items: center;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
     gap: 0px;
     -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "text" "ocflogo";
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "text" "ocflogo";
   }
   footer #ocf p {
     -ms-grid-row: 1;
@@ -1095,19 +1122,19 @@ footer a {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-wrap: no-wrap;
-        flex-wrap: no-wrap;
+    flex-wrap: no-wrap;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -ms-flex-line-pack: space-evenly;
-        align-content: space-evenly;
+    align-content: space-evenly;
     justify-items: center;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
   }
   footer #copyright p {
     text-align: center;
@@ -1163,7 +1190,7 @@ footer a {
   /* Footer */
   footer {
     -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   footer br {
     display: block !important;
@@ -1188,7 +1215,6 @@ footer a {
 ------------------------------------------*/
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 /*# sourceMappingURL=main.css.map */
-
 
 /*--------------------------------------------------------------
 # Debug Use

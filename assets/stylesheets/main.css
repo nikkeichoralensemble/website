@@ -463,8 +463,8 @@ navbar #logo {
 }
 
 navbar #logo img {
-    height: 6vh;
-    width: auto;
+  height: 6vh;
+  width: auto;
 }
 
 navbar #navtabs {
@@ -624,6 +624,7 @@ navbar #sidenav #close-nav-btn {
 navbar #open-nav-btn,
 navbar #close-nav-btn {
   font-size: var(--font--medium);
+  background-color: white;
 }
 
 /*** ANIMATIONS ***/
@@ -1044,6 +1045,16 @@ footer a {
   /* Navbar */
   /* Main */
   /* Footer */
+  footer {
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    -ms-grid-columns: 2fr 3fr 2fr;
+    grid-template-columns: 2fr 3fr 2fr;
+  }
+  footer a img {
+    height: auto;
+    width: 10vw;
+  }
   /* Components */
 }
 
@@ -1055,8 +1066,8 @@ footer a {
   footer {
     -ms-grid-rows: auto;
     grid-template-rows: auto;
-    -ms-grid-columns: auto auto auto;
-    grid-template-columns: auto auto auto;
+    -ms-grid-columns: 2fr 3fr 2fr;
+    grid-template-columns: 2fr 3fr 2fr;
   }
   footer a img {
     height: auto;
@@ -1082,10 +1093,10 @@ footer a {
   /* Main */
   /* Footer */
   footer {
-    -ms-grid-rows: auto auto auto;
-    grid-template-rows: auto auto auto;
-    -ms-grid-columns: 1pr;
-    grid-template-columns: 1pr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas: "contact" "ocf" "nice";
   }
   footer .contact {
@@ -1094,13 +1105,13 @@ footer a {
     grid-area: contact;
   }
   footer #ocf {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: ocf;
     display: Grid;
-    grid-auto-rows: minmax(10px, auto);
+    grid-auto-rows: auto;
     grid-auto-columns: minmax(10px, auto);
-    gap: 8px;
+    gap: 0px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1206,6 +1217,14 @@ footer a {
   navbar #open-nav-btn,
   navbar #close-nav-btn {
     display: block;
+    grid-area: "navbutton";
+  }
+  navbar {
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-areas: "navbutton . logo";
+  }
+  navbar #logo {
+    grid-area: "logo";
   }
   /* Main */
   /* Footer */

@@ -1,6 +1,6 @@
-RewriteEngine On
+RewriteEngine Off
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 # Change "user" and "flask" to your username and whatever directory
 # name you made in public_html, respectively
-RewriteRule ^(.*)$ /~nice/flask/run.fcgi/$1 [QSA,L]
+RewriteRule ^(.*)$ ocf.io/~nice/run.fcgi/$1 [QSA,L]

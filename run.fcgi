@@ -2,9 +2,9 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.expanduser('~/public_html'))
+# sys.path.insert(0, os.path.expanduser('~/'))
 from flup.server.fcgi import WSGIServer
-from app import app
+from website.app import app
 
 if __name__ == '__main__':
     WSGIServer(app, debug=True).run()

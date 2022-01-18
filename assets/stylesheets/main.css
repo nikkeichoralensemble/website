@@ -432,6 +432,7 @@ footer .fab {
 navbar {
   /* XXXXXXXXXXXXXXXXXXXXX Do not edit below this line XXXXXXXXXXXXXXXXXXXXX */
   position: fixed;
+  top: 0px;
   height: 7.5vh;
   display: Grid;
   grid-auto-rows: minmax(10px, auto);

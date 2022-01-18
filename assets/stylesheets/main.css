@@ -920,38 +920,56 @@ section[role="banner"]#auditionsbanner {
   background-position: center;
 }
 
-#emma {
-  background: url("../images/emma.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#roger {
-  background: url("../images/roger.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
 #jessica {
   background: url("../images/jessica.jpg");
   background-size: cover;
   background-position: center;
 }
 
-#april {
-  background: url("../images/april.jpg");
+#cindy {
+  background: url("../images/cindy.jpg");
   background-size: cover;
   background-position: center;
 }
 
-#jon {
-  background: url("../images/jon.jpg");
+#lynn {
+  background: url("../images/lynn.jpg");
   background-size: cover;
   background-position: center;
 }
 
-#hiro {
-  background: url("../images/hiro.jpg");
+#sydney {
+  background: url("../images/sydney.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#ava {
+  background: url("../images/ava.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#joshua {
+  background: url("../images/joshua.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#pallas {
+  background: url("../images/pallas.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#marissa {
+  background: url("../images/marissa.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#maya {
+  background: url("../images/maya.jpg");
   background-size: cover;
   background-position: center;
 }

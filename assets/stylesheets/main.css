@@ -841,9 +841,9 @@ section[role="banner"]#homebanner {
       color-stop(80%),
       to(var(--palette--theme))
     ),
-    url("../images/group1.jpg");
+    url("../images/group1.jpeg");
   background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
-    url("../images/group1.jpg");
+    url("../images/group1.jpeg");
 }
 
 section[role="banner"]#aboutbanner {

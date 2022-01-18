@@ -53,3 +53,5 @@ To inspect a page, right-click the page in a browser, select "inspect".
 1. SSH into OCF's server with `ssh nice@ssh.ocf.berkeley.edu` in a terminal
 2. run `cd website`
 3. run `git pull`
+4. run 'cd ..' so you're back at the home directory
+5. copy contents from website into "public_html"

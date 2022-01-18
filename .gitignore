@@ -11,6 +11,10 @@ _pypackages_
 env/
 venv/
 
+# Temporary Files
+*.swo
+*.swp
+
 # Binary Files
 *.DS_Store
 

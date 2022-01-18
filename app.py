@@ -31,6 +31,10 @@ def template():
 def newpage():
     return render_template("_newpage.html")
 
+@app.route("/hidden/test")
+def newpage():
+    return render_template("_local_testing.html")
+
 
 if __name__ == "__main__":
     app.run()

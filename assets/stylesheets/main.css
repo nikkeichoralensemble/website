@@ -914,12 +914,6 @@ section[role="banner"]#auditionsbanner {
   transition: all 0.5s;
 } */
 
-#samee {
-  background: url("../images/samee.jpeg");
-  background-size: cover;
-  background-position: center;
-}
-
 #jessica {
   background: url("../images/jessica.jpeg");
   background-size: cover;
@@ -970,6 +964,24 @@ section[role="banner"]#auditionsbanner {
 
 #maya {
   background: url("../images/maya.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+#dlo {
+  background: url("../images/dlo.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+#cj {
+  background: url("../images/cj.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+#ryan {
+  background: url("../images/ryan.jpeg");
   background-size: cover;
   background-position: center;
 }

@@ -849,13 +849,13 @@ section[role="banner"]#homebanner {
 section[role="banner"]#aboutbanner {
   height: 50vh;
   /* change this to fit image */
-  background-image: url("../images/group2.jpg");
+  background-image: url("../images/group1.jpeg");
 }
 
 section[role="banner"]#auditionsbanner {
   height: 50vh;
   /* change this to fit image */
-  background-image: url("../images/group3.jpg");
+  background-image: url("../images/group1.jpeg");
 }
 
 /*------------------------------------------

@@ -153,6 +153,7 @@ section {
 footer {
   width: 100vw;
 }
+
 /* XXXXXXXXXXXXXXXXXXXXX Do not edit above this line XXXXXXXXXXXXXXXXXXXXX */
 
 img {
@@ -280,6 +281,7 @@ table {
   display: flex;
   flex-direction: row;
 }
+
 /*------------------------------------------
 # Custom Components
 ------------------------------------------*/
@@ -293,9 +295,11 @@ img[role="logo"] {
 a[role] {
   text-decoration: none;
 }
+
 a[role="button"] {
   border: var(--little-border);
 }
+
 a[role="social-media"] {
   border: var(--little-border);
 }
@@ -396,16 +400,14 @@ footer .fab {
 .fas.fa-instagram:hover,
 .fab.fa-instagram:hover {
   background-color: #bc2a8d;
-  background: linear-gradient(
-    45deg,
-    #fccc63,
-    #fbad50,
-    #e95950,
-    #cd486b,
-    #bc2a8d,
-    #8a3ab9,
-    #4c68d7
-  );
+  background: linear-gradient(45deg,
+      #fccc63,
+      #fbad50,
+      #e95950,
+      #cd486b,
+      #bc2a8d,
+      #8a3ab9,
+      #4c68d7);
 }
 
 .fas.fa-envelope:hover,
@@ -493,7 +495,7 @@ navbar #navtabs {
   width: 100%;
 }
 
-navbar #navtabs > a[role="button"] {
+navbar #navtabs>a[role="button"] {
   line-height: 4;
   -ms-grid-column-align: stretch;
   justify-self: stretch;
@@ -558,7 +560,7 @@ navbar {
   box-shadow: var(--little-dropshadow);
 }
 
-navbar #navtabs > a[role="button"] {
+navbar #navtabs>a[role="button"] {
   border: var(--little-border);
   border-top: none;
   border-radius: 0px 0px var(--corner-roundedness) var(--corner-roundedness);
@@ -571,31 +573,29 @@ navbar #navtabs > a[role="button"] {
   color: var(--palette--black);
 }
 
-navbar #navtabs > a[role="button"]:hover {
+navbar #navtabs>a[role="button"]:hover {
   color: var(--palette--white);
   background-color: var(--palette--theme);
 }
 
 navbar #navtabs#homebanner {
-  background: -webkit-gradient(
-      linear,
+  background: -webkit-gradient(linear,
       left top,
       left bottom,
       from(transparent),
       color-stop(80%),
-      to(var(--palette--theme))
-    ),
-    url("../images/group1.jpeg");
+      to(var(--palette--theme))),
+    url("../images/spr_21/group1.jpeg");
   background: linear-gradient(transparent, 80%, var(--palette--theme)),
-    url("../images/group1.jpeg");
+    url("../images/spr_21/group1.jpeg");
 }
 
 navbar #navtabs#aboutbanner {
-  background: url("../images/group2.jpg");
+  background: url("../images/spr_21/group2.jpg");
 }
 
 navbar #navtabs#auditionsbanner {
-  background: url("../images/group3.jpg");
+  background: url("../images/spr_21/group3.jpg");
 }
 
 navbar #sidenav {
@@ -603,7 +603,7 @@ navbar #sidenav {
   color: var(--palette--white);
 }
 
-navbar #sidenav > a[role="button"] {
+navbar #sidenav>a[role="button"] {
   width: 100%;
   font-size: var(--font--medium);
   border-top: 0.5px solid var(--palette--white);
@@ -611,7 +611,7 @@ navbar #sidenav > a[role="button"] {
   color: var(--palette--white);
 }
 
-navbar #sidenav > a[role="button"]:hover {
+navbar #sidenav>a[role="button"]:hover {
   background-color: var(--palette--theme-lighter);
 }
 
@@ -629,7 +629,7 @@ navbar #close-nav-btn {
 }
 
 /*** ANIMATIONS ***/
-#navtabs > a[role="button"] {
+#navtabs>a[role="button"] {
   -webkit-transition: top 0.15s ease-in-out;
   transition: top 0.15s ease-in-out;
 }
@@ -833,29 +833,27 @@ section[role="banner"] p {
 section[role="banner"]#homebanner {
   height: 100vh;
   /* change this to fit image */
-  background-image: -webkit-gradient(
-      linear,
+  background-image: -webkit-gradient(linear,
       left top,
       left bottom,
       from(transparent),
       color-stop(80%),
-      to(var(--palette--theme))
-    ),
-    url("../images/group1.jpeg");
+      to(var(--palette--theme))),
+    url("../images/spr_21/group1.jpeg");
   background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
-    url("../images/group1.jpeg");
+    url("../images/spr_21/group1.jpeg");
 }
 
 section[role="banner"]#aboutbanner {
   height: 50vh;
   /* change this to fit image */
-  background-image: url("../images/group1.jpeg");
+  background-image: url("../images/spr_21/group1.jpeg");
 }
 
 section[role="banner"]#auditionsbanner {
   height: 50vh;
   /* change this to fit image */
-  background-image: url("../images/group1.jpeg");
+  background-image: url("../images/spr_21/group1.jpeg");
 }
 
 /*------------------------------------------
@@ -915,85 +913,85 @@ section[role="banner"]#auditionsbanner {
 } */
 
 #jessica {
-  background: url("../images/jessica.jpeg");
+  background: url("../images/spr_21/jessica.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 #cindy {
-  background: url("../images/cindy.jpeg");
+  background: url("../images/spr_21/cindy.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 #lynn {
-  background: url("../images/lynn.jpeg");
+  background: url("../images/spr_21/lynn.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 #sydney {
-  background: url("../images/sydney.jpeg");
+  background: url("../images/spr_21/sydney.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 #ava {
-  background: url("../images/ava.jpeg");
+  background: url("../images/spr_21/ava.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 #joshua {
-  background: url("../images/joshua.jpeg");
+  background: url("../images/spr_21/joshua.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 #pallas {
-  background: url("../images/pallas.jpeg");
+  background: url("../images/spr_21/pallas.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 #marissa {
-  background: url("../images/marissa.jpeg");
+  background: url("../images/spr_21/marissa.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 #maya {
-  background: url("../images/maya.jpeg");
+  background: url("../images/spr_21/maya.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 #dlo {
-  background: url("../images/dlo.jpeg");
+  background: url("../images/spr_21/dlo.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 #cj {
-  background: url("../images/cj.jpeg");
+  background: url("../images/spr_21/cj.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 #ryan {
-  background: url("../images/ryan.jpeg");
+  background: url("../images/spr_21/ryan.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 #extra1 {
-  background: url("../images/extra1.jpg");
+  background: url("../images/spr_21/extra1.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #extra2 {
-  background: url("../images/extra2.jpeg");
+  background: url("../images/spr_21/extra2.jpeg");
   background-size: cover;
   background-position: center;
 }
@@ -1072,6 +1070,7 @@ footer a {
 # Large -> Desktop
 --------------------------------------------------------------*/
 @media screen and (min-width: 1681px) {
+
   /* Basic */
   /* Navbar */
   /* Main */
@@ -1082,14 +1081,17 @@ footer a {
     -ms-grid-columns: 2fr 3fr 2fr;
     grid-template-columns: 2fr 3fr 2fr;
   }
+
   footer a img {
     height: auto;
     width: 10vw;
   }
+
   /* Components */
 }
 
 @media screen and (max-width: 1680px) {
+
   /* Basic */
   /* Navbar */
   /* Main */
@@ -1100,10 +1102,12 @@ footer a {
     -ms-grid-columns: 2fr 3fr 2fr;
     grid-template-columns: 2fr 3fr 2fr;
   }
+
   footer a img {
     height: auto;
     width: 10vw;
   }
+
   /* Components */
 }
 
@@ -1119,6 +1123,7 @@ footer a {
 }
 
 @media screen and (max-width: 750px) {
+
   /* Basic */
   /* Navbar */
   /* Main */
@@ -1130,11 +1135,13 @@ footer a {
     grid-template-columns: 1fr;
     grid-template-areas: "contact" "ocf" "nice";
   }
+
   footer .contact {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: contact;
   }
+
   footer #ocf {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -1157,25 +1164,30 @@ footer a {
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "text" "ocflogo";
   }
+
   footer #ocf p {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: text;
   }
+
   footer #ocf a {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: ocflogo;
   }
+
   footer #ocf a img {
     height: auto;
     width: 100%;
   }
-  footer > img[role="logo"] {
+
+  footer>img[role="logo"] {
     grid-area: nicelogo;
     height: 60%;
     width: auto;
   }
+
   footer #copyright {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
@@ -1199,12 +1211,15 @@ footer a {
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
   }
+
   footer #copyright p {
     text-align: center;
   }
+
   footer #copyright br {
     display: none;
   }
+
   /* Components */
 }
 
@@ -1212,12 +1227,14 @@ footer a {
 # Small -> Mobile
 --------------------------------------------------------------*/
 @media screen and (min-width: 561px) {
+
   /* Basic */
   /* Navbar */
   navbar #open-nav-btn,
   navbar #close-nav-btn {
     display: none;
   }
+
   /* Main */
   /* Footer */
   /* Components */
@@ -1236,36 +1253,44 @@ footer a {
 }
 
 @media screen and (max-width: 560px) {
+
   /* Basic */
   div {
     display: block;
   }
+
   /* Navbar */
   navbar #navtabs,
   navbar .contact {
     display: none;
   }
+
   navbar #open-nav-btn,
   navbar #close-nav-btn {
     display: block;
     grid-area: "navbutton";
   }
+
   navbar {
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-areas: "navbutton . logo";
   }
+
   navbar #logo {
     grid-area: "logo";
   }
+
   /* Main */
   /* Footer */
   footer {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
+
   footer br {
     display: block !important;
   }
+
   /* Components */
   .fas,
   .fab {

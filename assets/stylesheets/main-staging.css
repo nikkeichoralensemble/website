@@ -437,6 +437,7 @@ navbar {
   position: fixed;
   top: 0px;
   height: 7.5vh;
+  min-height: 2em;
   display: Grid;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
@@ -468,6 +469,7 @@ navbar #logo {
 
 navbar #logo img {
   height: 6vh;
+  min-height: 1.5em;
   width: auto;
 }
 
@@ -492,17 +494,21 @@ navbar #navtabs {
   justify-content: space-evenly;
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 100%;
+  height: 7.5vh;
+  min-height: 2em;
   width: 100%;
 }
 
 navbar #navtabs>a[role="button"] {
-  line-height: 4;
+  line-height: 7.5vh;
+  min-height: 2em;
+  overflow: hidden;
   -ms-grid-column-align: stretch;
   justify-self: stretch;
   -ms-flex-item-align: stretch;
   -ms-grid-row-align: stretch;
-  align-self: stretch;
+  align-self: center;
+  vertical-align: middle;
 }
 
 navbar .contact {
@@ -849,12 +855,14 @@ section[role="banner"]#aboutbanner {
   height: 50vh;
   /* change this to fit image */
   background-image: url("../images/spr_23/group_showcase.JPG");
+  background-position-y: 40%
 }
 
 section[role="banner"]#auditionsbanner {
   height: 50vh;
   /* change this to fit image */
   background-image: url("../images/spr_23/group_showcase.JPG");
+  background-position-y: 40%
 }
 
 /*------------------------------------------

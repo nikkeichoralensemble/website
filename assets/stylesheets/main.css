@@ -222,6 +222,7 @@ p {
   font-size: var(--font--regular);
   margin: 0.8em;
   color: var(--palette--black);
+  width: inherit;
 }
 
 /*------------------------------------------
@@ -436,6 +437,7 @@ navbar {
   position: fixed;
   top: 0px;
   height: 7.5vh;
+  min-height: 2em;
   display: Grid;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
@@ -467,6 +469,7 @@ navbar #logo {
 
 navbar #logo img {
   height: 6vh;
+  min-height: 1.5em;
   width: auto;
 }
 
@@ -491,17 +494,21 @@ navbar #navtabs {
   justify-content: space-evenly;
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 100%;
+  height: 7.5vh;
+  min-height: 2em;
   width: 100%;
 }
 
 navbar #navtabs>a[role="button"] {
-  line-height: 4;
+  line-height: 7.5vh;
+  min-height: 2em;
+  overflow: hidden;
   -ms-grid-column-align: stretch;
   justify-self: stretch;
   -ms-flex-item-align: stretch;
   -ms-grid-row-align: stretch;
-  align-self: stretch;
+  align-self: center;
+  vertical-align: middle;
 }
 
 navbar .contact {
@@ -585,17 +592,17 @@ navbar #navtabs#homebanner {
       from(transparent),
       color-stop(80%),
       to(var(--palette--theme))),
-    url("../images/spr_21/group1.jpeg");
+    url("../images/spr_23/group_showcase.JPG");
   background: linear-gradient(transparent, 80%, var(--palette--theme)),
-    url("../images/spr_21/group1.jpeg");
+    url("../images/spr_23/group_showcase.JPG");
 }
 
 navbar #navtabs#aboutbanner {
-  background: url("../images/spr_21/group2.jpg");
+  background: url("../images/spr_23/group_showcase.JPG");
 }
 
 navbar #navtabs#auditionsbanner {
-  background: url("../images/spr_21/group3.jpg");
+  background: url("../images/spr_23/group_showcase.JPG");
 }
 
 navbar #sidenav {
@@ -839,45 +846,40 @@ section[role="banner"]#homebanner {
       from(transparent),
       color-stop(80%),
       to(var(--palette--theme))),
-    url("../images/spr_21/group1.jpeg");
+    url("../images/spr_23/group_showcase.JPG");
   background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
-    url("../images/spr_21/group1.jpeg");
+    url("../images/spr_23/group_showcase.JPG");
 }
 
 section[role="banner"]#aboutbanner {
   height: 50vh;
   /* change this to fit image */
-  background-image: url("../images/spr_21/group1.jpeg");
+  background-image: url("../images/spr_23/group_showcase.JPG");
+  background-position-y: 40%
 }
 
 section[role="banner"]#auditionsbanner {
   height: 50vh;
   /* change this to fit image */
-  background-image: url("../images/spr_21/group1.jpeg");
+  background-image: url("../images/spr_23/group_showcase.JPG");
+  background-position-y: 40%
 }
 
 /*------------------------------------------
-# Current Members (Fall 2022)
+# Current Members (Fall 2023)
 ------------------------------------------*/
 /* Member Photos */
 .grid-container {
-  display: Grid;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
-  gap: 8px;
+  width: 90%;
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-line-pack: space-evenly;
   align-content: space-evenly;
   justify-items: center;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-  display: -ms-grid;
+  justify-content: center;
   display: grid;
-  -ms-grid-columns: (minmax(240px, 1fr)) [auto-fit];
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
   gap: 1em 3%;
 }
 
@@ -913,85 +915,85 @@ section[role="banner"]#auditionsbanner {
 } */
 
 #jessica {
-  background: url("../images/spr_21/jessica.jpeg");
+  background: url("../images/spr_23/jessica.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 #cindy {
-  background: url("../images/spr_21/cindy.jpeg");
-  background-size: cover;
-  background-position: center;
-}
-
-#lynn {
-  background: url("../images/spr_21/lynn.jpeg");
+  background: url("../images/spr_23/cindy.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #sydney {
-  background: url("../images/spr_21/sydney.jpeg");
+  background: url("../images/spr_23/sydney.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #ava {
-  background: url("../images/spr_21/ava.jpeg");
+  background: url("../images/spr_23/ava.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #joshua {
-  background: url("../images/spr_21/joshua.jpeg");
-  background-size: cover;
-  background-position: center;
-}
-
-#pallas {
-  background: url("../images/spr_21/pallas.jpeg");
+  background: url("../images/spr_23/joshua.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #marissa {
-  background: url("../images/spr_21/marissa.jpeg");
+  background: url("../images/spr_23/marissa.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #maya {
-  background: url("../images/spr_21/maya.jpeg");
+  background: url("../images/spr_23/maya.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #dlo {
-  background: url("../images/spr_21/dlo.jpeg");
+  background: url("../images/spr_23/dlo.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #cj {
-  background: url("../images/spr_21/cj.jpeg");
+  background: url("../images/spr_23/cj.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #ryan {
-  background: url("../images/spr_21/ryan.jpeg");
+  background: url("../images/spr_23/ryan.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#aimi {
+  background: url("../images/spr_23/aimi.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#alex {
+  background: url("../images/spr_23/alex.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #extra1 {
-  background: url("../images/spr_21/extra1.jpg");
+  background: url("../images/spr_23/altos_goofy.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #extra2 {
-  background: url("../images/spr_21/extra2.jpeg");
+  background: url("../images/spr_23/baris_goofy.jpg");
   background-size: cover;
   background-position: center;
 }

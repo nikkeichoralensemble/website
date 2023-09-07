@@ -869,7 +869,7 @@ section[role="banner"]#auditionsbanner {
 # Current Members (Fall 2023)
 ------------------------------------------*/
 /* Member Photos */
-.grid-container {
+.member-grid-container {
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
   width: 90%;
@@ -914,24 +914,6 @@ section[role="banner"]#auditionsbanner {
   transition: all 0.5s;
 } */
 
-#jessica {
-  background: url("../images/spr_23/jessica.jpeg");
-  background-size: cover;
-  background-position: center;
-}
-
-#cindy {
-  background: url("../images/spr_23/cindy.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#sydney {
-  background: url("../images/spr_23/sydney.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
 #ava {
   background: url("../images/spr_23/ava.jpg");
   background-size: cover;
@@ -950,26 +932,8 @@ section[role="banner"]#auditionsbanner {
   background-position: center;
 }
 
-#maya {
-  background: url("../images/spr_23/maya.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#dlo {
-  background: url("../images/spr_23/dlo.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
 #cj {
   background: url("../images/spr_23/cj.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-#ryan {
-  background: url("../images/spr_23/ryan.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -996,6 +960,62 @@ section[role="banner"]#auditionsbanner {
   background: url("../images/spr_23/baris_goofy.jpg");
   background-size: cover;
   background-position: center;
+}
+
+/*------------------------------------------
+# Upcoming Performances
+------------------------------------------*/
+/* Performance Photos */
+.performance-grid-container {
+  grid-auto-rows: minmax(10px, auto);
+  grid-auto-columns: minmax(10px, auto);
+  width: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+  gap: 1em 3%;
+}
+
+.performance {
+  background-color: var(--palette--white);
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--palette--theme-lighter);
+  border-radius: 3px;
+  outline: none;
+  width: 600px;
+}
+
+.performance h3 {
+  color: var(--palette--theme-darker);
+  padding-top: 0.5em;
+}
+
+.performance h4 {
+  color: var(--palette--black);
+  font-size: 90%;
+}
+
+/*------------------------------------------
+# Our Videos
+------------------------------------------*/
+/* Videos */
+.video-grid-container {
+  grid-auto-rows: minmax(10px, auto);
+  grid-auto-columns: minmax(10px, auto);
+  width: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, max-content));
+  gap: 1em 3%;
 }
 
 /*------------------------------------

@@ -950,6 +950,30 @@ section[role="banner"]#auditionsbanner {
   background-position: center;
 }
 
+#akira {
+  background: url("../images/fa_23/members/akira.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#diane {
+  background: url("../images/fa_23/members/diane.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#evi {
+  background: url("../images/fa_23/members/evi.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#michael {
+  background: url("../images/fa_23/members/michael.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 #extra1 {
   background: url("../images/spr_23/altos_goofy.jpg");
   background-size: cover;

@@ -21,3 +21,11 @@ To inspect a page, right-click the page in a browser, select "inspect".
 1. SSH into OCF's server with `ssh nice@ssh.ocf.berkeley.edu` in a terminal
 2. run `cd public_html`
 3. run `git pull`
+
+## Staged updates
+
+Edit HTML files appended with `-staging`
+
+These can be accessed at `niceacappella.berkeley.edu/file-name-staging`
+
+To deploy, copy code from staging files to live files and search and remove all instances of `-staging`

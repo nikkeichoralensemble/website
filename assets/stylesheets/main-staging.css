@@ -592,17 +592,17 @@ navbar #navtabs#homebanner {
       from(transparent),
       color-stop(80%),
       to(var(--palette--theme))),
-    url("../images/spr_23/group_showcase.JPG");
+    url("../images/spr_24/group/fa23_showcase.png");
   background: linear-gradient(transparent, 80%, var(--palette--theme)),
-    url("../images/spr_23/group_showcase.JPG");
+    url("../images/spr_24/group/fa23_showcase.png");
 }
 
 navbar #navtabs#aboutbanner {
-  background: url("../images/spr_23/group_showcase.JPG");
+  background: url("../images/spr_24/group/fa23_photoshoot_posed.png");
 }
 
 navbar #navtabs#auditionsbanner {
-  background: url("../images/spr_23/group_showcase.JPG");
+  background: url("../images/spr_24/group/fa23_photoshoot_cute.png");
 }
 
 navbar #sidenav {
@@ -846,22 +846,22 @@ section[role="banner"]#homebanner {
       from(transparent),
       color-stop(80%),
       to(var(--palette--theme))),
-    url("../images/spr_23/group_showcase.JPG");
+    url("../images/spr_24/group/fa23_showcase.png");
   background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
-    url("../images/spr_23/group_showcase.JPG");
+    url("../images/spr_24/group/fa23_showcase.png");
 }
 
 section[role="banner"]#aboutbanner {
   height: 50vh;
   /* change this to fit image */
-  background-image: url("../images/spr_23/group_showcase.JPG");
+  background-image: url("../images/spr_24/group/fa23_photoshoot_cute.png");
   background-position-y: 40%
 }
 
 section[role="banner"]#auditionsbanner {
   height: 50vh;
   /* change this to fit image */
-  background-image: url("../images/spr_23/group_showcase.JPG");
+  background-image: url("../images/spr_24/group/fa23_photoshoot_posed.png");
   background-position-y: 40%
 }
 
@@ -915,73 +915,145 @@ section[role="banner"]#auditionsbanner {
 } */
 
 #ava {
-  background: url("../images/spr_23/ava.jpg");
+  background: url("../images/spr_24/members/ava.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#ava:hover {
+  background: url("../images/spr_24/members/ava_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #joshua {
-  background: url("../images/spr_23/joshua.jpg");
+  background: url("../images/spr_24/members/josh.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#joshua:hover {
+  background: url("../images/spr_24/members/josh_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #marissa {
-  background: url("../images/spr_23/marissa.jpg");
+  background: url("../images/spr_24/members/marissa.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#marissa:hover {
+  background: url("../images/spr_24/members/marissa_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #cj {
-  background: url("../images/spr_23/cj.jpg");
+  background: url("../images/spr_24/members/cj.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#cj:hover {
+  background: url("../images/spr_24/members/cj_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #aimi {
-  background: url("../images/spr_23/aimi.jpg");
+  background: url("../images/spr_24/members/aimi.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#aimi:hover {
+  background: url("../images/spr_24/members/aimi_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #alex {
-  background: url("../images/spr_23/alex.jpg");
+  background: url("../images/spr_24/members/alex.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#alex:hover {
+  background: url("../images/spr_24/members/alex_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #akira {
-  background: url("../images/fa_23/members/akira.jpg");
+  background: url("../images/spr_24/members/akira.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#akira:hover {
+  background: url("../images/spr_24/members/akira_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #diane {
-  background: url("../images/fa_23/members/diane.jpg");
+  background: url("../images/spr_24/members/diane.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#diane:hover {
+  background: url("../images/spr_24/members/diane_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #evi {
-  background: url("../images/fa_23/members/evi.jpg");
+  background: url("../images/spr_24/members/evi.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#evi:hover {
+  background: url("../images/spr_24/members/evi_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #michael {
-  background: url("../images/fa_23/members/michael.jpg");
+  background: url("../images/spr_24/members/michael.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#michael:hover {
+  background: url("../images/spr_24/members/michael_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #extra1 {
-  background: url("../images/spr_23/altos_goofy.jpg");
+  background: url("../images/spr_24/group/sops.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#extra1:hover {
+  background: url("../images/spr_24/group/basses.png");
   background-size: cover;
   background-position: center;
 }
 
 #extra2 {
-  background: url("../images/spr_23/baris_goofy.jpg");
+  background: url("../images/spr_24/group/altos.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#extra2:hover {
+  background: url("../images/spr_24/group/tenors.png");
   background-size: cover;
   background-position: center;
 }

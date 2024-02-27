@@ -1034,6 +1034,30 @@ section[role="banner"]#auditionsbanner {
   background-position: center;
 }
 
+#mindy {
+  background: url("../images/spr_24/members/mindy.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#mindy:hover {
+  background: url("../images/spr_24/members/mindy_back.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#shiwei {
+  background: url("../images/spr_24/members/shiwei.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#shiwei:hover {
+  background: url("../images/spr_24/members/shiwei_back.png");
+  background-size: cover;
+  background-position: center;
+}
+
 #extra1 {
   background: url("../images/spr_24/group/sops.png");
   background-size: cover;

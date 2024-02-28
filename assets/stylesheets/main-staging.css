@@ -1034,6 +1034,30 @@ section[role="banner"]#auditionsbanner {
   background-position: center;
 }
 
+#lucky {
+  background: url("../images/spr_24/members/lucky.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#lucky:hover {
+  background: url("../images/spr_24/members/lucky_back.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#mark {
+  background: url("../images/spr_24/members/mark.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#mark:hover {
+  background: url("../images/spr_24/members/mark_back.png");
+  background-size: cover;
+  background-position: center;
+}
+
 #mindy {
   background: url("../images/spr_24/members/mindy.png");
   background-size: cover;
@@ -1054,6 +1078,18 @@ section[role="banner"]#auditionsbanner {
 
 #shiwei:hover {
   background: url("../images/spr_24/members/shiwei_back.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#stella {
+  background: url("../images/spr_24/members/stella.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#stella:hover {
+  background: url("../images/spr_24/members/stella_back.png");
   background-size: cover;
   background-position: center;
 }

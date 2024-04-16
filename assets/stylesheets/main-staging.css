@@ -915,186 +915,174 @@ section[role="banner"]#auditionsbanner {
 } */
 
 #ava {
-  background: url("../images/spr_24/members/ava.png");
+  background: url("../images/spr_24/photoshoot/ava_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #ava:hover {
-  background: url("../images/spr_24/members/ava_back.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#joshua {
-  background: url("../images/spr_24/members/josh.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#joshua:hover {
-  background: url("../images/spr_24/members/josh_back.png");
+  background: url("../images/spr_24/photoshoot/ava_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #marissa {
-  background: url("../images/spr_24/members/marissa.png");
+  background: url("../images/spr_24/photoshoot/marissa_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #marissa:hover {
-  background: url("../images/spr_24/members/marissa_back.png");
+  background: url("../images/spr_24/photoshoot/marissa_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #cj {
-  background: url("../images/spr_24/members/cj.png");
+  background: url("../images/spr_24/photoshoot/cj_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #cj:hover {
-  background: url("../images/spr_24/members/cj_back.png");
+  background: url("../images/spr_24/photoshoot/cj_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #aimi {
-  background: url("../images/spr_24/members/aimi.png");
+  background: url("../images/spr_24/photoshoot/aimi_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #aimi:hover {
-  background: url("../images/spr_24/members/aimi_back.png");
+  background: url("../images/spr_24/photoshoot/aimi_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #alex {
-  background: url("../images/spr_24/members/alex.png");
+  background: url("../images/spr_24/photoshoot/alex_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #alex:hover {
-  background: url("../images/spr_24/members/alex_back.png");
+  background: url("../images/spr_24/photoshoot/alex_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #akira {
-  background: url("../images/spr_24/members/akira.png");
+  background: url("../images/spr_24/photoshoot/akira_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #akira:hover {
-  background: url("../images/spr_24/members/akira_back.png");
+  background: url("../images/spr_24/photoshoot/akira_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #diane {
-  background: url("../images/spr_24/members/diane.png");
+  background: url("../images/spr_24/photoshoot/diane_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #diane:hover {
-  background: url("../images/spr_24/members/diane_back.png");
+  background: url("../images/spr_24/photoshoot/diane_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #evi {
-  background: url("../images/spr_24/members/evi.png");
+  background: url("../images/spr_24/photoshoot/evi_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #evi:hover {
-  background: url("../images/spr_24/members/evi_back.png");
+  background: url("../images/spr_24/photoshoot/evi_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #michael {
-  background: url("../images/spr_24/members/michael.png");
+  background: url("../images/spr_24/photoshoot/michael_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #michael:hover {
-  background: url("../images/spr_24/members/michael_back.png");
+  background: url("../images/spr_24/photoshoot/michael_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #lucky {
-  background: url("../images/spr_24/members/lucky.png");
+  background: url("../images/spr_24/photoshoot/lucky_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #lucky:hover {
-  background: url("../images/spr_24/members/lucky_back.png");
+  background: url("../images/spr_24/photoshoot/lucky_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #mark {
-  background: url("../images/spr_24/members/mark.png");
+  background: url("../images/spr_24/photoshoot/mark_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #mark:hover {
-  background: url("../images/spr_24/members/mark_back.png");
+  background: url("../images/spr_24/photoshoot/mark_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #mindy {
-  background: url("../images/spr_24/members/mindy.png");
+  background: url("../images/spr_24/photoshoot/mindy_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #mindy:hover {
-  background: url("../images/spr_24/members/mindy_back.png");
+  background: url("../images/spr_24/photoshoot/mindy_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #shiwei {
-  background: url("../images/spr_24/members/shiwei.png");
+  background: url("../images/spr_24/photoshoot/shiwei_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #shiwei:hover {
-  background: url("../images/spr_24/members/shiwei_back.png");
+  background: url("../images/spr_24/photoshoot/shiwei_back.png");
   background-size: cover;
   background-position: center;
 }
 
 #stella {
-  background: url("../images/spr_24/members/stella.png");
+  background: url("../images/spr_24/photoshoot/stella_front.png");
   background-size: cover;
   background-position: center;
 }
 
 #stella:hover {
-  background: url("../images/spr_24/members/stella_back.png");
+  background: url("../images/spr_24/photoshoot/stella_back.png");
   background-size: cover;
   background-position: center;
 }
 
-#extra1 {
+/* #extra1 {
   background: url("../images/spr_24/group/sops.png");
   background-size: cover;
   background-position: center;
@@ -1116,7 +1104,7 @@ section[role="banner"]#auditionsbanner {
   background: url("../images/spr_24/group/tenors.png");
   background-size: cover;
   background-position: center;
-}
+} */
 
 /*------------------------------------------
 # Upcoming Performances

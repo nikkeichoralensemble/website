@@ -437,7 +437,6 @@ navbar {
   position: fixed;
   top: 0px;
   height: 7.5vh;
-  min-height: 2em;
   display: Grid;
   grid-auto-rows: minmax(10px, auto);
   grid-auto-columns: minmax(10px, auto);
@@ -469,7 +468,6 @@ navbar #logo {
 
 navbar #logo img {
   height: 6vh;
-  min-height: 1.5em;
   width: auto;
 }
 
@@ -494,21 +492,17 @@ navbar #navtabs {
   justify-content: space-evenly;
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 7.5vh;
-  min-height: 2em;
+  height: 100%;
   width: 100%;
 }
 
-navbar #navtabs>a[role="button"] {
-  line-height: 7.5vh;
-  min-height: 2em;
-  overflow: hidden;
+navbar #navtabs > a[role="button"] {
+  line-height: 4;
   -ms-grid-column-align: stretch;
   justify-self: stretch;
   -ms-flex-item-align: stretch;
   -ms-grid-row-align: stretch;
-  align-self: center;
-  vertical-align: middle;
+  align-self: stretch;
 }
 
 navbar .contact {
@@ -567,7 +561,7 @@ navbar {
   box-shadow: var(--little-dropshadow);
 }
 
-navbar #navtabs>a[role="button"] {
+navbar #navtabs > a[role="button"] {
   border: var(--little-border);
   border-top: none;
   border-radius: 0px 0px var(--corner-roundedness) var(--corner-roundedness);
@@ -580,7 +574,7 @@ navbar #navtabs>a[role="button"] {
   color: var(--palette--black);
 }
 
-navbar #navtabs>a[role="button"]:hover {
+navbar #navtabs > a[role="button"]:hover {
   color: var(--palette--white);
   background-color: var(--palette--theme);
 }

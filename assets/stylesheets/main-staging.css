@@ -717,6 +717,16 @@ main a[role="button"].white:hover {
   color: var(--palette--black);
 }
 
+main a[role="button"].white2lb {
+  background-color: var(--palette--white);
+  color: var(--palette--black);
+}
+
+main a[role="button"].white2lb:hover {
+  background-color: var(--palette--theme-lighter);
+  color: var(--palette--black);
+}
+
 main a[role="button"].blue {
   background-color: var(--palette--theme);
   color: var(--palette--white);
@@ -735,6 +745,16 @@ main a[role="button"].lightblue {
 main a[role="button"].lightblue:hover {
   background-color: var(--palette--theme);
   color: var(--palette--white);
+}
+
+main a[role="button"].lightblue2w {
+  background-color: var(--palette--theme-lighter);
+  color: var(--palette--theme-darker);
+}
+
+main a[role="button"].lightblue2w:hover {
+  background-color: var(--palette--white);
+  color: var(--palette--theme);
 }
 
 main a[role="button"].pink {

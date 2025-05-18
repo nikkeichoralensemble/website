@@ -586,17 +586,20 @@ navbar #navtabs#homebanner {
       from(transparent),
       color-stop(80%),
       to(var(--palette--theme))),
-    url("../images/spr_24/group/fa23_showcase.png");
-  background: linear-gradient(transparent, 80%, var(--palette--theme)),
-    url("../images/spr_24/group/fa23_showcase.png");
+    url("../images/spr_25/group/fa24_mew1.jpg");
+  background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
+    url("../images/spr_25/group/fa24_mew1.jpg");
+    background-position-y: 60%
 }
 
 navbar #navtabs#aboutbanner {
-  background: url("../images/spr_24/group/fa23_photoshoot_posed.png");
+  background: url("../images/spr_25/group/sp25_showcase.JPG");
+  background-position-y: 34%
 }
 
 navbar #navtabs#auditionsbanner {
-  background: url("../images/spr_24/group/fa23_photoshoot_cute.png");
+  background: url("../images/spr_25/group/fa24_showcase.JPG");
+  background-position-y: 9%
 }
 
 navbar #sidenav {
@@ -860,23 +863,24 @@ section[role="banner"]#homebanner {
       from(transparent),
       color-stop(80%),
       to(var(--palette--theme))),
-    url("../images/spr_24/group/fa23_showcase.png");
+    url("../images/spr_25/group/fa24_mew1.jpg");
   background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
-    url("../images/spr_24/group/fa23_showcase.png");
+    url("../images/spr_25/group/fa24_mew1.jpg");
+    background-position-y: 60%
 }
 
 section[role="banner"]#aboutbanner {
   height: 50vh;
   /* change this to fit image */
-  background-image: url("../images/spr_24/group/fa23_photoshoot_cute.png");
-  background-position-y: 40%
+  background-image: url("../images/spr_25/group/sp25_showcase.JPG");
+  background-position-y: 34%
 }
 
 section[role="banner"]#auditionsbanner {
   height: 50vh;
   /* change this to fit image */
-  background-image: url("../images/spr_24/group/fa23_photoshoot_posed.png");
-  background-position-y: 40%
+  background-image: url("../images/spr_25/group/fa24_showcase.JPG");
+  background-position-y: 9%
 }
 
 /*------------------------------------------
@@ -929,169 +933,158 @@ section[role="banner"]#auditionsbanner {
 } */
 
 #ava {
-  background: url("../images/spr_24/photoshoot/ava_front.png");
+  background: url("../images/spr_25/photoshoot/ava-front.png");
   background-size: cover;
   background-position: center;
 }
 
 #ava:hover {
-  background: url("../images/spr_24/photoshoot/ava_back.png");
+  background: url("../images/spr_25/photoshoot/ava-back.png");
   background-size: cover;
   background-position: center;
 }
 
-#marissa {
-  background: url("../images/spr_24/photoshoot/marissa_front.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#marissa:hover {
-  background: url("../images/spr_24/photoshoot/marissa_back.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#cj {
-  background: url("../images/spr_24/photoshoot/cj_front.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#cj:hover {
-  background: url("../images/spr_24/photoshoot/cj_back.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#aimi {
-  background: url("../images/spr_24/photoshoot/aimi_front.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#aimi:hover {
-  background: url("../images/spr_24/photoshoot/aimi_back.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#alex {
-  background: url("../images/spr_24/photoshoot/alex_front.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#alex:hover {
-  background: url("../images/spr_24/photoshoot/alex_back.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#akira {
-  background: url("../images/spr_24/photoshoot/akira_front.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#akira:hover {
-  background: url("../images/spr_24/photoshoot/akira_back.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#diane {
-  background: url("../images/spr_24/photoshoot/diane_front.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#diane:hover {
-  background: url("../images/spr_24/photoshoot/diane_back.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#evi {
-  background: url("../images/spr_24/photoshoot/evi_front.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#evi:hover {
-  background: url("../images/spr_24/photoshoot/evi_back.png");
-  background-size: cover;
-  background-position: center;
-}
 
 #michael {
-  background: url("../images/spr_24/photoshoot/michael_front.png");
+  background: url("../images/spr_25/photoshoot/michael-front.png");
   background-size: cover;
   background-position: center;
 }
 
 #michael:hover {
-  background: url("../images/spr_24/photoshoot/michael_back.png");
+  background: url("../images/spr_25/photoshoot/michael-back.png");
   background-size: cover;
   background-position: center;
 }
 
-#lucky {
-  background: url("../images/spr_24/photoshoot/lucky_front.png");
+#marissa {
+  background: url("../images/spr_25/photoshoot/marissa-front.png");
   background-size: cover;
   background-position: center;
 }
 
-#lucky:hover {
-  background: url("../images/spr_24/photoshoot/lucky_back.png");
+#marissa:hover {
+  background: url("../images/spr_25/photoshoot/marissa-back.png");
   background-size: cover;
   background-position: center;
 }
 
-#mark {
-  background: url("../images/spr_24/photoshoot/mark_front.png");
+#aimi {
+  background: url("../images/spr_25/photoshoot/aimi-front.png");
   background-size: cover;
   background-position: center;
 }
 
-#mark:hover {
-  background: url("../images/spr_24/photoshoot/mark_back.png");
+#aimi:hover {
+  background: url("../images/spr_25/photoshoot/aimi-back.png");
   background-size: cover;
   background-position: center;
 }
 
-#mindy {
-  background: url("../images/spr_24/photoshoot/mindy_front.png");
+#akira {
+  background: url("../images/spr_25/photoshoot/akira-front.png");
   background-size: cover;
   background-position: center;
 }
 
-#mindy:hover {
-  background: url("../images/spr_24/photoshoot/mindy_back.png");
+#akira:hover {
+  background: url("../images/spr_25/photoshoot/akira-back.png");
   background-size: cover;
   background-position: center;
 }
 
-#shiwei {
-  background: url("../images/spr_24/photoshoot/shiwei_front.png");
+#alex {
+  background: url("../images/spr_25/photoshoot/alex-front.png");
   background-size: cover;
   background-position: center;
 }
 
-#shiwei:hover {
-  background: url("../images/spr_24/photoshoot/shiwei_back.png");
+#alex:hover {
+  background: url("../images/spr_25/photoshoot/alex-back.png");
   background-size: cover;
   background-position: center;
 }
 
-#stella {
-  background: url("../images/spr_24/photoshoot/stella_front.png");
+#gannah {
+  background: url("../images/spr_25/photoshoot/gannah-front.png");
   background-size: cover;
   background-position: center;
 }
 
-#stella:hover {
-  background: url("../images/spr_24/photoshoot/stella_back.png");
+#gannah:hover {
+  background: url("../images/spr_25/photoshoot/gannah-back.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#lannah {
+  background: url("../images/spr_25/photoshoot/lannah-front.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#lannah:hover {
+  background: url("../images/spr_25/photoshoot/lannah-back.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#james {
+  background: url("../images/spr_25/photoshoot/james-front.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#james:hover {
+  background: url("../images/spr_25/photoshoot/james-back.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#meilin {
+  background: url("../images/spr_25/photoshoot/meilin-front.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#meilin:hover {
+  background: url("../images/spr_25/photoshoot/meilin-back.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#nick {
+  background: url("../images/spr_25/photoshoot/nick-front.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#nick:hover {
+  background: url("../images/spr_25/photoshoot/nick-back.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#ryan {
+  background: url("../images/spr_25/photoshoot/ryan-front.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#ryan:hover {
+  background: url("../images/spr_25/photoshoot/ryan-back.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#sahana {
+  background: url("../images/spr_25/photoshoot/sahana-front.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#sahana:hover {
+  background: url("../images/spr_25/photoshoot/sahana-back.png");
   background-size: cover;
   background-position: center;
 }

@@ -594,7 +594,7 @@ navbar #navtabs#homebanner {
 
 navbar #navtabs#aboutbanner {
   background: url("../images/spr_26/NiCEChristmasGroupPhoto.jpg");
-  background-position-y: 34%
+  background-position-y: 20%
 }
 
 navbar #navtabs#auditionsbanner {
@@ -873,7 +873,7 @@ section[role="banner"]#aboutbanner {
   height: 50vh;
   /* change this to fit image */
   background-image: url("../images/spr_26/NiCEChristmasGroupPhoto.jpg");
-  background-position-y: 34%
+  background-position-y: 20%
 }
 
 section[role="banner"]#auditionsbanner {

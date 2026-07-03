@@ -877,7 +877,7 @@ section[role="banner"]#aboutbanner {
 }
 
 section[role="banner"]#auditionsbanner {
-  height: 50vh;
+  height: 75vh;
   /* change this to fit image */
   background-image: url("../images/spr_26/niceSP26-22.jpg");
   background-position-y: 9%

@@ -599,7 +599,7 @@ navbar #navtabs#aboutbanner {
 
 navbar #navtabs#auditionsbanner {
   background: url("../images/spr_26/niceSP26-22.jpg");
-  background-position-y: 9%
+  background-position-y: 17%
 }
 
 navbar #sidenav {
@@ -880,7 +880,7 @@ section[role="banner"]#auditionsbanner {
   height: 75vh;
   /* change this to fit image */
   background-image: url("../images/spr_26/niceSP26-22.jpg");
-  background-position-y: 9%
+  background-position-y: 17%
 }
 
 /*------------------------------------------

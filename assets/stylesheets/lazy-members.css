@@ -1,0 +1,23 @@
+/* Lazy-load overrides for member photos */
+
+.memberprofile .memberphoto {
+  height: 336px;
+  width: 240px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ececec; /* placeholder color while image loads */
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.memberprofile .memberphoto.loaded {
+  opacity: 1;
+}
+
+/* Make sure any background images set earlier in main-staging.css are not used */
+#aimi, #akira, #alex, #aspen, #hannah, #jack, #lisa, #meilin, #nick, #owen, #yinhang, #zach,
+#aimi:hover, #akira:hover, #alex:hover, #aspen:hover, #hannah:hover, #jack:hover, #lisa:hover, #meilin:hover, #nick:hover, #owen:hover, #yinhang:hover, #zach:hover {
+  background: none !important;
+  background-image: none !important;
+}

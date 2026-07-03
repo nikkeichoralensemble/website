@@ -1,39 +1,28 @@
+// Swap <img> src on hover/touch when data-hover is present. Images use loading="lazy" so the browser defers download.
 document.addEventListener('DOMContentLoaded', function () {
-  const photos = document.querySelectorAll('.memberphoto[data-src]');
+  const imgs = document.querySelectorAll('img.memberphoto[data-hover]');
 
-  function loadImage(el) {
-    const src = el.dataset.src;
-    if (!src) return;
+  imgs.forEach(img => {
+    const originalSrc = img.getAttribute('src');
+    const hoverSrc = img.dataset.hover;
+    if (!hoverSrc) return;
 
-    // set the background image
-    el.style.backgroundImage = `url('${src}')`;
-    el.classList.add('loaded');
-
-    // handle hover image swap if provided
-    if (el.dataset.hover) {
-      const hover = el.dataset.hover;
-      el.addEventListener('mouseenter', () => { el.style.backgroundImage = `url('${hover}')`; });
-      el.addEventListener('mouseleave', () => { el.style.backgroundImage = `url('${src}')`; });
-    }
-  }
-
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          loadImage(entry.target);
-          obs.unobserve(entry.target);
-        }
-      });
-    }, {
-      root: null,
-      rootMargin: '200px 0px', // start loading a bit before the element is visible
-      threshold: 0.1
+    // mouse hover for desktop
+    img.addEventListener('mouseenter', () => {
+      img.dataset._original = img.src;
+      img.src = hoverSrc;
+    });
+    img.addEventListener('mouseleave', () => {
+      img.src = img.dataset._original || originalSrc;
     });
 
-    photos.forEach(el => observer.observe(el));
-  } else {
-    // Fallback: load all immediately if IntersectionObserver not supported
-    photos.forEach(loadImage);
-  }
+    // touch devices: toggle on touchstart and restore on touchend
+    img.addEventListener('touchstart', () => {
+      img.dataset._original = img.src;
+      img.src = hoverSrc;
+    }, {passive: true});
+    img.addEventListener('touchend', () => {
+      img.src = img.dataset._original || originalSrc;
+    }, {passive: true});
+  });
 });

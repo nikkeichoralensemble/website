@@ -586,9 +586,9 @@ navbar #navtabs#homebanner {
       from(transparent),
       color-stop(80%),
       to(var(--palette--theme))),
-    url("../images/spr_26/NiCESpring2026ShowcaseGroupPhoto.jpg");
+    url("../images/spr_26/NiCESpring2026ShowcaseGroupPhoto.JPG");
   background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
-    url("../images/spr_26/NiCESpring2026ShowcaseGroupPhoto.jpg");
+    url("../images/spr_26/NiCESpring2026ShowcaseGroupPhoto.JPG");
     background-position-y: 60%
 }
 
@@ -598,7 +598,7 @@ navbar #navtabs#aboutbanner {
 }
 
 navbar #navtabs#auditionsbanner {
-  background: url("../images/spr_26/niceSP26-22.JPG");
+  background: url("../images/spr_26/niceSP26-22.jpg");
   background-position-y: 9%
 }
 
@@ -863,9 +863,9 @@ section[role="banner"]#homebanner {
       from(transparent),
       color-stop(80%),
       to(var(--palette--theme))),
-    url("../images/spr_26/NiCESpring2026ShowcaseGroupPhoto.jpg");
+    url("../images/spr_26/NiCESpring2026ShowcaseGroupPhoto.JPG");
   background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
-    url("../images/spr_26/NiCESpring2026ShowcaseGroupPhoto.jpg");
+    url("../images/spr_26/NiCESpring2026ShowcaseGroupPhoto.JPG");
     background-position-y: 60%
 }
 
@@ -879,7 +879,7 @@ section[role="banner"]#aboutbanner {
 section[role="banner"]#auditionsbanner {
   height: 50vh;
   /* change this to fit image */
-  background-image: url("../images/spr_26/niceSP26-22.JPG");
+  background-image: url("../images/spr_26/niceSP26-22.jpg");
   background-position-y: 9%
 }
 

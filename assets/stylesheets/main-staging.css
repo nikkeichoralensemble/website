@@ -586,19 +586,19 @@ navbar #navtabs#homebanner {
       from(transparent),
       color-stop(80%),
       to(var(--palette--theme))),
-    url("../images/spr_25/group/fa24_mew1.jpg");
+    url("../images/spr_26/NiCESpring2026ShowcaseGroupPhoto.jpg");
   background-image: linear-gradient(transparent, 80%, var(--palette--theme)),
     url("../images/spr_25/group/fa24_mew1.jpg");
     background-position-y: 60%
 }
 
 navbar #navtabs#aboutbanner {
-  background: url("../images/spr_25/group/sp25_showcase.JPG");
+  background: url("../images/spr_26/nice_group_photo.png");
   background-position-y: 34%
 }
 
 navbar #navtabs#auditionsbanner {
-  background: url("../images/spr_25/group/fa24_showcase.JPG");
+  background: url("../images/spr_26/niceSP26-22.JPG");
   background-position-y: 9%
 }
 
